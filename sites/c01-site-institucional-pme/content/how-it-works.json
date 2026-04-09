@@ -1,0 +1,20 @@
+{
+  "headline": "Como funciona em 3 passos",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Briefing",
+      "description": "Você preenche um formulário simples com as informações do seu negócio. Leva menos de 10 minutos."
+    },
+    {
+      "number": 2,
+      "title": "Desenvolvimento",
+      "description": "Criamos seu site com textos, design e estrutura otimizados para conversão e SEO."
+    },
+    {
+      "number": 3,
+      "title": "Lançamento",
+      "description": "Revisamos juntos, ajustamos detalhes e colocamos no ar. Pronto para receber clientes."
+    }
+  ]
+}

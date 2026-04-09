@@ -1,0 +1,20 @@
+{
+  "headline": "Como funciona em 3 passos",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Diagnóstico",
+      "description": "Entendemos seu negócio e seus objetivos em uma conversa inicial."
+    },
+    {
+      "number": 2,
+      "title": "Desenvolvimento",
+      "description": "Criamos a solução ideal com foco em resultados mensuráveis."
+    },
+    {
+      "number": 3,
+      "title": "Lançamento",
+      "description": "Colocamos no ar e acompanhamos o desempenho de perto."
+    }
+  ]
+}

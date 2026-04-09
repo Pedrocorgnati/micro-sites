@@ -1,0 +1,20 @@
+{
+  "headline": "Por que escolher nossa solução?",
+  "items": [
+    {
+      "icon": "zap",
+      "title": "Rápido e Eficiente",
+      "description": "Entregamos resultados em tempo recorde, sem comprometer a qualidade."
+    },
+    {
+      "icon": "target",
+      "title": "Focado em Conversão",
+      "description": "Cada detalhe é pensado para transformar visitantes em clientes."
+    },
+    {
+      "icon": "headphones",
+      "title": "Suporte Contínuo",
+      "description": "Estamos ao seu lado em todas as etapas, do início ao sucesso."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "headline": "Perguntas Frequentes",
+  "items": [
+    {
+      "question": "Quanto tempo leva para meu site ficar pronto?",
+      "answer": "O prazo padrão é de 7 dias corridos após o briefing aprovado. Para projetos com muitas páginas ou funcionalidades extras, pode levar até 14 dias."
+    },
+    {
+      "question": "Preciso ter domínio e hospedagem?",
+      "answer": "Não necessariamente. Podemos indicar e configurar tudo para você. Se já tem domínio e hospedagem, ótimo — trabalhamos com qualquer provedor."
+    },
+    {
+      "question": "O site funciona bem no celular?",
+      "answer": "Sim, todos os nossos sites são desenvolvidos com design responsivo, ou seja, funcionam perfeitamente em celulares, tablets e computadores."
+    },
+    {
+      "question": "Vocês fazem a manutenção do site depois?",
+      "answer": "Oferecemos 30 dias de suporte gratuito após a entrega. Após esse período, temos planos de manutenção mensal para quem precisar."
+    },
+    {
+      "question": "Qual é o investimento?",
+      "answer": "Os valores variam conforme o escopo do projeto. Entre em contato para receber um orçamento personalizado e sem compromisso."
+    }
+  ]
+}

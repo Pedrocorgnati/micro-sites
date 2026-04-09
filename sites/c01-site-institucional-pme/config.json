@@ -1,0 +1,27 @@
+{
+  "slug": "c01-site-institucional-pme",
+  "name": "SystemForge Digital",
+  "category": "C",
+  "funnelStage": "consideration",
+  "deployWave": 1,
+  "template": "landing",
+  "sectionOrder": "default",
+  "headline": "Sites Institucionais Profissionais para PMEs",
+  "subheadline": "Presença digital completa, pronta em dias, com foco em resultados e conversão.",
+  "seo": {
+    "title": "Site Institucional para PME — SystemForge Digital",
+    "description": "Criamos sites institucionais profissionais para pequenas e médias empresas com foco em conversão, SEO e crescimento digital.",
+    "keywords": ["site institucional", "site para pequena empresa", "criação de site PME", "presença digital"]
+  },
+  "cta": {
+    "primaryLabel": "Solicitar Orçamento Gratuito",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5511999999999",
+    "whatsappMessage": "Olá! Vim pelo site institucional e gostaria de solicitar um orçamento."
+  },
+  "showSystemForgeLogo": true,
+  "footerLinks": [
+    { "label": "Blog", "href": "/blog" },
+    { "label": "FAQ", "href": "/faq" }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "slug": "d01-calculadora-custo-site",
+  "name": "Calculadora Custo Site",
+  "category": "D",
+  "funnelStage": "consideration",
+  "deployWave": 1,
+  "template": "calculator",
+  "sectionOrder": "default",
+  "headline": "Calculadora Custo Site — Solução Digital",
+  "subheadline": "Ajudamos pequenas e médias empresas a crescer com presença digital de qualidade.",
+  "seo": {
+    "title": "Calculadora Custo Site — SystemForge Digital",
+    "description": "Descrição de 120-155 chars do site para SEO. Inclua keywords principais.",
+    "keywords": ["keyword-1", "keyword-2", "keyword-3"]
+  },
+  "cta": {
+    "primaryLabel": "Solicitar Orçamento Gratuito",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5511999999999",
+    "whatsappMessage": "Olá! Vim pelo site d01-calculadora-custo-site e gostaria de saber mais."
+  },
+  "showSystemForgeLogo": true,
+  "footerLinks": [
+    { "label": "Privacidade", "href": "/privacidade" }
+  ]
+}

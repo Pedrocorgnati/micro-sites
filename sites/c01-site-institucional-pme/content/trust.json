@@ -1,0 +1,26 @@
+{
+  "headline": "Resultados que falam por si",
+  "stats": [
+    { "value": "50+", "label": "Sites entregues" },
+    { "value": "98%", "label": "Clientes satisfeitos" },
+    { "value": "7 dias", "label": "Prazo médio de entrega" },
+    { "value": "4.9★", "label": "Avaliação média" }
+  ],
+  "testimonials": [
+    {
+      "name": "Ana Rodrigues",
+      "role": "Clínica de Estética",
+      "quote": "Em uma semana meu site estava no ar e já recebi meus primeiros agendamentos pelo formulário. Recomendo demais!"
+    },
+    {
+      "name": "Carlos Mendes",
+      "role": "Advogado",
+      "quote": "Profissionalismo do início ao fim. O site ficou exatamente como eu imaginava, com um design sério e moderno."
+    },
+    {
+      "name": "Fernanda Lima",
+      "role": "Psicóloga",
+      "quote": "O botão de WhatsApp trouxe vários novos pacientes logo nos primeiros dias. Investimento que vale cada centavo."
+    }
+  ]
+}

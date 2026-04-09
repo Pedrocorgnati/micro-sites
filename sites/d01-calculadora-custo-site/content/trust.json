@@ -1,0 +1,9 @@
+{
+  "headline": "Resultados que falam por si",
+  "stats": [
+    { "value": "50+", "label": "Projetos entregues" },
+    { "value": "98%", "label": "Clientes satisfeitos" },
+    { "value": "5★",  "label": "Avaliação média" }
+  ],
+  "testimonials": []
+}
