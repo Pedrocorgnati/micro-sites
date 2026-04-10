@@ -24,12 +24,17 @@ export type CategorySlug =
   | 'e01-ia-para-pequenos-negocios' | 'e02-automacao-whatsapp' | 'e03-site-com-ia'
   // Categoria F — Blog Técnico
   | 'f01-blog-desenvolvimento-web' | 'f02-blog-marketing-digital'
-  // Templates extras
-  | string;
+  // Categoria A — Nicho Vertical (extras)
+  | 'a07-contabilidade-digital' | 'a08-imobiliaria-regional'
+  | 'a09-escola-idiomas' | 'a10-clinica-odontologica'
+  // Categoria B — Dor / Problema (extras)
+  | 'b06-sem-leads-qualificados' | 'b07-site-nao-aparece-google' | 'b08-concorrente-digital'
+  // Categoria C — Solução (extras)
+  | 'c06-automacao-atendimento' | 'c07-sistema-gestao-web' | 'c08-marketplace-nicho';
 
-export type FunnelStage = 'awareness' | 'consideration' | 'decision' | 'conversion';
+export type FunnelStage = 'awareness' | 'consideration' | 'decision';
 
-export type DeployWave = 1 | 2 | 3 | 4;
+export type DeployWave = 1 | 2 | 3;
 
 export type PageTemplate = 'landing' | 'blog' | 'calculator' | 'waitlist';
 
@@ -43,12 +48,16 @@ export type SchemaType =
 
 export type SiteOrder = 'default' | 'b-variant' | 'd-variant';
 
+export type CalculatorType = 'calculator' | 'diagnostic' | 'checklist';
+
 // --- Interfaces ---
 
 export interface SEOConfig {
   title: string;
   description: string;
-  keywords?: string[];
+  keywords: string[];
+  ogTitle?: string;
+  ogDescription?: string;
   canonical?: string;
   ogImage?: string;
   noindex?: boolean;
@@ -63,23 +72,28 @@ export interface CTAConfig {
 
 export interface LeadMagnetConfig {
   enabled: boolean;
-  type?: 'email-gate' | 'full-result' | 'download';
-  incentive?: string;
+  type: CalculatorType;
+  partialResultLabel: string;
+  fullResultPath: string;
 }
 
 export interface SiteConfig {
   // Identidade
-  slug: string;
+  slug: CategorySlug;
   name: string;
   category: SiteCategory;
+  accentColor: string;
+  wave: DeployWave;
   funnelStage: FunnelStage;
-  deployWave: DeployWave;
   template: PageTemplate;
-  sectionOrder: SiteOrder;
+  hasBlog: boolean;
+  schema: SchemaType[];
 
-  // Conteúdo
-  headline: string;
-  subheadline: string;
+  // Campos adicionais de implementação
+  deployWave?: DeployWave;
+  sectionOrder?: SiteOrder;
+  headline?: string;
+  subheadline?: string;
 
   // SEO
   seo: SEOConfig;
@@ -89,6 +103,8 @@ export interface SiteConfig {
 
   // Opcional
   leadMagnet?: LeadMagnetConfig;
+  relatedSites?: CategorySlug[];
+  features?: string[];
   gaId?: string;
   showSystemForgeLogo?: boolean;
   footerLinks?: { label: string; href: string }[];
@@ -176,6 +192,22 @@ export interface SiteContent {
   blog?: BlogArticle[];
 }
 
+// --- Tipos auxiliares ---
+
+export interface PageContent {
+  filename: string;
+  frontmatter: Record<string, unknown>;
+  body: string;
+}
+
+export interface CalculatorInput {
+  id: string;
+  label: string;
+  type: 'select' | 'radio' | 'number' | 'checkbox';
+  options?: Array<{ value: string; label: string; points?: number }>;
+  weight?: number;
+}
+
 // --- Constantes de acento ---
 
 export interface AccentColors {
@@ -203,3 +235,60 @@ export const CTA_LABELS: Record<SiteCategory, string> = {
   E: 'Entrar na Lista de Espera',
   F: 'Falar com Especialista',
 };
+
+export const CATEGORY_NAMES: Record<SiteCategory, string> = {
+  A: 'Nicho Local',
+  B: 'Dor de Negócio',
+  C: 'Serviço Digital',
+  D: 'Ferramenta Interativa',
+  E: 'Pré-SaaS / Waitlist',
+  F: 'Conteúdo Educativo',
+};
+
+export const SITE_LIMITS = {
+  maxSites: 36,
+  maxBlogArticles: 50,
+  maxFAQItems: 20,
+  maxFeatureGridItems: 6,
+  maxRelatedSites: 4,
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  titleMaxLength: 60,
+  descriptionMaxLength: 155,
+  keywordsMax: 6,
+} as const;
+
+export const PAGE_ROUTES = {
+  home: '/',
+  contact: '/contato',
+  thanks: '/obrigado',
+  privacy: '/privacidade',
+  faq: '/faq',
+  result: '/resultado',
+  blog: '/blog',
+  waitlist: '/lista-de-espera',
+} as const;
+
+export const TIMING = {
+  formDebounceMs: 300,
+  formTimeoutMs: 10_000,
+  calculatorDebounceMs: 150,
+  localStorageTTLMs: 24 * 60 * 60 * 1000,
+} as const;
+
+export const STORAGE_KEYS = {
+  cookieConsent: 'cookie_consent',
+  cookieConsentTimestamp: 'cookie_consent_ts',
+  calculatorProgress: (slug: string) => `calc_progress_${slug}`,
+} as const;
+
+export const SECTION_ORDER = {
+  landing: ['hero', 'problem', 'solution', 'features', 'howItWorks', 'trust', 'faq', 'cta'],
+  landing_B: ['hero', 'solution', 'problem', 'features', 'howItWorks', 'trust', 'faq', 'cta'],
+  landing_A: ['hero', 'problem', 'solution', 'features', 'localTestimonials', 'howItWorks', 'trust', 'faq', 'cta'],
+  calculator: ['hero', 'calculator', 'problem', 'solution', 'features', 'trust', 'faq', 'cta'],
+  waitlist: ['hero', 'problem', 'waitlist', 'trust', 'faq'],
+} as const;
+
+export const WHATSAPP_NUMBER = '5511999999999';
+export const GA4_MEASUREMENT_ID = 'G-XXXXXXXXXX';

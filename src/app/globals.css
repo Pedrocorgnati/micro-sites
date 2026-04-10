@@ -193,6 +193,65 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ============================================================
+   CORES DE ACENTO POR CATEGORIA (data-category)
+   ============================================================ */
+[data-category='A'] {
+  --color-accent: #2563EB;
+  --color-accent-hover: #1D4ED8;
+  --color-on-accent: #FFFFFF;
+  --color-secondary: #93C5FD;
+  --color-on-secondary: #1E3A8A;
+}
+
+[data-category='B'] {
+  --color-accent: #EA580C;
+  --color-accent-hover: #C2410C;
+  --color-on-accent: #FFFFFF;
+  --color-secondary: #FDBA74;
+  --color-on-secondary: #7C2D12;
+}
+
+[data-category='C'] {
+  --color-accent: #059669;
+  --color-accent-hover: #047857;
+  --color-on-accent: #FFFFFF;
+  --color-secondary: #6EE7B7;
+  --color-on-secondary: #064E3B;
+}
+
+[data-category='D'] {
+  --color-accent: #7C3AED;
+  --color-accent-hover: #6D28D9;
+  --color-on-accent: #FFFFFF;
+  --color-secondary: #C4B5FD;
+  --color-on-secondary: #4C1D95;
+}
+
+[data-category='E'] {
+  --color-accent: #0891B2;
+  --color-accent-hover: #0E7490;
+  --color-on-accent: #FFFFFF;
+  --color-secondary: #67E8F9;
+  --color-on-secondary: #155E75;
+}
+
+[data-category='F'] {
+  --color-accent: #1E40AF;
+  --color-accent-hover: #1E3A8A;
+  --color-on-accent: #FFFFFF;
+  --color-secondary: #93C5FD;
+  --color-on-secondary: #1E3A8A;
+}
+
+/* ============================================================
+   TOUCH TARGETS — WCAG 2.5.5 (mobile-first obrigatório)
+   ============================================================ */
+button, a, [role="button"], input[type="submit"], input[type="button"] {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* ============================================================
    ACESSIBILIDADE — Prefers reduced motion
    ============================================================ */
 @media (prefers-reduced-motion: reduce) {

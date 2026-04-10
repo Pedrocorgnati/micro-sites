@@ -55,6 +55,7 @@ export function CookieConsent() {
       role="dialog"
       aria-label="Aviso de cookies"
       aria-describedby="cookie-desc"
+      data-testid="cookie-consent-banner"
       className={cn(
         'fixed bottom-0 left-0 right-0 z-50',
         'border-t shadow-xl bg-white',
@@ -80,6 +81,7 @@ export function CookieConsent() {
         </p>
         <div className="flex items-center gap-3 shrink-0">
           <button
+            data-testid="cookie-consent-reject-button"
             onClick={handleReject}
             className="px-4 py-2 min-h-[44px] rounded-lg border text-sm font-medium transition-colors duration-150 hover:bg-gray-50"
             style={{ borderColor: '#D1D5DB', color: 'var(--color-text-primary)' }}
@@ -87,6 +89,7 @@ export function CookieConsent() {
             Recusar
           </button>
           <button
+            data-testid="cookie-consent-accept-button"
             onClick={handleAccept}
             className="px-4 py-2 min-h-[44px] rounded-lg text-sm font-medium transition-colors duration-150"
             style={{

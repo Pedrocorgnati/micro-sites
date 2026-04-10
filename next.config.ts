@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
   images: { unoptimized: true },
   trailingSlash: true,
   distDir: siteSlug ? `dist/${siteSlug}` : 'dist',
+
+  // Oculta header X-Powered-By (segurança)
+  poweredByHeader: false,
+
+
 };
 
 export default nextConfig;

@@ -14,7 +14,7 @@ export function BlogLayout({ article, config, relatedArticles = [] }: BlogLayout
   const waUrl = `https://wa.me/${config.cta.whatsappNumber.replace(/\D/g, '')}?text=${encodeURIComponent(config.cta.whatsappMessage)}`;
 
   return (
-    <article className="max-w-[1200px] mx-auto px-4 py-12">
+    <article data-testid="blog-article" className="max-w-[1200px] mx-auto px-4 py-12">
       {/* Breadcrumbs */}
       <Breadcrumbs
         items={[
@@ -87,6 +87,7 @@ export function BlogLayout({ article, config, relatedArticles = [] }: BlogLayout
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
+                data-testid="blog-article-inline-cta-contact"
                 href="/contato"
                 className="inline-flex items-center justify-center px-6 py-3 min-h-[44px] rounded-lg font-semibold text-sm text-white transition-all duration-150 active:scale-95"
                 style={{ backgroundColor: 'var(--color-accent)' }}
@@ -94,6 +95,7 @@ export function BlogLayout({ article, config, relatedArticles = [] }: BlogLayout
                 Entrar em contato
               </Link>
               <a
+                data-testid="blog-article-inline-cta-whatsapp"
                 href={waUrl}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -131,7 +133,7 @@ export function BlogLayout({ article, config, relatedArticles = [] }: BlogLayout
         </div>
 
         {/* Sidebar — desktop only */}
-        <aside className="hidden lg:block w-72 shrink-0">
+        <aside data-testid="blog-article-sidebar" className="hidden lg:block w-72 shrink-0">
           <div className="sticky top-6 flex flex-col gap-6">
             {/* CTA box */}
             <div

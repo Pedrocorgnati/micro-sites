@@ -2,22 +2,31 @@
   "slug": "d01-calculadora-custo-site",
   "name": "Calculadora Custo Site",
   "category": "D",
+  "accentColor": "#7C3AED",
+  "wave": 1,
   "funnelStage": "consideration",
-  "deployWave": 1,
   "template": "calculator",
+  "hasBlog": false,
+  "schema": ["Organization", "FAQPage"],
   "sectionOrder": "default",
   "headline": "Calculadora Custo Site — Solução Digital",
   "subheadline": "Ajudamos pequenas e médias empresas a crescer com presença digital de qualidade.",
   "seo": {
     "title": "Calculadora Custo Site — SystemForge Digital",
-    "description": "Descrição de 120-155 chars do site para SEO. Inclua keywords principais.",
-    "keywords": ["keyword-1", "keyword-2", "keyword-3"]
+    "description": "Descubra quanto custa criar seu site com nossa calculadora gratuita. Resultado em menos de 5 minutos.",
+    "keywords": ["custo site", "preço site", "quanto custa site"]
   },
   "cta": {
-    "primaryLabel": "Solicitar Orçamento Gratuito",
+    "primaryLabel": "Ver Resultado Completo",
     "formEndpoint": "https://api.staticforms.xyz/submit",
     "whatsappNumber": "5511999999999",
-    "whatsappMessage": "Olá! Vim pelo site d01-calculadora-custo-site e gostaria de saber mais."
+    "whatsappMessage": "Olá! Vim pela calculadora de custo de site e gostaria de saber mais."
+  },
+  "leadMagnet": {
+    "enabled": true,
+    "type": "calculator",
+    "partialResultLabel": "Seu orçamento estimado",
+    "fullResultPath": "/resultado"
   },
   "showSystemForgeLogo": true,
   "footerLinks": [

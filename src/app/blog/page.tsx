@@ -24,7 +24,7 @@ export default function BlogPage() {
     <div style={accentStyle}>
       <Header siteName={config.name} ctaLabel={config.cta.primaryLabel} ctaHref="/contato" />
 
-      <main id="main-content" tabIndex={-1} className="py-12" style={{ backgroundColor: 'var(--color-muted)' }}>
+      <main id="main-content" data-testid="main-content" tabIndex={-1} className="py-12" style={{ backgroundColor: 'var(--color-muted)' }}>
         <div className="max-w-[1200px] mx-auto px-4">
           <h1
             className="text-2xl md:text-3xl font-bold mb-2"

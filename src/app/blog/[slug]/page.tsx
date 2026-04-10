@@ -58,6 +58,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
 
       <main
         id="main-content"
+        data-testid="main-content"
         tabIndex={-1}
         style={{ backgroundColor: 'var(--color-background)' }}
       >

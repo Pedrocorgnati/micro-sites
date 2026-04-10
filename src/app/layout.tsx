@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
 import { ToastProvider } from '@/components/ui/Toast';
@@ -24,6 +24,13 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 const SITE_SLUG = process.env.SITE_SLUG ?? 'c01-site-institucional-pme';
 const config = loadSiteConfig(SITE_SLUG);
 const GA4_ID = config.gaId ?? process.env.NEXT_PUBLIC_GA4_ID;
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+  // themeColor injetado por site via generateMetadata em cada [slug]/page.tsx
+};
 
 export const metadata: Metadata = {
   title: {
@@ -54,6 +61,13 @@ export default function RootLayout({
       className={`${inter.variable} ${plusJakartaSans.variable} h-full`}
     >
       <body className="min-h-full flex flex-col antialiased" style={{ backgroundColor: 'var(--color-background)', color: 'var(--color-text-primary)' }}>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:rounded focus:text-white focus:text-sm focus:font-medium"
+          style={{ backgroundColor: 'var(--color-accent)' }}
+        >
+          Pular para o conteúdo
+        </a>
         <ToastProvider>
           {children}
         </ToastProvider>

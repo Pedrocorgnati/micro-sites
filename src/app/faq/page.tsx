@@ -23,7 +23,7 @@ export default function FAQPage() {
     <div style={accentStyle}>
       <Header siteName={config.name} ctaLabel={config.cta.primaryLabel} ctaHref="/contato" />
 
-      <main id="main-content" tabIndex={-1}>
+      <main id="main-content" data-testid="main-content" tabIndex={-1}>
         <FAQAccordion
           headline={content.faqs?.headline ?? 'Perguntas Frequentes'}
           faqs={faqs}

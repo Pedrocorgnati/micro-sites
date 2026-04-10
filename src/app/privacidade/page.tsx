@@ -20,6 +20,7 @@ export default function PrivacidadePage() {
 
       <main
         id="main-content"
+        data-testid="main-content"
         tabIndex={-1}
         className="max-w-[1200px] mx-auto px-4 py-12"
         style={{ color: 'var(--color-text-primary)' }}

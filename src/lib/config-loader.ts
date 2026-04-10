@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { marked } from 'marked';
-import type { SiteConfig, SiteContent, BlogArticle, ACCENT_COLORS } from '@/types';
+import type { SiteConfig, SiteContent, BlogArticle, CategorySlug, SiteCategory } from '@/types';
 import { ACCENT_COLORS as COLORS, CTA_LABELS } from '@/types';
 
 const SITES_DIR = path.join(process.cwd(), 'sites');
@@ -20,7 +20,18 @@ export function loadSiteConfig(slug: string): SiteConfig {
   }
 
   const raw = fs.readFileSync(configPath, 'utf-8');
-  const config = JSON.parse(raw) as SiteConfig;
+  const parsed = JSON.parse(raw);
+
+  // Normalizar campos legados
+  const config: SiteConfig = {
+    ...parsed,
+    // wave pode vir como deployWave em configs antigos
+    wave: parsed.wave ?? parsed.deployWave ?? 1,
+    // Campos obrigatórios com defaults seguros
+    accentColor: parsed.accentColor ?? COLORS[parsed.category as SiteCategory]?.accent ?? '#2563EB',
+    hasBlog: parsed.hasBlog ?? false,
+    schema: parsed.schema ?? ['Organization', 'FAQPage'],
+  };
 
   // Garantir valores padrão
   if (!config.cta.primaryLabel) {
@@ -161,18 +172,22 @@ function sanitizeHtml(html: string): string {
 
 function getDefaultConfig(slug: string): SiteConfig {
   return {
-    slug,
+    slug: slug as CategorySlug,
     name: 'Meu Site',
     category: 'A',
+    accentColor: '#2563EB',
+    wave: 1,
     funnelStage: 'consideration',
-    deployWave: 1,
     template: 'landing',
+    hasBlog: false,
+    schema: ['Organization', 'FAQPage'],
     sectionOrder: 'default',
     headline: 'Solução Profissional para o Seu Negócio',
     subheadline: 'Ajudamos pequenas e médias empresas a crescer com presença digital de qualidade.',
     seo: {
       title: 'Meu Site — Solução Digital',
       description: 'Ajudamos pequenas e médias empresas a crescer com presença digital de qualidade.',
+      keywords: ['site profissional', 'presença digital'],
     },
     cta: {
       primaryLabel: 'Solicitar Orçamento Gratuito',

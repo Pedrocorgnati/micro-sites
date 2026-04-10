@@ -22,6 +22,7 @@ export default function ObrigadoPage() {
 
       <main
         id="main-content"
+        data-testid="main-content"
         tabIndex={-1}
         className="flex flex-col items-center justify-center px-4 py-24 min-h-[60vh] text-center"
       >
@@ -62,6 +63,7 @@ export default function ObrigadoPage() {
 
         <div className="flex flex-col sm:flex-row gap-4">
           <a
+            data-testid="obrigado-whatsapp-button"
             href={waUrl}
             target="_blank"
             rel="noopener noreferrer"
@@ -71,6 +73,7 @@ export default function ObrigadoPage() {
             Falar agora no WhatsApp
           </a>
           <Link
+            data-testid="obrigado-home-link"
             href="/"
             className="inline-flex items-center justify-center px-6 py-3 min-h-[44px] rounded-lg font-semibold text-sm border-2 transition-all duration-150 active:scale-95"
             style={{

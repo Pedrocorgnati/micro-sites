@@ -11,6 +11,9 @@ import { HowItWorks } from '@/components/sections/HowItWorks';
 import { TrustSection } from '@/components/sections/TrustSection';
 import { FAQAccordion } from '@/components/sections/FAQAccordion';
 import { CTASection } from '@/components/sections/CTASection';
+import { LocalTestimonials } from '@/components/sections/LocalTestimonials';
+import { Calculator } from '@/components/sections/Calculator';
+import type { CalculatorInput } from '@/types';
 
 const SITE_SLUG = process.env.SITE_SLUG ?? 'c01-site-institucional-pme';
 
@@ -19,7 +22,12 @@ export default function HomePage() {
   const content = loadSiteContent(SITE_SLUG);
   const articles = loadBlogArticles(SITE_SLUG);
   const isB = config.category === 'B';
+  const isA = config.category === 'A';
+  const isD = config.category === 'D';
   const accentStyle = getAccentStyle(config);
+
+  // Calculator inputs para sites Cat D
+  const calculatorInputs: CalculatorInput[] = (config as { calculatorInputs?: CalculatorInput[] }).calculatorInputs ?? [];
 
   const hasFaqs = (content.faqs?.items?.length ?? 0) > 0;
 
@@ -78,8 +86,8 @@ export default function HomePage() {
         )}
 
         <HeroSection
-          headline={content.hero?.headline ?? config.headline}
-          subheadline={content.hero?.subheadline ?? config.subheadline}
+          headline={content.hero?.headline ?? config.headline ?? config.name}
+          subheadline={content.hero?.subheadline ?? config.subheadline ?? config.seo.description}
           ctaLabel={config.cta.primaryLabel}
           ctaHref="/contato"
           whatsappNumber={config.cta.whatsappNumber}
@@ -122,6 +130,21 @@ export default function HomePage() {
           <FeatureGrid
             headline={content.features.headline}
             features={content.features.items}
+          />
+        )}
+
+        {/* LocalTestimonials — apenas Cat A (INT-027) */}
+        {isA && (content.trust?.testimonials?.length ?? 0) > 0 && (
+          <LocalTestimonials
+            testimonials={content.trust?.testimonials}
+          />
+        )}
+
+        {/* Calculator — apenas Cat D */}
+        {isD && calculatorInputs.length > 0 && (
+          <Calculator
+            inputs={calculatorInputs}
+            config={config}
           />
         )}
 

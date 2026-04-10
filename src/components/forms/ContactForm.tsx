@@ -8,6 +8,7 @@ interface ContactFormProps {
 export function ContactForm({ config }: ContactFormProps) {
   return (
     <section
+      data-testid="contact-form-section"
       aria-label="Formulário de contato"
       className="py-16 min-h-[60vh]"
       style={{ backgroundColor: 'var(--color-muted)' }}
