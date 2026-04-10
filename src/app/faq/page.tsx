@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { loadSiteConfig, loadSiteContent, getAccentStyle } from '@/lib/config-loader';
+import { buildFAQSchema } from '@/lib/schema-markup';
 import { Header } from '@/components/ui/Header';
 import { Footer } from '@/components/ui/Footer';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
@@ -19,15 +20,25 @@ export default function FAQPage() {
 
   const faqs = content.faqs?.items ?? [];
 
+  // FAQPage JSON-LD renderizado no server component para garantir presença no HTML estático
+  const faqSchema = faqs.length > 0 ? buildFAQSchema(faqs) : null;
+
   return (
     <div style={accentStyle}>
       <Header siteName={config.name} ctaLabel={config.cta.primaryLabel} ctaHref="/contato" />
 
       <main id="main-content" data-testid="main-content" tabIndex={-1}>
+        {faqSchema && (
+          <script
+            id="faq-schema"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+          />
+        )}
         <FAQAccordion
           headline={content.faqs?.headline ?? 'Perguntas Frequentes'}
           faqs={faqs}
-          showSchema
+          showSchema={false}
         />
 
         <CTASection

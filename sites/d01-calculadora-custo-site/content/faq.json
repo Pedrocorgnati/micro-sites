@@ -1,17 +1,25 @@
 {
-  "headline": "Perguntas Frequentes",
+  "headline": "Perguntas Frequentes sobre a Calculadora",
   "items": [
     {
-      "question": "Quanto tempo leva para ficar pronto?",
-      "answer": "O prazo varia conforme a complexidade do projeto. Projetos simples ficam prontos em 1 a 2 semanas."
+      "question": "O resultado da calculadora é um orçamento oficial?",
+      "answer": "O resultado é uma estimativa baseada em parâmetros médios do mercado brasileiro. Para um orçamento oficial e personalizado, entre em contato conosco após usar a calculadora."
     },
     {
-      "question": "Qual é o investimento?",
-      "answer": "Temos planos para diferentes orçamentos. Entre em contato para um orçamento personalizado."
+      "question": "A calculadora funciona sem JavaScript?",
+      "answer": "Sem JavaScript, exibimos um link direto para falar com nossa equipe pelo WhatsApp e resolver sua dúvida de forma rápida e direta."
     },
     {
-      "question": "Vocês oferecem suporte após a entrega?",
-      "answer": "Sim, oferecemos suporte contínuo e manutenção para garantir que tudo funcione perfeitamente."
+      "question": "Quantas etapas tem a calculadora?",
+      "answer": "São 5 perguntas simples sobre seu projeto. O resultado parcial aparece na tela 3 e o orçamento completo é liberado após você informar seu e-mail."
+    },
+    {
+      "question": "Meus dados ficam salvos?",
+      "answer": "Seu progresso fica salvo por 24 horas no seu navegador (localStorage). Nenhum dado é enviado ao servidor antes da sua confirmação explícita no formulário."
+    },
+    {
+      "question": "Quanto custa usar a calculadora?",
+      "answer": "A calculadora é completamente gratuita. Não há custo, cadastro obrigatório ou compromisso para usar a ferramenta e obter sua estimativa."
     }
   ]
 }

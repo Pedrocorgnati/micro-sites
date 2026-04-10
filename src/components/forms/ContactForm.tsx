@@ -30,6 +30,7 @@ export function ContactForm({ config }: ContactFormProps) {
             whatsappNumber={config.cta.whatsappNumber}
             whatsappMessage={config.cta.whatsappMessage}
             siteName={config.name}
+            siteSlug={config.slug}
           />
         </div>
       </div>

@@ -40,6 +40,7 @@ interface ContactFormBaseProps {
   whatsappNumber: string;
   whatsappMessage?: string;
   siteName?: string;
+  siteSlug?: string;
   accessKey?: string;
 }
 
@@ -52,6 +53,7 @@ export function ContactFormBase({
   whatsappNumber,
   whatsappMessage = 'Olá! Tive um problema ao enviar o formulário e gostaria de falar.',
   siteName,
+  siteSlug,
   accessKey,
 }: ContactFormBaseProps) {
   const { addToast } = useToast();
@@ -106,6 +108,7 @@ export function ContactFormBase({
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('event', 'contact_form_submit', {
           site_name: siteName,
+          site_slug: siteSlug,
           method: 'static_forms',
         });
       }
