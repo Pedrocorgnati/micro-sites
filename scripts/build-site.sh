@@ -32,6 +32,28 @@ SLUG=""
 
 for arg in "$@"; do
   case "$arg" in
+    --help|-h)
+      echo ""
+      echo "Uso: bash scripts/build-site.sh <slug> [flags]"
+      echo ""
+      echo "Builda um micro-site específico para exportação estática."
+      echo ""
+      echo "Argumentos:"
+      echo "  slug              Slug do site (ex: d01-calculadora-custo-site)"
+      echo ""
+      echo "Flags:"
+      echo "  --skip-og         Pula geração de OG image (mais rápido)"
+      echo "  --skip-validate   Pula validação do config.json"
+      echo "  -h, --help        Exibe esta mensagem"
+      echo ""
+      echo "Exemplos:"
+      echo "  bash scripts/build-site.sh d01-calculadora-custo-site"
+      echo "  bash scripts/build-site.sh c01-site-institucional-pme --skip-og"
+      echo "  bash scripts/build-site.sh a01-clinicas-estetica --skip-validate"
+      echo ""
+      echo "Output: dist/<slug>/"
+      echo ""
+      exit 0 ;;
     --skip-og)       SKIP_OG=true ;;
     --skip-validate) SKIP_VALIDATE=true ;;
     --*)             echo "Flag desconhecida: $arg" >&2; exit 1 ;;

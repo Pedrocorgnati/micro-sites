@@ -1,20 +1,20 @@
 {
   "slug": "d01-calculadora-custo-site",
-  "name": "Calculadora Custo Site",
+  "name": "Calculadora de Custo de Site",
   "category": "D",
   "accentColor": "#7C3AED",
   "wave": 1,
   "funnelStage": "consideration",
   "template": "calculator",
-  "hasBlog": false,
+  "hasBlog": true,
   "schema": ["Organization", "FAQPage"],
   "sectionOrder": "default",
-  "headline": "Calculadora Custo Site — Solução Digital",
-  "subheadline": "Ajudamos pequenas e médias empresas a crescer com presença digital de qualidade.",
+  "headline": "Quanto custa criar um site? Calcule agora, grátis.",
+  "subheadline": "Simulador baseado em dados reais do mercado brasileiro. Resultado em menos de 5 minutos.",
   "seo": {
-    "title": "Calculadora Custo Site — SystemForge Digital",
-    "description": "Descubra quanto custa criar seu site com nossa calculadora gratuita. Resultado em menos de 5 minutos.",
-    "keywords": ["custo site", "preço site", "quanto custa site"]
+    "title": "Calculadora de Custo de Site 2026 — Grátis",
+    "description": "Calcule o custo do seu site em menos de 5 minutos. Simulador gratuito com base em dados reais do mercado brasileiro.",
+    "keywords": ["custo site", "preço site", "quanto custa criar um site", "calculadora site"]
   },
   "cta": {
     "primaryLabel": "Ver Resultado Completo",

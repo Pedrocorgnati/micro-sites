@@ -58,3 +58,9 @@ node_modules/
 .next/
 out/
 .turbo/
+/dist/
+
+# Scripts de deploy — arquivos temporários
+/tmp/deploy-worktree-*
+/tmp/build-log-*.txt
+/tmp/micro-sites-*.lock

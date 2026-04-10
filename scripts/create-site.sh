@@ -37,10 +37,26 @@ log_error() { echo -e "${RED}[ERRO]${NC}  $1" >&2; }
 # Validação de argumento
 # ---------------------------------------------------------------------------
 
-if [[ $# -lt 1 ]]; then
-  log_error "Uso: bash scripts/create-site.sh <slug>"
-  log_error "Exemplo: bash scripts/create-site.sh d01-calculadora-custo-site"
-  exit 1
+if [[ $# -lt 1 ]] || [[ "$1" == "--help" ]] || [[ "$1" == "-h" ]]; then
+  echo ""
+  echo "Uso: bash scripts/create-site.sh <slug>"
+  echo ""
+  echo "Cria um novo micro-site em sites/<slug>/ a partir do _template."
+  echo ""
+  echo "Argumentos:"
+  echo "  slug    Formato: {a-f}{NN}-{descricao}"
+  echo "          Exemplos válidos: a01-clinicas-estetica, d03-diagnostico-presenca-digital"
+  echo ""
+  echo "Exemplos:"
+  echo "  bash scripts/create-site.sh d06-calculadora-roi"
+  echo "  bash scripts/create-site.sh a02-academia-crossfit"
+  echo "  bash scripts/create-site.sh c01-site-institucional-pme"
+  echo ""
+  echo "Categorias:"
+  echo "  A = Nicho Vertical  B = Dor/Problema  C = Solução"
+  echo "  D = Ferramentas     E = Waitlist       F = Blog"
+  echo ""
+  [[ $# -lt 1 ]] && exit 1 || exit 0
 fi
 
 SLUG="$1"
@@ -73,9 +89,9 @@ fi
 SITE_DIR="$SITES_DIR/$SLUG"
 
 if [[ -d "$SITE_DIR" ]]; then
-  log_error "Site já existe: $SITE_DIR"
-  log_error "Para recriar, remova a pasta manualmente: rm -rf sites/$SLUG"
-  exit 1
+  log_warn "Site '$SLUG' já existe em sites/$SLUG/. Abortando (use --force para sobrescrever)."
+  log_warn "Para recriar: rm -rf sites/$SLUG && bash scripts/create-site.sh $SLUG"
+  exit 0
 fi
 
 # ---------------------------------------------------------------------------

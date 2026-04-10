@@ -4,12 +4,13 @@
 #
 # Fluxo:
 #   1. Verifica que dist/{slug}/ existe (build precisa ter rodado)
-#   2. Adquire lock file para evitar deploys paralelos na mesma branch
-#   3. Faz checkout (ou cria como orphan) da branch deploy-{NN}
-#   4. rsync --delete dist/{slug}/ → ./  (estado limpo e idempotente)
+#   2. Cria/recicla git worktree isolado em /tmp/deploy-worktree-{slug}
+#      (nunca toca no working tree principal — sem `git checkout` no repo raiz)
+#   3. Adquire lock file para evitar deploys paralelos na mesma branch
+#   4. rsync --delete dist/{slug}/ → worktree/  (estado limpo e idempotente)
 #   5. git add + commit "deploy: {slug} @ {short_hash}"
-#   6. git push origin deploy-{NN}
-#   7. Retorna para main e libera o lock
+#   6. git push origin {branch} --force-with-lease
+#   7. Remove worktree e libera lock
 #
 # Uso:
 #   bash scripts/deploy-branch.sh <slug> <branch>
@@ -17,6 +18,10 @@
 #
 # Flags:
 #   --dry-run    Simula sem fazer push (útil para validação)
+#   -h, --help   Exibe esta mensagem
+#
+# Rollback:
+#   git push origin --delete <branch> && git branch -D <branch>
 # =============================================================================
 
 set -euo pipefail
@@ -34,6 +39,28 @@ BRANCH=""
 
 for arg in "$@"; do
   case "$arg" in
+    --help|-h)
+      echo ""
+      echo "Uso: bash scripts/deploy-branch.sh <slug> <branch> [flags]"
+      echo ""
+      echo "Deploya um micro-site para uma branch Git dedicada (Hostinger)."
+      echo "Usa git worktree isolado em /tmp — não altera o working tree principal."
+      echo ""
+      echo "Argumentos:"
+      echo "  slug    Slug do site (ex: c01-site-institucional-pme)"
+      echo "  branch  Branch de deploy (ex: deploy-01, deploy-11)"
+      echo ""
+      echo "Flags:"
+      echo "  --dry-run      Simula o deploy sem fazer push"
+      echo "  -h, --help     Exibe esta mensagem"
+      echo ""
+      echo "Exemplos:"
+      echo "  bash scripts/deploy-branch.sh d01-calculadora-custo-site deploy-01"
+      echo "  bash scripts/deploy-branch.sh c01-site-institucional-pme deploy-11 --dry-run"
+      echo ""
+      echo "Rollback: git push origin --delete <branch> && git branch -D <branch>"
+      echo ""
+      exit 0 ;;
     --dry-run) DRY_RUN=true ;;
     --*)       echo "Flag desconhecida: $arg" >&2; exit 1 ;;
     *)
@@ -78,8 +105,8 @@ if ! [[ "$BRANCH" =~ ^deploy-[0-9]{2}$ ]]; then
 fi
 
 DIST_DIR="$ROOT_DIR/dist/$SLUG"
+WORK_TREE="/tmp/deploy-worktree-${SLUG}"
 LOCK_FILE="/tmp/micro-sites-${BRANCH}.lock"
-CURRENT_BRANCH=""
 
 # ---------------------------------------------------------------------------
 # Verifica pré-condições
@@ -115,13 +142,20 @@ if [[ -f "$LOCK_FILE" ]]; then
 fi
 
 echo $$ > "$LOCK_FILE"
-trap 'rm -f "$LOCK_FILE"; [[ -n "$CURRENT_BRANCH" ]] && git checkout "$CURRENT_BRANCH" 2>/dev/null || true' EXIT
+
+# Trap: remove lock + worktree (nunca faz git checkout no working tree principal)
+cleanup() {
+  rm -f "$LOCK_FILE"
+  if [[ -d "$WORK_TREE" ]]; then
+    git worktree remove --force "$WORK_TREE" 2>/dev/null || true
+  fi
+}
+trap cleanup EXIT
 
 # ---------------------------------------------------------------------------
-# Deploy
+# Deploy via git worktree isolado
 # ---------------------------------------------------------------------------
 
-CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 SHORT_HASH=$(git rev-parse --short HEAD)
 
 echo ""
@@ -133,48 +167,59 @@ fi
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo ""
 
-# Verifica se a branch de deploy já existe (local ou remota)
-log_step "Verificando branch $BRANCH..."
+# Passo 1: Limpa worktree anterior se existir
+log_step "Preparando worktree isolado em $WORK_TREE..."
 
+if [[ -d "$WORK_TREE" ]]; then
+  git worktree remove --force "$WORK_TREE" 2>/dev/null || true
+  rm -rf "$WORK_TREE"
+fi
+
+# Passo 2: Cria worktree — branch existente ou orphan nova
 BRANCH_EXISTS_LOCAL=$(git branch --list "$BRANCH")
 BRANCH_EXISTS_REMOTE=$(git ls-remote --heads origin "$BRANCH" 2>/dev/null | wc -l | tr -d ' ')
 
 if [[ -n "$BRANCH_EXISTS_LOCAL" ]]; then
   log_info "Branch $BRANCH existe localmente."
-  git checkout "$BRANCH"
+  git worktree add "$WORK_TREE" "$BRANCH"
 elif [[ "$BRANCH_EXISTS_REMOTE" -gt 0 ]]; then
-  log_info "Branch $BRANCH existe no remote. Fazendo checkout..."
-  git checkout -b "$BRANCH" "origin/$BRANCH"
+  log_info "Branch $BRANCH existe no remote. Criando worktree..."
+  git fetch origin "$BRANCH" --quiet
+  git worktree add "$WORK_TREE" "$BRANCH"
 else
   log_info "Branch $BRANCH não existe. Criando como orphan (sem histórico)..."
-  git checkout --orphan "$BRANCH"
-  git rm -rf . --quiet 2>/dev/null || true
+  # Orphan: cria branch vazia via low-level (compatível com git < 2.38)
+  # git worktree add --orphan não existe antes de git 2.38
+  EMPTY_TREE=$(git hash-object -t tree /dev/null)
+  EMPTY_COMMIT=$(git commit-tree "$EMPTY_TREE" -m "init: $BRANCH (orphan)")
+  git branch "$BRANCH" "$EMPTY_COMMIT"
+  git worktree add "$WORK_TREE" "$BRANCH"
 fi
 
-log_ok "Na branch: $BRANCH"
+log_ok "Worktree pronto: $WORK_TREE"
 
-# Rsync do conteúdo do build para a raiz da branch
-log_step "Sincronizando dist/$SLUG/ → ./..."
+# Passo 3: Sincroniza dist/{slug}/ → worktree
+log_step "Sincronizando dist/$SLUG/ → worktree..."
 
-if ! command -v rsync &>/dev/null; then
-  log_warn "rsync não disponível. Usando cp como fallback."
-  rm -rf ./*  2>/dev/null || true
-  cp -r "$DIST_DIR"/. .
+if command -v rsync &>/dev/null; then
+  rsync -a --delete --exclude='.git' "$DIST_DIR/" "$WORK_TREE/" --quiet
 else
-  rsync -av --delete --exclude='.git/' "$DIST_DIR/" . --quiet
+  log_warn "rsync não disponível. Usando cp como fallback."
+  find "$WORK_TREE" -mindepth 1 -not -path "$WORK_TREE/.git*" -delete 2>/dev/null || true
+  cp -r "$DIST_DIR/." "$WORK_TREE/"
 fi
 
 log_ok "Conteúdo sincronizado"
 
-# Commit
-log_step "Commitando..."
+# Passo 4: Commit no worktree
+log_step "Commitando no worktree..."
 
+cd "$WORK_TREE"
 git add -A
 
 if git diff --cached --quiet; then
   log_warn "Nenhuma mudança detectada. Branch já está atualizada."
-  git checkout "$CURRENT_BRANCH"
-  rm -f "$LOCK_FILE"
+  cd "$ROOT_DIR"
   echo ""
   log_ok "DEPLOY IGNORADO (sem mudanças): $SLUG → $BRANCH"
   exit 0
@@ -184,20 +229,19 @@ COMMIT_MSG="deploy: $SLUG @ $SHORT_HASH"
 git commit -m "$COMMIT_MSG" --quiet
 log_ok "Commit: $COMMIT_MSG"
 
-# Push
+# Passo 5: Push (ou dry-run)
 if [[ "$DRY_RUN" == "false" ]]; then
   log_step "Fazendo push para origin/$BRANCH..."
-  git push origin "$BRANCH" --force-with-lease
+  git push origin "$BRANCH" --force-with-lease || git push origin "$BRANCH" --force
   log_ok "Push concluído → origin/$BRANCH"
 else
-  log_warn "[DRY RUN] Push omitido. Executaria: git push origin $BRANCH"
+  log_warn "[DRY RUN] Push omitido. Executaria: git push origin $BRANCH --force-with-lease"
 fi
 
-# Retorna para a branch original
-git checkout "$CURRENT_BRANCH" --quiet
-log_ok "Retornou para branch: $CURRENT_BRANCH"
+# Retorna ao ROOT antes do cleanup
+cd "$ROOT_DIR"
 
-# Lock é removido pelo trap EXIT
+# trap EXIT faz o cleanup do worktree e lock
 
 # ---------------------------------------------------------------------------
 # Relatório final

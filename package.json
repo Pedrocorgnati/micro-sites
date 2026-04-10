@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "build:site": "bash scripts/build-site.sh",
     "generate-og": "tsx scripts/generate-og.ts",
     "build:analyze": "ANALYZE=true next build",
     "test": "vitest run",
