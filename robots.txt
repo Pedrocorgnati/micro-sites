@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow: /obrigado
+
+Sitemap: https://example.com/sitemap.xml

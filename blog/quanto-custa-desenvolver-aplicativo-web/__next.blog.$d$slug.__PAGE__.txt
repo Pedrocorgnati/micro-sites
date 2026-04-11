@@ -1,0 +1,97 @@
+1:"$Sreact.fragment"
+2:I[6197,["/_next/static/chunks/0x~qyvhzfx0nt.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0imj62bfbmw-f.js","/_next/static/chunks/0acm~yisauz3m.js"],"Header"]
+3:I[22016,["/_next/static/chunks/0x~qyvhzfx0nt.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0imj62bfbmw-f.js","/_next/static/chunks/0acm~yisauz3m.js"],""]
+c:I[44971,["/_next/static/chunks/0x~qyvhzfx0nt.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0imj62bfbmw-f.js","/_next/static/chunks/0acm~yisauz3m.js"],"WhatsAppButton"]
+d:I[97367,["/_next/static/chunks/0x~qyvhzfx0nt.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0imj62bfbmw-f.js"],"OutletBoundary"]
+e:"$Sreact.suspense"
+4:Ta15,<h2>Resposta direta: de R$ 5.000 a R$ 150.000</h2>
+<p>O custo de um aplicativo web varia principalmente pela <strong>complexidade dos módulos</strong> e <strong>quantidade de integrações</strong>. Veja a tabela:</p>
+<table>
+<thead>
+<tr>
+<th>Tipo de sistema</th>
+<th>Escopo</th>
+<th>Prazo</th>
+<th>Custo estimado</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Sistema simples (1-2 módulos)</td>
+<td>Cadastro + listagem + dashboard básico</td>
+<td>4-6 semanas</td>
+<td>R$ 5.000 - R$ 15.000</td>
+</tr>
+<tr>
+<td>Sistema médio (3-5 módulos)</td>
+<td>Gestão, financeiro, relatórios</td>
+<td>8-12 semanas</td>
+<td>R$ 15.000 - R$ 45.000</td>
+</tr>
+<tr>
+<td>Sistema complexo (6+ módulos)</td>
+<td>ERP, CRM, integrações múltiplas</td>
+<td>16-24 semanas</td>
+<td>R$ 45.000 - R$ 150.000</td>
+</tr>
+</tbody></table>
+<h2>O que define o preço?</h2>
+<ol>
+<li><strong>Quantidade de módulos</strong> — cada tela, fluxo e funcionalidade tem custo de design + desenvolvimento + testes</li>
+<li><strong>Autenticação e permissões</strong> — sistema com múltiplos perfis de usuário é mais complexo</li>
+<li><strong>Integrações externas</strong> — conectar com WhatsApp, ERP, gateway de pagamento, ERP legacy</li>
+<li><strong>Volume de dados</strong> — sistemas com grandes volumes precisam de banco otimizado e infraestrutura mais robusta</li>
+<li><strong>Quem desenvolve</strong> — freelancer (mais barato, mais risco), agência (preço médio), fábrica especializada (mais estrutura)</li>
+</ol>
+<h2>Freelancer vs Agência vs Fábrica de Software</h2>
+<table>
+<thead>
+<tr>
+<th>Critério</th>
+<th>Freelancer</th>
+<th>Agência</th>
+<th>Fábrica especializada</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Custo</td>
+<td>Menor</td>
+<td>Médio</td>
+<td>Médio-alto</td>
+</tr>
+<tr>
+<td>Risco de abandono</td>
+<td>Alto</td>
+<td>Baixo</td>
+<td>Baixo</td>
+</tr>
+<tr>
+<td>Documentação</td>
+<td>Raramente</td>
+<td>Às vezes</td>
+<td>Sempre</td>
+</tr>
+<tr>
+<td>Suporte pós-entrega</td>
+<td>Variável</td>
+<td>Sim</td>
+<td>Sim, com SLA</td>
+</tr>
+<tr>
+<td>Escalabilidade</td>
+<td>Limitada</td>
+<td>Média</td>
+<td>Alta</td>
+</tr>
+</tbody></table>
+<h2>O que a SystemForge entrega</h2>
+<p>Desenvolvemos aplicativos web com arquitetura escalável, documentação técnica, autenticação robusta e suporte pós-entrega. Nosso processo começa com um briefing técnico gratuito onde mapeamos seus requisitos e apresentamos uma proposta detalhada com escopo e prazo.</p>
+<p><a href="/contato">Solicite um orçamento sem compromisso</a> — a conversa é grátis e já sai com clareza do que precisa.</p>
+0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"style":{"--color-accent":"#059669","--color-accent-hover":"#047857","--color-on-accent":"#FFFFFF","--color-secondary":"#6EE7B7","--color-on-secondary":"#064E3B"},"children":[["$","$L2",null,{"siteName":"SystemForge Digital","ctaLabel":"Quero um Aplicativo Web para Minha Empresa","ctaHref":"/contato"}],["$","main",null,{"id":"main-content","data-testid":"main-content","tabIndex":-1,"style":{"backgroundColor":"var(--color-background)"},"children":["$","article",null,{"data-testid":"blog-article","className":"max-w-[1200px] mx-auto px-4 py-12","children":[["$","nav",null,{"data-testid":"breadcrumbs","aria-label":"Navegação estrutural","children":["$","ol",null,{"className":"flex flex-wrap items-center gap-1 text-sm","children":[["$","li","0",{"className":"flex items-center gap-1","children":[false,["$","$L3",null,{"href":"/blog","className":"transition-colors duration-150 hover:underline","style":{"color":"var(--color-text-muted)"},"children":"Blog"}]]}],["$","li","1",{"className":"flex items-center gap-1","children":[["$","span",null,{"aria-hidden":"true","style":{"color":"var(--color-text-muted)"},"children":"/"}],["$","span",null,{"aria-current":"page","style":{"color":"var(--color-text-primary)"},"children":"Quanto custa desenvolver um aplicativo web em 2026?"}]]}]]}]}],["$","div",null,{"className":"mt-6 flex flex-col lg:flex-row gap-10","children":[["$","div",null,{"className":"flex-1 min-w-0","children":[["$","div",null,{"className":"flex flex-wrap gap-2 mb-4","children":[["$","span","custo app web",{"className":"text-xs font-medium px-2 py-0.5 rounded-full","style":{"backgroundColor":"var(--color-muted)","color":"var(--color-accent)"},"children":"custo app web"}],["$","span","desenvolvimento web",{"className":"text-xs font-medium px-2 py-0.5 rounded-full","style":{"backgroundColor":"var(--color-muted)","color":"var(--color-accent)"},"children":"desenvolvimento web"}],["$","span","orçamento sistema",{"className":"text-xs font-medium px-2 py-0.5 rounded-full","style":{"backgroundColor":"var(--color-muted)","color":"var(--color-accent)"},"children":"orçamento sistema"}]]}],["$","h1",null,{"className":"text-2xl md:text-4xl font-bold mb-4 leading-tight","style":{"fontFamily":"var(--font-heading)","color":"var(--color-text-primary)"},"children":"Quanto custa desenvolver um aplicativo web em 2026?"}],["$","div",null,{"className":"flex flex-wrap items-center gap-3 text-sm mb-8 pb-6 border-b","style":{"color":"var(--color-text-muted)","borderColor":"var(--color-border)"},"children":[["$","time",null,{"dateTime":"2026-03-20","children":"20 de março de 2026"}],["$","span",null,{"children":["· ","Equipe SystemForge"]}],["$","span",null,{"children":["· ",6," min de leitura"]}]]}],["$","div",null,{"className":"prose","dangerouslySetInnerHTML":{"__html":"$4"}}],"$L5","$L6"]}],"$L7"]}]]}]}],"$L8","$L9"]}],["$La"],"$Lb"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"2HwuNUY7P7ySaav1fAaEo"}
+5:["$","div",null,{"className":"mt-12 p-6 rounded-xl border","style":{"backgroundColor":"var(--color-muted)","borderColor":"var(--color-border)"},"children":[["$","p",null,{"className":"text-base font-semibold mb-3","style":{"fontFamily":"var(--font-heading)","color":"var(--color-text-primary)"},"children":"Gostou do conteúdo? Podemos ajudar o seu negócio."}],["$","div",null,{"className":"flex flex-col sm:flex-row gap-3","children":[["$","$L3",null,{"data-testid":"blog-article-inline-cta-contact","href":"/contato","className":"inline-flex items-center justify-center px-6 py-3 min-h-[44px] rounded-lg font-semibold text-sm text-white transition-all duration-150 active:scale-95","style":{"backgroundColor":"var(--color-accent)"},"children":"Entrar em contato"}],["$","a",null,{"data-testid":"blog-article-inline-cta-whatsapp","href":"https://wa.me/5511999999999?text=Ol%C3%A1!%20Preciso%20desenvolver%20um%20aplicativo%20web%20para%20minha%20empresa%20e%20vim%20pelo%20site%20da%20SystemForge.","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center justify-center px-6 py-3 min-h-[44px] rounded-lg font-semibold text-sm border-2 transition-all duration-150 active:scale-95","style":{"color":"#25D366","borderColor":"#25D366"},"children":"Falar no WhatsApp"}]]}]]}]
+6:["$","div",null,{"className":"mt-10 lg:hidden","children":[["$","h2",null,{"className":"text-lg font-semibold mb-4","style":{"fontFamily":"var(--font-heading)","color":"var(--color-text-primary)"},"children":"Artigos relacionados"}],["$","div",null,{"className":"flex flex-col gap-3","children":[["$","$L3","app-web-vs-app-mobile-qual-escolher",{"href":"/blog/app-web-vs-app-mobile-qual-escolher","className":"text-sm font-medium transition-colors duration-150","style":{"color":"var(--color-accent)"},"children":["App web ou app mobile: qual a diferença e quando usar?"," →"]}]]}]]}]
+7:["$","aside",null,{"data-testid":"blog-article-sidebar","className":"hidden lg:block w-72 shrink-0","children":["$","div",null,{"className":"sticky top-6 flex flex-col gap-6","children":[["$","div",null,{"className":"p-6 rounded-xl border","style":{"backgroundColor":"var(--color-muted)","borderColor":"var(--color-border)"},"children":[["$","p",null,{"className":"text-base font-semibold mb-2","style":{"fontFamily":"var(--font-heading)","color":"var(--color-text-primary)"},"children":"Precisa de ajuda?"}],["$","p",null,{"className":"text-sm mb-4","style":{"color":"var(--color-text-secondary)"},"children":["Criamos aplicativos web sob medida para automatizar processos, melhorar a produt","…"]}],["$","$L3",null,{"href":"/contato","className":"block text-center px-4 py-3 min-h-[44px] rounded-lg font-semibold text-sm text-white transition-all duration-150 active:scale-95","style":{"backgroundColor":"var(--color-accent)"},"children":"Quero um Aplicativo Web para Minha Empresa"}]]}],["$","div",null,{"children":[["$","h2",null,{"className":"text-sm font-semibold mb-3","style":{"fontFamily":"var(--font-heading)","color":"var(--color-text-primary)"},"children":"Artigos relacionados"}],["$","div",null,{"className":"flex flex-col gap-2","children":[["$","$L3","app-web-vs-app-mobile-qual-escolher",{"href":"/blog/app-web-vs-app-mobile-qual-escolher","className":"text-sm transition-colors duration-150","style":{"color":"var(--color-accent)"},"children":["App web ou app mobile: qual a diferença e quando usar?"," →"]}]]}]]}]]}]}]
+8:["$","footer",null,{"data-testid":"footer","className":"border-t bg-[#1F2937] py-8","style":{"borderColor":"var(--color-border)"},"children":["$","div",null,{"className":"max-w-[1200px] mx-auto px-4","children":["$","div",null,{"className":"flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4","children":[["$","p",null,{"data-testid":"footer-copyright","className":"text-sm","style":{"color":"#9CA3AF"},"children":["© ",2026," ","SystemForge Digital",".",[" ","Desenvolvido por"," ",["$","a",null,{"href":"https://systemforge.com.br","target":"_blank","rel":"noopener noreferrer","className":"hover:text-white transition-colors duration-150","style":{"color":"#9CA3AF"},"children":"SystemForge"}]]]}],["$","nav",null,{"data-testid":"footer-nav","aria-label":"Links do rodapé","children":["$","ul",null,{"className":"flex flex-wrap items-center gap-4","children":[["$","li",null,{"children":["$","$L3",null,{"data-testid":"footer-privacy-link","href":"/privacidade","className":"text-sm transition-colors duration-150 hover:text-white","style":{"color":"#9CA3AF"},"children":"Política de Privacidade"}]}],[["$","li","/blog",{"children":["$","$L3",null,{"href":"/blog","className":"text-sm transition-colors duration-150 hover:text-white","style":{"color":"#9CA3AF"},"children":"Blog"}]}],["$","li","/faq",{"children":["$","$L3",null,{"href":"/faq","className":"text-sm transition-colors duration-150 hover:text-white","style":{"color":"#9CA3AF"},"children":"FAQ"}]}]]]}]}]]}]}]}]
+9:["$","$Lc",null,{"phone":"5511999999999","message":"Olá! Preciso desenvolver um aplicativo web para minha empresa e vim pelo site da SystemForge."}]
+a:["$","script","script-0",{"src":"/_next/static/chunks/0acm~yisauz3m.js","async":true}]
+b:["$","$Ld",null,{"children":["$","$e",null,{"name":"Next.MetadataOutlet","children":"$@f"}]}]
+f:null
