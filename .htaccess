@@ -1,0 +1,28 @@
+# Headers de segurança — gerado por build-site.sh
+
+# Prevenir clickjacking
+Header set X-Frame-Options "SAMEORIGIN"
+
+# Prevenir MIME type sniffing
+Header set X-Content-Type-Options "nosniff"
+
+# Referrer policy
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+# Permissions policy (desabilitar features desnecessárias)
+Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+
+# Cache para assets estáticos (JS, CSS, imagens, fontes hasheadas pelo Next.js)
+<FilesMatch "\.(js|css|png|jpg|jpeg|svg|woff2|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+
+# Cache para HTML (curto para permitir atualizações)
+<FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=3600"
+</FilesMatch>
+
+# Redirecionar para HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
