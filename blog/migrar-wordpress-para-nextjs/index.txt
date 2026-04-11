@@ -1,0 +1,182 @@
+1:"$Sreact.fragment"
+2:I[88840,["/_next/static/chunks/0x~qyvhzfx0nt.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0imj62bfbmw-f.js"],"ToastProvider"]
+3:I[39756,["/_next/static/chunks/0x~qyvhzfx0nt.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0imj62bfbmw-f.js"],"default"]
+4:I[58298,["/_next/static/chunks/0x~qyvhzfx0nt.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0imj62bfbmw-f.js","/_next/static/chunks/0e-zd0tv_3-f5.js"],"default"]
+5:I[37457,["/_next/static/chunks/0x~qyvhzfx0nt.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0imj62bfbmw-f.js"],"default"]
+6:I[22016,["/_next/static/chunks/0x~qyvhzfx0nt.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0imj62bfbmw-f.js","/_next/static/chunks/0acm~yisauz3m.js"],""]
+7:I[69087,["/_next/static/chunks/0x~qyvhzfx0nt.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0imj62bfbmw-f.js"],"CookieConsent"]
+9:I[97367,["/_next/static/chunks/0x~qyvhzfx0nt.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0imj62bfbmw-f.js"],"OutletBoundary"]
+a:"$Sreact.suspense"
+d:I[97367,["/_next/static/chunks/0x~qyvhzfx0nt.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0imj62bfbmw-f.js"],"ViewportBoundary"]
+f:I[97367,["/_next/static/chunks/0x~qyvhzfx0nt.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0imj62bfbmw-f.js"],"MetadataBoundary"]
+11:I[68027,["/_next/static/chunks/0x~qyvhzfx0nt.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0imj62bfbmw-f.js"],"default",1]
+:HL["/_next/static/chunks/05-whwrn9j9dd.css","style"]
+:HL["/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/fba5a26ea33df6a3-s.p.0eehd8tgys7nv.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"c":["","blog","migrar-wordpress-para-nextjs",""],"q":"","i":false,"f":[[["",{"children":["blog",{"children":[["slug","migrar-wordpress-para-nextjs","d",null],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/05-whwrn9j9dd.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/0x~qyvhzfx0nt.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0d3shmwh5_nmn.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/_next/static/chunks/0imj62bfbmw-f.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"pt-BR","data-category":"F","className":"inter_7b064e0d-module__MOT0tq__variable plus_jakarta_sans_2f34c5d8-module__elNu7G__variable h-full","children":["$","body",null,{"className":"min-h-full flex flex-col antialiased","style":{"backgroundColor":"var(--color-background)","color":"var(--color-text-primary)"},"children":[["$","a",null,{"href":"#main-content","className":"sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:rounded focus:text-white focus:text-sm focus:font-medium","style":{"backgroundColor":"var(--color-accent)"},"children":"Pular para o conteúdo"}],["$","$L2",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$4","errorStyles":[],"errorScripts":[["$","script","script-0",{"src":"/_next/static/chunks/0e-zd0tv_3-f5.js","async":true}]],"template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","main",null,{"className":"flex flex-col items-center justify-center min-h-[60vh] px-4 py-24 text-center","style":{"backgroundColor":"var(--color-background)"},"children":[["$","p",null,{"className":"text-7xl font-extrabold mb-4","style":{"fontFamily":"var(--font-heading)","color":"var(--color-accent)"},"aria-hidden":"true","children":"404"}],["$","h1",null,{"className":"text-2xl font-bold mb-3","style":{"fontFamily":"var(--font-heading)","color":"var(--color-text-primary)"},"children":"Página não encontrada"}],["$","p",null,{"className":"text-base mb-8 max-w-sm","style":{"color":"var(--color-text-secondary)"},"children":"A página que você está procurando não existe ou foi movida."}],["$","div",null,{"className":"flex flex-col sm:flex-row gap-4","children":[["$","$L6",null,{"href":"/","className":"inline-flex items-center justify-center px-6 py-3 min-h-[44px] rounded-lg font-semibold text-sm text-white transition-all duration-150 active:scale-95","style":{"backgroundColor":"var(--color-accent)"},"children":"Voltar ao Início"}],["$","$L6",null,{"href":"/contato","className":"inline-flex items-center justify-center px-6 py-3 min-h-[44px] rounded-lg font-semibold text-sm border-2 transition-all duration-150 active:scale-95","style":{"color":"var(--color-accent)","borderColor":"var(--color-accent)"},"children":["Falar com ","SystemForge Digital"]}]]}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","$L7",null,{}],"$undefined","$undefined",false]}]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L8",[["$","script","script-0",{"src":"/_next/static/chunks/0acm~yisauz3m.js","async":true,"nonce":"$undefined"}]],["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]]}],{},null,false,null]},null,false,"$@c"]},null,false,"$@c"]},null,false,null],["$","$1","h",{"children":[null,["$","$Ld",null,{"children":"$Le"}],["$","div",null,{"hidden":true,"children":["$","$Lf",null,{"children":["$","$a",null,{"name":"Next.Metadata","children":"$L10"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],false]],"m":"$undefined","G":["$11",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/05-whwrn9j9dd.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"tniAGuC4MP1U_7bX2Zsk6"}
+12:[]
+c:"$W12"
+13:I[6197,["/_next/static/chunks/0x~qyvhzfx0nt.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0imj62bfbmw-f.js","/_next/static/chunks/0acm~yisauz3m.js"],"Header"]
+14:T21de,<h1>Como Migrar do WordPress para Next.js Sem Perder SEO</h1>
+<p><strong>Resposta direta:</strong> é possível migrar WordPress para Next.js sem perder posicionamento no Google, desde que você mantenha as mesmas URLs (ou implemente redirects 301 corretos), preserva todos os metadados e recria o sitemap corretamente. O processo leva de 2 a 6 semanas dependendo do volume de conteúdo.</p>
+<hr>
+<h2>Por Que Migrar do WordPress para Next.js?</h2>
+<p>Os motivos mais comuns que levam empresas a migrar:</p>
+<ul>
+<li><strong>PageSpeed mobile abaixo de 65</strong> mesmo após otimizações no WordPress</li>
+<li><strong>Custo de hosting gerenciado premium</strong> (Kinsta, WP Engine) acima de R$ 500/mês</li>
+<li><strong>Vulnerabilidades de segurança</strong> recorrentes via plugins desatualizados</li>
+<li><strong>Integrações bloqueadas</strong> que não encontram plugin adequado</li>
+<li><strong>Dependência técnica</strong> de um único desenvolvedor WordPress</li>
+</ul>
+<hr>
+<h2>O Que Pode Dar Errado (e Como Evitar)</h2>
+<p>Antes do passo a passo, os erros que destroem posicionamento:</p>
+<h3>1. URLs Mudaram Sem Redirect 301</h3>
+<p><strong>O problema:</strong> o Google indexou <code>seusite.com/blog/meu-artigo/</code>. Se no Next.js a URL virar <code>seusite.com/blog/meu-artigo</code> (sem barra final), ou <code>seusite.com/artigos/meu-artigo</code>, o Google trata como nova página e a antiga some.</p>
+<p><strong>A solução:</strong> mapeie cada URL antiga e implemente redirect 301 no <code>next.config.js</code> ou no servidor. Mantenha os redirects por pelo menos 12 meses.</p>
+<h3>2. Metadados Perdidos</h3>
+<p>Títulos, meta descriptions e Open Graph que existiam via YOAST precisam ser recriados em cada página Next.js usando <code>generateMetadata</code>.</p>
+<h3>3. Imagens Sem Alt Text</h3>
+<p>O WordPress pode ter imagens sem alt text. Na migração, é o momento de corrigir — mas manter os alts existentes para não criar mudanças desnecessárias.</p>
+<h3>4. Sitemap Incorreto</h3>
+<p>O WordPress gera sitemap automático. O Next.js precisa que você implemente (manualmente ou via <code>next-sitemap</code>). Um sitemap incorreto atrasa a re-indexação em semanas.</p>
+<hr>
+<h2>Passo a Passo da Migração</h2>
+<h3>Fase 1: Auditoria Pre-Migração (3–5 dias)</h3>
+<p><strong>1.1. Exportar inventário completo do WordPress</strong></p>
+<pre><code class="language-bash"># Via WP-CLI
+wp post list --post_type=post --post_status=publish --format=csv &gt; posts.csv
+wp post list --post_type=page --post_status=publish --format=csv &gt; pages.csv
+</code></pre>
+<p>Documente: total de posts, páginas, categorias, tags, imagens em <code>/wp-content/uploads/</code>.</p>
+<p><strong>1.2. Mapear todas as URLs indexadas</strong></p>
+<p>Use Google Search Console → Performance → Páginas para listar todas as URLs indexadas pelo Google. Exporte para CSV. Essas são as URLs que PRECISAM continuar funcionando.</p>
+<p><strong>1.3. Registrar backlinks de alta autoridade</strong></p>
+<p>Use Ahrefs ou Semrush para exportar os 50 backlinks mais importantes. As URLs de destino desses links são prioritárias para preservar.</p>
+<p><strong>1.4. Baseline de métricas</strong></p>
+<p>Documente antes da migração:</p>
+<ul>
+<li>Número de palavras-chave ranqueando (Search Console)</li>
+<li>Tráfego orgânico mensal</li>
+<li>Posição média das 20 principais palavras-chave</li>
+</ul>
+<h3>Fase 2: Exportação do Conteúdo WordPress (1–2 dias)</h3>
+<p><strong>2.1. Exportar via REST API</strong></p>
+<pre><code class="language-javascript">// Exportar todos os posts em JSON
+const response = await fetch(&#39;https://seuwordpress.com/wp-json/wp/v2/posts?per_page=100&amp;_fields=id,slug,title,content,excerpt,date,categories,tags,yoast_head_json&#39;);
+const posts = await response.json();
+</code></pre>
+<p><strong>2.2. Baixar todas as imagens</strong></p>
+<pre><code class="language-bash"># Sincronizar uploads do WordPress localmente
+rsync -avz usuario@servidor:/var/www/html/wp-content/uploads/ ./public/uploads/
+</code></pre>
+<p><strong>2.3. Exportar categorias e tags</strong></p>
+<pre><code class="language-javascript">const categories = await fetch(&#39;https://seuwordpress.com/wp-json/wp/v2/categories?per_page=100&#39;).then(r =&gt; r.json());
+const tags = await fetch(&#39;https://seuwordpress.com/wp-json/wp/v2/tags?per_page=100&#39;).then(r =&gt; r.json());
+</code></pre>
+<h3>Fase 3: Estrutura Next.js (3–7 dias)</h3>
+<p><strong>3.1. Preservar estrutura de URLs</strong></p>
+<p>Se o WordPress usava <code>/blog/{slug}/</code>, configure o Next.js da mesma forma:</p>
+<pre><code>app/
+  blog/
+    [slug]/
+      page.tsx
+</code></pre>
+<p>Se precisar mudar a estrutura, implemente redirects em <code>next.config.js</code>:</p>
+<pre><code class="language-javascript">// next.config.js
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: &#39;/antigo-caminho/:slug&#39;,
+        destination: &#39;/novo-caminho/:slug&#39;,
+        permanent: true, // 301
+      },
+    ];
+  },
+};
+</code></pre>
+<p><strong>3.2. Recriar metadados com generateMetadata</strong></p>
+<pre><code class="language-typescript">// app/blog/[slug]/page.tsx
+export async function generateMetadata({ params }: Props): Promise&lt;Metadata&gt; {
+  const post = await getPost(params.slug);
+  
+  return {
+    title: post.yoast_title || post.title.rendered,
+    description: post.yoast_description || post.excerpt.rendered.replace(/&lt;[^&gt;]+&gt;/g, &#39;&#39;),
+    openGraph: {
+      title: post.yoast_og_title,
+      description: post.yoast_og_description,
+      images: [post.featured_image_url],
+    },
+  };
+}
+</code></pre>
+<p><strong>3.3. Implementar Schema.org</strong></p>
+<pre><code class="language-typescript">// Dados estruturados para artigo de blog
+const articleSchema = {
+  &#39;@context&#39;: &#39;https://schema.org&#39;,
+  &#39;@type&#39;: &#39;Article&#39;,
+  headline: post.title,
+  datePublished: post.date,
+  author: { &#39;@type&#39;: &#39;Person&#39;, name: post.author_name },
+  publisher: {
+    &#39;@type&#39;: &#39;Organization&#39;,
+    name: &#39;SystemForge Digital&#39;,
+    logo: { &#39;@type&#39;: &#39;ImageObject&#39;, url: &#39;https://seusite.com/logo.png&#39; },
+  },
+};
+</code></pre>
+<h3>Fase 4: Sitemap e Robots (1 dia)</h3>
+<p><strong>4.1. Instalar next-sitemap</strong></p>
+<pre><code class="language-bash">npm install next-sitemap
+</code></pre>
+<pre><code class="language-javascript">// next-sitemap.config.js
+module.exports = {
+  siteUrl: &#39;https://seusite.com.br&#39;,
+  generateRobotsTxt: true,
+  changefreq: &#39;weekly&#39;,
+  priority: 0.7,
+  sitemapSize: 5000,
+};
+</code></pre>
+<p><strong>4.2. Submeter sitemap no Search Console</strong></p>
+<p>Após o lançamento, acesse Search Console → Sitemaps e submeta <code>https://seusite.com.br/sitemap.xml</code>.</p>
+<h3>Fase 5: Lançamento (1–2 dias)</h3>
+<p><strong>Checklist pré-lançamento:</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> Todas as URLs do inventário testadas e respondendo 200</li>
+<li><input disabled="" type="checkbox"> Todos os redirects 301 testados</li>
+<li><input disabled="" type="checkbox"> Sitemap.xml acessível e válido</li>
+<li><input disabled="" type="checkbox"> Robots.txt não bloqueando crawlers</li>
+<li><input disabled="" type="checkbox"> SSL ativo (HTTPS) e certificado válido</li>
+<li><input disabled="" type="checkbox"> Google Analytics/GTM configurado</li>
+<li><input disabled="" type="checkbox"> Search Console verificado no novo site</li>
+</ul>
+<p><strong>Lançamento gradual recomendado:</strong></p>
+<p>Se o site tem alto tráfego, considere lançar primeiro em staging com <code>.htpasswd</code> para auditoria interna antes de apontar o DNS.</p>
+<h3>Fase 6: Monitoramento Pós-Migração (30–90 dias)</h3>
+<p><strong>Semana 1:</strong> monitore Search Console diariamente. Erros 404 aparecerão — corrija imediatamente.
+<strong>Semana 2–4:</strong> acompanhe impressões e cliques. É normal uma queda leve seguida de recuperação.
+<strong>Mês 2–3:</strong> as métricas devem igualar ou superar o período pré-migração.</p>
+<hr>
+<h2>Resultado Esperado</h2>
+<p>Com migração bem executada:</p>
+<ul>
+<li><strong>PageSpeed mobile:</strong> 45–65 (WordPress) → 90–99 (Next.js)</li>
+<li><strong>Tráfego orgânico:</strong> manutenção nos primeiros 60 dias, crescimento a partir do mês 3</li>
+<li><strong>Custo operacional:</strong> redução de 60–80% (Vercel Free vs hosting gerenciado)</li>
+</ul>
+<p><strong>Fazemos migrações WordPress → Next.js com garantia de posicionamento.</strong> Entre em contato para avaliação do seu site.</p>
+8:["$","div",null,{"style":{"--color-accent":"#1E40AF","--color-accent-hover":"#1E3A8A","--color-on-accent":"#FFFFFF","--color-secondary":"#93C5FD","--color-on-secondary":"#1E3A8A"},"children":[["$","$L13",null,{"siteName":"SystemForge Digital","ctaLabel":"Falar com um Especialista","ctaHref":"/contato"}],["$","main",null,{"id":"main-content","data-testid":"main-content","tabIndex":-1,"style":{"backgroundColor":"var(--color-background)"},"children":["$","article",null,{"data-testid":"blog-article","className":"max-w-[1200px] mx-auto px-4 py-12","children":[["$","nav",null,{"data-testid":"breadcrumbs","aria-label":"Navegação estrutural","className":"$undefined","children":["$","ol",null,{"className":"flex flex-wrap items-center gap-1 text-sm","children":[["$","li","0",{"className":"flex items-center gap-1","children":[false,["$","$L6",null,{"href":"/blog","className":"transition-colors duration-150 hover:underline","style":{"color":"var(--color-text-muted)"},"children":"Blog"}]]}],["$","li","1",{"className":"flex items-center gap-1","children":[["$","span",null,{"aria-hidden":"true","style":{"color":"var(--color-text-muted)"},"children":"/"}],["$","span",null,{"aria-current":"page","style":{"color":"var(--color-text-primary)"},"children":"Como Migrar do WordPress para Next.js Sem Perder SEO"}]]}]]}]}],["$","div",null,{"className":"mt-6 flex flex-col lg:flex-row gap-10","children":[["$","div",null,{"className":"flex-1 min-w-0","children":[["$","div",null,{"className":"flex flex-wrap gap-2 mb-4","children":[["$","span","migrar WordPress Next.js",{"className":"text-xs font-medium px-2 py-0.5 rounded-full","style":{"backgroundColor":"var(--color-muted)","color":"var(--color-accent)"},"children":"migrar WordPress Next.js"}],["$","span","WordPress para Next.js",{"className":"text-xs font-medium px-2 py-0.5 rounded-full","style":{"backgroundColor":"var(--color-muted)","color":"var(--color-accent)"},"children":"WordPress para Next.js"}],["$","span","migração site SEO",{"className":"text-xs font-medium px-2 py-0.5 rounded-full","style":{"backgroundColor":"var(--color-muted)","color":"var(--color-accent)"},"children":"migração site SEO"}],["$","span","Next.js migração",{"className":"text-xs font-medium px-2 py-0.5 rounded-full","style":{"backgroundColor":"var(--color-muted)","color":"var(--color-accent)"},"children":"Next.js migração"}]]}],["$","h1",null,{"className":"text-2xl md:text-4xl font-bold mb-4 leading-tight","style":{"fontFamily":"var(--font-heading)","color":"var(--color-text-primary)"},"children":"Como Migrar do WordPress para Next.js Sem Perder SEO"}],["$","div",null,{"className":"flex flex-wrap items-center gap-3 text-sm mb-8 pb-6 border-b","style":{"color":"var(--color-text-muted)","borderColor":"var(--color-border)"},"children":[["$","time",null,{"dateTime":"2026-04-05","children":"05 de abril de 2026"}],["$","span",null,{"children":["· ","SystemForge Digital"]}],["$","span",null,{"children":["· ","9 min"," min de leitura"]}]]}],["$","div",null,{"className":"prose","dangerouslySetInnerHTML":{"__html":"$14"}}],"$L15","$L16"]}],"$L17"]}]]}]}],"$L18","$L19"]}]
+1a:I[44971,["/_next/static/chunks/0x~qyvhzfx0nt.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0imj62bfbmw-f.js","/_next/static/chunks/0acm~yisauz3m.js"],"WhatsAppButton"]
+15:["$","div",null,{"className":"mt-12 p-6 rounded-xl border","style":{"backgroundColor":"var(--color-muted)","borderColor":"var(--color-border)"},"children":[["$","p",null,{"className":"text-base font-semibold mb-3","style":{"fontFamily":"var(--font-heading)","color":"var(--color-text-primary)"},"children":"Gostou do conteúdo? Podemos ajudar o seu negócio."}],["$","div",null,{"className":"flex flex-col sm:flex-row gap-3","children":[["$","$L6",null,{"data-testid":"blog-article-inline-cta-contact","href":"/contato","className":"inline-flex items-center justify-center px-6 py-3 min-h-[44px] rounded-lg font-semibold text-sm text-white transition-all duration-150 active:scale-95","style":{"backgroundColor":"var(--color-accent)"},"children":"Entrar em contato"}],["$","a",null,{"data-testid":"blog-article-inline-cta-whatsapp","href":"https://wa.me/5511999999999?text=Ol%C3%A1!%20Li%20o%20comparativo%20e%20tenho%20d%C3%BAvidas%20sobre%20qual%20solu%C3%A7%C3%A3o%20%C3%A9%20melhor%20para%20meu%20neg%C3%B3cio.","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center justify-center px-6 py-3 min-h-[44px] rounded-lg font-semibold text-sm border-2 transition-all duration-150 active:scale-95","style":{"color":"#25D366","borderColor":"#25D366"},"children":"Falar no WhatsApp"}]]}]]}]
+16:["$","div",null,{"className":"mt-10 lg:hidden","children":[["$","h2",null,{"className":"text-lg font-semibold mb-4","style":{"fontFamily":"var(--font-heading)","color":"var(--color-text-primary)"},"children":"Artigos relacionados"}],["$","div",null,{"className":"flex flex-col gap-3","children":[["$","$L6","wordpress-vs-desenvolvimento-proprio",{"href":"/blog/wordpress-vs-desenvolvimento-proprio","className":"text-sm font-medium transition-colors duration-150","style":{"color":"var(--color-accent)"},"children":["WordPress vs Desenvolvimento Próprio: Qual Escolher em 2026?"," →"]}],["$","$L6","site-sob-medida-vs-plataforma-pronta",{"href":"/blog/site-sob-medida-vs-plataforma-pronta","className":"text-sm font-medium transition-colors duration-150","style":{"color":"var(--color-accent)"},"children":["Site Sob Medida vs Plataforma Pronta: Comparativo Honesto para 2026"," →"]}]]}]]}]
+17:["$","aside",null,{"data-testid":"blog-article-sidebar","className":"hidden lg:block w-72 shrink-0","children":["$","div",null,{"className":"sticky top-6 flex flex-col gap-6","children":[["$","div",null,{"className":"p-6 rounded-xl border","style":{"backgroundColor":"var(--color-muted)","borderColor":"var(--color-border)"},"children":[["$","p",null,{"className":"text-base font-semibold mb-2","style":{"fontFamily":"var(--font-heading)","color":"var(--color-text-primary)"},"children":"Precisa de ajuda?"}],["$","p",null,{"className":"text-sm mb-4","style":{"color":"var(--color-text-secondary)"},"children":["Comparativo completo: WordPress vs desenvolvimento próprio vs Wix. Prós, contras","…"]}],["$","$L6",null,{"href":"/contato","className":"block text-center px-4 py-3 min-h-[44px] rounded-lg font-semibold text-sm text-white transition-all duration-150 active:scale-95","style":{"backgroundColor":"var(--color-accent)"},"children":"Falar com um Especialista"}]]}],["$","div",null,{"children":[["$","h2",null,{"className":"text-sm font-semibold mb-3","style":{"fontFamily":"var(--font-heading)","color":"var(--color-text-primary)"},"children":"Artigos relacionados"}],["$","div",null,{"className":"flex flex-col gap-2","children":[["$","$L6","wordpress-vs-desenvolvimento-proprio",{"href":"/blog/wordpress-vs-desenvolvimento-proprio","className":"text-sm transition-colors duration-150","style":{"color":"var(--color-accent)"},"children":["WordPress vs Desenvolvimento Próprio: Qual Escolher em 2026?"," →"]}],["$","$L6","site-sob-medida-vs-plataforma-pronta",{"href":"/blog/site-sob-medida-vs-plataforma-pronta","className":"text-sm transition-colors duration-150","style":{"color":"var(--color-accent)"},"children":["Site Sob Medida vs Plataforma Pronta: Comparativo Honesto para 2026"," →"]}]]}]]}]]}]}]
+18:["$","footer",null,{"data-testid":"footer","className":"border-t bg-[#1F2937] py-8","style":{"borderColor":"var(--color-border)"},"children":["$","div",null,{"className":"max-w-[1200px] mx-auto px-4","children":["$","div",null,{"className":"flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4","children":[["$","p",null,{"data-testid":"footer-copyright","className":"text-sm","style":{"color":"#9CA3AF"},"children":["© ",2026," ","SystemForge Digital",".",[" ","Desenvolvido por"," ",["$","a",null,{"href":"https://systemforge.com.br","target":"_blank","rel":"noopener noreferrer","className":"hover:text-white transition-colors duration-150","style":{"color":"#9CA3AF"},"children":"SystemForge"}]]]}],["$","nav",null,{"data-testid":"footer-nav","aria-label":"Links do rodapé","children":["$","ul",null,{"className":"flex flex-wrap items-center gap-4","children":[["$","li",null,{"children":["$","$L6",null,{"data-testid":"footer-privacy-link","href":"/privacidade","className":"text-sm transition-colors duration-150 hover:text-white","style":{"color":"#9CA3AF"},"children":"Política de Privacidade"}]}],[["$","li","/blog",{"children":["$","$L6",null,{"href":"/blog","className":"text-sm transition-colors duration-150 hover:text-white","style":{"color":"#9CA3AF"},"children":"Blog"}]}],["$","li","/faq",{"children":["$","$L6",null,{"href":"/faq","className":"text-sm transition-colors duration-150 hover:text-white","style":{"color":"#9CA3AF"},"children":"FAQ"}]}]]]}]}]]}]}]}]
+19:["$","$L1a",null,{"phone":"5511999999999","message":"Olá! Li o comparativo e tenho dúvidas sobre qual solução é melhor para meu negócio."}]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, viewport-fit=cover"}]]
+1b:I[27201,["/_next/static/chunks/0x~qyvhzfx0nt.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0imj62bfbmw-f.js"],"IconMark"]
+b:null
+10:[["$","title","0",{"children":"Como Migrar do WordPress para Next.js Sem Perder SEO | SystemForge Digital"}],["$","meta","1",{"name":"description","content":"Guia técnico completo para migração WordPress → Next.js: preservando URLs, conteúdo, metadados e posicionamento no Google. Passo a passo com exemplos reais."}],["$","meta","2",{"name":"keywords","content":"site sob medida vs plataforma,WordPress vs desenvolvimento próprio,site personalizado ou pronto,comparativo plataformas 2026"}],["$","meta","3",{"name":"robots","content":"index, follow"}],["$","meta","4",{"property":"og:title","content":"Como Migrar do WordPress para Next.js Sem Perder SEO"}],["$","meta","5",{"property":"og:description","content":"Guia técnico completo para migração WordPress → Next.js: preservando URLs, conteúdo, metadados e posicionamento no Google. Passo a passo com exemplos reais."}],["$","meta","6",{"property":"og:type","content":"article"}],["$","meta","7",{"property":"article:published_time","content":"2026-04-05"}],["$","meta","8",{"property":"article:author","content":"SystemForge Digital"}],["$","meta","9",{"name":"twitter:card","content":"summary"}],["$","meta","10",{"name":"twitter:title","content":"Como Migrar do WordPress para Next.js Sem Perder SEO"}],["$","meta","11",{"name":"twitter:description","content":"Guia técnico completo para migração WordPress → Next.js: preservando URLs, conteúdo, metadados e posicionamento no Google. Passo a passo com exemplos reais."}],["$","link","12",{"rel":"icon","href":"/favicon.ico?favicon.0x3dzn~oxb6tn.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L1b","13",{}]]
