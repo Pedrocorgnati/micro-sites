@@ -1,0 +1,142 @@
+1:"$Sreact.fragment"
+2:I[6197,["/_next/static/chunks/0x~qyvhzfx0nt.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0imj62bfbmw-f.js","/_next/static/chunks/0acm~yisauz3m.js"],"Header"]
+3:I[22016,["/_next/static/chunks/0x~qyvhzfx0nt.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0imj62bfbmw-f.js","/_next/static/chunks/0acm~yisauz3m.js"],""]
+c:I[44971,["/_next/static/chunks/0x~qyvhzfx0nt.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0imj62bfbmw-f.js","/_next/static/chunks/0acm~yisauz3m.js"],"WhatsAppButton"]
+d:I[97367,["/_next/static/chunks/0x~qyvhzfx0nt.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0imj62bfbmw-f.js"],"OutletBoundary"]
+e:"$Sreact.suspense"
+4:T108f,<h1>Quanto Tempo Leva para Criar um Site? Prazos Reais por Tipo de Projeto</h1>
+<p><strong>Resposta direta:</strong> um site institucional simples leva de 7 a 15 dias úteis. Landing page: 3 a 7 dias. E-commerce básico: 20 a 40 dias. Aplicativo web: 60 a 180 dias. Mas esses números valem apenas se você entregar os insumos no prazo — o que raramente acontece.</p>
+<hr>
+<h2>Cronograma Real por Tipo de Site</h2>
+<h3>Site Institucional (5–8 páginas)</h3>
+<table>
+<thead>
+<tr>
+<th>Etapa</th>
+<th>Dias Úteis</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Briefing e aprovação de escopo</td>
+<td>1–2 dias</td>
+</tr>
+<tr>
+<td>Wireframes e aprovação de layout</td>
+<td>2–4 dias</td>
+</tr>
+<tr>
+<td>Desenvolvimento</td>
+<td>5–8 dias</td>
+</tr>
+<tr>
+<td>Conteúdo (textos + imagens)</td>
+<td>paralelo ao desenvolvimento</td>
+</tr>
+<tr>
+<td>Testes e ajustes</td>
+<td>1–2 dias</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>9–16 dias úteis</strong></td>
+</tr>
+</tbody></table>
+<h3>Landing Page de Alta Conversão</h3>
+<table>
+<thead>
+<tr>
+<th>Etapa</th>
+<th>Dias Úteis</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Briefing de campanha</td>
+<td>1 dia</td>
+</tr>
+<tr>
+<td>Design aprovado</td>
+<td>1–2 dias</td>
+</tr>
+<tr>
+<td>Desenvolvimento e integrações</td>
+<td>2–4 dias</td>
+</tr>
+<tr>
+<td>Testes A/B e pixel</td>
+<td>1 dia</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>5–8 dias úteis</strong></td>
+</tr>
+</tbody></table>
+<h3>E-commerce Básico (até 200 produtos)</h3>
+<table>
+<thead>
+<tr>
+<th>Etapa</th>
+<th>Dias Úteis</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Planejamento e escolha de plataforma</td>
+<td>3–5 dias</td>
+</tr>
+<tr>
+<td>Design e configuração</td>
+<td>5–10 dias</td>
+</tr>
+<tr>
+<td>Cadastro de produtos e categorias</td>
+<td>5–15 dias</td>
+</tr>
+<tr>
+<td>Integração de pagamento e frete</td>
+<td>3–5 dias</td>
+</tr>
+<tr>
+<td>Testes de checkout e segurança</td>
+<td>2–3 dias</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>18–38 dias úteis</strong></td>
+</tr>
+</tbody></table>
+<hr>
+<h2>O Que Atrasa um Projeto de Site?</h2>
+<h3>1. Aprovação de Layout em Loop</h3>
+<p>O cenário mais comum: o cliente não aprova o design na primeira rodada, pede mudanças, mais mudanças, e o que era 2 dias de aprovação vira 2 semanas.</p>
+<p><strong>Como evitar:</strong> defina no contrato o número máximo de rodadas de revisão (geralmente 2) e o prazo de resposta do cliente (48h úteis).</p>
+<h3>2. Conteúdo Entregue com Atraso</h3>
+<p>O desenvolvedor termina o site mas não tem textos, fotos ou vídeos para colocar. O projeto congela.</p>
+<p><strong>Como evitar:</strong> inicie a produção de conteúdo no mesmo dia que o design. Não espere o site estar pronto para começar a escrever os textos.</p>
+<h3>3. Escopo Crescente (Scope Creep)</h3>
+<p>&quot;Enquanto vocês estão nisso, pode adicionar uma área de membros?&quot; Esta frase atrasa qualquer projeto.</p>
+<p><strong>Como evitar:</strong> todo item fora do escopo inicial entra em uma lista de segunda fase. Aprovado separado, orçado separado.</p>
+<h3>4. Integrações com Terceiros</h3>
+<p>APIs de frete, gateways de pagamento, CRMs — cada integração depende de credenciais, testes e homologação do parceiro. Uma integração com Correios pode adicionar 5 dias ao projeto.</p>
+<hr>
+<h2>Como Garantir Entrega no Prazo</h2>
+<ol>
+<li><strong>Assine contrato com marco de entrega:</strong> não apenas &quot;aproximadamente X semanas&quot;</li>
+<li><strong>Entregue insumos em D+1:</strong> logo e fotos no primeiro dia</li>
+<li><strong>Designe um aprovador único:</strong> múltiplas pessoas aprovando layout é receita para atraso</li>
+<li><strong>Limite revisões no contrato:</strong> 2 rodadas de revisão é padrão razoável</li>
+<li><strong>Aceite lançar MVP:</strong> o site perfeito demora. O site bom lança e melhora</li>
+</ol>
+<hr>
+<h2>Quanto Tempo Leva na SystemForge Digital?</h2>
+<p>Site institucional (5 páginas): <strong>10 dias úteis</strong> com conteúdo fornecido pelo cliente.
+Landing page: <strong>5 dias úteis</strong>.
+E-commerce básico: <strong>21 dias úteis</strong>.</p>
+<p>Garantia de prazo em contrato. Se atrasarmos por nosso lado, desconto proporcional.</p>
+0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"style":{"--color-accent":"#1E40AF","--color-accent-hover":"#1E3A8A","--color-on-accent":"#FFFFFF","--color-secondary":"#93C5FD","--color-on-secondary":"#1E3A8A"},"children":[["$","$L2",null,{"siteName":"SystemForge Digital","ctaLabel":"Solicitar Orçamento Sem Compromisso","ctaHref":"/contato"}],["$","main",null,{"id":"main-content","data-testid":"main-content","tabIndex":-1,"style":{"backgroundColor":"var(--color-background)"},"children":["$","article",null,{"data-testid":"blog-article","className":"max-w-[1200px] mx-auto px-4 py-12","children":[["$","nav",null,{"data-testid":"breadcrumbs","aria-label":"Navegação estrutural","children":["$","ol",null,{"className":"flex flex-wrap items-center gap-1 text-sm","children":[["$","li","0",{"className":"flex items-center gap-1","children":[false,["$","$L3",null,{"href":"/blog","className":"transition-colors duration-150 hover:underline","style":{"color":"var(--color-text-muted)"},"children":"Blog"}]]}],["$","li","1",{"className":"flex items-center gap-1","children":[["$","span",null,{"aria-hidden":"true","style":{"color":"var(--color-text-muted)"},"children":"/"}],["$","span",null,{"aria-current":"page","style":{"color":"var(--color-text-primary)"},"children":"Quanto Tempo Leva para Criar um Site? Prazos Reais por Tipo de Projeto"}]]}]]}]}],["$","div",null,{"className":"mt-6 flex flex-col lg:flex-row gap-10","children":[["$","div",null,{"className":"flex-1 min-w-0","children":[["$","div",null,{"className":"flex flex-wrap gap-2 mb-4","children":[["$","span","prazo site",{"className":"text-xs font-medium px-2 py-0.5 rounded-full","style":{"backgroundColor":"var(--color-muted)","color":"var(--color-accent)"},"children":"prazo site"}],["$","span","tempo criação site",{"className":"text-xs font-medium px-2 py-0.5 rounded-full","style":{"backgroundColor":"var(--color-muted)","color":"var(--color-accent)"},"children":"tempo criação site"}],["$","span","cronograma desenvolvimento web",{"className":"text-xs font-medium px-2 py-0.5 rounded-full","style":{"backgroundColor":"var(--color-muted)","color":"var(--color-accent)"},"children":"cronograma desenvolvimento web"}],["$","span","quanto tempo site",{"className":"text-xs font-medium px-2 py-0.5 rounded-full","style":{"backgroundColor":"var(--color-muted)","color":"var(--color-accent)"},"children":"quanto tempo site"}]]}],["$","h1",null,{"className":"text-2xl md:text-4xl font-bold mb-4 leading-tight","style":{"fontFamily":"var(--font-heading)","color":"var(--color-text-primary)"},"children":"Quanto Tempo Leva para Criar um Site? Prazos Reais por Tipo de Projeto"}],["$","div",null,{"className":"flex flex-wrap items-center gap-3 text-sm mb-8 pb-6 border-b","style":{"color":"var(--color-text-muted)","borderColor":"var(--color-border)"},"children":[["$","time",null,{"dateTime":"2026-03-22","children":"22 de março de 2026"}],["$","span",null,{"children":["· ","SystemForge Digital"]}],["$","span",null,{"children":["· ","5 min"," min de leitura"]}]]}],["$","div",null,{"className":"prose","dangerouslySetInnerHTML":{"__html":"$4"}}],"$L5","$L6"]}],"$L7"]}]]}]}],"$L8","$L9"]}],["$La"],"$Lb"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"hf4cLTf114HarjZ1ZbQYE"}
+5:["$","div",null,{"className":"mt-12 p-6 rounded-xl border","style":{"backgroundColor":"var(--color-muted)","borderColor":"var(--color-border)"},"children":[["$","p",null,{"className":"text-base font-semibold mb-3","style":{"fontFamily":"var(--font-heading)","color":"var(--color-text-primary)"},"children":"Gostou do conteúdo? Podemos ajudar o seu negócio."}],["$","div",null,{"className":"flex flex-col sm:flex-row gap-3","children":[["$","$L3",null,{"data-testid":"blog-article-inline-cta-contact","href":"/contato","className":"inline-flex items-center justify-center px-6 py-3 min-h-[44px] rounded-lg font-semibold text-sm text-white transition-all duration-150 active:scale-95","style":{"backgroundColor":"var(--color-accent)"},"children":"Entrar em contato"}],["$","a",null,{"data-testid":"blog-article-inline-cta-whatsapp","href":"https://wa.me/5511999999999?text=Ol%C3%A1!%20Li%20o%20guia%20sobre%20custo%20de%20site%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20o%20meu%20projeto.","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center justify-center px-6 py-3 min-h-[44px] rounded-lg font-semibold text-sm border-2 transition-all duration-150 active:scale-95","style":{"color":"#25D366","borderColor":"#25D366"},"children":"Falar no WhatsApp"}]]}]]}]
+6:["$","div",null,{"className":"mt-10 lg:hidden","children":[["$","h2",null,{"className":"text-lg font-semibold mb-4","style":{"fontFamily":"var(--font-heading)","color":"var(--color-text-primary)"},"children":"Artigos relacionados"}],["$","div",null,{"className":"flex flex-col gap-3","children":[["$","$L3","checklist-antes-de-contratar-criacao-de-site",{"href":"/blog/checklist-antes-de-contratar-criacao-de-site","className":"text-sm font-medium transition-colors duration-150","style":{"color":"var(--color-accent)"},"children":["Checklist Completo: O Que Verificar Antes de Contratar Criação de Site"," →"]}],["$","$L3","site-feito-em-um-dia-vs-site-profissional",{"href":"/blog/site-feito-em-um-dia-vs-site-profissional","className":"text-sm font-medium transition-colors duration-150","style":{"color":"var(--color-accent)"},"children":["Site Feito em Um Dia vs Site Profissional: O Que Você Está Realmente Comprando"," →"]}],["$","$L3","quanto-custa-criar-site-2026",{"href":"/blog/quanto-custa-criar-site-2026","className":"text-sm font-medium transition-colors duration-150","style":{"color":"var(--color-accent)"},"children":["Quanto Custa Criar um Site em 2026? Tabela de Preços Reais"," →"]}]]}]]}]
+7:["$","aside",null,{"data-testid":"blog-article-sidebar","className":"hidden lg:block w-72 shrink-0","children":["$","div",null,{"className":"sticky top-6 flex flex-col gap-6","children":[["$","div",null,{"className":"p-6 rounded-xl border","style":{"backgroundColor":"var(--color-muted)","borderColor":"var(--color-border)"},"children":[["$","p",null,{"className":"text-base font-semibold mb-2","style":{"fontFamily":"var(--font-heading)","color":"var(--color-text-primary)"},"children":"Precisa de ajuda?"}],["$","p",null,{"className":"text-sm mb-4","style":{"color":"var(--color-text-secondary)"},"children":["Tabela de preços reais para criação de site no Brasil em 2026. Freelancer, agênc","…"]}],["$","$L3",null,{"href":"/contato","className":"block text-center px-4 py-3 min-h-[44px] rounded-lg font-semibold text-sm text-white transition-all duration-150 active:scale-95","style":{"backgroundColor":"var(--color-accent)"},"children":"Solicitar Orçamento Sem Compromisso"}]]}],["$","div",null,{"children":[["$","h2",null,{"className":"text-sm font-semibold mb-3","style":{"fontFamily":"var(--font-heading)","color":"var(--color-text-primary)"},"children":"Artigos relacionados"}],["$","div",null,{"className":"flex flex-col gap-2","children":[["$","$L3","checklist-antes-de-contratar-criacao-de-site",{"href":"/blog/checklist-antes-de-contratar-criacao-de-site","className":"text-sm transition-colors duration-150","style":{"color":"var(--color-accent)"},"children":["Checklist Completo: O Que Verificar Antes de Contratar Criação de Site"," →"]}],["$","$L3","site-feito-em-um-dia-vs-site-profissional",{"href":"/blog/site-feito-em-um-dia-vs-site-profissional","className":"text-sm transition-colors duration-150","style":{"color":"var(--color-accent)"},"children":["Site Feito em Um Dia vs Site Profissional: O Que Você Está Realmente Comprando"," →"]}],["$","$L3","quanto-custa-criar-site-2026",{"href":"/blog/quanto-custa-criar-site-2026","className":"text-sm transition-colors duration-150","style":{"color":"var(--color-accent)"},"children":["Quanto Custa Criar um Site em 2026? Tabela de Preços Reais"," →"]}]]}]]}]]}]}]
+8:["$","footer",null,{"data-testid":"footer","className":"border-t bg-[#1F2937] py-8","style":{"borderColor":"var(--color-border)"},"children":["$","div",null,{"className":"max-w-[1200px] mx-auto px-4","children":["$","div",null,{"className":"flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4","children":[["$","p",null,{"data-testid":"footer-copyright","className":"text-sm","style":{"color":"#9CA3AF"},"children":["© ",2026," ","SystemForge Digital",".",[" ","Desenvolvido por"," ",["$","a",null,{"href":"https://systemforge.com.br","target":"_blank","rel":"noopener noreferrer","className":"hover:text-white transition-colors duration-150","style":{"color":"#9CA3AF"},"children":"SystemForge"}]]]}],["$","nav",null,{"data-testid":"footer-nav","aria-label":"Links do rodapé","children":["$","ul",null,{"className":"flex flex-wrap items-center gap-4","children":[["$","li",null,{"children":["$","$L3",null,{"data-testid":"footer-privacy-link","href":"/privacidade","className":"text-sm transition-colors duration-150 hover:text-white","style":{"color":"#9CA3AF"},"children":"Política de Privacidade"}]}],[["$","li","/blog",{"children":["$","$L3",null,{"href":"/blog","className":"text-sm transition-colors duration-150 hover:text-white","style":{"color":"#9CA3AF"},"children":"Blog"}]}],["$","li","/faq",{"children":["$","$L3",null,{"href":"/faq","className":"text-sm transition-colors duration-150 hover:text-white","style":{"color":"#9CA3AF"},"children":"FAQ"}]}]]]}]}]]}]}]}]
+9:["$","$Lc",null,{"phone":"5511999999999","message":"Olá! Li o guia sobre custo de site e gostaria de um orçamento para o meu projeto."}]
+a:["$","script","script-0",{"src":"/_next/static/chunks/0acm~yisauz3m.js","async":true}]
+b:["$","$Ld",null,{"children":["$","$e",null,{"name":"Next.MetadataOutlet","children":"$@f"}]}]
+f:null
