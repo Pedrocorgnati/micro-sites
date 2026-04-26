@@ -1,0 +1,29 @@
+name: static-forms-quota
+
+# TASK-8 intake-review (CL-117) — alerta automatico quota Static Forms.
+on:
+  schedule:
+    - cron: '0 10 * * *'  # diario 10:00 UTC
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - run: npm ci
+
+      - name: Check quota
+        env:
+          STATIC_FORMS_API_KEY: ${{ secrets.STATIC_FORMS_API_KEY }}
+          STATIC_FORMS_ENDPOINTS: ${{ secrets.STATIC_FORMS_ENDPOINTS }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx tsx scripts/check-static-forms-quota.ts

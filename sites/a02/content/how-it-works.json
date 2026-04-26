@@ -1,0 +1,25 @@
+{
+  "headline": "Como começar sua transformação?",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Agende sua aula grátis",
+      "description": "Clique no botão e escolha um horário disponível. Sem compromisso, sem pagamento antecipado."
+    },
+    {
+      "number": 2,
+      "title": "Avaliação física completa",
+      "description": "Na primeira aula, seu personal faz uma avaliação completa para entender seus objetivos e limitações."
+    },
+    {
+      "number": 3,
+      "title": "Programa personalizado",
+      "description": "Com base na avaliação, criamos seu plano de treino exclusivo com metas claras para 30, 60 e 90 dias."
+    },
+    {
+      "number": 4,
+      "title": "Resultados acompanhados",
+      "description": "A cada mês, reavaliamos seu progresso e ajustamos o treino para garantir evolução contínua."
+    }
+  ]
+}

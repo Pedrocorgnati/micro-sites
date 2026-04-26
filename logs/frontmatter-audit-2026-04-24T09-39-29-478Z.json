@@ -1,0 +1,946 @@
+[
+  {
+    "site": "a01",
+    "file": "exame-preventivo-lista-completa.md",
+    "missing_slug": false,
+    "slug_value": "exame-preventivo-lista-completa",
+    "title_len": 51,
+    "description_len": 131,
+    "word_count": 1015,
+    "issues": []
+  },
+  {
+    "site": "a01",
+    "file": "plano-de-saude-vs-consulta-particular.md",
+    "missing_slug": false,
+    "slug_value": "plano-de-saude-vs-consulta-particular",
+    "title_len": 54,
+    "description_len": 126,
+    "word_count": 893,
+    "issues": []
+  },
+  {
+    "site": "a01",
+    "file": "sintomas-que-exigem-pronto-socorro.md",
+    "missing_slug": false,
+    "slug_value": "sintomas-que-exigem-pronto-socorro",
+    "title_len": 46,
+    "description_len": 133,
+    "word_count": 966,
+    "issues": []
+  },
+  {
+    "site": "a01",
+    "file": "telemedicina-como-funciona-brasil.md",
+    "missing_slug": false,
+    "slug_value": "telemedicina-como-funciona-brasil",
+    "title_len": 45,
+    "description_len": 134,
+    "word_count": 863,
+    "issues": []
+  },
+  {
+    "site": "a02",
+    "file": "perder-peso-quantas-vezes-semana-treinar.md",
+    "missing_slug": false,
+    "slug_value": "perder-peso-quantas-vezes-semana-treinar",
+    "title_len": 50,
+    "description_len": 107,
+    "word_count": 1018,
+    "issues": []
+  },
+  {
+    "site": "a02",
+    "file": "personal-trainer-beneficios.md",
+    "missing_slug": false,
+    "slug_value": "personal-trainer-beneficios",
+    "title_len": 57,
+    "description_len": 110,
+    "word_count": 1315,
+    "issues": []
+  },
+  {
+    "site": "a02",
+    "file": "proteina-whey-vale-a-pena.md",
+    "missing_slug": false,
+    "slug_value": "proteina-whey-vale-a-pena",
+    "title_len": 52,
+    "description_len": 125,
+    "word_count": 1062,
+    "issues": []
+  },
+  {
+    "site": "a02",
+    "file": "treino-em-casa-vs-academia.md",
+    "missing_slug": false,
+    "slug_value": "treino-em-casa-vs-academia",
+    "title_len": 53,
+    "description_len": 109,
+    "word_count": 1027,
+    "issues": []
+  },
+  {
+    "site": "a03",
+    "file": "beneficios-comida-caseira-vs-fast-food.md",
+    "missing_slug": false,
+    "slug_value": "beneficios-comida-caseira-vs-fast-food",
+    "title_len": 45,
+    "description_len": 149,
+    "word_count": 1091,
+    "issues": []
+  },
+  {
+    "site": "a03",
+    "file": "como-escolher-marmita-saudavel-delivery.md",
+    "missing_slug": false,
+    "slug_value": "como-escolher-marmita-saudavel-delivery",
+    "title_len": 42,
+    "description_len": 142,
+    "word_count": 925,
+    "issues": []
+  },
+  {
+    "site": "a03",
+    "file": "como-montar-cardapio-semanal-empresa.md",
+    "missing_slug": false,
+    "slug_value": "como-montar-cardapio-semanal-empresa",
+    "title_len": 41,
+    "description_len": 133,
+    "word_count": 1181,
+    "issues": []
+  },
+  {
+    "site": "a03",
+    "file": "delivery-almoco-executivo-como-funciona.md",
+    "missing_slug": false,
+    "slug_value": "delivery-almoco-executivo-como-funciona",
+    "title_len": 43,
+    "description_len": 140,
+    "word_count": 1194,
+    "issues": []
+  },
+  {
+    "site": "a04",
+    "file": "como-abrir-processo-trabalhista.md",
+    "missing_slug": false,
+    "slug_value": "como-abrir-processo-trabalhista",
+    "title_len": 46,
+    "description_len": 109,
+    "word_count": 1188,
+    "issues": []
+  },
+  {
+    "site": "a04",
+    "file": "direitos-trabalhistas-rescisao.md",
+    "missing_slug": false,
+    "slug_value": "direitos-trabalhistas-rescisao",
+    "title_len": 55,
+    "description_len": 107,
+    "word_count": 1060,
+    "issues": []
+  },
+  {
+    "site": "a04",
+    "file": "mei-direitos-trabalhistas.md",
+    "missing_slug": false,
+    "slug_value": "mei-direitos-trabalhistas",
+    "title_len": 46,
+    "description_len": 111,
+    "word_count": 1243,
+    "issues": []
+  },
+  {
+    "site": "a04",
+    "file": "pensao-alimenticia-como-calcular.md",
+    "missing_slug": false,
+    "slug_value": "pensao-alimenticia-como-calcular",
+    "title_len": 37,
+    "description_len": 96,
+    "word_count": 1070,
+    "issues": []
+  },
+  {
+    "site": "a05",
+    "file": "escritura-registro-imovel.md",
+    "missing_slug": false,
+    "slug_value": "escritura-registro-imovel",
+    "title_len": 45,
+    "description_len": 112,
+    "word_count": 1079,
+    "issues": []
+  },
+  {
+    "site": "a05",
+    "file": "fgts-compra-imovel-como-usar.md",
+    "missing_slug": false,
+    "slug_value": "fgts-compra-imovel-como-usar",
+    "title_len": 44,
+    "description_len": 111,
+    "word_count": 1184,
+    "issues": []
+  },
+  {
+    "site": "a05",
+    "file": "laudo-vistoria-imovel.md",
+    "missing_slug": false,
+    "slug_value": "laudo-vistoria-imovel",
+    "title_len": 48,
+    "description_len": 129,
+    "word_count": 1056,
+    "issues": []
+  },
+  {
+    "site": "a05",
+    "file": "valor-metro-quadrado-cidade.md",
+    "missing_slug": false,
+    "slug_value": "valor-metro-quadrado-cidade",
+    "title_len": 46,
+    "description_len": 130,
+    "word_count": 1034,
+    "issues": []
+  },
+  {
+    "site": "a06",
+    "file": "certificado-mec-importancia.md",
+    "missing_slug": false,
+    "slug_value": "certificado-mec-importancia",
+    "title_len": 56,
+    "description_len": 117,
+    "word_count": 1117,
+    "issues": []
+  },
+  {
+    "site": "a06",
+    "file": "cursos-profissionalizantes-mais-empregaveis.md",
+    "missing_slug": false,
+    "slug_value": "cursos-profissionalizantes-mais-empregaveis",
+    "title_len": 51,
+    "description_len": 100,
+    "word_count": 1182,
+    "issues": []
+  },
+  {
+    "site": "a06",
+    "file": "ead-ou-presencial-curso.md",
+    "missing_slug": false,
+    "slug_value": "ead-ou-presencial-curso",
+    "title_len": 57,
+    "description_len": 122,
+    "word_count": 1259,
+    "issues": []
+  },
+  {
+    "site": "a06",
+    "file": "ingles-para-negocios-como-aprender.md",
+    "missing_slug": false,
+    "slug_value": "ingles-para-negocios-como-aprender",
+    "title_len": 59,
+    "description_len": 113,
+    "word_count": 1208,
+    "issues": []
+  },
+  {
+    "site": "a07",
+    "file": "desenquadramento-mei-quando-acontece.md",
+    "missing_slug": false,
+    "slug_value": "desenquadramento-mei-quando-acontece",
+    "title_len": 45,
+    "description_len": 129,
+    "word_count": 1148,
+    "issues": []
+  },
+  {
+    "site": "a07",
+    "file": "diferenca-mei-me-epp.md",
+    "missing_slug": false,
+    "slug_value": "diferenca-mei-me-epp",
+    "title_len": 41,
+    "description_len": 139,
+    "word_count": 1014,
+    "issues": []
+  },
+  {
+    "site": "a07",
+    "file": "mei-pode-contratar-funcionario.md",
+    "missing_slug": false,
+    "slug_value": "mei-pode-contratar-funcionario",
+    "title_len": 43,
+    "description_len": 128,
+    "word_count": 921,
+    "issues": []
+  },
+  {
+    "site": "a07",
+    "file": "nota-fiscal-mei-como-emitir.md",
+    "missing_slug": false,
+    "slug_value": "nota-fiscal-mei-como-emitir",
+    "title_len": 42,
+    "description_len": 125,
+    "word_count": 1041,
+    "issues": []
+  },
+  {
+    "site": "a08",
+    "file": "calendario-vacinas-caes-gatos-2026.md",
+    "missing_slug": false,
+    "slug_value": "calendario-vacinas-caes-gatos-2026",
+    "title_len": 44,
+    "description_len": 138,
+    "word_count": 1253,
+    "issues": []
+  },
+  {
+    "site": "a08",
+    "file": "castrar-pet-beneficios-cuidados.md",
+    "missing_slug": false,
+    "slug_value": "castrar-pet-beneficios-cuidados",
+    "title_len": 40,
+    "description_len": 139,
+    "word_count": 1338,
+    "issues": []
+  },
+  {
+    "site": "a08",
+    "file": "como-escolher-clinica-veterinaria.md",
+    "missing_slug": false,
+    "slug_value": "como-escolher-clinica-veterinaria",
+    "title_len": 37,
+    "description_len": 132,
+    "word_count": 1160,
+    "issues": []
+  },
+  {
+    "site": "a08",
+    "file": "sinais-que-seu-pet-precisa-veterinario.md",
+    "missing_slug": false,
+    "slug_value": "sinais-que-seu-pet-precisa-veterinario",
+    "title_len": 44,
+    "description_len": 129,
+    "word_count": 1224,
+    "issues": []
+  },
+  {
+    "site": "a09",
+    "file": "como-cuidar-cabelo-apos-coloracao.md",
+    "missing_slug": false,
+    "slug_value": "como-cuidar-cabelo-apos-coloracao",
+    "title_len": 38,
+    "description_len": 135,
+    "word_count": 1323,
+    "issues": []
+  },
+  {
+    "site": "a09",
+    "file": "como-escolher-salao-de-beleza.md",
+    "missing_slug": false,
+    "slug_value": "como-escolher-salao-de-beleza",
+    "title_len": 37,
+    "description_len": 131,
+    "word_count": 1245,
+    "issues": []
+  },
+  {
+    "site": "a09",
+    "file": "tendencias-coloracao-cabelo-2026.md",
+    "missing_slug": false,
+    "slug_value": "tendencias-coloracao-cabelo-2026",
+    "title_len": 43,
+    "description_len": 129,
+    "word_count": 1315,
+    "issues": []
+  },
+  {
+    "site": "a09",
+    "file": "tratamentos-capilares-mais-procurados.md",
+    "missing_slug": false,
+    "slug_value": "tratamentos-capilares-mais-procurados",
+    "title_len": 45,
+    "description_len": 147,
+    "word_count": 1420,
+    "issues": []
+  },
+  {
+    "site": "a10",
+    "file": "como-decorar-sala-pequena-apartamento.md",
+    "missing_slug": false,
+    "slug_value": "como-decorar-sala-pequena-apartamento",
+    "title_len": 40,
+    "description_len": 124,
+    "word_count": 1316,
+    "issues": []
+  },
+  {
+    "site": "a10",
+    "file": "como-escolher-moveis-para-espaco-pequeno.md",
+    "missing_slug": false,
+    "slug_value": "como-escolher-moveis-para-espaco-pequeno",
+    "title_len": 40,
+    "description_len": 128,
+    "word_count": 1316,
+    "issues": []
+  },
+  {
+    "site": "a10",
+    "file": "iluminacao-residencial-guia-completo.md",
+    "missing_slug": false,
+    "slug_value": "iluminacao-residencial-guia-completo",
+    "title_len": 37,
+    "description_len": 142,
+    "word_count": 1462,
+    "issues": []
+  },
+  {
+    "site": "a10",
+    "file": "tendencias-decoracao-2026.md",
+    "missing_slug": false,
+    "slug_value": "tendencias-decoracao-2026",
+    "title_len": 33,
+    "description_len": 133,
+    "word_count": 1291,
+    "issues": []
+  },
+  {
+    "site": "b01-sem-site-profissional",
+    "file": "como-criar-site-profissional-pequena-empresa.md",
+    "missing_slug": false,
+    "slug_value": "como-criar-site-profissional-pequena-empresa",
+    "title_len": 69,
+    "description_len": 132,
+    "word_count": 789,
+    "issues": [
+      "title-too-long",
+      "word-count-low"
+    ]
+  },
+  {
+    "site": "b01-sem-site-profissional",
+    "file": "empresa-sem-site-perde-clientes.md",
+    "missing_slug": false,
+    "slug_value": "empresa-sem-site-perde-clientes",
+    "title_len": 66,
+    "description_len": 131,
+    "word_count": 651,
+    "issues": [
+      "title-too-long",
+      "word-count-low"
+    ]
+  },
+  {
+    "site": "b02-site-antigo-lento",
+    "file": "como-modernizar-site-empresa.md",
+    "missing_slug": false,
+    "slug_value": "como-modernizar-site-empresa",
+    "title_len": 66,
+    "description_len": 129,
+    "word_count": 707,
+    "issues": [
+      "title-too-long",
+      "word-count-low"
+    ]
+  },
+  {
+    "site": "b02-site-antigo-lento",
+    "file": "site-lento-perde-clientes.md",
+    "missing_slug": false,
+    "slug_value": "site-lento-perde-clientes",
+    "title_len": 81,
+    "description_len": 134,
+    "word_count": 684,
+    "issues": [
+      "title-too-long",
+      "word-count-low"
+    ]
+  },
+  {
+    "site": "b03-sem-automacao",
+    "file": "automacao-negocio-pequeno-empresa.md",
+    "missing_slug": false,
+    "slug_value": "automacao-negocio-pequeno-empresa",
+    "title_len": 75,
+    "description_len": 121,
+    "word_count": 695,
+    "issues": [
+      "title-too-long",
+      "word-count-low"
+    ]
+  },
+  {
+    "site": "b03-sem-automacao",
+    "file": "whatsapp-business-automacao-empresa.md",
+    "missing_slug": false,
+    "slug_value": "whatsapp-business-automacao-empresa",
+    "title_len": 78,
+    "description_len": 138,
+    "word_count": 641,
+    "issues": [
+      "title-too-long",
+      "word-count-low"
+    ]
+  },
+  {
+    "site": "b04-sem-presenca-digital",
+    "file": "google-meu-negocio-otimizacao.md",
+    "missing_slug": false,
+    "slug_value": "google-meu-negocio-otimizacao",
+    "title_len": 73,
+    "description_len": 116,
+    "word_count": 778,
+    "issues": [
+      "title-too-long",
+      "word-count-low"
+    ]
+  },
+  {
+    "site": "b04-sem-presenca-digital",
+    "file": "presenca-digital-negocio-local.md",
+    "missing_slug": false,
+    "slug_value": "presenca-digital-negocio-local",
+    "title_len": 61,
+    "description_len": 134,
+    "word_count": 774,
+    "issues": [
+      "title-too-long",
+      "word-count-low"
+    ]
+  },
+  {
+    "site": "b05-perder-clientes-online",
+    "file": "concorrente-melhor-site.md",
+    "missing_slug": false,
+    "slug_value": "concorrente-melhor-site",
+    "title_len": 71,
+    "description_len": 140,
+    "word_count": 644,
+    "issues": [
+      "title-too-long",
+      "word-count-low"
+    ]
+  },
+  {
+    "site": "b05-perder-clientes-online",
+    "file": "taxa-conversao-site.md",
+    "missing_slug": false,
+    "slug_value": "taxa-conversao-site",
+    "title_len": 65,
+    "description_len": 127,
+    "word_count": 701,
+    "issues": [
+      "title-too-long",
+      "word-count-low"
+    ]
+  },
+  {
+    "site": "b06-sem-leads-qualificados",
+    "file": "como-qualificar-leads-digitalmente.md",
+    "missing_slug": false,
+    "slug_value": "como-qualificar-leads-digitalmente",
+    "title_len": 78,
+    "description_len": 141,
+    "word_count": 624,
+    "issues": [
+      "title-too-long",
+      "word-count-low"
+    ]
+  },
+  {
+    "site": "b06-sem-leads-qualificados",
+    "file": "funil-de-vendas-digital-pme.md",
+    "missing_slug": false,
+    "slug_value": "funil-de-vendas-digital-pme",
+    "title_len": 61,
+    "description_len": 133,
+    "word_count": 705,
+    "issues": [
+      "title-too-long",
+      "word-count-low"
+    ]
+  },
+  {
+    "site": "b07-site-nao-aparece-google",
+    "file": "por-que-site-nao-aparece-google.md",
+    "missing_slug": false,
+    "slug_value": "por-que-site-nao-aparece-google",
+    "title_len": 64,
+    "description_len": 124,
+    "word_count": 711,
+    "issues": [
+      "title-too-long",
+      "word-count-low"
+    ]
+  },
+  {
+    "site": "b07-site-nao-aparece-google",
+    "file": "seo-local-negocio-local.md",
+    "missing_slug": false,
+    "slug_value": "seo-local-negocio-local",
+    "title_len": 84,
+    "description_len": 156,
+    "word_count": 691,
+    "issues": [
+      "title-too-long",
+      "description-too-long",
+      "word-count-low"
+    ]
+  },
+  {
+    "site": "b08-concorrente-digital",
+    "file": "como-superar-concorrente-digital.md",
+    "missing_slug": false,
+    "slug_value": "como-superar-concorrente-digital",
+    "title_len": 70,
+    "description_len": 141,
+    "word_count": 662,
+    "issues": [
+      "title-too-long",
+      "word-count-low"
+    ]
+  },
+  {
+    "site": "b08-concorrente-digital",
+    "file": "transformacao-digital-pequena-empresa.md",
+    "missing_slug": false,
+    "slug_value": "transformacao-digital-pequena-empresa",
+    "title_len": 70,
+    "description_len": 141,
+    "word_count": 801,
+    "issues": [
+      "title-too-long"
+    ]
+  },
+  {
+    "site": "c01-site-institucional-pme",
+    "file": "custo-manutencao-site.md",
+    "missing_slug": false,
+    "slug_value": "custo-manutencao-site",
+    "title_len": 53,
+    "description_len": 126,
+    "word_count": 1132,
+    "issues": []
+  },
+  {
+    "site": "c01-site-institucional-pme",
+    "file": "hospedagem-site-comparativo.md",
+    "missing_slug": false,
+    "slug_value": "hospedagem-site-comparativo",
+    "title_len": 45,
+    "description_len": 129,
+    "word_count": 1129,
+    "issues": []
+  },
+  {
+    "site": "c01-site-institucional-pme",
+    "file": "site-institucional-vs-landing-page.md",
+    "missing_slug": false,
+    "slug_value": "site-institucional-vs-landing-page",
+    "title_len": 50,
+    "description_len": 131,
+    "word_count": 991,
+    "issues": []
+  },
+  {
+    "site": "c02-landing-page-conversao",
+    "file": "copy-landing-page-formula.md",
+    "missing_slug": false,
+    "slug_value": "copy-landing-page-formula",
+    "title_len": 50,
+    "description_len": 132,
+    "word_count": 1616,
+    "issues": []
+  },
+  {
+    "site": "c02-landing-page-conversao",
+    "file": "cro-como-aumentar-conversao.md",
+    "missing_slug": false,
+    "slug_value": "cro-como-aumentar-conversao",
+    "title_len": 48,
+    "description_len": 126,
+    "word_count": 1237,
+    "issues": []
+  },
+  {
+    "site": "c02-landing-page-conversao",
+    "file": "landing-page-b2b-vs-b2c.md",
+    "missing_slug": false,
+    "slug_value": "landing-page-b2b-vs-b2c",
+    "title_len": 49,
+    "description_len": 137,
+    "word_count": 1245,
+    "issues": []
+  },
+  {
+    "site": "c03-app-web-negocio",
+    "file": "app-web-vs-app-mobile-qual-escolher.md",
+    "missing_slug": false,
+    "slug_value": "app-web-vs-app-mobile-qual-escolher",
+    "title_len": 54,
+    "description_len": 116,
+    "word_count": 901,
+    "issues": []
+  },
+  {
+    "site": "c03-app-web-negocio",
+    "file": "quanto-custa-desenvolver-aplicativo-web.md",
+    "missing_slug": false,
+    "slug_value": "quanto-custa-desenvolver-aplicativo-web",
+    "title_len": 51,
+    "description_len": 144,
+    "word_count": 877,
+    "issues": []
+  },
+  {
+    "site": "c04-ecommerce-pequeno-negocio",
+    "file": "como-montar-ecommerce-sem-complicar.md",
+    "missing_slug": false,
+    "slug_value": "como-montar-ecommerce-sem-complicar",
+    "title_len": 61,
+    "description_len": 120,
+    "word_count": 808,
+    "issues": [
+      "title-too-long"
+    ]
+  },
+  {
+    "site": "c04-ecommerce-pequeno-negocio",
+    "file": "taxa-de-conversao-ecommerce-como-melhorar.md",
+    "missing_slug": false,
+    "slug_value": "taxa-de-conversao-ecommerce-como-melhorar",
+    "title_len": 56,
+    "description_len": 150,
+    "word_count": 833,
+    "issues": []
+  },
+  {
+    "site": "c05-sistema-agendamento",
+    "file": "agenda-online-vs-agenda-papel.md",
+    "missing_slug": false,
+    "slug_value": "agenda-online-vs-agenda-papel",
+    "title_len": 48,
+    "description_len": 120,
+    "word_count": 1390,
+    "issues": []
+  },
+  {
+    "site": "c05-sistema-agendamento",
+    "file": "como-implementar-agendamento-online.md",
+    "missing_slug": false,
+    "slug_value": "como-implementar-agendamento-online",
+    "title_len": 50,
+    "description_len": 117,
+    "word_count": 1324,
+    "issues": []
+  },
+  {
+    "site": "c05-sistema-agendamento",
+    "file": "como-reduzir-faltas-com-lembretes-automaticos.md",
+    "missing_slug": false,
+    "slug_value": "como-reduzir-faltas-com-lembretes-automaticos",
+    "title_len": 45,
+    "description_len": 131,
+    "word_count": 1405,
+    "issues": []
+  },
+  {
+    "site": "c05-sistema-agendamento",
+    "file": "vantagens-agendamento-online-para-negocios.md",
+    "missing_slug": false,
+    "slug_value": "vantagens-agendamento-online-para-negocios",
+    "title_len": 45,
+    "description_len": 114,
+    "word_count": 1243,
+    "issues": []
+  },
+  {
+    "site": "c06-automacao-atendimento",
+    "file": "atendimento-humano-vs-automatizado.md",
+    "missing_slug": false,
+    "slug_value": "atendimento-humano-vs-automatizado",
+    "title_len": 52,
+    "description_len": 126,
+    "word_count": 1596,
+    "issues": []
+  },
+  {
+    "site": "c06-automacao-atendimento",
+    "file": "chatbot-para-pequenas-empresas-vale-a-pena.md",
+    "missing_slug": false,
+    "slug_value": "chatbot-para-pequenas-empresas-vale-a-pena",
+    "title_len": 44,
+    "description_len": 110,
+    "word_count": 1340,
+    "issues": []
+  },
+  {
+    "site": "c06-automacao-atendimento",
+    "file": "como-automatizar-atendimento-whatsapp.md",
+    "missing_slug": false,
+    "slug_value": "como-automatizar-atendimento-whatsapp",
+    "title_len": 42,
+    "description_len": 121,
+    "word_count": 1620,
+    "issues": []
+  },
+  {
+    "site": "c06-automacao-atendimento",
+    "file": "como-criar-fluxo-atendimento-automatizado.md",
+    "missing_slug": false,
+    "slug_value": "como-criar-fluxo-atendimento-automatizado",
+    "title_len": 47,
+    "description_len": 130,
+    "word_count": 1533,
+    "issues": []
+  },
+  {
+    "site": "d01-calculadora-custo-site",
+    "file": "artigo-antigo.md",
+    "missing_slug": false,
+    "slug_value": "artigo-antigo",
+    "title_len": 38,
+    "description_len": 76,
+    "word_count": 2,
+    "issues": [
+      "word-count-low"
+    ]
+  },
+  {
+    "site": "d01-calculadora-custo-site",
+    "file": "artigo-novo.md",
+    "missing_slug": false,
+    "slug_value": "artigo-novo",
+    "title_len": 35,
+    "description_len": 83,
+    "word_count": 2,
+    "issues": [
+      "word-count-low"
+    ]
+  },
+  {
+    "site": "d01-calculadora-custo-site",
+    "file": "custo-criar-site-2026.md",
+    "missing_slug": false,
+    "slug_value": "custo-criar-site-2026",
+    "title_len": 49,
+    "description_len": 127,
+    "word_count": 315,
+    "issues": [
+      "word-count-low"
+    ]
+  },
+  {
+    "site": "d01-calculadora-custo-site",
+    "file": "site-sob-medida-vs-plataforma.md",
+    "missing_slug": false,
+    "slug_value": "site-sob-medida-vs-plataforma",
+    "title_len": 60,
+    "description_len": 153,
+    "word_count": 523,
+    "issues": [
+      "word-count-low"
+    ]
+  },
+  {
+    "site": "d02-calculadora-custo-app",
+    "file": "mvp-app-guia-completo.md",
+    "missing_slug": false,
+    "slug_value": "mvp-app-guia-completo",
+    "title_len": 62,
+    "description_len": 139,
+    "word_count": 661,
+    "issues": [
+      "title-too-long",
+      "word-count-low"
+    ]
+  },
+  {
+    "site": "d02-calculadora-custo-app",
+    "file": "quanto-custa-criar-app-2026.md",
+    "missing_slug": false,
+    "slug_value": "quanto-custa-criar-app-2026",
+    "title_len": 65,
+    "description_len": 114,
+    "word_count": 502,
+    "issues": [
+      "title-too-long",
+      "word-count-low"
+    ]
+  },
+  {
+    "site": "f01-blog-desenvolvimento-web",
+    "file": "contrato-desenvolvimento-software.md",
+    "missing_slug": false,
+    "slug_value": "contrato-desenvolvimento-software",
+    "title_len": 54,
+    "description_len": 130,
+    "word_count": 1549,
+    "issues": []
+  },
+  {
+    "site": "f01-blog-desenvolvimento-web",
+    "file": "custo-app-mobile-2026.md",
+    "missing_slug": false,
+    "slug_value": "custo-app-mobile-2026",
+    "title_len": 47,
+    "description_len": 130,
+    "word_count": 1545,
+    "issues": []
+  },
+  {
+    "site": "f01-blog-desenvolvimento-web",
+    "file": "manutencao-site-o-que-inclui.md",
+    "missing_slug": false,
+    "slug_value": "manutencao-site-o-que-inclui",
+    "title_len": 52,
+    "description_len": 130,
+    "word_count": 1532,
+    "issues": []
+  },
+  {
+    "site": "f01-blog-desenvolvimento-web",
+    "file": "site-wordpress-vs-next-js.md",
+    "missing_slug": false,
+    "slug_value": "site-wordpress-vs-next-js",
+    "title_len": 44,
+    "description_len": 131,
+    "word_count": 1406,
+    "issues": []
+  },
+  {
+    "site": "f02-blog-marketing-digital",
+    "file": "cms-headless-o-que-e.md",
+    "missing_slug": false,
+    "slug_value": "cms-headless-o-que-e",
+    "title_len": 43,
+    "description_len": 129,
+    "word_count": 1511,
+    "issues": []
+  },
+  {
+    "site": "f02-blog-marketing-digital",
+    "file": "migrar-site-sem-perder-seo.md",
+    "missing_slug": false,
+    "slug_value": "migrar-site-sem-perder-seo",
+    "title_len": 36,
+    "description_len": 142,
+    "word_count": 1423,
+    "issues": []
+  },
+  {
+    "site": "f02-blog-marketing-digital",
+    "file": "shopify-vs-loja-integrada.md",
+    "missing_slug": false,
+    "slug_value": "shopify-vs-loja-integrada",
+    "title_len": 51,
+    "description_len": 124,
+    "word_count": 1369,
+    "issues": []
+  },
+  {
+    "site": "f02-blog-marketing-digital",
+    "file": "wix-para-empresas-vale-a-pena.md",
+    "missing_slug": false,
+    "slug_value": "wix-para-empresas-vale-a-pena",
+    "title_len": 39,
+    "description_len": 130,
+    "word_count": 1329,
+    "issues": []
+  }
+]

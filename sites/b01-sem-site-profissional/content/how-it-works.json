@@ -1,0 +1,20 @@
+{
+  "headline": "Do zero ao ar em 3 passos simples",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Briefing em 10 minutos",
+      "description": "Você preenche um formulário rápido sobre seu negócio, público e objetivos. Nada complicado."
+    },
+    {
+      "number": 2,
+      "title": "Criamos seu site",
+      "description": "Nossa equipe desenvolve design, textos e estrutura técnica. Você acompanha e aprova."
+    },
+    {
+      "number": 3,
+      "title": "Lançamento e suporte",
+      "description": "Publicamos, verificamos tudo funcionando e ficamos disponíveis por 30 dias para ajustes."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "headline": "Dúvidas sobre criação de landing page",
+  "items": [
+    {
+      "question": "Em quanto tempo fica pronta a landing page?",
+      "answer": "Landing pages simples ficam prontas em 3 a 5 dias úteis. Páginas com mais seções ou integrações complexas levam de 7 a 10 dias úteis após o briefing aprovado."
+    },
+    {
+      "question": "Preciso ter uma conta no Google Ads ou Meta Ads para contratar?",
+      "answer": "Não. Você pode contratar a criação da landing page independentemente de onde vai anunciar. Ajudamos a configurar o pixel e as integrações necessárias com a ferramenta que você já usa."
+    },
+    {
+      "question": "Posso editar o conteúdo da página depois?",
+      "answer": "Sim. Entregamos a página com painel de edição simples para você alterar textos, imagens e CTA sem precisar de programador. Também oferecemos suporte para alterações pontuais."
+    },
+    {
+      "question": "A landing page funciona bem no celular?",
+      "answer": "Todas as nossas páginas são criadas mobile-first: o design começa pelo celular e depois é adaptado para desktop. Testamos em iOS e Android antes da entrega."
+    },
+    {
+      "question": "Vocês fazem testes A/B?",
+      "answer": "Sim, para projetos com volume de tráfego suficiente (acima de 500 visitas/mês), configuramos variantes de teste e monitoramos a taxa de conversão para recomendar a versão vencedora."
+    }
+  ]
+}

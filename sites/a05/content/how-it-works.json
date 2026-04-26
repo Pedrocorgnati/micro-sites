@@ -1,0 +1,25 @@
+{
+  "headline": "Como funciona o processo?",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Defina seu perfil",
+      "description": "Conta para a gente o que você busca: localização, tamanho, valor e finalidade (morar, investir ou alugar)."
+    },
+    {
+      "number": 2,
+      "title": "Visitas selecionadas",
+      "description": "Apresentamos apenas imóveis que realmente se encaixam no seu perfil. Sem perda de tempo com opções fora do ideal."
+    },
+    {
+      "number": 3,
+      "title": "Proposta e negociação",
+      "description": "Auxiliamos na negociação com total transparência. Avaliação de mercado para garantir preço justo para ambas as partes."
+    },
+    {
+      "number": 4,
+      "title": "Documentação e fechamento",
+      "description": "Cuidamos de toda a documentação, financiamento e registro. Entregamos as chaves com segurança jurídica total."
+    }
+  ]
+}

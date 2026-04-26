@@ -1,0 +1,25 @@
+{
+  "headline": "O que nos torna especiais",
+  "items": [
+    {
+      "icon": "leaf",
+      "title": "Ingredientes frescos diários",
+      "description": "Compramos direto da feira toda semana. Sem congelados, sem conservantes. Sabor e nutrição de verdade."
+    },
+    {
+      "icon": "clock",
+      "title": "Cardápio novo toda semana",
+      "description": "Nunca comer a mesma coisa. Pratos variados de segunda a sexta, com opções fitness e tradicionais."
+    },
+    {
+      "icon": "truck",
+      "title": "Entrega pontual garantida",
+      "description": "Sua marmita quente e bem embalada no horário combinado. Atendemos empresas e residências."
+    },
+    {
+      "icon": "dollar-sign",
+      "title": "Preço justo e transparente",
+      "description": "Marmitas a partir de R$ 18. Combos semanais com desconto. Sem taxas surpresa."
+    }
+  ]
+}

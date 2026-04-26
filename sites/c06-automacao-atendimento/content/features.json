@@ -1,0 +1,20 @@
+{
+  "headline": "Por que nosso atendimento com IA converte mais",
+  "items": [
+    {
+      "icon": "clock",
+      "title": "Responde em menos de 3 segundos",
+      "description": "A taxa de conversão cai drasticamente quando o tempo de resposta passa de 5 minutos. Nossa IA responde instantaneamente."
+    },
+    {
+      "icon": "filter",
+      "title": "Só chega lead qualificado na sua equipe",
+      "description": "O assistente identifica orçamento, prazo e intenção de compra antes de transferir para o humano."
+    },
+    {
+      "icon": "message-circle",
+      "title": "Tom da sua empresa, não de robô",
+      "description": "Treinamos o assistente com sua voz de marca, seus produtos e seus exemplos reais de conversa."
+    }
+  ]
+}

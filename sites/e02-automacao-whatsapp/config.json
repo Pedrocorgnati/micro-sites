@@ -1,0 +1,48 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "e02-automacao-whatsapp",
+  "name": "ForgeChat — Automação WhatsApp para Negócios",
+  "category": "E",
+  "accentColor": "#0891B2",
+  "wave": 3,
+  "funnelStage": "consideration",
+  "template": "waitlist",
+  "hasBlog": false,
+  "schema": [
+    "FAQPage",
+    "Organization",
+    "Organization"
+  ],
+  "headline": "Automatize Seu WhatsApp. Atenda Mais. Trabalhe Menos.",
+  "subheadline": "Bot inteligente que responde clientes, agenda e qualifica leads no WhatsApp — sem você precisar ficar no celular o dia todo.",
+  "seo": {
+    "title": "ForgeChat — Bot WhatsApp para Negócios | Lista de Espera",
+    "description": "Automatize seu WhatsApp: respostas automáticas, qualificação de leads e agendamentos sem código. Entre na lista de espera do ForgeChat.",
+    "keywords": [
+      "automação whatsapp",
+      "bot whatsapp negócio",
+      "whatsapp business automação",
+      "chatbot whatsapp sem código"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Entrar na Lista de Espera",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Tenho interesse no ForgeChat para automação do meu WhatsApp. Podem me avisar quando lançar?"
+  },
+  "waitlist": {
+    "count": 1243,
+    "earlyBirdDiscount": "Early birds: 3 meses grátis + onboarding dedicado",
+    "endpoint": "https://api.staticforms.xyz/submit"
+  },
+  "showSystemForgeLogo": true,
+  "footerLinks": [
+    {
+      "label": "FAQ",
+      "href": "/faq"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "lastReviewed": "2026-04-12"
+}

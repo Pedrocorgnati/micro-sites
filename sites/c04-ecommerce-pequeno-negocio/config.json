@@ -1,0 +1,49 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "c04-ecommerce-pequeno-negocio",
+  "name": "SystemForge Digital",
+  "category": "C",
+  "accentColor": "#059669",
+  "wave": 2,
+  "funnelStage": "consideration",
+  "template": "landing",
+  "hasBlog": true,
+  "schema": [
+    "FAQPage",
+    "HowTo",
+    "Organization"
+  ],
+  "sectionOrder": "default",
+  "headline": "E-commerce Completo para Seu Pequeno Negócio",
+  "subheadline": "Montamos sua loja virtual do zero, com gestão de estoque, pagamento e entrega integrados.",
+  "seo": {
+    "title": "E-commerce para Pequeno Negócio | SystemForge Digital",
+    "description": "Loja virtual completa para pequenas empresas: produtos, carrinho, Pix e cartão integrados, SEO e mobile-first. Comece a vender online em dias.",
+    "keywords": [
+      "criar e-commerce pequeno negócio",
+      "loja virtual acessível",
+      "e-commerce PME",
+      "montar loja online 2026"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Quero Montar Meu E-commerce",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Quero criar um e-commerce para meu negócio e vim pelo site da SystemForge."
+  },
+  "showSystemForgeLogo": true,
+  "footerLinks": [
+    {
+      "label": "Blog",
+      "href": "/blog"
+    },
+    {
+      "label": "FAQ",
+      "href": "/faq"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "systemForgeUrl": "https://systemforge.com.br",
+  "lastReviewed": "2026-04-12"
+}

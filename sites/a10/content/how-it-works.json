@@ -1,0 +1,25 @@
+{
+  "headline": "Como decorar com a Casa & Decor?",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Explore o catálogo",
+      "description": "Navegue pelo nosso catálogo online ou visite a loja em [Cidade]. Nossos consultores estão disponíveis para orientar a escolha das peças."
+    },
+    {
+      "number": 2,
+      "title": "Consultoria personalizada",
+      "description": "Compartilhe fotos do seu ambiente. Montamos um painel de inspiração com peças selecionadas especialmente para o seu espaço."
+    },
+    {
+      "number": 3,
+      "title": "Pedido e pagamento",
+      "description": "Finalize o pedido com segurança: cartão, Pix ou boleto. Parcelamos em até 10x sem juros no cartão."
+    },
+    {
+      "number": 4,
+      "title": "Entrega e montagem",
+      "description": "Entrega agendada em [Cidade] e região. Para móveis, oferecemos serviço de montagem opcional com equipe especializada."
+    }
+  ]
+}

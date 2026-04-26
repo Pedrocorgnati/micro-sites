@@ -1,0 +1,63 @@
+[
+  {
+    "slug": "desenquadramento-mei-quando-acontece",
+    "title": "Desenquadramento do MEI: Quando e Como Ocorre",
+    "description": "Entenda quando o MEI é desenquadrado, o que acontece com seu CNPJ, como regularizar e como migrar para ME sem perder seu negócio.",
+    "tags": [
+      "desenquadramento MEI",
+      "limite MEI",
+      "migração ME",
+      "faturamento"
+    ],
+    "date": "2026-04-09",
+    "readingTime": 6,
+    "category": "Caso de Uso",
+    "funnelStage": "MOFU"
+  },
+  {
+    "slug": "diferenca-mei-me-epp",
+    "title": "MEI, ME e EPP: Diferenças e Como Escolher",
+    "description": "Compare MEI, Microempresa e EPP: limites de faturamento, tributação, obrigações e quando cada modalidade é mais vantajosa para seu negócio.",
+    "tags": [
+      "MEI",
+      "ME",
+      "EPP",
+      "CNPJ",
+      "abertura de empresa"
+    ],
+    "date": "2026-04-09",
+    "readingTime": 6,
+    "category": "Caso de Uso",
+    "funnelStage": "MOFU"
+  },
+  {
+    "slug": "mei-pode-contratar-funcionario",
+    "title": "MEI Pode Contratar Funcionário? Regras 2026",
+    "description": "Descubra se MEI pode ter empregado, quantos, como formalizar e qual o custo real de contratar como Microempreendedor Individual.",
+    "tags": [
+      "MEI",
+      "contratar funcionário",
+      "CLT",
+      "microempreendedor"
+    ],
+    "date": "2026-04-09",
+    "readingTime": 5,
+    "category": "Caso de Uso",
+    "funnelStage": "MOFU"
+  },
+  {
+    "slug": "nota-fiscal-mei-como-emitir",
+    "title": "Nota Fiscal MEI: Como Emitir Passo a Passo",
+    "description": "Aprenda como emitir nota fiscal como MEI, quando é obrigatório emitir, os sistemas gratuitos disponíveis e como evitar erros.",
+    "tags": [
+      "nota fiscal MEI",
+      "NFS-e",
+      "faturamento",
+      "emissão de NF"
+    ],
+    "date": "2026-04-09",
+    "readingTime": 6,
+    "category": "Caso de Uso",
+    "funnelStage": "MOFU"
+  }
+]

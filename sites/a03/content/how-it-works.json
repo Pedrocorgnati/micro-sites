@@ -1,0 +1,25 @@
+{
+  "headline": "Como pedir é simples",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Escolha seu prato",
+      "description": "Acesse o cardápio da semana pelo WhatsApp ou nosso site e escolha sua opção preferida."
+    },
+    {
+      "number": 2,
+      "title": "Informe o endereço",
+      "description": "Diga onde quer receber — empresa, casa ou retirada no local. Também fazemos entregas para empresas com 10+ marmitas."
+    },
+    {
+      "number": 3,
+      "title": "Confirme o pedido",
+      "description": "Pedido confirmado pelo WhatsApp com horário estimado de entrega. Pagamento na entrega ou Pix."
+    },
+    {
+      "number": 4,
+      "title": "Receba e aproveite",
+      "description": "Sua refeição chega quente, bem embalada e pronta para ser saboreada. Bom apetite!"
+    }
+  ]
+}

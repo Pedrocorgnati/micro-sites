@@ -1,0 +1,20 @@
+{
+  "headline": "Nossa consultoria é isenta de conflito de interesse",
+  "items": [
+    {
+      "icon": "search",
+      "title": "Análise Comparativa Imparcial",
+      "description": "Avaliamos WordPress, Wix, Webflow e desenvolvimento próprio com critérios técnicos objetivos para o seu caso específico."
+    },
+    {
+      "icon": "trending-up",
+      "title": "TCO Calculado em 3 Anos",
+      "description": "Mostramos o custo total de propriedade — não só o preço de setup. Inclui mensalidades, plugins, hospedagem e manutenção projetados."
+    },
+    {
+      "icon": "shield-check",
+      "title": "Recomendação Sem Viés de Venda",
+      "description": "Se WordPress for a melhor opção para você, dizemos isso. Não forçamos desenvolvimento próprio quando não é necessário."
+    }
+  ]
+}

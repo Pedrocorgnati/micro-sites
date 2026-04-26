@@ -1,0 +1,44 @@
+name: dashboard-weekly
+
+# TASK-9 intake-review (CL-247, CL-278, CL-306) — dashboard semanal de metricas.
+on:
+  schedule:
+    - cron: '0 8 * * 1'  # Segunda 08:00 UTC
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Collect GA4 metrics
+        env:
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+        run: npx tsx scripts/metrics/collect-ga4.ts || echo "GA4 creds ausentes — skip"
+
+      - name: Collect GSC indexation
+        env:
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+        run: npx tsx scripts/metrics/collect-gsc.ts || echo "GSC creds ausentes — skip"
+
+      - name: Generate dashboard
+        run: npx tsx scripts/generate-network-dashboard.ts
+
+      - name: Commit dashboard artifacts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/dashboard/ public/metrics/ || true
+          git diff --cached --quiet || git commit -m "chore(dashboard): weekly refresh $(date -u +%Y-%m-%d)"
+          git push || echo "sem mudancas"

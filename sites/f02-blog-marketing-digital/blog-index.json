@@ -1,0 +1,64 @@
+[
+  {
+    "slug": "cms-headless-o-que-e",
+    "title": "CMS Headless: O Que É e Quando Usar em 2026",
+    "description": "Entenda o que é um CMS headless, como funciona a arquitetura, diferença do CMS tradicional e quando vale a pena para sua empresa.",
+    "tags": [
+      "CMS headless",
+      "Contentful",
+      "Strapi",
+      "arquitetura web",
+      "Next.js"
+    ],
+    "date": "2026-04-09",
+    "readingTime": 8,
+    "category": "Caso de Uso",
+    "funnelStage": "TOFU"
+  },
+  {
+    "slug": "migrar-site-sem-perder-seo",
+    "title": "Como Migrar um Site Sem Perder o SEO",
+    "description": "Guia completo para migrar um site mantendo rankings e tráfego orgânico. Checklist de 20 itens, redirecionamentos e monitoramento pós-migração.",
+    "tags": [
+      "migração de site",
+      "SEO",
+      "301 redirect",
+      "Google Search Console"
+    ],
+    "date": "2026-04-09",
+    "readingTime": 8,
+    "category": "Caso de Uso",
+    "funnelStage": "MOFU"
+  },
+  {
+    "slug": "shopify-vs-loja-integrada",
+    "title": "Shopify vs Loja Integrada: Qual é Melhor no Brasil?",
+    "description": "Compare Shopify e Loja Integrada para e-commerce brasileiro: taxas, gateways de pagamento, SEO, suporte e custo total em R$.",
+    "tags": [
+      "Shopify",
+      "Loja Integrada",
+      "e-commerce",
+      "loja virtual",
+      "Brasil"
+    ],
+    "date": "2026-04-09",
+    "readingTime": 7,
+    "category": "Ferramenta",
+    "funnelStage": "MOFU"
+  },
+  {
+    "slug": "wix-para-empresas-vale-a-pena",
+    "title": "Wix para Empresas: Vale a Pena em 2026?",
+    "description": "Análise honesta do Wix para pequenas e médias empresas: limitações, preços reais, SEO, performance e quando ele NÃO é recomendado.",
+    "tags": [
+      "Wix",
+      "construtor de site",
+      "small business",
+      "site sem código"
+    ],
+    "date": "2026-04-09",
+    "readingTime": 7,
+    "category": "Ferramenta",
+    "funnelStage": "TOFU"
+  }
+]

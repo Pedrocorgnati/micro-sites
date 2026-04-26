@@ -1,0 +1,29 @@
+{
+  "headline": "Perguntas Frequentes",
+  "items": [
+    {
+      "question": "Qual é o valor de uma consulta?",
+      "answer": "A consulta custa R$ 150 (particular). Aceitamos os principais planos de saúde. Consulte nossa lista de convênios ao agendar."
+    },
+    {
+      "question": "Quanto tempo dura a consulta?",
+      "answer": "Em média 30 minutos para primeira consulta e 15-20 minutos para retorno. O tempo varia de acordo com a especialidade e necessidade do paciente."
+    },
+    {
+      "question": "Vocês atendem crianças?",
+      "answer": "Sim! Temos pediatra com experiência em crianças de todas as idades. Atendimento especial para os pequenos."
+    },
+    {
+      "question": "Preciso de encaminhamento médico?",
+      "answer": "Não é necessário encaminhamento para uma consulta inicial. Você pode agendar diretamente com qualquer especialista."
+    },
+    {
+      "question": "Qual é o horário de funcionamento?",
+      "answer": "Funcionamos de segunda a sexta, das 8h às 18h. Sábado, das 9h às 13h (sujeito a disponibilidade). Agende pelo site 24h por dia."
+    },
+    {
+      "question": "Aceitam planos de saúde?",
+      "answer": "Sim, aceitamos os principais convênios. Confirme o seu plano no momento do agendamento ou ligue para nossa recepção."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "headline": "Dúvidas sobre automação de atendimento com IA",
+  "items": [
+    {
+      "question": "A IA vai substituir minha equipe de atendimento?",
+      "answer": "Não. A IA cuida das perguntas repetitivas, qualificação inicial e agendamentos simples. Sua equipe recebe apenas os leads qualificados e casos que precisam de atendimento humano real."
+    },
+    {
+      "question": "O chatbot funciona no WhatsApp?",
+      "answer": "Sim. Integramos via WhatsApp Business API (oficial, não viola os termos). Também podemos implantar no seu site, Instagram Direct ou Messenger."
+    },
+    {
+      "question": "Quanto tempo leva para implantar?",
+      "answer": "Em 2 a 3 semanas para fluxos simples. Para empresas com múltiplos produtos e fluxos complexos de qualificação, o prazo é de 4 a 6 semanas."
+    },
+    {
+      "question": "A IA consegue coletar dados dos clientes?",
+      "answer": "Sim. Coletamos nome, telefone, e-mail e qualquer informação relevante para seu processo. Todos os dados são armazenados em conformidade com a LGPD."
+    },
+    {
+      "question": "E se o cliente fizer uma pergunta que a IA não sabe responder?",
+      "answer": "Configuramos um fluxo de transferência para humano. O cliente é avisado de que será atendido por um humano, e sua equipe recebe o contexto completo da conversa."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "headline": "Como construímos seu funil de qualificação",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Análise do perfil ideal",
+      "description": "Mapeamos quem são seus melhores clientes e o que os atraiu até você. Isso define a estratégia de qualificação."
+    },
+    {
+      "number": 2,
+      "title": "Estrutura de atração",
+      "description": "Criamos páginas, formulários e SEO alinhados ao perfil ideal. O sistema filtra automaticamente."
+    },
+    {
+      "number": 3,
+      "title": "Nutrição e conversão",
+      "description": "Leads frios entram em sequência de conteúdo. Leads quentes chegam prontos para fechar."
+    }
+  ]
+}

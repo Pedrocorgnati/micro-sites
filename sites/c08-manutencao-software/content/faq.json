@@ -1,0 +1,25 @@
+{
+  "headline": "Dúvidas sobre modernização de software legado",
+  "items": [
+    {
+      "question": "É possível modernizar sem parar o sistema atual?",
+      "answer": "Sim. Nossa abordagem é incremental: modernizamos módulo por módulo enquanto o sistema original continua em operação. O switch final é rápido e planejado para o horário de menor impacto."
+    },
+    {
+      "question": "Vocês conseguem trabalhar com qualquer tecnologia legada?",
+      "answer": "Temos experiência com sistemas em PHP (versões antigas), Delphi, VB6, ASP clássico, Java legado e bancos SQL Server/Access. Avaliamos cada caso no briefing técnico."
+    },
+    {
+      "question": "Quanto tempo leva a modernização?",
+      "answer": "Depende do tamanho do sistema. Módulos simples: 4-6 semanas. Sistemas complexos com múltiplos módulos: 3-12 meses. Definimos o roadmap completo na auditoria técnica inicial."
+    },
+    {
+      "question": "Meus dados históricos serão perdidos?",
+      "answer": "Não. Migramos todos os dados com validação linha por linha. Mantemos backup da base original por 90 dias após a migração como garantia adicional."
+    },
+    {
+      "question": "O que acontece se o projeto for mais complexo do que previsto?",
+      "answer": "Identificamos complexidades na auditoria técnica — antes de iniciar o desenvolvimento. Se algo imprevisto surgir, paramos, comunicamos e apresentamos opções antes de continuar."
+    }
+  ]
+}

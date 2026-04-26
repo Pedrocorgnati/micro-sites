@@ -1,0 +1,61 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "b03-sem-automacao",
+  "name": "SystemForge Digital",
+  "category": "B",
+  "accentColor": "#EA580C",
+  "wave": 1,
+  "funnelStage": "awareness",
+  "template": "landing",
+  "hasBlog": true,
+  "schema": [
+    "Organization",
+    "FAQPage",
+    "HowTo"
+  ],
+  "sectionOrder": "b-variant",
+  "headline": "Você Faz Tudo na Mão Que Poderia Ser Automático?",
+  "subheadline": "Resposta manual, agendamentos por WhatsApp, cobranças feitas uma a uma. Sua equipe merece mais do que isso.",
+  "seo": {
+    "title": "Sem Automação? Você Perde Tempo e Dinheiro — SystemForge",
+    "description": "Automatize processos repetitivos do seu negócio: atendimento, agendamentos e cobranças. Mais eficiência, menos trabalho manual.",
+    "keywords": [
+      "automação de negócio",
+      "automatizar atendimento",
+      "automação whatsapp empresa",
+      "sistema automação PME"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Quero Automatizar Meu Negócio",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Faço muita coisa manualmente e quero automatizar. Podem me ajudar?"
+  },
+  "exitIntent": {
+    "offerText": "Quanto tempo você gasta com tarefas repetitivas?",
+    "offerSubtext": "Empresas que automatizam processos operacionais economizam em média 15 horas por semana. Esse tempo poderia estar em crescimento.",
+    "ctaLabel": "Quero Economizar Tempo",
+    "ctaHref": "#contato"
+  },
+  "showSystemForgeLogo": false,
+  "footerLinks": [
+    {
+      "label": "Blog",
+      "href": "/blog"
+    },
+    {
+      "label": "FAQ",
+      "href": "/faq"
+    }
+  ],
+  "crossLinks": [
+    {
+      "href": "https://c05.DOMAIN.com",
+      "anchor": "Conheça nosso sistema de automação de atendimento",
+      "context": "cta"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "lastReviewed": "2026-04-12"
+}

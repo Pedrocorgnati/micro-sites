@@ -1,0 +1,25 @@
+{
+  "headline": "Perguntas Frequentes",
+  "items": [
+    {
+      "question": "Os certificados do EduFuturo são reconhecidos pelo mercado?",
+      "answer": "Sim. Somos autorizados pelo MEC. Nossos certificados são aceitos em processos seletivos públicos, privados e concursos em todo o Brasil."
+    },
+    {
+      "question": "Existe modalidade EAD disponível?",
+      "answer": "Sim! Oferecemos cursos 100% EAD e híbridos. Você acessa o conteúdo pela nossa plataforma a qualquer hora e de qualquer lugar."
+    },
+    {
+      "question": "Qual é a duração dos cursos?",
+      "answer": "Varia por curso: idiomas duram de 12 a 24 meses, cursos técnicos de 6 a 18 meses e capacitações rápidas de 40 a 120 horas. Consulte a grade específica."
+    },
+    {
+      "question": "Vocês oferecem parcelamento?",
+      "answer": "Sim. Parcelamos em até 12x no cartão ou boleto. Também há descontos para pagamento à vista e bolsas para grupos sociais específicos."
+    },
+    {
+      "question": "Em quanto tempo recebo o certificado?",
+      "answer": "O certificado é emitido em até 15 dias úteis após a conclusão do curso e aprovação na avaliação final. Pode ser retirado presencialmente ou enviado pelos Correios."
+    }
+  ]
+}

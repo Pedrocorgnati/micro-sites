@@ -1,0 +1,45 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "c07-sistema-gestao-web",
+  "name": "SystemForge Digital",
+  "category": "C",
+  "accentColor": "#059669",
+  "wave": 3,
+  "funnelStage": "consideration",
+  "template": "landing",
+  "hasBlog": true,
+  "schema": [
+    "FAQPage",
+    "HowTo",
+    "Organization"
+  ],
+  "sectionOrder": "default",
+  "headline": "Dashboard de Gestão Web para Tomar Decisões com Dados",
+  "subheadline": "Construímos sistemas de gestão online que centralizam dados, KPIs e relatórios do seu negócio em um só lugar.",
+  "seo": {
+    "title": "Sistema de Gestão Web para Empresa — SystemForge Digital",
+    "description": "Dashboard web sob medida para gestão empresarial: KPIs, financeiro, operações e relatórios em tempo real. Tome decisões com dados reais.",
+    "keywords": [
+      "sistema gestão web",
+      "dashboard gestão empresarial",
+      "painel gestão online",
+      "KPI dashboard empresa 2026"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Quero um Dashboard de Gestão",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Preciso de um dashboard de gestão para minha empresa e vim pelo site da SystemForge."
+  },
+  "showSystemForgeLogo": true,
+  "footerLinks": [
+    {
+      "label": "FAQ",
+      "href": "/faq"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "systemForgeUrl": "https://systemforge.com.br",
+  "lastReviewed": "2026-04-12"
+}

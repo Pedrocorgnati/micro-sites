@@ -1,0 +1,87 @@
+name: Lighthouse Gate
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches:
+      - 'deploy-*'
+  # TASK-3 intake-review (CL-088, CL-172, CL-299) — auditoria mensal producao
+  schedule:
+    - cron: '0 3 1 * *'
+  workflow_dispatch:
+    inputs:
+      env:
+        description: 'Target env (local | production)'
+        required: false
+        default: 'local'
+
+jobs:
+  lighthouse-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Lighthouse CI
+        run: npm i -g @lhci/cli@0.13.x
+
+      - name: Build all sites
+        run: bash scripts/build-all.sh
+
+      # TASK-16 ST002 / CL-276 — retry para flutuacoes de network/Chrome
+      - name: Run Lighthouse gate (per-category thresholds, with retry)
+        uses: nick-fields/retry@v3
+        with:
+          max_attempts: 3
+          timeout_minutes: 25
+          retry_wait_seconds: 30
+          retry_on: any
+          command: GATE=1 bash scripts/lighthouse-batch.sh
+
+      - name: Generate monthly consolidated report
+        if: always()
+        run: npx tsx scripts/lighthouse-monthly-report.ts
+
+      - name: Upload Lighthouse reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-reports
+          path: |
+            .lighthouseci/**
+            docs/LIGHTHOUSE-RESULTS.json
+            output/reports/lighthouse-monthly/**
+          if-no-files-found: ignore
+          retention-days: 14
+
+      # TASK-16 ST001 — abre PR mensal com relatorio (apenas em schedule)
+      - name: Open monthly report PR
+        if: github.event_name == 'schedule'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: 'chore(lighthouse): monthly consolidated report ${{ github.run_id }}'
+          title: 'chore(lighthouse): monthly consolidated report'
+          body: |
+            ## Lighthouse Monthly Report
+
+            Relatorio consolidado dos 36 sites com delta vs mes anterior.
+
+            Conferir: `output/reports/lighthouse-monthly/`
+
+            Acoes recomendadas:
+            - Sites abaixo do threshold (Perf <90, Cat D <85): abrir issue de remediation
+            - Comparar delta com mes anterior — quedas >5pt merecem investigacao
+          branch: lighthouse/monthly-${{ github.run_id }}
+          delete-branch: true
+          labels: |
+            automation
+            lighthouse

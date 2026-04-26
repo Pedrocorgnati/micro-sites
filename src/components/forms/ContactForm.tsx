@@ -31,6 +31,7 @@ export function ContactForm({ config }: ContactFormProps) {
             whatsappMessage={config.cta.whatsappMessage}
             siteName={config.name}
             siteSlug={config.slug}
+            accessKey={(config as unknown as Record<string, unknown>).formAccessKey as string | undefined}
           />
         </div>
       </div>

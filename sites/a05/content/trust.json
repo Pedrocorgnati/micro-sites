@@ -1,0 +1,26 @@
+{
+  "headline": "Histórias reais de clientes satisfeitos",
+  "testimonials": [
+    {
+      "name": "Luciana Martins",
+      "role": "Compradora",
+      "business": "",
+      "quote": "Depois de 6 meses procurando sozinha, encontrei meu apartamento em 3 semanas com a ImóvelCerto. Os corretores entenderam exatamente o que eu queria. Melhor experiência de compra que tive.",
+      "rating": 5
+    },
+    {
+      "name": "Pedro Nunes",
+      "role": "Investidor",
+      "business": "Nunes Investimentos",
+      "quote": "Já comprei 4 imóveis com eles para investimento. Sempre transparentes no processo, rápidos na documentação e honestos na avaliação de preço. Parceiros de confiança.",
+      "rating": 5
+    },
+    {
+      "name": "Sandra Braga",
+      "role": "Proprietária",
+      "business": "",
+      "quote": "Colocaram meu imóvel para alugar em 15 dias. A gestão do contrato é profissional, recebo o aluguel sempre em dia e não me preocupo com nada. Tranquilidade total.",
+      "rating": 5
+    }
+  ]
+}

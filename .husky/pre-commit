@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# .husky/pre-commit (CL-072, CL-064)
+# Bloqueia dev junior (email contem "junior" ou "jr") de commitar paths protegidos.
+set -uo pipefail
+
+email=$(git config user.email 2>/dev/null || echo "")
+
+if [[ "$email" == *"junior"* || "$email" == *"jr@"* || "$email" == *".jr."* ]]; then
+  blocked=$(git diff --cached --name-only | grep -E "^(sites/_template/|scripts/|src/components/lgpd/|.github/|.husky/|next.config.ts|package.json|tsconfig.json)" || true)
+  if [[ -n "$blocked" ]]; then
+    echo "==============================================================="
+    echo "Pre-commit bloqueado para dev junior (${email})"
+    echo "Paths protegidos detectados:"
+    echo "$blocked"
+    echo
+    echo "Para commitar nestes paths, peca review ao Pedro (CODEOWNERS)."
+    echo "==============================================================="
+    exit 1
+  fi
+fi
+
+exit 0

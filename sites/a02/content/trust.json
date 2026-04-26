@@ -1,0 +1,26 @@
+{
+  "headline": "Resultados reais de alunos reais",
+  "testimonials": [
+    {
+      "name": "Rafael Mendes",
+      "role": "Engenheiro",
+      "business": "",
+      "quote": "Perdi 18kg em 6 meses com acompanhamento do personal. Nunca imaginei que conseguiria. A metodologia do Studio FitPro é diferente de tudo que já experimentei — resultados rápidos e sólidos.",
+      "rating": 5
+    },
+    {
+      "name": "Juliana Alves",
+      "role": "Advogada",
+      "business": "",
+      "quote": "Fui de sedentária total a correndo 5km em 3 meses. O suporte da equipe faz toda a diferença. Os treinos são desafiadores mas sempre dentro do meu limite. Vale cada centavo.",
+      "rating": 5
+    },
+    {
+      "name": "Roberto Silva",
+      "role": "Comerciante",
+      "business": "Loja Silva",
+      "quote": "Treino aqui com minha esposa há 8 meses. O ambiente é ótimo, os professores são dedicados e o resultado aparece rápido. Perdemos peso juntos e ganhamos qualidade de vida.",
+      "rating": 5
+    }
+  ]
+}

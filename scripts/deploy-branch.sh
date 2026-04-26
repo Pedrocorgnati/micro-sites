@@ -244,6 +244,30 @@ cd "$ROOT_DIR"
 # trap EXIT faz o cleanup do worktree e lock
 
 # ---------------------------------------------------------------------------
+# Submissão de sitemap ao Google Search Console (warning only)
+# ---------------------------------------------------------------------------
+
+if [[ "$DRY_RUN" == "false" ]]; then
+  SITE_CONFIG="$ROOT_DIR/sites/$SLUG/config.json"
+  if [[ -f "$SITE_CONFIG" ]]; then
+    SITE_URL=$(node -e "const c=require('$SITE_CONFIG'); process.stdout.write(c.seo?.canonical ?? '')" 2>/dev/null || true)
+    if [[ -n "$SITE_URL" ]] && [[ "$SITE_URL" =~ ^https?:// ]]; then
+      log_step "Submetendo sitemap ao Google..."
+      SITEMAP_URL="${SITE_URL%/}/sitemap.xml"
+      PING_STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 \
+        "https://www.google.com/ping?sitemap=${SITEMAP_URL}" 2>/dev/null || echo "000")
+      if [[ "$PING_STATUS" == "200" ]]; then
+        log_ok "Sitemap submetido: $SITEMAP_URL"
+      else
+        log_warn "Sitemap ping retornou HTTP $PING_STATUS (não bloqueante)"
+      fi
+    else
+      log_warn "SITE_URL não configurado em config.seo.canonical — sitemap não submetido"
+    fi
+  fi
+fi
+
+# ---------------------------------------------------------------------------
 # Relatório final
 # ---------------------------------------------------------------------------
 

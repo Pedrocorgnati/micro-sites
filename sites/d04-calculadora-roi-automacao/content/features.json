@@ -1,0 +1,20 @@
+{
+  "headline": "Por que calcular o ROI antes de decidir?",
+  "items": [
+    {
+      "icon": "trending-up",
+      "title": "Argumento Financeiro Sólido",
+      "description": "Apresente números concretos de economia para justificar o investimento em automação."
+    },
+    {
+      "icon": "clock",
+      "title": "Identifique Gargalos",
+      "description": "Descubra quais processos consomem mais recursos e têm maior potencial de retorno."
+    },
+    {
+      "icon": "shield",
+      "title": "Decisão Baseada em Dados",
+      "description": "Pare de adivinhar e baseie sua estratégia de automação em projeções reais do seu negócio."
+    }
+  ]
+}

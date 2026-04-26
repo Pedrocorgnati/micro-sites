@@ -1,0 +1,26 @@
+{
+  "headline": "Sites que chegaram à primeira página",
+  "stats": [
+    { "value": "1ª pág", "label": "Google em 90 dias" },
+    { "value": "+180%", "label": "Tráfego orgânico" },
+    { "value": "3-6 meses", "label": "Para resultados sólidos" },
+    { "value": "50+", "label": "Sites otimizados" }
+  ],
+  "testimonials": [
+    {
+      "name": "Henrique Costa",
+      "role": "Proprietário — Pet Shop",
+      "quote": "Em 4 meses meu site começou a aparecer para 'pet shop [cidade]'. Recebo novos clientes toda semana que chegam pelo Google."
+    },
+    {
+      "name": "Tatiana Lima",
+      "role": "Psicóloga",
+      "quote": "Tinha site há 2 anos mas não aparecia para nada. Depois da otimização, apareço na primeira página para buscas de psicólogo na minha região."
+    },
+    {
+      "name": "Bruno Macedo",
+      "role": "Instalador de câmeras",
+      "quote": "Nunca imaginei que SEO faria tanta diferença. Hoje a maioria dos clientes novos me encontra pelo Google — zero custo com anúncio."
+    }
+  ]
+}

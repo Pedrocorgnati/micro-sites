@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import { loadSiteConfig, loadSiteContent, getAccentStyle } from '@/lib/config-loader';
 import { buildFAQSchema } from '@/lib/schema-markup';
 import { Header } from '@/components/ui/Header';
@@ -9,9 +10,14 @@ import { CTASection } from '@/components/sections/CTASection';
 
 const SITE_SLUG = process.env.SITE_SLUG ?? 'c01-site-institucional-pme';
 
-export const metadata: Metadata = {
-  title: 'Perguntas Frequentes',
-};
+export function generateMetadata(): Metadata {
+  const config = loadSiteConfig(SITE_SLUG);
+  return {
+    title: 'Perguntas Frequentes',
+    description: `Respostas para as perguntas mais frequentes sobre ${config.name}. Tire suas dúvidas rapidamente antes de entrar em contato.`,
+    alternates: { canonical: '/faq' },
+  };
+}
 
 export default function FAQPage() {
   const config = loadSiteConfig(SITE_SLUG);
@@ -20,21 +26,25 @@ export default function FAQPage() {
 
   const faqs = content.faqs?.items ?? [];
 
+  // CL-223/CL-369: /faq condicional — 404 quando nao ha FAQs publicaveis
+  const faqEnabled = (config as { faqEnabled?: boolean }).faqEnabled !== false;
+  if (!faqEnabled || faqs.length === 0) {
+    notFound();
+  }
+
   // FAQPage JSON-LD renderizado no server component para garantir presença no HTML estático
-  const faqSchema = faqs.length > 0 ? buildFAQSchema(faqs) : null;
+  const faqSchema = buildFAQSchema(faqs);
 
   return (
     <div style={accentStyle}>
       <Header siteName={config.name} ctaLabel={config.cta.primaryLabel} ctaHref="/contato" />
 
       <main id="main-content" data-testid="main-content" tabIndex={-1}>
-        {faqSchema && (
-          <script
-            id="faq-schema"
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-          />
-        )}
+        <script
+          id="faq-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
         <FAQAccordion
           headline={content.faqs?.headline ?? 'Perguntas Frequentes'}
           faqs={faqs}
@@ -51,7 +61,7 @@ export default function FAQPage() {
         />
       </main>
 
-      <Footer siteName={config.name} showSystemForgeLogo={config.showSystemForgeLogo} links={config.footerLinks} />
+      <Footer siteName={config.name} showSystemForgeLogo={config.showSystemForgeLogo} links={config.footerLinks} contactEmail={(config as { contactEmail?: string }).contactEmail} />
       <WhatsAppButton phone={config.cta.whatsappNumber} message={config.cta.whatsappMessage} />
     </div>
   );

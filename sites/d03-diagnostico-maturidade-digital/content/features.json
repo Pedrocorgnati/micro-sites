@@ -1,0 +1,20 @@
+{
+  "headline": "5 pilares avaliados no diagnóstico",
+  "items": [
+    {
+      "icon": "globe",
+      "title": "Presença Online",
+      "description": "Site, SEO e visibilidade no Google — a base que toda empresa digital precisa ter."
+    },
+    {
+      "icon": "users",
+      "title": "Captação de Leads",
+      "description": "Como você atrai e converte clientes: orgânico, pago ou multicanal."
+    },
+    {
+      "icon": "zap",
+      "title": "Automação de Processos",
+      "description": "O quanto do seu atendimento e operação já funciona sem intervenção manual."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "headline": "Por que nosso dashboard de gestão é diferente",
+  "items": [
+    {
+      "icon": "activity",
+      "title": "Dados em tempo real",
+      "description": "KPIs atualizados automaticamente — não no final do mês quando o relatório fica pronto, mas agora."
+    },
+    {
+      "icon": "link",
+      "title": "Integra com o que você já usa",
+      "description": "Não precisa mudar seu ERP, CRM ou planilha. Conectamos o que você já tem e centralizamos em um único painel."
+    },
+    {
+      "icon": "bell",
+      "title": "Alertas antes do problema",
+      "description": "Configure limites por KPI e receba notificação antes que o desvio vire uma crise. Gestão proativa, não reativa."
+    }
+  ]
+}

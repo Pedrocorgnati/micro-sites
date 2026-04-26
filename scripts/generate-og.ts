@@ -17,7 +17,9 @@ import { getAllSlugs, loadSiteConfig } from '../src/lib/content-loader';
 import { generateOGImage } from '../src/lib/og-image-generator';
 
 const SLUG_ARG = process.argv[2] ?? process.env.SITE_SLUG ?? '';
-const DIST_DIR = path.join(process.cwd(), 'dist');
+const ROOT_DIR = process.cwd();
+const DIST_DIR = path.join(ROOT_DIR, 'dist');
+const FALLBACK_OG = path.join(ROOT_DIR, 'public', 'og-default.png');
 
 async function main() {
   const slugs = SLUG_ARG ? [SLUG_ARG] : getAllSlugs();
@@ -43,6 +45,23 @@ async function main() {
     } catch (err) {
       // BUILD_056 — falha em OG image é warning (não aborta geração dos demais)
       console.error(`  ✗ [WARN BUILD_056] ${slug}: ${err}`);
+
+      // Fallback: copiar public/og-default.png para dist/{slug}/og-image.png
+      // Garante que <meta property="og:image"> sempre resolva para uma imagem valida.
+      try {
+        const siteDistDir = path.join(DIST_DIR, slug);
+        if (!fs.existsSync(siteDistDir)) {
+          fs.mkdirSync(siteDistDir, { recursive: true });
+        }
+        if (fs.existsSync(FALLBACK_OG)) {
+          fs.copyFileSync(FALLBACK_OG, path.join(siteDistDir, 'og-image.png'));
+          console.log(`  ↳ fallback og-default aplicado em ${slug}`);
+        } else {
+          console.error(`  ✗ [WARN BUILD_056] fallback indisponivel: ${FALLBACK_OG} nao existe (rode scripts/generate-default-assets.ts)`);
+        }
+      } catch (fallbackErr) {
+        console.error(`  ✗ [WARN BUILD_056] falha ao aplicar fallback em ${slug}: ${fallbackErr}`);
+      }
     }
   }
 }

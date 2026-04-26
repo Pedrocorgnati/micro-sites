@@ -1,0 +1,24 @@
+# .gitattributes (CL-528-529)
+# Reduz noise em diff/PR de assets gerados ou binarios.
+
+# Build output marcado como gerado (linguist nao conta linhas no GitHub)
+dist/**            linguist-generated=true
+.next/**           linguist-generated=true
+out/**             linguist-generated=true
+
+# Binarios — diff binario, sem text mode
+*.pdf              binary
+*.woff             binary
+*.woff2            binary
+*.ttf              binary
+*.eot              binary
+*.png              binary
+*.jpg              binary
+*.jpeg             binary
+*.webp             binary
+*.avif             binary
+*.ico              binary
+*.zip              binary
+
+# Lockfiles — hide do diff por default
+package-lock.json  -diff

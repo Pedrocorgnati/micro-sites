@@ -1,0 +1,62 @@
+name: content-freshness
+
+# TASK-4 intake-review (CL-096, CL-258) — refresh trimestral automatizado
+on:
+  schedule:
+    # Trimestral: 01 Jan, 01 Abr, 01 Jul, 01 Out as 09:00 UTC
+    - cron: '0 9 1 1,4,7,10 *'
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run freshness check
+        run: bash scripts/check-content-freshness.sh
+
+      - name: Compute quarter label
+        id: quarter
+        run: |
+          month=$(date +%-m)
+          year=$(date +%Y)
+          case "$month" in
+            1|2|3)   q=1 ;;
+            4|5|6)   q=2 ;;
+            7|8|9)   q=3 ;;
+            10|11|12) q=4 ;;
+          esac
+          echo "label=${year}-Q${q}" >> "$GITHUB_OUTPUT"
+
+      - name: Open refresh issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          QUARTER: ${{ steps.quarter.outputs.label }}
+        run: |
+          if [ ! -f output/metrics/content-freshness.json ]; then
+            echo "JSON ausente — abortando"; exit 0
+          fi
+          body_file=$(mktemp)
+          {
+            echo "# Refresh trimestral ${QUARTER}"
+            echo ""
+            echo "Gate automatico de conteudo — sites/posts com \`dateModified\` > 90 dias."
+            echo ""
+            echo "## Dados"
+            echo ""
+            echo '```json'
+            cat output/metrics/content-freshness.json
+            echo '```'
+            echo ""
+            echo "## Acao sugerida"
+            echo "- Executar \`/blog:refresh-content\` nos top-N por trafego"
+            echo "- Atualizar \`lastReviewed\` em \`sites/{slug}/config.json\`"
+          } > "$body_file"
+          gh issue create \
+            --title "Refresh trimestral ${QUARTER}" \
+            --label "content-refresh" \
+            --body-file "$body_file"

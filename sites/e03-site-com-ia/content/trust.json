@@ -1,0 +1,26 @@
+{
+  "headline": "Fundadores que já garantiram seu lugar",
+  "stats": [
+    { "value": "241", "label": "Fundadores na lista" },
+    { "value": "50%", "label": "Off no primeiro ano" },
+    { "value": "+3x", "label": "Mais conversões vs sites estáticos" },
+    { "value": "2026", "label": "Lançamento previsto" }
+  ],
+  "testimonials": [
+    {
+      "name": "Mariana Freitas",
+      "role": "Coach de carreira",
+      "quote": "A ideia de um site que se adapta ao visitante é revolucionária para quem atende diferentes públicos. Estou animada para ser fundadora."
+    },
+    {
+      "name": "Eduardo Castilho",
+      "role": "Consultor de vendas",
+      "quote": "Um chatbot que realmente entende as perguntas dos clientes é o que separa sites bons de sites excelentes. ForgeSite parece entregar isso."
+    },
+    {
+      "name": "Natalia Pereira",
+      "role": "Proprietária — E-commerce",
+      "quote": "A/B testing automático é algo que sempre quis mas nunca tive tempo de implementar. Se ForgeSite realmente faz isso, muda tudo."
+    }
+  ]
+}

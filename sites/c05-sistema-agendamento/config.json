@@ -1,0 +1,45 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "c05-sistema-agendamento",
+  "name": "SystemForge Digital",
+  "category": "C",
+  "accentColor": "#059669",
+  "wave": 1,
+  "funnelStage": "consideration",
+  "template": "landing",
+  "hasBlog": true,
+  "schema": [
+    "FAQPage",
+    "HowTo",
+    "Organization"
+  ],
+  "sectionOrder": "default",
+  "headline": "Sistema de Agendamento Online que Organiza Seu Negócio",
+  "subheadline": "Automatize marcações de consultas, serviços e reuniões com um sistema sob medida para sua empresa.",
+  "seo": {
+    "title": "Agendamento Online para Empresa | SystemForge Digital",
+    "description": "Sistema web de agendamento sob medida para clínicas, salões, academias e prestadores de serviço. Reduza faltas e automatize lembretes.",
+    "keywords": [
+      "sistema agendamento online",
+      "software agendamento clientes",
+      "app agendamento empresa",
+      "agenda online 2026"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Quero um Sistema de Agendamento",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Preciso de um sistema de agendamento online e vim pelo site da SystemForge."
+  },
+  "showSystemForgeLogo": true,
+  "footerLinks": [
+    {
+      "label": "FAQ",
+      "href": "/faq"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "systemForgeUrl": "https://systemforge.com.br",
+  "lastReviewed": "2026-04-12"
+}

@@ -1,0 +1,56 @@
+/* ============================================================
+   src/styles/animations.css
+   ============================================================
+   Politica de animacao minima (ADR-0005).
+   Importado em src/app/globals.css — prevalece sobre definicoes
+   anteriores para compliance prefers-reduced-motion.
+
+   Regras (ADR-0005):
+     - fade-in ate 200ms
+     - transicoes <= 200ms
+     - SEM parallax, scroll-jacking, autoplay ou scale > 1.05
+     - Excecoes marcadas com "animation-policy-ok: <motivo>"
+
+   Compliance:
+     - prefers-reduced-motion: reduce desativa TUDO (animation/transition)
+   ============================================================ */
+
+/* Palette canonica de keyframes permitidos (ADR-0005 §Permitido) */
+@keyframes sf-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes sf-fade-in-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* animation-policy-ok: spinner exige loop continuo (estado loading) */
+@keyframes sf-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Classes utilitarias canonicas */
+.sf-fade-in    { animation: sf-fade-in 200ms ease-out both; }
+.sf-fade-in-up { animation: sf-fade-in-up 200ms ease-out both; }
+/* animation-policy-ok: spinner exige loop continuo (estado loading) */
+.sf-spin       { animation: sf-spin 800ms linear infinite; }
+
+/* ============================================================
+   Compliance prefers-reduced-motion — ADR-0005
+   Prevalece sobre TUDO (animation + transition) via cascade.
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    animation-duration: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition: none !important;
+    transition-duration: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+}

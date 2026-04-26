@@ -1,0 +1,48 @@
+[
+  {
+    "slug": "custo-manutencao-site",
+    "title": "Custo de Manutenção de Site: O Que Você Paga Todo Mês",
+    "description": "Descubra todos os custos mensais e anuais para manter um site no ar: hospedagem, domínio, SSL, plugins, backups e mão de obra.",
+    "tags": [
+      "custo de site",
+      "manutenção web",
+      "hospedagem",
+      "investimento digital"
+    ],
+    "date": "2026-04-09",
+    "readingTime": 6,
+    "category": "Caso de Uso",
+    "funnelStage": "MOFU"
+  },
+  {
+    "slug": "hospedagem-site-comparativo",
+    "title": "Hospedagem de Site: Comparativo Completo 2026",
+    "description": "Compare as melhores hospedagens de site para pequenas empresas: Hostinger, HostGator, Locaweb e AWS. Preço, velocidade e suporte.",
+    "tags": [
+      "hospedagem",
+      "hosting",
+      "Hostinger",
+      "HostGator",
+      "WordPress"
+    ],
+    "date": "2026-04-09",
+    "readingTime": 6,
+    "category": "Ferramenta",
+    "funnelStage": "MOFU"
+  },
+  {
+    "slug": "site-institucional-vs-landing-page",
+    "title": "Site Institucional vs Landing Page: Qual Escolher?",
+    "description": "Entenda a diferença entre site institucional e landing page, quando usar cada um e como cada formato impacta suas conversões e SEO.",
+    "tags": [
+      "site institucional",
+      "landing page",
+      "presença digital",
+      "conversão"
+    ],
+    "date": "2026-04-09",
+    "readingTime": 5,
+    "category": "Caso de Uso",
+    "funnelStage": "TOFU"
+  }
+]

@@ -1,0 +1,49 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "c02-landing-page-conversao",
+  "name": "SystemForge Digital",
+  "category": "C",
+  "accentColor": "#059669",
+  "wave": 1,
+  "funnelStage": "consideration",
+  "template": "landing",
+  "hasBlog": true,
+  "schema": [
+    "FAQPage",
+    "HowTo",
+    "Organization"
+  ],
+  "sectionOrder": "default",
+  "headline": "Landing Pages que Convertem: Do Clique à Venda",
+  "subheadline": "Criamos landing pages otimizadas para campanhas Google Ads e Meta Ads com foco total em conversão.",
+  "seo": {
+    "title": "Landing Page de Alta Conversão | SystemForge Digital",
+    "description": "Landing pages profissionais para campanhas de performance. Copywriting focado em conversão, testes A/B e integração com seu pixel de rastreamento.",
+    "keywords": [
+      "criação landing page",
+      "landing page alta conversão",
+      "landing page Google Ads",
+      "landing page Meta Ads"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Quero uma Landing Page que Converte",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Preciso de uma landing page para minha campanha e vim pelo site da SystemForge."
+  },
+  "showSystemForgeLogo": true,
+  "footerLinks": [
+    {
+      "label": "Blog",
+      "href": "/blog"
+    },
+    {
+      "label": "FAQ",
+      "href": "/faq"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "systemForgeUrl": "https://systemforge.com.br",
+  "lastReviewed": "2026-04-12"
+}

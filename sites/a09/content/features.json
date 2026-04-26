@@ -1,0 +1,25 @@
+{
+  "headline": "Por que o Studio Beauté é diferente?",
+  "items": [
+    {
+      "icon": "award",
+      "title": "Profissionais certificados",
+      "description": "Equipe com formação técnica reconhecida e participação em cursos de atualização periódicos. Você está em mãos experientes e atualizadas."
+    },
+    {
+      "icon": "star",
+      "title": "Produtos premium",
+      "description": "Utilizamos exclusivamente marcas profissionais certificadas (Wella, L'Oréal, OPI). Resultados superiores e menor agressão ao fio e à pele."
+    },
+    {
+      "icon": "calendar",
+      "title": "Agenda online fácil",
+      "description": "Agende pelo WhatsApp sem esperar. Confirmação imediata, lembrete no dia anterior e horário reservado exclusivamente para você."
+    },
+    {
+      "icon": "heart",
+      "title": "Avaliação personalizada",
+      "description": "Antes de qualquer procedimento, avaliamos o histórico capilar e o tipo de pele para indicar o tratamento ideal. Resultado alinhado com o que você quer."
+    }
+  ]
+}

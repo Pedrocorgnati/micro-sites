@@ -1,0 +1,25 @@
+{
+  "headline": "Dúvidas sobre WordPress, Wix e desenvolvimento próprio",
+  "items": [
+    {
+      "question": "WordPress ainda vale a pena em 2026?",
+      "answer": "Depende do uso. Para blogs com equipe editorial que prefere CMS visual: sim. Para sites corporativos que precisam de performance máxima e segurança robusta: o custo de manutenção do WordPress supera o benefício. Avalie caso a caso."
+    },
+    {
+      "question": "Wix ou Squarespace são boas opções para negócios sérios?",
+      "answer": "Para portfólios criativos e pequenos negócios locais: sim. Para negócios que dependem de SEO técnico avançado, integração com sistemas externos ou tráfego alto: não recomendamos. As limitações de markup e velocidade impactam diretamente o ranqueamento."
+    },
+    {
+      "question": "Qual a diferença real entre site sob medida e plataforma pronta?",
+      "answer": "Plataforma pronta: menor custo inicial, menor flexibilidade, mensalidade recorrente, dependência do fornecedor. Sob medida: maior custo inicial, controle total, sem mensalidade de plataforma, código próprio que você pode migrar ou expandir."
+    },
+    {
+      "question": "É possível migrar do WordPress para Next.js sem perder SEO?",
+      "answer": "Sim, com planejamento. Os pontos críticos são: manter as URLs exatamente iguais (ou usar redirects 301), exportar todos os metadados, recriar o sitemap e fazer a migração gradual. Já realizamos mais de 15 migrações WordPress → Next.js sem perda de posicionamento."
+    },
+    {
+      "question": "Quanto custa migrar de plataforma?",
+      "answer": "Migração simples (até 50 páginas, sem e-commerce): R$ 3.000 a R$ 6.000. Migração de e-commerce com produtos e histórico de pedidos: R$ 8.000 a R$ 20.000. O custo depende da quantidade de conteúdo, integrações e complexidade das regras de negócio."
+    }
+  ]
+}

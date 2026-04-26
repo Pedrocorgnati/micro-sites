@@ -1,0 +1,25 @@
+{
+  "headline": "Dúvidas sobre sistema de gestão web",
+  "items": [
+    {
+      "question": "O sistema vai se integrar com o ERP ou planilha que já uso?",
+      "answer": "Depende da ferramenta. Avaliamos a viabilidade técnica no briefing. Temos experiência com integrações via API, CSV automático e webhooks com Excel, Google Sheets, Totvs, SAP e ERPs específicos do segmento."
+    },
+    {
+      "question": "Quantos usuários podem acessar o dashboard?",
+      "answer": "Definimos no projeto. Sistemas menores para 1-5 usuários são mais simples e baratos. Sistemas para equipes maiores têm controle de acesso por perfil — cada gestor vê os dados do seu setor."
+    },
+    {
+      "question": "Os dados ficam atualizados em tempo real?",
+      "answer": "Depende da fonte. Dados via API atualizam em tempo real (ou próximo disso). Dados de planilhas ou bases legadas podem ter atualização a cada 15-60 minutos, configurável."
+    },
+    {
+      "question": "Consigo ver o dashboard no celular?",
+      "answer": "Sim. Desenvolvemos com design responsivo — você acessa os KPIs pelo navegador do celular sem perder qualidade de visualização."
+    },
+    {
+      "question": "Quanto tempo demora para o painel ficar pronto?",
+      "answer": "Painéis com 3-5 KPIs de fontes simples: 3-4 semanas. Dashboards complexos com múltiplas integrações: 6-10 semanas. Definimos o prazo exato após o mapeamento de fontes de dados."
+    }
+  ]
+}

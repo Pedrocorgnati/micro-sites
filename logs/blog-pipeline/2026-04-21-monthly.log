@@ -1,0 +1,861 @@
+[2026-04-21T20:18:47] === MONTHLY pipeline — scope=ALL ===
+[2026-04-21T20:18:47] Sites elegiveis: a01 a02 a03 a04 a05 a06 a07 a08 a09 a10 b01-sem-site-profissional b02-site-antigo-lento b03-sem-automacao b04-sem-presenca-digital b05-perder-clientes-online b06-sem-leads-qualificados b07-site-nao-aparece-google b08-concorrente-digital c01-site-institucional-pme c02-landing-page-conversao c03-app-web-negocio c04-ecommerce-pequeno-negocio c05-sistema-agendamento c06-automacao-atendimento c07-sistema-gestao-web c08-marketplace-nicho d01-calculadora-custo-site d02-calculadora-custo-app d03-diagnostico-maturidade-digital d04-calculadora-roi-automacao d05-checklist-presenca-digital f01-blog-desenvolvimento-web f02-blog-marketing-digital 
+[2026-04-21T20:18:47] --- planning a01 ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=a01
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=a01
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=a01
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=a01
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=a01
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning a02 ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=a02
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=a02
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=a02
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=a02
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=a02
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning a03 ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=a03
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=a03
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=a03
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=a03
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=a03
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning a04 ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=a04
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=a04
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=a04
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=a04
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=a04
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning a05 ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=a05
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=a05
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=a05
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=a05
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=a05
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning a06 ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=a06
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=a06
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=a06
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=a06
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=a06
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning a07 ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=a07
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=a07
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=a07
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=a07
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=a07
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning a08 ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=a08
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=a08
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=a08
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=a08
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=a08
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning a09 ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=a09
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=a09
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=a09
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=a09
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=a09
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning a10 ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=a10
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=a10
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=a10
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=a10
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=a10
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning b01-sem-site-profissional ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=b01-sem-site-profissional
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=b01-sem-site-profissional
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=b01-sem-site-profissional
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=b01-sem-site-profissional
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=b01-sem-site-profissional
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning b02-site-antigo-lento ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=b02-site-antigo-lento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=b02-site-antigo-lento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=b02-site-antigo-lento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=b02-site-antigo-lento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=b02-site-antigo-lento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning b03-sem-automacao ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=b03-sem-automacao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=b03-sem-automacao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=b03-sem-automacao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=b03-sem-automacao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=b03-sem-automacao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning b04-sem-presenca-digital ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=b04-sem-presenca-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=b04-sem-presenca-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=b04-sem-presenca-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=b04-sem-presenca-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=b04-sem-presenca-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning b05-perder-clientes-online ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=b05-perder-clientes-online
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=b05-perder-clientes-online
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=b05-perder-clientes-online
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=b05-perder-clientes-online
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=b05-perder-clientes-online
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning b06-sem-leads-qualificados ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=b06-sem-leads-qualificados
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=b06-sem-leads-qualificados
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=b06-sem-leads-qualificados
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=b06-sem-leads-qualificados
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=b06-sem-leads-qualificados
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning b07-site-nao-aparece-google ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=b07-site-nao-aparece-google
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=b07-site-nao-aparece-google
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=b07-site-nao-aparece-google
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=b07-site-nao-aparece-google
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=b07-site-nao-aparece-google
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning b08-concorrente-digital ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=b08-concorrente-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=b08-concorrente-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=b08-concorrente-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=b08-concorrente-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=b08-concorrente-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning c01-site-institucional-pme ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=c01-site-institucional-pme
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=c01-site-institucional-pme
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=c01-site-institucional-pme
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=c01-site-institucional-pme
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=c01-site-institucional-pme
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning c02-landing-page-conversao ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=c02-landing-page-conversao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=c02-landing-page-conversao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=c02-landing-page-conversao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=c02-landing-page-conversao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=c02-landing-page-conversao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning c03-app-web-negocio ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=c03-app-web-negocio
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=c03-app-web-negocio
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=c03-app-web-negocio
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=c03-app-web-negocio
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=c03-app-web-negocio
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning c04-ecommerce-pequeno-negocio ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=c04-ecommerce-pequeno-negocio
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=c04-ecommerce-pequeno-negocio
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=c04-ecommerce-pequeno-negocio
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=c04-ecommerce-pequeno-negocio
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=c04-ecommerce-pequeno-negocio
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning c05-sistema-agendamento ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=c05-sistema-agendamento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=c05-sistema-agendamento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=c05-sistema-agendamento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=c05-sistema-agendamento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=c05-sistema-agendamento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning c06-automacao-atendimento ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=c06-automacao-atendimento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=c06-automacao-atendimento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=c06-automacao-atendimento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=c06-automacao-atendimento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=c06-automacao-atendimento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning c07-sistema-gestao-web ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=c07-sistema-gestao-web
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=c07-sistema-gestao-web
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=c07-sistema-gestao-web
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=c07-sistema-gestao-web
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=c07-sistema-gestao-web
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning c08-marketplace-nicho ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=c08-marketplace-nicho
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=c08-marketplace-nicho
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=c08-marketplace-nicho
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=c08-marketplace-nicho
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=c08-marketplace-nicho
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning d01-calculadora-custo-site ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=d01-calculadora-custo-site
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=d01-calculadora-custo-site
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=d01-calculadora-custo-site
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=d01-calculadora-custo-site
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=d01-calculadora-custo-site
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning d02-calculadora-custo-app ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=d02-calculadora-custo-app
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=d02-calculadora-custo-app
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=d02-calculadora-custo-app
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=d02-calculadora-custo-app
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=d02-calculadora-custo-app
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning d03-diagnostico-maturidade-digital ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=d03-diagnostico-maturidade-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=d03-diagnostico-maturidade-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=d03-diagnostico-maturidade-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=d03-diagnostico-maturidade-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=d03-diagnostico-maturidade-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning d04-calculadora-roi-automacao ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=d04-calculadora-roi-automacao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=d04-calculadora-roi-automacao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=d04-calculadora-roi-automacao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=d04-calculadora-roi-automacao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=d04-calculadora-roi-automacao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning d05-checklist-presenca-digital ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=d05-checklist-presenca-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=d05-checklist-presenca-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=d05-checklist-presenca-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=d05-checklist-presenca-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=d05-checklist-presenca-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning f01-blog-desenvolvimento-web ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=f01-blog-desenvolvimento-web
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=f01-blog-desenvolvimento-web
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=f01-blog-desenvolvimento-web
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=f01-blog-desenvolvimento-web
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=f01-blog-desenvolvimento-web
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- planning f02-blog-marketing-digital ---
+[2026-04-21T20:18:47] -> expand-keywords: /blog:expand-keywords --site=f02-blog-marketing-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> cluster-keywords: /blog:cluster-keywords --site=f02-blog-marketing-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> discover-intents: /blog:discover-intents --site=f02-blog-marketing-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> prioritize-topics: /blog:prioritize-topics --site=f02-blog-marketing-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> generate-briefs: /blog:generate-briefs --site=f02-blog-marketing-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing a01 ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=a01
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=a01
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=a01
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=a01
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=a01
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing a02 ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=a02
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=a02
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=a02
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=a02
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=a02
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing a03 ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=a03
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=a03
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=a03
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=a03
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=a03
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing a04 ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=a04
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=a04
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=a04
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=a04
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=a04
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing a05 ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=a05
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=a05
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=a05
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=a05
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=a05
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing a06 ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=a06
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=a06
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=a06
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=a06
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=a06
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing a07 ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=a07
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=a07
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=a07
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=a07
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=a07
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing a08 ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=a08
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=a08
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=a08
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=a08
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=a08
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing a09 ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=a09
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=a09
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=a09
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=a09
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=a09
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing a10 ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=a10
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=a10
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=a10
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=a10
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=a10
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing b01-sem-site-profissional ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=b01-sem-site-profissional
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=b01-sem-site-profissional
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=b01-sem-site-profissional
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=b01-sem-site-profissional
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=b01-sem-site-profissional
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing b02-site-antigo-lento ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=b02-site-antigo-lento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=b02-site-antigo-lento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=b02-site-antigo-lento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=b02-site-antigo-lento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=b02-site-antigo-lento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing b03-sem-automacao ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=b03-sem-automacao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=b03-sem-automacao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=b03-sem-automacao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=b03-sem-automacao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=b03-sem-automacao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing b04-sem-presenca-digital ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=b04-sem-presenca-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=b04-sem-presenca-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=b04-sem-presenca-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=b04-sem-presenca-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=b04-sem-presenca-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing b05-perder-clientes-online ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=b05-perder-clientes-online
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=b05-perder-clientes-online
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=b05-perder-clientes-online
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=b05-perder-clientes-online
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=b05-perder-clientes-online
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing b06-sem-leads-qualificados ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=b06-sem-leads-qualificados
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=b06-sem-leads-qualificados
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=b06-sem-leads-qualificados
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=b06-sem-leads-qualificados
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=b06-sem-leads-qualificados
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing b07-site-nao-aparece-google ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=b07-site-nao-aparece-google
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=b07-site-nao-aparece-google
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=b07-site-nao-aparece-google
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=b07-site-nao-aparece-google
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=b07-site-nao-aparece-google
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing b08-concorrente-digital ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=b08-concorrente-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=b08-concorrente-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=b08-concorrente-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=b08-concorrente-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=b08-concorrente-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing c01-site-institucional-pme ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=c01-site-institucional-pme
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=c01-site-institucional-pme
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=c01-site-institucional-pme
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=c01-site-institucional-pme
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=c01-site-institucional-pme
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing c02-landing-page-conversao ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=c02-landing-page-conversao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=c02-landing-page-conversao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=c02-landing-page-conversao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=c02-landing-page-conversao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=c02-landing-page-conversao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing c03-app-web-negocio ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=c03-app-web-negocio
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=c03-app-web-negocio
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=c03-app-web-negocio
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=c03-app-web-negocio
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=c03-app-web-negocio
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing c04-ecommerce-pequeno-negocio ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=c04-ecommerce-pequeno-negocio
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=c04-ecommerce-pequeno-negocio
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=c04-ecommerce-pequeno-negocio
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=c04-ecommerce-pequeno-negocio
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=c04-ecommerce-pequeno-negocio
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing c05-sistema-agendamento ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=c05-sistema-agendamento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=c05-sistema-agendamento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=c05-sistema-agendamento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=c05-sistema-agendamento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=c05-sistema-agendamento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing c06-automacao-atendimento ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=c06-automacao-atendimento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=c06-automacao-atendimento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=c06-automacao-atendimento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=c06-automacao-atendimento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=c06-automacao-atendimento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing c07-sistema-gestao-web ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=c07-sistema-gestao-web
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=c07-sistema-gestao-web
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=c07-sistema-gestao-web
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=c07-sistema-gestao-web
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=c07-sistema-gestao-web
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing c08-marketplace-nicho ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=c08-marketplace-nicho
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=c08-marketplace-nicho
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=c08-marketplace-nicho
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=c08-marketplace-nicho
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=c08-marketplace-nicho
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing d01-calculadora-custo-site ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=d01-calculadora-custo-site
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=d01-calculadora-custo-site
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=d01-calculadora-custo-site
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=d01-calculadora-custo-site
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=d01-calculadora-custo-site
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing d02-calculadora-custo-app ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=d02-calculadora-custo-app
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=d02-calculadora-custo-app
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=d02-calculadora-custo-app
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=d02-calculadora-custo-app
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=d02-calculadora-custo-app
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing d03-diagnostico-maturidade-digital ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=d03-diagnostico-maturidade-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=d03-diagnostico-maturidade-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=d03-diagnostico-maturidade-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=d03-diagnostico-maturidade-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=d03-diagnostico-maturidade-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing d04-calculadora-roi-automacao ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=d04-calculadora-roi-automacao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=d04-calculadora-roi-automacao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=d04-calculadora-roi-automacao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=d04-calculadora-roi-automacao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=d04-calculadora-roi-automacao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing d05-checklist-presenca-digital ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=d05-checklist-presenca-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=d05-checklist-presenca-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=d05-checklist-presenca-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=d05-checklist-presenca-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=d05-checklist-presenca-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing f01-blog-desenvolvimento-web ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=f01-blog-desenvolvimento-web
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=f01-blog-desenvolvimento-web
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=f01-blog-desenvolvimento-web
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=f01-blog-desenvolvimento-web
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=f01-blog-desenvolvimento-web
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] --- producing f02-blog-marketing-digital ---
+[2026-04-21T20:18:47] -> write-articles: /blog:write-articles --site=f02-blog-marketing-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> eeat-inject: /blog:eeat-inject --site=f02-blog-marketing-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> quality-gate: /blog:quality-gate --site=f02-blog-marketing-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-metadata: /blog:build-metadata --site=f02-blog-marketing-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> review-seo: /blog:review-seo --site=f02-blog-marketing-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=a01
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=a01
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=a02
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=a02
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=a03
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=a03
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=a04
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=a04
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=a05
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=a05
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=a06
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=a06
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=a07
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=a07
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=a08
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=a08
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=a09
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=a09
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=a10
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=a10
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=b01-sem-site-profissional
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=b01-sem-site-profissional
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=b02-site-antigo-lento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=b02-site-antigo-lento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=b03-sem-automacao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=b03-sem-automacao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=b04-sem-presenca-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=b04-sem-presenca-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=b05-perder-clientes-online
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=b05-perder-clientes-online
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=b06-sem-leads-qualificados
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=b06-sem-leads-qualificados
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=b07-site-nao-aparece-google
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=b07-site-nao-aparece-google
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=b08-concorrente-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=b08-concorrente-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=c01-site-institucional-pme
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=c01-site-institucional-pme
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=c02-landing-page-conversao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=c02-landing-page-conversao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=c03-app-web-negocio
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=c03-app-web-negocio
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=c04-ecommerce-pequeno-negocio
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=c04-ecommerce-pequeno-negocio
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=c05-sistema-agendamento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=c05-sistema-agendamento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=c06-automacao-atendimento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=c06-automacao-atendimento
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=c07-sistema-gestao-web
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=c07-sistema-gestao-web
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=c08-marketplace-nicho
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=c08-marketplace-nicho
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=d01-calculadora-custo-site
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=d01-calculadora-custo-site
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=d02-calculadora-custo-app
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=d02-calculadora-custo-app
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=d03-diagnostico-maturidade-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=d03-diagnostico-maturidade-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=d04-calculadora-roi-automacao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=d04-calculadora-roi-automacao
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=d05-checklist-presenca-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=d05-checklist-presenca-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=f01-blog-desenvolvimento-web
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=f01-blog-desenvolvimento-web
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> build-internal-links: /blog:build-internal-links --site=f02-blog-marketing-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] -> schedule-batch: /blog:schedule-batch --site=f02-blog-marketing-digital
+[2026-04-21T20:18:47]    [dry-run] skip
+[2026-04-21T20:18:47] === DONE mode=monthly site=ALL ===

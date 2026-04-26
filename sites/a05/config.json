@@ -1,0 +1,61 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "a05",
+  "name": "ImóvelCerto Negócios",
+  "category": "A",
+  "accentColor": "#2563EB",
+  "wave": 2,
+  "funnelStage": "consideration",
+  "showSystemForgeLogo": false,
+  "template": "landing",
+  "hasBlog": true,
+  "schema": [
+    "Organization",
+    "FAQPage",
+    "LocalBusiness"
+  ],
+  "seo": {
+    "title": "ImóvelCerto — Compra, Venda e Aluguel de Imóveis em [Cidade]",
+    "description": "Imóveis residenciais e comerciais. Avaliação gratuita. Corretores certificados CRECI. Financiamento facilitado com Caixa e bancos parceiros.",
+    "keywords": [
+      "imobiliária",
+      "comprar imóvel",
+      "alugar casa",
+      "corretor CRECI",
+      "imóvel comercial",
+      "financiamento imobiliário"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Avaliação Gratuita",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Vim pelo site ImóvelCerto e gostaria de solicitar uma avaliação gratuita."
+  },
+  "localBusiness": {
+    "type": "RealEstateAgent",
+    "address": "Rua Comercial, 200, [Cidade] - [Estado]",
+    "phone": "+5511999990005",
+    "openingHours": "Mo-Sa 08:00-18:00",
+    "priceRange": "$$"
+  },
+  "footerLinks": [
+    {
+      "label": "Privacidade",
+      "href": "/privacidade"
+    },
+    {
+      "label": "Contato",
+      "href": "/contato"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "crossLinks": [
+    {
+      "href": "https://c01.DOMAIN.com",
+      "anchor": "Site moderno para seu escritório de advocacia",
+      "context": "footer"
+    }
+  ],
+  "lastReviewed": "2026-04-12"
+}

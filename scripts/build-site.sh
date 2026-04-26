@@ -28,6 +28,7 @@ ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 SKIP_OG=false
 SKIP_VALIDATE=false
+RUN_LIGHTHOUSE=false
 SLUG=""
 
 for arg in "$@"; do
@@ -56,6 +57,7 @@ for arg in "$@"; do
       exit 0 ;;
     --skip-og)       SKIP_OG=true ;;
     --skip-validate) SKIP_VALIDATE=true ;;
+    --lighthouse)    RUN_LIGHTHOUSE=true ;;
     --*)             echo "Flag desconhecida: $arg" >&2; exit 1 ;;
     *)               SLUG="$arg" ;;
   esac
@@ -201,6 +203,13 @@ if [[ "$SKIP_VALIDATE" == "false" ]]; then
     VALIDATION_WARNINGS=$((VALIDATION_WARNINGS + 1))
   fi
 
+  # formAccessKey ausente ou com placeholder
+  FORM_KEY=$(node -e "const c=require('$CONFIG_FILE'); process.stdout.write(c.formAccessKey ?? '')" 2>/dev/null || true)
+  if [[ -z "$FORM_KEY" || "$FORM_KEY" == "SUBSTITUIR_PELA_CHAVE_DO_STATIC_FORMS" ]]; then
+    log_warn "formAccessKey não configurado para site ${SLUG}. Formulários não funcionarão. Consulte docs/STATIC-FORMS-SETUP.md"
+    VALIDATION_WARNINGS=$((VALIDATION_WARNINGS + 1))
+  fi
+
   if [[ $VALIDATION_ERRORS -gt 0 ]]; then
     echo ""
     log_error "Validação falhou com $VALIDATION_ERRORS erro(s). Build abortado."
@@ -250,6 +259,31 @@ if [[ "$SKIP_OG" == "false" ]]; then
 fi
 
 # ---------------------------------------------------------------------------
+# FASE 3.5: Geração de PDF de lead-magnet (sites elegíveis)
+# ---------------------------------------------------------------------------
+
+log_step "Fase 3.5: Gerando PDF de lead-magnet (se elegível)..."
+
+if [[ -f "$ROOT_DIR/scripts/generate-pdf.ts" ]]; then
+  if node -e "require('pdf-lib')" 2>/dev/null; then
+    if SITE_SLUG="$SLUG" npx tsx scripts/generate-pdf.ts "$SLUG" 2>&1; then
+      if [[ -f "$DIST_DIR/relatorio.pdf" ]]; then
+        log_ok "PDF lead-magnet gerado → dist/$SLUG/relatorio.pdf"
+      else
+        log_ok "Site não elegível para lead-magnet (pulando PDF)"
+      fi
+    else
+      log_warn "Falha na geração do PDF. Build continua sem relatorio.pdf"
+    fi
+  else
+    log_warn "pdf-lib não instalado. Pulando PDF lead-magnet."
+    log_warn "Para instalar: npm install pdf-lib"
+  fi
+else
+  log_warn "scripts/generate-pdf.ts não encontrado. Pulando PDF lead-magnet."
+fi
+
+# ---------------------------------------------------------------------------
 # FASE 4: .htaccess com headers de segurança
 # ---------------------------------------------------------------------------
 
@@ -287,6 +321,28 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 HTACCESS
 
 log_ok ".htaccess gerado → dist/$SLUG/.htaccess"
+
+# ---------------------------------------------------------------------------
+# FASE 5: Lighthouse CI (opcional — ativado com --lighthouse)
+# ---------------------------------------------------------------------------
+
+if [[ "$RUN_LIGHTHOUSE" == "true" ]]; then
+  log_step "Fase 5: Executando Lighthouse CI..."
+
+  if [[ ! -f "$ROOT_DIR/lighthouserc.json" ]]; then
+    log_warn "lighthouserc.json não encontrado. Pulando Lighthouse CI."
+  elif npx lhci --version &>/dev/null 2>&1; then
+    set +e
+    LHCI_CONFIG="$ROOT_DIR/lighthouserc.json"
+    npx lhci autorun --config="$LHCI_CONFIG" 2>&1 || {
+      log_warn "Lighthouse CI: budgets excedidos (warning apenas — build não bloqueado)"
+    }
+    set -e
+    log_ok "Lighthouse CI concluído. Relatório em .lighthouseci/"
+  else
+    log_warn "lhci não instalado. Execute: npm install -D @lhci/cli"
+  fi
+fi
 
 # ---------------------------------------------------------------------------
 # Relatório final

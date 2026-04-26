@@ -1,0 +1,60 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "a03",
+  "name": "Sabor da Terra",
+  "category": "A",
+  "accentColor": "#2563EB",
+  "wave": 2,
+  "funnelStage": "awareness",
+  "showSystemForgeLogo": false,
+  "template": "landing",
+  "hasBlog": true,
+  "schema": [
+    "Organization",
+    "FAQPage",
+    "LocalBusiness"
+  ],
+  "seo": {
+    "title": "Sabor da Terra — Comida Caseira e Delivery em [Cidade]",
+    "description": "Almoço executivo, jantares e delivery de comida caseira. Cardápio semanal variado. Peça agora pelo WhatsApp com entrega rápida.",
+    "keywords": [
+      "restaurante comida caseira",
+      "delivery almoço",
+      "marmita executivo",
+      "comida por quilo",
+      "almoço delivery"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Pedir pelo WhatsApp",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Vim pelo site Sabor da Terra e gostaria de fazer um pedido."
+  },
+  "localBusiness": {
+    "type": "Restaurant",
+    "address": "Rua do Comércio, 789, [Cidade] - [Estado]",
+    "phone": "+5511999990003",
+    "openingHours": "Mo-Fr 11:00-15:00",
+    "priceRange": "$"
+  },
+  "footerLinks": [
+    {
+      "label": "Privacidade",
+      "href": "/privacidade"
+    },
+    {
+      "label": "Contato",
+      "href": "/contato"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "crossLinks": [
+    {
+      "href": "https://c04.DOMAIN.com",
+      "anchor": "Crie seu e-commerce para delivery",
+      "context": "footer"
+    }
+  ],
+  "lastReviewed": "2026-04-12"
+}

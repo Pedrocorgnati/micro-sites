@@ -1,0 +1,25 @@
+{
+  "headline": "Como funciona a matrícula?",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Escolha seu curso",
+      "description": "Navegue pelo catálogo de cursos técnicos, idiomas e capacitações. Nossos consultores ajudam a escolher o melhor caminho para seus objetivos."
+    },
+    {
+      "number": 2,
+      "title": "Fale com a gente",
+      "description": "Entre em contato pelo WhatsApp ou venha pessoalmente. Explicamos grade, carga horária, valores e condições de parcelamento."
+    },
+    {
+      "number": 3,
+      "title": "Efetue a matrícula",
+      "description": "Documentação simples: RG, CPF e comprovante de escolaridade. Matrícula online ou presencial. Pagamento à vista ou parcelado."
+    },
+    {
+      "number": 4,
+      "title": "Comece a estudar",
+      "description": "Acesso imediato ao material didático e plataforma EAD (se aplicável). Certificado emitido em até 15 dias após a conclusão."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "headline": "Como funciona o checklist",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Responda 5 perguntas",
+      "description": "Site, mobile, Google Meu Negócio, redes sociais e monitoramento. Simples e objetivo."
+    },
+    {
+      "number": 2,
+      "title": "Veja sua pontuação",
+      "description": "Cada item vale 20 pontos. Acompanhe sua pontuação crescendo conforme responde."
+    },
+    {
+      "number": 3,
+      "title": "Receba o plano de melhoria",
+      "description": "Informe seu e-mail e receba o checklist completo com prioridades e como resolver cada item."
+    }
+  ]
+}

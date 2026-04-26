@@ -1,0 +1,35 @@
+{
+  "category": "D",
+  "claims": [
+    {
+      "id": "roi_automacao_mpe",
+      "value": "30%",
+      "text": "MPEs que automatizam processos de atendimento reportam ganhos de 30% em produtividade",
+      "source": {
+        "label": "Sebrae Transformacao Digital",
+        "url": "https://sebrae.com.br/sites/PortalSebrae/artigos/transformacao-digital-mpe",
+        "year": 2024
+      }
+    },
+    {
+      "id": "mercado_apps_brasil",
+      "value": "R$ 280 bi",
+      "text": "Mercado brasileiro de software e servicos de TI em 2024",
+      "source": {
+        "label": "ABES / IDC",
+        "url": "https://abes.com.br/estudo-mercado-brasileiro-de-ti/",
+        "year": 2024
+      }
+    },
+    {
+      "id": "maturidade_digital_mpe",
+      "value": "2,8",
+      "text": "Indice medio de maturidade digital das MPEs (escala 0-5)",
+      "source": {
+        "label": "CGI.br / TIC Empresas",
+        "url": "https://cetic.br/pt/pesquisa/empresas/",
+        "year": 2024
+      }
+    }
+  ]
+}

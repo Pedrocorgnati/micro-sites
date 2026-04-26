@@ -1,0 +1,25 @@
+{
+  "headline": "Perguntas Frequentes",
+  "items": [
+    {
+      "question": "Atendem MEI e microempresa?",
+      "answer": "Sim. Temos planos específicos para MEI, ME e EPP com honorários compatíveis com o porte. Consulte nossa tabela de serviços."
+    },
+    {
+      "question": "Como funciona a migração do contador atual?",
+      "answer": "Cuidamos de tudo: solicitamos os documentos ao contador anterior, fazemos a comunicação e garantimos que nenhum prazo seja perdido durante a transição."
+    },
+    {
+      "question": "Vocês fazem abertura de empresa?",
+      "answer": "Sim. Abertura de ME, EPP, Ltda e SLU com escolha do regime tributário adequado, CNAE correto e orientação sobre obrigações desde o início."
+    },
+    {
+      "question": "Oferecem planejamento tributário?",
+      "answer": "Sim. Anualmente revisamos o enquadramento tributário de cada cliente para garantir que estão no regime mais vantajoso. É comum economizarmos 15% a 30% na carga tributária."
+    },
+    {
+      "question": "O atendimento é presencial ou digital?",
+      "answer": "Ambos. Temos escritório em [Cidade] para reuniões presenciais e portal do cliente digital para quem prefere atendimento remoto. Você escolhe."
+    }
+  ]
+}

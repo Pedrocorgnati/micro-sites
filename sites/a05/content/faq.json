@@ -1,0 +1,25 @@
+{
+  "headline": "Perguntas Frequentes",
+  "items": [
+    {
+      "question": "A avaliação do meu imóvel é gratuita?",
+      "answer": "Sim, realizamos avaliação gratuita de mercado para imóveis residenciais e comerciais. Sem compromisso de contratação."
+    },
+    {
+      "question": "Qual é a comissão da imobiliária?",
+      "answer": "A comissão segue a tabela CRECI regional (geralmente 6% na venda). No aluguel, a taxa de administração é de 10% ao mês. Informamos tudo antes da assinatura."
+    },
+    {
+      "question": "Quanto tempo leva para vender meu imóvel?",
+      "answer": "O prazo varia conforme localização, preço e condições de mercado. Com precificação correta, imóveis de perfil popular saem em 30-60 dias; médio e alto padrão em 60-120 dias."
+    },
+    {
+      "question": "Vocês ajudam no financiamento bancário?",
+      "answer": "Sim! Temos parceria com Caixa Econômica e demais bancos. Simulamos as melhores condições e acompanhamos todo o processo de aprovação do crédito."
+    },
+    {
+      "question": "O que é necessário para alugar um imóvel?",
+      "answer": "Documentos pessoais (RG, CPF, comprovante de renda), fiador ou seguro fiança. Analisamos o perfil e indicamos a melhor opção de garantia."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "headline": "Perguntas Frequentes",
+  "items": [
+    {
+      "question": "Qual é o valor da mensalidade?",
+      "answer": "Os planos variam de R$ 250 a R$ 450/mês dependendo da frequência e do tipo de acompanhamento. Entre em contato para um orçamento personalizado."
+    },
+    {
+      "question": "Preciso ter experiência em academia?",
+      "answer": "Não! Atendemos iniciantes completos. Nosso personal adapta o treino ao seu nível atual e evolui junto com você."
+    },
+    {
+      "question": "A primeira aula é realmente grátis?",
+      "answer": "Sim, sem pagar nada e sem compromisso. Você conhece o espaço, faz a avaliação e experimenta um treino antes de decidir."
+    },
+    {
+      "question": "Posso treinar se tiver alguma lesão?",
+      "answer": "Sim! Temos experiência em reabilitação e adaptação de treinos para lesões. Informe sua condição na avaliação inicial."
+    },
+    {
+      "question": "Qual é o horário de funcionamento?",
+      "answer": "Segunda a sexta das 6h às 22h, sábados das 8h às 16h. Horários flexíveis para encaixar na sua rotina."
+    }
+  ]
+}

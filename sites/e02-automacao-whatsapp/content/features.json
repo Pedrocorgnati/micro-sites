@@ -1,0 +1,29 @@
+{
+  "headline": "Tudo que o ForgeChat vai fazer pelo seu WhatsApp",
+  "items": [
+    {
+      "title": "Bot inteligente",
+      "description": "Responde perguntas frequentes com naturalidade. Não parece um robô — parece você, mas disponível 24h."
+    },
+    {
+      "title": "Agendamento automático",
+      "description": "Clientes agendam diretamente pelo WhatsApp. Você recebe confirmação e calendário atualizado automaticamente."
+    },
+    {
+      "title": "Qualificação de leads",
+      "description": "O bot coleta informações-chave antes de passar para você. Você fala só com quem já tem interesse real."
+    },
+    {
+      "title": "Follow-up automático",
+      "description": "Sequência de mensagens para leads que não fecharam. Recupere vendas que você perderia sem acompanhar."
+    },
+    {
+      "title": "Cobranças e pagamentos",
+      "description": "Envie link de pagamento e lembretes automáticos. Reduza inadimplência sem conversas difíceis."
+    },
+    {
+      "title": "Painel de controle",
+      "description": "Veja em tempo real: leads ativos, taxa de conversão, horários de pico e performance do bot."
+    }
+  ]
+}

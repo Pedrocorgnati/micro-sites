@@ -1,0 +1,20 @@
+{
+  "headline": "Como montamos seu e-commerce em 3 etapas",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Configuração da Loja",
+      "description": "Cadastramos produtos, categorias, formas de pagamento (Pix, cartão) e regras de frete da sua loja."
+    },
+    {
+      "number": 2,
+      "title": "Design e Experiência de Compra",
+      "description": "Criamos layout que transmite confiança, com fotos profissionais e processo de checkout simplificado."
+    },
+    {
+      "number": 3,
+      "title": "Integração e Ativação",
+      "description": "Conectamos ao seu WhatsApp, ERP ou planilha de estoque e ativamos a loja para vendas imediatas."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "headline": "Tutores que confiam na PetCare",
+  "testimonials": [
+    {
+      "name": "Ana Paula Ramos",
+      "role": "Tutora",
+      "business": "",
+      "quote": "Minha golden retriever passou por uma cirurgia de urgência na PetCare. A equipe foi incrível — explicaram tudo, ficaram disponíveis a noite toda e ela se recuperou muito bem. Gratidão eterna.",
+      "rating": 5
+    },
+    {
+      "name": "Rodrigo Mendes",
+      "role": "Tutor",
+      "business": "",
+      "quote": "Levo meus dois gatos há 4 anos. Prontuário completo, veterinário que já conhece cada um deles pelo nome, lembrete de vacina no WhatsApp. É a clínica que eu queria ter encontrado antes.",
+      "rating": 5
+    },
+    {
+      "name": "Juliana Castro",
+      "role": "Tutora",
+      "business": "Canil JC",
+      "quote": "Como criadora de Labradores, preciso de uma clínica parceira séria. A PetCare atende meus cães com protocolo claro, laudos detalhados e preço justo. Indicação garantida.",
+      "rating": 5
+    }
+  ]
+}

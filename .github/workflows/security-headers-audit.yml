@@ -1,0 +1,43 @@
+name: Security Headers Audit
+
+# TASK-21 ST002 / CL-638, CL-639 — audit semanal de HSTS/X-Frame/HTTPS redirect
+
+on:
+  schedule:
+    - cron: '0 5 * * MON'   # toda segunda 05:00 UTC
+  workflow_dispatch:
+    inputs:
+      strict:
+        description: 'Falhar workflow se algum site faltar header'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Run security headers audit
+        run: |
+          if [ "${{ inputs.strict }}" = "true" ]; then
+            npx tsx scripts/audit-security-headers.ts --strict
+          else
+            npx tsx scripts/audit-security-headers.ts || echo "::warning::audit warnings — nao bloqueante"
+          fi
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-headers-report
+          path: output/reports/security-headers-*.json
+          retention-days: 30

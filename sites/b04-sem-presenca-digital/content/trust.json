@@ -1,0 +1,26 @@
+{
+  "headline": "Negócios que saíram do invisible",
+  "stats": [
+    { "value": "1ª pág", "label": "Google em 60 dias" },
+    { "value": "+85%", "label": "Aumento em contatos" },
+    { "value": "7 dias", "label": "Para estar no ar" },
+    { "value": "4.8★", "label": "Avaliação no Google" }
+  ],
+  "testimonials": [
+    {
+      "name": "Rodrigo Lima",
+      "role": "Proprietário — Barbearia",
+      "quote": "Passei anos só por indicação. Depois do site e Google Meu Negócio, clientes novos chegam toda semana sem eu precisar indicar nada."
+    },
+    {
+      "name": "Cristiane Moura",
+      "role": "Manicure",
+      "quote": "Em dois meses apareci na primeira página do Google para 'manicure no [bairro]'. Agenda lotada, precisei até contratar ajuda."
+    },
+    {
+      "name": "Paulo Henrique",
+      "role": "Encanador",
+      "quote": "Antes era só boca a boca. Agora recebo ligações de clientes que me acharam no Google. A SystemForge mudou meu negócio."
+    }
+  ]
+}

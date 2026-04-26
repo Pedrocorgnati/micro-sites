@@ -1,0 +1,26 @@
+{
+  "headline": "Empresas com funil qualificado",
+  "stats": [
+    { "value": "+65%", "label": "Taxa de fechamento" },
+    { "value": "-50%", "label": "Tempo em leads ruins" },
+    { "value": "3x", "label": "ROI em 6 meses" },
+    { "value": "30 dias", "label": "Para ver diferença" }
+  ],
+  "testimonials": [
+    {
+      "name": "Gustavo Melo",
+      "role": "Consultor financeiro",
+      "quote": "Recebia 30 contatos por mês e fechava 2. Com o funil qualificado, recebo 15 e fecho 6. Menos trabalho, mais resultado."
+    },
+    {
+      "name": "Marina Santos",
+      "role": "Arquiteta",
+      "quote": "Antes perdia horas em reuniões de briefing com clientes que não tinham orçamento para o projeto. O formulário resolve isso antes."
+    },
+    {
+      "name": "Caio Mendes",
+      "role": "Diretor — Agência de Marketing",
+      "quote": "Qualidade dos leads melhorou muito. Chegam para nós já com budget definido e entendendo o que precisam. Reuniões muito mais produtivas."
+    }
+  ]
+}

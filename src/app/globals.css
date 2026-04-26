@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "../styles/animations.css"; /* ADR-0005: politica de animacao + reduced-motion */
 
 /* ============================================================
    DESIGN TOKENS — Micro Sites
@@ -10,7 +11,7 @@
   --color-background: #FFFFFF;
   --color-surface: #F9FAFB;
   --color-text-primary: #111827;
-  --color-text-secondary: #6B7280;
+  --color-text-secondary: #4B5563;
   --color-text-muted: #9CA3AF;
   --color-border: #E5E7EB;
   --color-muted: #F3F4F6;
@@ -121,6 +122,18 @@ h1, h2, h3, h4, h5, h6 {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+/* Scroll reveal — usado pelo hook useScrollReveal */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  /* animation-policy-ok: reveal 500ms intencional para legibilidade em scroll lento (ADR-0005) */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @keyframes animate-out {
   from { opacity: 1; transform: translateY(0); }
   to   { opacity: 0; transform: translateY(8px); }
@@ -180,14 +193,17 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
+/* animation-policy-ok: feedback de sucesso executado uma unica vez (ADR-0005) */
 .animate-pulse-once {
   animation: pulse-once 500ms cubic-bezier(0, 0, 0.2, 1);
 }
 
+/* animation-policy-ok: feedback de erro (shake) precisa durar > 200ms para ser percebido (ADR-0005) */
 .animate-shake {
   animation: shake 300ms cubic-bezier(0, 0, 0.2, 1);
 }
 
+/* animation-policy-ok: spinner de loading exige loop continuo (ADR-0005) */
 .animate-spin {
   animation: spin 1s linear infinite;
 }
@@ -252,13 +268,18 @@ button, a, [role="button"], input[type="submit"], input[type="button"] {
 }
 
 /* ============================================================
-   ACESSIBILIDADE — Prefers reduced motion
+   ACESSIBILIDADE — Prefers reduced motion (ADR-0005)
+   Wrapper canonico vive em src/styles/animations.css; o bloco
+   abaixo e redundancia defensiva caso animations.css deixe de
+   ser importado acidentalmente.
    ============================================================ */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
-    animation-duration: 0.01ms !important;
+    animation: none !important;
+    animation-duration: 0ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    transition: none !important;
+    transition-duration: 0ms !important;
     scroll-behavior: auto !important;
   }
 }
@@ -343,4 +364,55 @@ button, a, [role="button"], input[type="submit"], input[type="button"] {
   font-style: italic;
   color: var(--color-text-secondary);
   margin: 1.5rem 0;
+}
+
+/* ==========================================================================
+   Print CSS — /resultado page PDF export
+   ========================================================================== */
+
+@media print {
+  /* Ocultar elementos de navegação e UI */
+  header,
+  footer,
+  nav,
+  [data-testid="whatsapp-button"],
+  [data-testid="exit-intent-popup"],
+  [data-testid="cookie-banner"],
+  [data-testid="next-steps-section"],
+  .print-hidden {
+    display: none !important;
+  }
+
+  /* Garantir que cores e backgrounds imprimam */
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #111827;
+    background: #ffffff;
+  }
+
+  main {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Evitar quebras de página dentro de cards de resultado */
+  [data-testid="result-card"],
+  [data-testid="result-item"] {
+    break-inside: avoid;
+  }
+
+  /* Garantir que links mostrem o URL em documentos impressos */
+  a[href]:not([href^="#"])::after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: #6B7280;
+  }
 }

@@ -1,0 +1,60 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "a01",
+  "name": "Clínica Saúde Total",
+  "category": "A",
+  "accentColor": "#2563EB",
+  "wave": 1,
+  "funnelStage": "consideration",
+  "showSystemForgeLogo": false,
+  "template": "landing",
+  "hasBlog": true,
+  "schema": [
+    "Organization",
+    "FAQPage",
+    "LocalBusiness"
+  ],
+  "seo": {
+    "title": "Clínica Saúde Total — Atendimento Médico em [Cidade]",
+    "description": "Consultas médicas, exames e especialidades. Agendamento online em menos de 2 minutos. Atendimento humanizado e sem filas.",
+    "keywords": [
+      "clínica médica",
+      "consulta médica online",
+      "agendamento médico",
+      "especialistas saúde",
+      "médico particular"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Agendar Consulta",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Vim pelo site Clínica Saúde Total e gostaria de agendar uma consulta."
+  },
+  "localBusiness": {
+    "type": "MedicalClinic",
+    "address": "Rua das Flores, 123, [Cidade] - [Estado]",
+    "phone": "+5511999990001",
+    "openingHours": "Mo-Fr 08:00-18:00",
+    "priceRange": "$$"
+  },
+  "footerLinks": [
+    {
+      "label": "Privacidade",
+      "href": "/privacidade"
+    },
+    {
+      "label": "Contato",
+      "href": "/contato"
+    }
+  ],
+  "crossLinks": [
+    {
+      "href": "https://c01.DOMAIN.com",
+      "anchor": "Precisa de um site profissional para sua clínica?",
+      "context": "footer"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "lastReviewed": "2026-04-12"
+}

@@ -1,4 +1,5 @@
 {
+  "templateVersion": "1.0.0",
   "slug": "__SLUG__",
   "name": "__NOME_DO_SITE__",
   "category": "__CATEGORY__",
@@ -11,16 +12,25 @@
   "seo": {
     "title": "__NOME_DO_SITE__ — SystemForge Digital",
     "description": "Descrição de 120-155 chars do site para SEO. Inclua keywords principais.",
-    "keywords": ["keyword-1", "keyword-2", "keyword-3"]
+    "keywords": [
+      "keyword-1",
+      "keyword-2",
+      "keyword-3"
+    ]
   },
   "cta": {
     "primaryLabel": "Solicitar Orçamento Gratuito",
     "formEndpoint": "https://api.staticforms.xyz/submit",
-    "whatsappNumber": "5511999999999",
+    "whatsappNumber": "5512920043268",
     "whatsappMessage": "Olá! Vim pelo site __SLUG__ e gostaria de saber mais."
   },
   "showSystemForgeLogo": true,
   "footerLinks": [
-    { "label": "Privacidade", "href": "/privacidade" }
-  ]
+    {
+      "label": "Privacidade",
+      "href": "/privacidade"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "formAccessKey": "SUBSTITUIR_PELA_CHAVE_DO_STATIC_FORMS"
 }

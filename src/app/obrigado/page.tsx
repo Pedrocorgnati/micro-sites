@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { loadSiteConfig, getAccentStyle, buildWhatsAppUrl } from '@/lib/config-loader';
 import { Header } from '@/components/ui/Header';
 import { Footer } from '@/components/ui/Footer';
+import { CrossSellRecommendations } from '@/components/sections/CrossSellRecommendations';
+import { appendUtm, type UtmInput } from '@/lib/utm-builder';
 
 const SITE_SLUG = process.env.SITE_SLUG ?? 'c01-site-institucional-pme';
 
@@ -11,10 +13,28 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
+interface CrossLink {
+  href: string;
+  anchor: string;
+  context: 'footer' | 'article' | 'cta' | 'resultado';
+}
+
 export default function ObrigadoPage() {
   const config = loadSiteConfig(SITE_SLUG);
   const accentStyle = getAccentStyle(config);
   const waUrl = buildWhatsAppUrl(config.cta.whatsappNumber, config.cta.whatsappMessage);
+
+  const allCrossLinks: CrossLink[] = (config as { crossLinks?: CrossLink[] }).crossLinks ?? [];
+  const ctaCrossLinks = allCrossLinks.filter((cl) => cl.context === 'cta').slice(0, 3);
+
+  // CL-323 / CL-126: aplicar UTM canonico nos links cross-sell de /obrigado
+  // para rastrear a distribuicao de leads entre micro-sites.
+  const crossSellUtm: UtmInput = {
+    slug: SITE_SLUG,
+    category: config.category,
+    campaign: 'cross-sell',
+    content: 'obrigado',
+  };
 
   return (
     <div style={accentStyle}>
@@ -61,7 +81,7 @@ export default function ObrigadoPage() {
           úteis.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex flex-col sm:flex-row gap-4 mb-12">
           <a
             data-testid="obrigado-whatsapp-button"
             href={waUrl}
@@ -84,9 +104,66 @@ export default function ObrigadoPage() {
             Voltar ao Início
           </Link>
         </div>
+
+        {/* Cross-sell */}
+        {ctaCrossLinks.length >= 2 && (
+          <section
+            data-testid="obrigado-cross-sell"
+            className="w-full max-w-2xl"
+            aria-label="Você também pode se interessar por"
+          >
+            <h2
+              className="text-base font-semibold mb-4"
+              style={{ color: 'var(--color-text-secondary)' }}
+            >
+              Você também pode se interessar por:
+            </h2>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              {ctaCrossLinks.map((cl) => (
+                <a
+                  key={cl.href}
+                  href={appendUtm(cl.href, crossSellUtm)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid={`obrigado-cross-sell-link`}
+                  className="flex-1 flex flex-col items-center gap-2 p-4 rounded-xl border transition-shadow duration-200 hover:shadow-md"
+                  style={{
+                    backgroundColor: 'var(--color-surface)',
+                    borderColor: 'var(--color-border)',
+                  }}
+                >
+                  <span
+                    className="text-sm font-medium text-center leading-snug"
+                    style={{ color: 'var(--color-text-primary)' }}
+                  >
+                    {cl.anchor}
+                  </span>
+                  <span
+                    className="text-xs font-semibold mt-auto"
+                    style={{ color: 'var(--color-accent)' }}
+                  >
+                    Conhecer →
+                  </span>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <CrossSellRecommendations
+          currentSlug={SITE_SLUG}
+          currentCategory={config.category}
+        />
       </main>
 
-      <Footer siteName={config.name} showSystemForgeLogo={config.showSystemForgeLogo} links={config.footerLinks} />
+      <Footer
+        siteName={config.name}
+        showSystemForgeLogo={config.showSystemForgeLogo}
+        links={config.footerLinks}
+        contactEmail={(config as { contactEmail?: string }).contactEmail}
+        siteSlug={SITE_SLUG}
+        siteCategory={config.category}
+      />
     </div>
   );
 }

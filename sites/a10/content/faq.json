@@ -1,0 +1,25 @@
+{
+  "headline": "Perguntas Frequentes",
+  "items": [
+    {
+      "question": "Vocês fazem consultoria de decoração?",
+      "answer": "Sim, oferecemos consultoria gratuita presencial ou por WhatsApp. Compartilhe fotos do ambiente e montamos sugestões de peças para o seu espaço."
+    },
+    {
+      "question": "Qual é o prazo de entrega?",
+      "answer": "Entrega local em [Cidade] de 2 a 5 dias úteis para produtos em estoque. Para itens sob encomenda, informamos o prazo no momento da compra."
+    },
+    {
+      "question": "Parcelam no cartão?",
+      "answer": "Sim, parcelamos em até 10x sem juros no cartão de crédito. Também aceitamos Pix (5% de desconto) e boleto bancário."
+    },
+    {
+      "question": "Como funciona a política de trocas?",
+      "answer": "Troca garantida em até 7 dias corridos após o recebimento para produtos sem uso e na embalagem original. Venha à loja ou agende a retirada."
+    },
+    {
+      "question": "Vocês fazem entregas fora de [Cidade]?",
+      "answer": "Sim, enviamos para todo o Brasil via transportadora especializada em objetos frágeis. O frete é calculado no pedido conforme o destino."
+    }
+  ]
+}

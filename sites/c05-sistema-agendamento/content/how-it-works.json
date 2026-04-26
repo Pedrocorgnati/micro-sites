@@ -1,0 +1,20 @@
+{
+  "headline": "Como implantamos seu sistema de agendamento",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Levantamento de Agenda",
+      "description": "Mapeamos seus tipos de serviço, horários disponíveis, recursos (salas, profissionais) e regras de cancelamento."
+    },
+    {
+      "number": 2,
+      "title": "Configuração do Sistema",
+      "description": "Configuramos o sistema com sua identidade visual, notificações automáticas por WhatsApp e e-mail."
+    },
+    {
+      "number": 3,
+      "title": "Ativação para Clientes",
+      "description": "Publicamos o link de agendamento, treinamos sua equipe e acompanhamos os primeiros 30 dias de uso."
+    }
+  ]
+}

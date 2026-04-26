@@ -1,0 +1,29 @@
+{
+  "headline": "Como qualificamos seus leads digitalmente",
+  "items": [
+    {
+      "title": "Páginas por segmento",
+      "description": "Páginas específicas por tipo de cliente e serviço. Cada um chega na página certa e se identifica com o conteúdo."
+    },
+    {
+      "title": "Formulário com filtros",
+      "description": "Perguntas de qualificação que identificam orçamento, urgência e necessidade antes do primeiro contato."
+    },
+    {
+      "title": "SEO para compradores",
+      "description": "Foco em palavras com intenção de compra. Menos tráfego, mas tráfego que converte."
+    },
+    {
+      "title": "Nutrição de leads frios",
+      "description": "Sequência de e-mails e conteúdo para prospects que não estão prontos agora — mas estarão."
+    },
+    {
+      "title": "Qualificação via WhatsApp",
+      "description": "Fluxo automatizado que coleta informações básicas antes de você entrar na conversa."
+    },
+    {
+      "title": "Análise de origem",
+      "description": "Saiba de onde vêm seus melhores clientes para investir mais no que realmente funciona."
+    }
+  ]
+}

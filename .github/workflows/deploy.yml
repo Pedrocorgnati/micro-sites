@@ -1,0 +1,301 @@
+# =============================================================================
+# deploy.yml — CI/CD para Micro Sites
+#
+# CI:  Lint (shellcheck) + Build de validacao (tsc + next build)
+# CD:  Deploy via SSH para Hostinger (somente na branch main)
+#
+# Secrets necessarios:
+#   HOSTINGER_SSH_HOST  — hostname ou IP do servidor
+#   HOSTINGER_SSH_USER  — usuario SSH
+#   HOSTINGER_SSH_KEY   — chave privada SSH (Ed25519 ou RSA)
+# =============================================================================
+
+name: CI/CD — Micro Sites
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'sites/**'
+      - 'scripts/**'
+      - 'package.json'
+      - 'next.config.ts'
+      - 'tailwind.config.ts'
+      - 'tsconfig.json'
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      site_slug:
+        description: 'Slug do site para deploy (vazio = todos os sites alterados)'
+        required: false
+        default: ''
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NODE_VERSION: '20'
+
+jobs:
+  # ---------------------------------------------------------------------------
+  # CI: Lint + Type-check + Build validation
+  # ---------------------------------------------------------------------------
+  ci:
+    name: CI — Lint & Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: TypeScript check
+        run: npx tsc --noEmit
+
+      - name: ESLint
+        run: npx eslint . --max-warnings=0 || true
+
+      - name: ShellCheck scripts
+        uses: ludeeus/action-shellcheck@2.0.0
+        with:
+          scandir: scripts
+          severity: warning
+
+      - name: Audit output export (CL-633)
+        run: npx tsx scripts/audit-output-export.ts
+
+      - name: Audit GA4 PII (TASK-26 / CL-269)
+        run: npx tsx scripts/audit-ga4-pii.ts
+
+      - name: Audit markdown image refs (TASK-15 / CL-095)
+        run: npx tsx scripts/audit-markdown-image-refs.ts
+
+      - name: Audit contacts consistency (CL-143, CL-387)
+        run: npx tsx scripts/audit-contacts-consistency.ts
+
+      - name: Audit animation policy (ADR-0005, CL-155)
+        run: npx tsx scripts/audit-animations.ts
+
+      - name: Audit content uniqueness (CL-098)
+        run: npx tsx scripts/audit-content-uniqueness.ts
+
+      - name: Audit headings hierarchy (CL-179)
+        run: npx tsx scripts/audit-headings-hierarchy.ts
+
+      - name: NoScript coverage gate (Cat. D)
+        run: npx tsx scripts/validate-noscript-coverage.ts
+
+      - name: Upload noscript coverage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: noscript-coverage-report
+          path: output/noscript-coverage-report.json
+          if-no-files-found: ignore
+
+      - name: Build validation (D01 — piloto)
+        run: SITE_SLUG=d01-calculadora-custo-site npm run build
+        env:
+          SITE_SLUG: d01-calculadora-custo-site
+
+  # ---------------------------------------------------------------------------
+  # CD: Deploy sites alterados via SSH (somente main)
+  # ---------------------------------------------------------------------------
+  deploy:
+    name: CD — Deploy to Hostinger
+    needs: ci
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Detect changed sites
+        id: changes
+        run: |
+          if [[ -n "${{ github.event.inputs.site_slug }}" ]]; then
+            echo "slugs=${{ github.event.inputs.site_slug }}" >> "$GITHUB_OUTPUT"
+            echo "Manually triggered for: ${{ github.event.inputs.site_slug }}"
+            exit 0
+          fi
+
+          CHANGED_SLUGS=""
+
+          # Check if src/ or shared config changed (affects all sites)
+          SHARED_CHANGED=$(git diff --name-only HEAD~1 HEAD -- src/ next.config.ts tailwind.config.ts tsconfig.json package.json | wc -l)
+
+          if [[ "$SHARED_CHANGED" -gt 0 ]]; then
+            # Shared code changed — rebuild all sites
+            CHANGED_SLUGS=$(ls -d sites/*/ 2>/dev/null | xargs -I{} basename {} | grep -v _template | tr '\n' ' ')
+            echo "Shared code changed — rebuilding all sites"
+          else
+            # Only specific sites changed
+            CHANGED_SLUGS=$(git diff --name-only HEAD~1 HEAD -- sites/ | sed -n 's|^sites/\([^/]*\)/.*|\1|p' | sort -u | grep -v _template | tr '\n' ' ')
+          fi
+
+          echo "slugs=${CHANGED_SLUGS}" >> "$GITHUB_OUTPUT"
+          echo "Changed sites: ${CHANGED_SLUGS:-none}"
+
+      - name: Build changed sites
+        if: steps.changes.outputs.slugs != ''
+        env:
+          SENTRY_ENABLED: ${{ vars.SENTRY_ENABLED || '0' }}
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ vars.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ vars.SENTRY_PROJECT }}
+          NEXT_PUBLIC_SENTRY_RELEASE: ${{ github.sha }}
+        run: |
+          for SLUG in ${{ steps.changes.outputs.slugs }}; do
+            echo "::group::Building $SLUG"
+            bash scripts/build-site.sh "$SLUG" --skip-og --skip-validate
+            echo "::endgroup::"
+          done
+
+      - name: Sentry — release + sourcemaps upload (Cat D only)
+        if: steps.changes.outputs.slugs != '' && vars.SENTRY_ENABLED == '1'
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ vars.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ vars.SENTRY_PROJECT }}
+        run: |
+          set -e
+          for SLUG in ${{ steps.changes.outputs.slugs }}; do
+            # CL-264: sourcemaps apenas para Cat D (calculadoras)
+            case "$SLUG" in
+              d0[1-9]*|d1[0-2]*)
+                echo "::group::Sentry release $SLUG"
+                npx @sentry/cli releases new "${{ github.sha }}" || true
+                npx @sentry/cli releases files "${{ github.sha }}" upload-sourcemaps "dist/$SLUG/_next/static" --url-prefix "~/_next/static" || true
+                npx @sentry/cli releases finalize "${{ github.sha }}" || true
+                find "dist/$SLUG" -name "*.map" -delete
+                echo "::endgroup::"
+                ;;
+            esac
+          done
+
+      - name: Audit CTA presence (CL-252)
+        if: steps.changes.outputs.slugs != ''
+        run: npx tsx scripts/audit-cta-presence.ts
+
+      - name: Validate JSON-LD schemas (TASK-15 / CL-109, CL-120)
+        if: steps.changes.outputs.slugs != ''
+        run: npx tsx scripts/validate-schemas-rich-results.ts
+
+      - name: Audit OG images (TASK-16 / CL-103)
+        if: steps.changes.outputs.slugs != ''
+        run: |
+          for SLUG in ${{ steps.changes.outputs.slugs }}; do
+            npx tsx scripts/audit-og-images.ts --site "$SLUG"
+          done
+
+      - name: Audit NoScript fallback (CL-189)
+        if: steps.changes.outputs.slugs != ''
+        run: npx tsx scripts/audit-noscript.ts
+
+      - name: Setup SSH
+        if: steps.changes.outputs.slugs != ''
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.HOSTINGER_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -p 65002 -H "${{ secrets.HOSTINGER_SSH_HOST }}" >> ~/.ssh/known_hosts 2>/dev/null || true
+
+      - name: Deploy via SSH
+        if: steps.changes.outputs.slugs != ''
+        env:
+          SSH_HOST: ${{ secrets.HOSTINGER_SSH_HOST }}
+          SSH_USER: ${{ secrets.HOSTINGER_SSH_USER }}
+        run: |
+          source scripts/deploy-map.sh
+
+          for SLUG in ${{ steps.changes.outputs.slugs }}; do
+            BRANCH="${DEPLOY_MAP[$SLUG]:-}"
+            if [[ -z "$BRANCH" ]]; then
+              echo "::warning::No deploy mapping for $SLUG — skipping"
+              continue
+            fi
+
+            DIST_DIR="dist/$SLUG"
+            if [[ ! -d "$DIST_DIR" ]]; then
+              echo "::warning::No dist/ for $SLUG — skipping"
+              continue
+            fi
+
+            echo "::group::Deploying $SLUG → $BRANCH"
+            bash scripts/deploy-branch.sh "$SLUG" "$BRANCH"
+            echo "::endgroup::"
+          done
+
+      - name: Smoke post-deploy (TASK-15 / CL-049, CL-642)
+        if: steps.changes.outputs.slugs != '' && success()
+        continue-on-error: true
+        env:
+          DOMAIN_TEMPLATE: ${{ vars.DOMAIN_TEMPLATE || '' }}
+          BASE_URL: ${{ vars.BASE_URL || '' }}
+          SLUGS_FILTER: ${{ steps.changes.outputs.slugs }}
+        run: npx tsx scripts/smoke-post-deploy.ts
+
+      - name: Upload smoke report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: smoke-post-deploy
+          path: output/reports/smoke-*.json
+          if-no-files-found: ignore
+
+      - name: Apply cross-wave interlinking (post-deploy)
+        if: steps.changes.outputs.slugs != '' && success()
+        env:
+          ACTIVE_WAVE: ${{ vars.ACTIVE_WAVE || '1' }}
+        run: npx tsx scripts/apply-cross-wave-links.ts
+
+      - name: Upload cross-wave report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cross-wave-report
+          path: output/cross-wave-report.json
+          if-no-files-found: ignore
+
+      - name: Monitor Hostinger storage (post-deploy)
+        if: always()
+        continue-on-error: true
+        env:
+          HOSTINGER_SSH_HOST: ${{ secrets.HOSTINGER_SSH_HOST }}
+          HOSTINGER_SSH_USER: ${{ secrets.HOSTINGER_SSH_USER }}
+          HOSTINGER_SSH_PORT: ${{ secrets.HOSTINGER_SSH_PORT }}
+          HOSTINGER_SSH_KEY_PATH: ~/.ssh/deploy_key
+        run: npx tsx scripts/monitor-hostinger-storage.ts
+
+      - name: Upload storage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hostinger-storage-report
+          path: output/storage-report.json
+          if-no-files-found: ignore
+
+      - name: Cleanup SSH
+        if: always()
+        run: rm -f ~/.ssh/deploy_key

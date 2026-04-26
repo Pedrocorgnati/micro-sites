@@ -1,10 +1,16 @@
 'use client';
 
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import type { SiteConfig, CalculatorInput } from '@/types';
-import { STORAGE_KEYS } from '@/types';
+import type { SiteConfig, CalculatorInput, CalculatorType } from '@/types';
+import { STORAGE_KEYS, TIMING } from '@/types';
 import { buildWhatsAppUrl } from '@/lib/whatsapp';
+import { formatResult } from '@/lib/utils';
+import { trackEvent } from '@/lib/analytics';
+import { captureCalculatorError, setSentryContextTags } from '@/lib/sentry-helpers';
+import { PRIVACY_POLICY_VERSION } from '@/lib/privacy-version';
+import { recordFailure, recordSuccess, shouldSkipRequest } from '@/lib/circuit-breaker';
+import { getFormEndpoint } from '@/lib/constants';
 import { ProgressBanner } from './ProgressBanner';
 import { NoscriptFallback } from './NoscriptFallback';
 
@@ -12,7 +18,7 @@ interface CalculatorProps {
   inputs: CalculatorInput[];
   config: SiteConfig;
   partialResultThreshold?: number;
-  type?: 'calculator' | 'diagnostic' | 'checklist';
+  type?: CalculatorType;
   headline?: string;
   subheadline?: string;
 }
@@ -28,10 +34,6 @@ function calcTotal(inputs: CalculatorInput[], answers: Answers): number {
     const weight = input.weight ?? 1;
     return sum + points * weight;
   }, 0);
-}
-
-function formatCurrency(value: number): string {
-  return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value);
 }
 
 export function Calculator({
@@ -50,11 +52,40 @@ export function Calculator({
   const [emailError, setEmailError] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [networkError, setNetworkError] = useState('');
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const startedTrackedRef = useRef(false);
+
+  function scoreBand(total: number): 'low' | 'mid' | 'high' {
+    if (total < 30) return 'low';
+    if (total < 70) return 'mid';
+    return 'high';
+  }
+
+  function trackStartedOnce() {
+    if (startedTrackedRef.current) return;
+    startedTrackedRef.current = true;
+    trackEvent('calculator_started', { site: config.slug, category: config.category, type });
+    // CL-322: canonical GA4 event name alinhado ao INTAKE-CHECKLIST.
+    trackEvent('calculator_start', { calculator_id: config.slug });
+  }
 
   const currentInput = inputs[step];
   const answeredCount = Object.keys(answers).length;
   const hasPartialResult = answeredCount >= partialResultThreshold;
-  const partialTotal = calcTotal(inputs, answers);
+  let partialTotal = 0;
+  try {
+    partialTotal = calcTotal(inputs, answers);
+  } catch (err) {
+    captureCalculatorError(err, { slug: config.slug, step, type });
+  }
+
+  useEffect(() => {
+    setSentryContextTags({
+      site_slug: config.slug,
+      category: config.category ?? 'unknown',
+      calc_type: type,
+    });
+  }, [config.slug, config.category, type]);
 
   const storageKey = STORAGE_KEYS.calculatorProgress(config.slug);
 
@@ -71,11 +102,12 @@ export function Calculator({
   }, [storageKey]);
 
   function handleSelect(value: string) {
+    trackStartedOnce();
     const newAnswers = { ...answers, [currentInput.id]: value };
     setAnswers(newAnswers);
     saveProgress(newAnswers, step);
 
-    if (step + 1 >= inputs.length || (hasPartialResult && step + 1 >= partialResultThreshold)) {
+    if (step + 1 >= inputs.length) {
       setShowEmailCapture(true);
     }
   }
@@ -87,11 +119,26 @@ export function Calculator({
       setShowEmailCapture(true);
       return;
     }
-    setStep(nextStep);
-    saveProgress(answers, nextStep);
-    if (answeredCount + 1 >= partialResultThreshold) {
-      setShowEmailCapture(false);
+    // CL-365: micro-loading transicional entre etapas.
+    // prefers-reduced-motion: aplica transicao instantanea.
+    const reducedMotion =
+      typeof window !== 'undefined' &&
+      typeof window.matchMedia === 'function' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const advance = (): void => {
+      setStep(nextStep);
+      saveProgress(answers, nextStep);
+      if (answeredCount + 1 >= partialResultThreshold) {
+        setShowEmailCapture(false);
+      }
+      setIsTransitioning(false);
+    };
+    if (reducedMotion) {
+      advance();
+      return;
     }
+    setIsTransitioning(true);
+    window.setTimeout(advance, 200);
   }
 
   function handlePrev() {
@@ -129,6 +176,41 @@ export function Calculator({
     setIsSubmitting(true);
 
     try {
+      // CL-496: circuit breaker — pula fetch se aberto
+      if (config.cta.formEndpoint && shouldSkipRequest('static-forms')) {
+        // Continua o fluxo (mostra resultado + WA fallback) sem tentar SF
+      } else
+      // Static Forms — lead capture
+      if (config.cta.formEndpoint) {
+        // TASK-7 / CL-013: marcar origem D03/D04 no payload para roteamento
+        // de nurture (email alert <15min + WhatsApp D+5).
+        const nurturePriorityTag = config.slug?.startsWith('d03')
+          ? 'D03'
+          : config.slug?.startsWith('d04')
+          ? 'D04'
+          : undefined;
+        // TASK-20 ST002: resolve via getFormEndpoint preservando override do config
+        const calcEndpoint = getFormEndpoint('calc', { slug: config.slug, siteOverride: config.cta.formEndpoint });
+        const res = await fetch(calcEndpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email,
+            site: config.slug,
+            source: config.slug,
+            calculator_type: type,
+            nurture_priority_tag: nurturePriorityTag,
+            resultado: partialTotal,
+            tipo: type,
+            // CL-242: log versao da PrivacyPolicy aceita
+            privacy_version: PRIVACY_POLICY_VERSION,
+            accessKey: config.cta.formAccessKey ?? '',
+          }),
+        });
+        if (!res.ok) throw new Error('form-submit-failed');
+        recordSuccess('static-forms');
+      }
+
       // GA4 event
       if (typeof window !== 'undefined' && (window as Window & { gtag?: (...args: unknown[]) => void }).gtag) {
         (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'calculator_lead_captured', {
@@ -137,16 +219,26 @@ export function Calculator({
         });
       }
 
+      trackEvent('calculator_completed', {
+        site: config.slug,
+        category: config.category,
+        type,
+        scoreBand: scoreBand(partialTotal),
+      });
+
       // Salvar resultado no sessionStorage para /resultado
-      const resultData = { inputs, answers, total: partialTotal, email };
+      const resultData = { inputs, answers, total: partialTotal, email, type };
       sessionStorage.setItem('calc-full-result', JSON.stringify(resultData));
 
       // Limpar localStorage (LGPD)
       clearProgress();
 
       router.push('/resultado');
-    } catch {
-      setNetworkError('Verifique sua conexão');
+    } catch (err) {
+      // CL-496: registrar falha no circuit breaker
+      recordFailure('static-forms');
+      captureCalculatorError(err, { slug: config.slug, step, type });
+      setNetworkError('Erro ao enviar. Tente pelo WhatsApp.');
       setIsSubmitting(false);
     }
   }
@@ -204,10 +296,23 @@ export function Calculator({
           style={{ backgroundColor: '#FFFFFF', borderColor: 'var(--color-border)', boxShadow: 'var(--shadow-md)' }}
         >
           {!showEmailCapture ? (
-            <>
+            <div
+              aria-busy={isTransitioning}
+              style={{ opacity: isTransitioning ? 0.55 : 1, transition: 'opacity 150ms ease' }}
+            >
+              {isTransitioning && (
+                <div
+                  role="status"
+                  aria-live="polite"
+                  data-testid="calculator-transitioning"
+                  className="sr-only"
+                >
+                  Carregando proxima pergunta
+                </div>
+              )}
               {/* Progress Bar */}
               <div className="mb-6">
-                <div className="flex justify-between text-xs mb-1" style={{ color: 'var(--color-text-muted)' }}>
+                <div className="flex justify-between text-xs mb-1" style={{ color: 'var(--color-text-secondary)' }}>
                   <span>Pergunta {step + 1} de {inputs.length}</span>
                   <span>{progressPercent}% concluído</span>
                 </div>
@@ -279,7 +384,7 @@ export function Calculator({
                     Estimativa parcial ({labelMap[type]}):
                   </p>
                   <p className="text-xl font-extrabold" style={{ fontFamily: 'var(--font-heading)', color: 'var(--color-accent)' }}>
-                    {formatCurrency(partialTotal)}
+                    {formatResult(partialTotal, type)}
                   </p>
                 </div>
               )}
@@ -291,7 +396,7 @@ export function Calculator({
                   data-testid="calculator-prev-button"
                   onClick={handlePrev}
                   disabled={step === 0}
-                  className="px-5 py-2.5 rounded-lg border text-sm font-medium min-h-[44px] transition-colors disabled:opacity-40 disabled:cursor-not-allowed hover:bg-gray-50"
+                  className="px-5 py-2.5 rounded-lg border text-sm font-medium min-h-[44px] transition-colors disabled:opacity-40 disabled:cursor-not-allowed hover:bg-gray-50 focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 focus-visible:outline-none"
                   style={{ borderColor: 'var(--color-border)', color: 'var(--color-text-secondary)' }}
                 >
                   ← Voltar
@@ -300,14 +405,14 @@ export function Calculator({
                   type="button"
                   data-testid="calculator-next-button"
                   onClick={handleNext}
-                  disabled={!answers[currentInput?.id]}
-                  className="flex-1 px-5 py-2.5 rounded-lg text-sm font-semibold text-white min-h-[44px] transition-all hover:opacity-90 disabled:opacity-40 disabled:cursor-not-allowed"
+                  disabled={!answers[currentInput?.id] || isTransitioning}
+                  className="flex-1 px-5 py-2.5 rounded-lg text-sm font-semibold text-white min-h-[44px] transition-all hover:opacity-90 disabled:opacity-40 disabled:cursor-not-allowed focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 focus-visible:outline-none"
                   style={{ backgroundColor: 'var(--color-accent)' }}
                 >
                   {step + 1 >= inputs.length ? 'Ver resultado →' : 'Próxima →'}
                 </button>
               </div>
-            </>
+            </div>
           ) : (
             /* Email Capture */
             <div data-testid="email-capture">
@@ -317,9 +422,9 @@ export function Calculator({
                   Seu resultado estimado
                 </p>
                 <p className="text-3xl font-extrabold mb-2" style={{ fontFamily: 'var(--font-heading)', color: 'var(--color-accent)' }}>
-                  {formatCurrency(partialTotal)}
+                  {formatResult(partialTotal, type)}
                 </p>
-                <p className="text-xs" style={{ color: 'var(--color-text-muted)' }}>
+                <p className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>
                   Para ver o resultado completo, informe seu e-mail:
                 </p>
               </div>
@@ -339,7 +444,7 @@ export function Calculator({
                     aria-invalid={!!emailError}
                     aria-describedby={emailError ? 'calc-email-error' : undefined}
                     disabled={isSubmitting}
-                    className="w-full px-3 py-2.5 rounded-lg border text-sm min-h-[44px] transition-colors outline-none"
+                    className="w-full px-3 py-2.5 rounded-lg border text-sm min-h-[44px] transition-colors focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 focus-visible:outline-none"
                     style={{
                       borderColor: emailError ? 'var(--color-danger)' : 'var(--color-border)',
                       color: 'var(--color-text-primary)',
@@ -363,27 +468,27 @@ export function Calculator({
                   data-testid="calculator-email-submit-button"
                   disabled={isSubmitting}
                   aria-busy={isSubmitting}
-                  className="w-full px-5 py-3 rounded-lg text-sm font-semibold text-white min-h-[44px] transition-all hover:opacity-90 disabled:opacity-60"
+                  className="w-full px-5 py-3 rounded-lg text-sm font-semibold text-white min-h-[44px] transition-all hover:opacity-90 disabled:opacity-60 focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 focus-visible:outline-none"
                   style={{ backgroundColor: 'var(--color-accent)' }}
                 >
                   {isSubmitting ? '⟳ Enviando...' : 'Ver resultado completo →'}
                 </button>
 
-                <p className="text-xs text-center" style={{ color: 'var(--color-text-muted)' }}>
+                <p className="text-xs text-center" style={{ color: 'var(--color-text-secondary)' }}>
                   Sem spam. Seus dados são tratados conforme nossa{' '}
-                  <a href="/privacidade" className="underline" style={{ color: 'var(--color-accent)' }}>
+                  <a href="/privacidade" className="underline focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 focus-visible:outline-none rounded" style={{ color: 'var(--color-accent)' }}>
                     Política de Privacidade
                   </a>.
                 </p>
 
-                <p className="text-xs text-center" style={{ color: 'var(--color-text-muted)' }}>
+                <p className="text-xs text-center" style={{ color: 'var(--color-text-secondary)' }}>
                   Ou{' '}
                   <a
                     data-testid="calculator-whatsapp-link"
                     href={waUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline font-medium"
+                    className="underline font-medium focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 focus-visible:outline-none rounded"
                     style={{ color: '#25D366' }}
                   >
                     fale pelo WhatsApp

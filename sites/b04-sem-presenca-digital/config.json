@@ -1,0 +1,66 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "b04-sem-presenca-digital",
+  "name": "SystemForge Digital",
+  "category": "B",
+  "accentColor": "#EA580C",
+  "wave": 2,
+  "funnelStage": "awareness",
+  "template": "landing",
+  "hasBlog": true,
+  "schema": [
+    "Organization",
+    "FAQPage",
+    "HowTo"
+  ],
+  "sectionOrder": "b-variant",
+  "headline": "Seu Negócio Existe Offline. E Online?",
+  "subheadline": "73% dos consumidores pesquisam online antes de comprar de um negócio local. Se você não está lá, está perdendo para quem está.",
+  "seo": {
+    "title": "Sem Presença Digital? Você É Invisível Online — SystemForge",
+    "description": "Construa presença digital completa: site, Google Meu Negócio, SEO local e redes sociais integradas. Apareça onde seus clientes procuram.",
+    "keywords": [
+      "presença digital negócio",
+      "google meu negócio",
+      "seo local",
+      "aparecer no google"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Quero Ter Presença Digital",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Meu negócio não tem presença digital e quero resolver isso. Podem me ajudar?"
+  },
+  "exitIntent": {
+    "offerText": "Seus clientes te procuram online — você está lá?",
+    "offerSubtext": "73% dos consumidores pesquisam no Google antes de ir a um negócio local. Sem presença digital, você perde para o concorrente toda vez.",
+    "ctaLabel": "Quero Aparecer no Google",
+    "ctaHref": "#contato"
+  },
+  "showSystemForgeLogo": false,
+  "footerLinks": [
+    {
+      "label": "Blog",
+      "href": "/blog"
+    },
+    {
+      "label": "FAQ",
+      "href": "/faq"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "crossLinks": [
+    {
+      "href": "https://c01.DOMAIN.com",
+      "anchor": "Crie sua presença digital hoje",
+      "context": "footer"
+    },
+    {
+      "href": "https://d03.DOMAIN.com",
+      "anchor": "Diagnóstico gratuito de maturidade digital",
+      "context": "footer"
+    }
+  ],
+  "lastReviewed": "2026-04-12"
+}

@@ -1,0 +1,121 @@
+{
+  "$schema": "../src/schemas/alert-rules.schema.json",
+  "version": "1.0.0",
+  "lastUpdatedAt": "2026-04-25",
+  "rules": [
+    {
+      "id": "SF_QUOTA_70",
+      "description": "Static Forms quota mensal acima de 70%",
+      "metric": "static_forms.submissions.monthly_pct",
+      "threshold": 0.7,
+      "comparator": ">=",
+      "window": "30d",
+      "channel": "github_issue+email",
+      "severity": "warning",
+      "owner": "footstockbr@gmail.com",
+      "runbook": "docs/operations/SF-QUOTA-ESCALATION-RUNBOOK.md"
+    },
+    {
+      "id": "SF_QUOTA_90",
+      "description": "Static Forms quota mensal acima de 90% — escalar SF Pro/Web3Forms",
+      "metric": "static_forms.submissions.monthly_pct",
+      "threshold": 0.9,
+      "comparator": ">=",
+      "window": "30d",
+      "channel": "github_issue+email+sentry",
+      "severity": "critical",
+      "owner": "footstockbr@gmail.com",
+      "runbook": "docs/operations/SF-QUOTA-ESCALATION-RUNBOOK.md"
+    },
+    {
+      "id": "SF_DOWN_5MIN",
+      "description": "Static Forms endpoint indisponivel por >=5min (sintetico)",
+      "metric": "synthetic.static_forms.consecutive_failures",
+      "threshold": 1,
+      "comparator": ">=",
+      "window": "5m",
+      "channel": "github_issue+email",
+      "severity": "critical",
+      "owner": "footstockbr@gmail.com",
+      "runbook": "docs/operations/SF-QUOTA-ESCALATION-RUNBOOK.md"
+    },
+    {
+      "id": "SF_SUBMISSION_DROP_W2W",
+      "description": "Submissions semanais < 70% da media de 4 semanas",
+      "metric": "static_forms.submissions.weekly_vs_4w_avg",
+      "threshold": 0.7,
+      "comparator": "<",
+      "window": "7d",
+      "channel": "github_issue+email",
+      "severity": "warning",
+      "owner": "footstockbr@gmail.com"
+    },
+    {
+      "id": "GSC_INDEX_DROP_20PCT",
+      "description": "Indexacao GSC caiu >20% w/w para algum site da rede",
+      "metric": "gsc.indexed_urls.wow_delta",
+      "threshold": -0.2,
+      "comparator": "<=",
+      "window": "7d",
+      "channel": "github_issue+email",
+      "severity": "warning",
+      "owner": "footstockbr@gmail.com"
+    },
+    {
+      "id": "SENTRY_ERROR_SPIKE",
+      "description": "Sentry — picos de erro em Calculator/global-error",
+      "metric": "sentry.errors.daily_count",
+      "threshold": 50,
+      "comparator": ">=",
+      "window": "24h",
+      "channel": "sentry+email",
+      "severity": "warning",
+      "owner": "footstockbr@gmail.com",
+      "runbook": "docs/operations/SENTRY-ROTATION-RUNBOOK.md"
+    },
+    {
+      "id": "GA4_CALC_COMPLETION_DROP",
+      "description": "Conclusao calculadora caiu >25% vs baseline 4 semanas",
+      "metric": "ga4.calculator_completion_rate.vs_4w",
+      "threshold": -0.25,
+      "comparator": "<=",
+      "window": "7d",
+      "channel": "github_issue+email",
+      "severity": "warning",
+      "owner": "footstockbr@gmail.com"
+    },
+    {
+      "id": "UPTIME_DOWN_3MIN",
+      "description": "Site fora do ar por >=3min (UptimeRobot)",
+      "metric": "uptime.consecutive_down_minutes",
+      "threshold": 3,
+      "comparator": ">=",
+      "window": "5m",
+      "channel": "uptimerobot+email",
+      "severity": "critical",
+      "owner": "footstockbr@gmail.com"
+    },
+    {
+      "id": "SSL_EXPIRY_30D",
+      "description": "Certificado SSL expira em <=30 dias",
+      "metric": "ssl.days_to_expiry",
+      "threshold": 30,
+      "comparator": "<=",
+      "window": "1d",
+      "channel": "github_issue+email",
+      "severity": "warning",
+      "owner": "footstockbr@gmail.com"
+    },
+    {
+      "id": "WA_DEEP_LINK_BROKEN",
+      "description": "WhatsApp deep link respondendo erro (HEAD != 2xx/3xx)",
+      "metric": "synthetic.whatsapp.broken_count",
+      "threshold": 1,
+      "comparator": ">=",
+      "window": "1d",
+      "channel": "github_issue+email",
+      "severity": "warning",
+      "owner": "footstockbr@gmail.com"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+name: 2FA Enforcement Audit
+
+# TASK-29 ST003 / CL-481, CL-482, CL-605 — auditoria mensal de 2FA + senha policy
+
+on:
+  schedule:
+    - cron: '0 9 15 * *'   # dia 15 de cada mes 09:00 UTC
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Audit 2FA via GitHub API
+        id: audit
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ORG_TOKEN: ${{ secrets.ORG_ADMIN_TOKEN }}
+        run: |
+          # Personal repo (nao org): listar collaborators + checar 2FA
+          # NOTA: para repos pessoais, GitHub API nao expoe 2FA status diretamente
+          # via REST. Para org, /orgs/{org}/members?filter=2fa_disabled funciona.
+          set +e
+          REPO="${{ github.repository }}"
+          OWNER=$(echo "$REPO" | cut -d/ -f1)
+
+          # Tentar como org primeiro (se aplicavel)
+          if curl -sf -H "Authorization: token ${ORG_TOKEN:-$GH_TOKEN}" \
+            "https://api.github.com/orgs/$OWNER" >/dev/null 2>&1; then
+            echo "[2fa-audit] $OWNER e organizacao — checando 2fa_disabled filter"
+            DISABLED=$(curl -sf -H "Authorization: token ${ORG_TOKEN:-$GH_TOKEN}" \
+              "https://api.github.com/orgs/$OWNER/members?filter=2fa_disabled&per_page=100" | jq length)
+            echo "disabled_count=$DISABLED" >> "$GITHUB_OUTPUT"
+            if [ "$DISABLED" -gt 0 ]; then
+              echo "::warning::$DISABLED member(s) sem 2FA habilitado na org $OWNER"
+              curl -sf -H "Authorization: token ${ORG_TOKEN:-$GH_TOKEN}" \
+                "https://api.github.com/orgs/$OWNER/members?filter=2fa_disabled" \
+                | jq -r '.[].login'
+            else
+              echo "[2fa-audit] OK — 0 members sem 2FA"
+            fi
+          else
+            echo "[2fa-audit] $OWNER e usuario pessoal (nao org)"
+            echo "Para repos pessoais, GitHub API nao expoe 2FA status de collaborators."
+            echo "Validacao manual via Settings > Security > Two-factor auth."
+            echo "disabled_count=manual" >> "$GITHUB_OUTPUT"
+          fi
+          exit 0
+
+      - name: Open issue if 2FA gap detected
+        if: steps.audit.outputs.disabled_count != '0' && steps.audit.outputs.disabled_count != 'manual'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const count = '${{ steps.audit.outputs.disabled_count }}';
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `2FA enforcement — ${count} member(s) sem 2FA (${new Date().toISOString().slice(0,7)})`,
+              body: `Auditoria mensal detectou ${count} colaborador(es) sem 2FA habilitado.\n\nAcao:\n1. Identificar quem e via API: \`gh api /orgs/{ORG}/members?filter=2fa_disabled\`\n2. Comunicar e dar 7 dias para habilitar\n3. Apos prazo: revogar acesso ao repo conforme RESPONSIBILITIES.md\n\nVer runbook: \`docs/team/RESPONSIBILITIES.md\` secao "Seguranca obrigatoria".`,
+              labels: ['security', '2fa', 'enforcement']
+            });
+
+      - name: Reminder for personal repo
+        if: steps.audit.outputs.disabled_count == 'manual'
+        run: |
+          echo "::notice::Repo pessoal — validar manualmente em GitHub Settings > Security."
+          echo "Pedro: confirmar 2FA ON em sua conta + qualquer collaborator ativo."

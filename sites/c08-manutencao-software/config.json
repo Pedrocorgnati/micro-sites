@@ -1,0 +1,45 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "c08-manutencao-software",
+  "name": "SystemForge Digital",
+  "category": "C",
+  "accentColor": "#059669",
+  "wave": 3,
+  "funnelStage": "consideration",
+  "template": "landing",
+  "hasBlog": true,
+  "schema": [
+    "FAQPage",
+    "HowTo",
+    "Organization"
+  ],
+  "sectionOrder": "default",
+  "headline": "Modernize Seu Software Sem Parar as Operações",
+  "subheadline": "Assumimos sistemas legados, adicionamos funcionalidades e migramos para tecnologias modernas com segurança.",
+  "seo": {
+    "title": "Modernização de Software Legado | SystemForge Digital",
+    "description": "Assumimos seu sistema legado, corrigimos bugs, adicionamos funcionalidades e modernizamos a tecnologia sem downtime e sem perda de dados.",
+    "keywords": [
+      "manutenção software legado",
+      "modernização sistema legado",
+      "evolução software empresa",
+      "atualizar sistema antigo 2026"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Quero Modernizar Meu Sistema",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Preciso modernizar um sistema legado da minha empresa e vim pelo site da SystemForge."
+  },
+  "showSystemForgeLogo": true,
+  "footerLinks": [
+    {
+      "label": "FAQ",
+      "href": "/faq"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "systemForgeUrl": "https://systemforge.com.br",
+  "lastReviewed": "2026-04-12"
+}

@@ -1,0 +1,66 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "b07-site-nao-aparece-google",
+  "name": "SystemForge Digital",
+  "category": "B",
+  "accentColor": "#EA580C",
+  "wave": 3,
+  "funnelStage": "awareness",
+  "template": "landing",
+  "hasBlog": true,
+  "schema": [
+    "Organization",
+    "FAQPage",
+    "HowTo"
+  ],
+  "sectionOrder": "b-variant",
+  "headline": "Seu Site Não Aparece no Google. Seus Clientes Não Te Encontram.",
+  "subheadline": "Ter um site sem SEO é como abrir uma loja em uma rua onde ninguém passa. Veja como mudar isso.",
+  "seo": {
+    "title": "Site Não Aparece no Google? Como Resolver com SEO",
+    "description": "Descubra por que seu site não aparece no Google e como implementar SEO para atrair clientes organicamente. Diagnóstico gratuito.",
+    "keywords": [
+      "site não aparece google",
+      "seo para site",
+      "aparecer no google",
+      "melhorar seo site"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Quero Aparecer no Google",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Meu site não aparece no Google e preciso de ajuda com SEO. Podem me ajudar?"
+  },
+  "exitIntent": {
+    "offerText": "Sem Google, você depende só de indicações",
+    "offerSubtext": "68% dos cliques online vão para os 3 primeiros resultados do Google. Onde você está nessa conta?",
+    "ctaLabel": "Quero Entrar no Top 3",
+    "ctaHref": "#contato"
+  },
+  "showSystemForgeLogo": false,
+  "footerLinks": [
+    {
+      "label": "Blog",
+      "href": "/blog"
+    },
+    {
+      "label": "FAQ",
+      "href": "/faq"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "crossLinks": [
+    {
+      "href": "https://c01.DOMAIN.com",
+      "anchor": "Site otimizado para SEO e Google",
+      "context": "footer"
+    },
+    {
+      "href": "https://d03.DOMAIN.com",
+      "anchor": "Diagnóstico de maturidade digital gratuito",
+      "context": "footer"
+    }
+  ],
+  "lastReviewed": "2026-04-12"
+}

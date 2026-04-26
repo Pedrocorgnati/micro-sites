@@ -1,0 +1,10 @@
+[2026-04-21T20:14:20] === DAILY pipeline — site=a01 ===
+[2026-04-21T20:14:20] -> write-articles: /blog:write-articles --site=a01 --limit=1
+[2026-04-21T20:14:20]    [dry-run] skip
+[2026-04-21T20:14:20] -> eeat-inject: /blog:eeat-inject --site=a01
+[2026-04-21T20:14:20]    [dry-run] skip
+[2026-04-21T20:14:20] -> quality-gate: /blog:quality-gate --site=a01
+[2026-04-21T20:14:20]    [dry-run] skip
+[2026-04-21T20:14:20] -> build-metadata: /blog:build-metadata --site=a01
+[2026-04-21T20:14:20]    [dry-run] skip
+[2026-04-21T20:14:20] === DONE mode=daily site=a01 ===

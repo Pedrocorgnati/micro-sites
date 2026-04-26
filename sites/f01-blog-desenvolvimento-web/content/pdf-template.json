@@ -1,0 +1,42 @@
+{
+  "title": "Comparativo — Wix vs WordPress vs Shopify vs Custom",
+  "subtitle": "Como escolher a stack do seu site de acordo com objetivo, orcamento e manutencao.",
+  "blocks": [
+    { "type": "heading", "level": 2, "text": "1. Quadro comparativo" },
+    {
+      "type": "table",
+      "columns": ["Criterio", "Wix", "WordPress", "Shopify", "Custom"],
+      "rows": [
+        ["Setup inicial", "Rapido", "Medio", "Rapido", "Lento"],
+        ["Custo mensal", "R$ 50-150", "R$ 30-200", "R$ 150-400", "Variavel"],
+        ["Customizacao", "Baixa", "Alta", "Media", "Total"],
+        ["SEO tecnico", "Bom", "Otimo", "Bom", "Otimo"],
+        ["E-commerce", "Basico", "WooCommerce", "Nativo", "Sob medida"],
+        ["Manutencao", "Gerenciada", "Sua responsabilidade", "Gerenciada", "Equipe tecnica"]
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "2. Quando escolher cada um" },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        "Wix: validar rapido, time sem programadores, orcamento curto",
+        "WordPress: blog/autoridade com flexibilidade e controle sobre SEO",
+        "Shopify: loja online pronta, foco em volume e integracoes prontas",
+        "Custom (Next.js/React): performance maxima, produto digital, escala"
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "3. Sinais de alerta" },
+    {
+      "type": "list",
+      "style": "numbered",
+      "items": [
+        "Plataforma que dificulta exportar seus dados",
+        "Ausencia de backup automatizado",
+        "Temas/plugins abandonados ha mais de 12 meses",
+        "Equipe refem de um unico fornecedor"
+      ]
+    },
+    { "type": "callout", "text": "Dica: avalie a longevidade do fornecedor. Migrar de plataforma em 2 anos costuma custar mais que escolher o certo de entrada." }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "headline": "Dúvidas sobre o ForgeSite",
+  "items": [
+    {
+      "question": "ForgeSite substitui meu site atual?",
+      "answer": "Sim. ForgeSite é uma plataforma completa de criação e gestão de sites com IA nativa — você cria seu site no ForgeSite e ele gerencia a otimização automaticamente."
+    },
+    {
+      "question": "Como o chatbot aprende sobre meu negócio?",
+      "answer": "Você fornece informações sobre seu negócio, FAQ, preços e serviços durante o onboarding. A IA é treinada com esses dados e começa a responder visitantes imediatamente."
+    },
+    {
+      "question": "O que é 'conteúdo personalizado por visitante'?",
+      "answer": "A IA analisa sinais como origem do visitante, horário, comportamento na página e histórico (se existir) para exibir textos e CTAs mais relevantes para aquele perfil específico."
+    },
+    {
+      "question": "Quando lança?",
+      "answer": "Previsão para o segundo semestre de 2026. Fundadores na lista de espera serão os primeiros a ter acesso e ganham 50% off no primeiro ano."
+    },
+    {
+      "question": "Preciso saber programar?",
+      "answer": "Não. ForgeSite é completamente visual. Você configura conteúdo, define regras básicas e a IA cuida da otimização técnica automaticamente."
+    }
+  ]
+}

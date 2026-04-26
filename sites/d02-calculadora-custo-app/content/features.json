@@ -1,0 +1,20 @@
+{
+  "headline": "Por que usar nossa calculadora de custo de app?",
+  "items": [
+    {
+      "icon": "bar-chart",
+      "title": "Dados Reais do Mercado",
+      "description": "Estimativas baseadas em projetos reais entregues no Brasil, não em tabelas genéricas da internet."
+    },
+    {
+      "icon": "shield",
+      "title": "Sem Surpresas no Orçamento",
+      "description": "Saiba antecipadamente o que impacta o custo do seu app e priorize as funcionalidades certas."
+    },
+    {
+      "icon": "clock",
+      "title": "Resultado em 5 Minutos",
+      "description": "5 perguntas objetivas. Sem cadastro obrigatório, sem compromisso. Estimativa imediata."
+    }
+  ]
+}

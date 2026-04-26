@@ -1,0 +1,25 @@
+{
+  "headline": "Perguntas frequentes sobre modernização de site",
+  "items": [
+    {
+      "question": "Vou perder meu domínio ou o histórico de SEO?",
+      "answer": "Não. Mantemos seu domínio e URLs existentes. Fazemos o processo de migração seguindo as melhores práticas para preservar o histórico de SEO que você já construiu."
+    },
+    {
+      "question": "Meu site vai ficar fora do ar durante a modernização?",
+      "answer": "Não. Desenvolvemos o novo site em paralelo. A troca acontece em questão de minutos, com downtime mínimo — geralmente menos de 5 minutos."
+    },
+    {
+      "question": "Em quanto tempo vejo resultados no Google?",
+      "answer": "Melhorias de velocidade e mobile têm impacto imediato no rankeamento. Aumento de posições costuma ser visível em 30–60 dias após a modernização."
+    },
+    {
+      "question": "Preciso refazer todo o conteúdo?",
+      "answer": "Não obrigatoriamente. Migramos textos e imagens existentes, atualizando o que for necessário. Se quiser criar conteúdo novo, incluímos no briefing."
+    },
+    {
+      "question": "Qual o custo da modernização?",
+      "answer": "Depende do tamanho e complexidade do projeto. Entre em contato para uma avaliação gratuita do seu site atual e um orçamento personalizado."
+    }
+  ]
+}

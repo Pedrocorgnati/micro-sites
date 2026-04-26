@@ -1,0 +1,201 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "d03-diagnostico-maturidade-digital",
+  "name": "Diagnóstico de Maturidade Digital",
+  "category": "D",
+  "accentColor": "#7C3AED",
+  "wave": 1,
+  "funnelStage": "consideration",
+  "template": "calculator",
+  "hasBlog": true,
+  "schema": [
+    "FAQPage",
+    "Organization",
+    "HowTo",
+    "Product"
+  ],
+  "sectionOrder": "default",
+  "headline": "Descubra o nível digital da sua empresa em 5 minutos.",
+  "subheadline": "Questionário gratuito de maturidade digital para PMEs. Receba um diagnóstico personalizado e um plano de ação.",
+  "seo": {
+    "title": "Diagnóstico de Maturidade Digital Gratuito 2026",
+    "description": "Descubra em que estágio digital está sua empresa e receba um plano de ação personalizado. Questionário gratuito em 5 minutos.",
+    "keywords": [
+      "maturidade digital",
+      "diagnóstico digital",
+      "transformação digital PME",
+      "nível digital empresa"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Ver Diagnóstico Completo",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Fiz o diagnóstico de maturidade digital e gostaria de conversar sobre os resultados."
+  },
+  "leadMagnet": {
+    "enabled": true,
+    "type": "diagnostic",
+    "partialResultLabel": "Seu índice de maturidade digital",
+    "fullResultPath": "/resultado"
+  },
+  "calculatorInputs": [
+    {
+      "id": "presenca-online",
+      "label": "Como está sua presença online hoje?",
+      "type": "radio",
+      "weight": 1,
+      "options": [
+        {
+          "value": "nenhuma",
+          "label": "Não tenho site nem redes sociais ativas",
+          "points": 0
+        },
+        {
+          "value": "basica",
+          "label": "Tenho redes sociais mas sem site",
+          "points": 20
+        },
+        {
+          "value": "site-antigo",
+          "label": "Tenho site desatualizado",
+          "points": 35
+        },
+        {
+          "value": "boa",
+          "label": "Site moderno e redes ativas",
+          "points": 70
+        }
+      ]
+    },
+    {
+      "id": "captacao-leads",
+      "label": "Como você capta clientes hoje?",
+      "type": "radio",
+      "weight": 1,
+      "options": [
+        {
+          "value": "boca-boca",
+          "label": "Somente indicações e boca a boca",
+          "points": 10
+        },
+        {
+          "value": "ads",
+          "label": "Anúncios pagos (Google/Meta Ads)",
+          "points": 40
+        },
+        {
+          "value": "organico",
+          "label": "SEO e conteúdo orgânico",
+          "points": 70
+        },
+        {
+          "value": "multicanal",
+          "label": "Multi-canal (orgânico + pago + email)",
+          "points": 100
+        }
+      ]
+    },
+    {
+      "id": "automacao",
+      "label": "Que parte do seu atendimento está automatizada?",
+      "type": "radio",
+      "weight": 1,
+      "options": [
+        {
+          "value": "nada",
+          "label": "Tudo manual (WhatsApp, planilhas)",
+          "points": 0
+        },
+        {
+          "value": "pouco",
+          "label": "Alguns processos automatizados",
+          "points": 30
+        },
+        {
+          "value": "medio",
+          "label": "CRM + funil básico",
+          "points": 60
+        },
+        {
+          "value": "avancado",
+          "label": "CRM + automação + integração completa",
+          "points": 100
+        }
+      ]
+    },
+    {
+      "id": "dados",
+      "label": "Você analisa dados do seu negócio regularmente?",
+      "type": "radio",
+      "weight": 1,
+      "options": [
+        {
+          "value": "nao",
+          "label": "Não tenho métricas definidas",
+          "points": 0
+        },
+        {
+          "value": "eventual",
+          "label": "Esporadicamente",
+          "points": 25
+        },
+        {
+          "value": "mensal",
+          "label": "Relatórios mensais",
+          "points": 60
+        },
+        {
+          "value": "semanal",
+          "label": "Dashboards semanais com KPIs definidos",
+          "points": 100
+        }
+      ]
+    },
+    {
+      "id": "equipe",
+      "label": "Sua equipe está capacitada para ferramentas digitais?",
+      "type": "radio",
+      "weight": 1,
+      "options": [
+        {
+          "value": "nao",
+          "label": "Resistência ou desconhecimento de ferramentas",
+          "points": 0
+        },
+        {
+          "value": "basico",
+          "label": "Uso básico (Office, WhatsApp Business)",
+          "points": 30
+        },
+        {
+          "value": "medio",
+          "label": "Uso de CRM, ERP ou e-commerce",
+          "points": 65
+        },
+        {
+          "value": "avancado",
+          "label": "Equipe treinada em múltiplas ferramentas digitais",
+          "points": 100
+        }
+      ]
+    }
+  ],
+  "showSystemForgeLogo": true,
+  "footerLinks": [
+    {
+      "label": "Privacidade",
+      "href": "/privacidade"
+    }
+  ],
+  "crossLinks": [
+    {
+      "href": "https://c05.DOMAIN.com",
+      "anchor": "Automatize seu atendimento com nossa solução",
+      "context": "resultado"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "headerBadge": "Uma ferramenta da SystemForge",
+  "lastReviewed": "2026-04-12"
+}

@@ -1,0 +1,29 @@
+{
+  "headline": "O que automatizamos no seu negócio",
+  "items": [
+    {
+      "title": "Atendimento WhatsApp",
+      "description": "Bot inteligente responde dúvidas frequentes, qualifica leads e agenda visitas — sem você precisar digitar."
+    },
+    {
+      "title": "Agendamentos online",
+      "description": "Sistema de agenda com confirmação, lembretes e cancelamentos automáticos. Zero conflito de horários."
+    },
+    {
+      "title": "Cobranças automáticas",
+      "description": "Follow-up de pagamentos por e-mail e WhatsApp no momento certo. Reduz inadimplência sem constrangimento."
+    },
+    {
+      "title": "Captação de leads",
+      "description": "Formulários que classificam e notificam a equipe automaticamente. Nenhum lead sem resposta."
+    },
+    {
+      "title": "Integração com suas ferramentas",
+      "description": "Conectamos com as ferramentas que você já usa: Google Agenda, Planilhas, CRM, e-mail marketing."
+    },
+    {
+      "title": "Relatórios automáticos",
+      "description": "Receba resumos semanais por e-mail com os principais indicadores do seu negócio."
+    }
+  ]
+}

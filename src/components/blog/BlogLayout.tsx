@@ -8,9 +8,11 @@ interface BlogLayoutProps {
   article: BlogArticle;
   config: SiteConfig;
   relatedArticles?: BlogArticle[];
+  prevArticle?: Pick<BlogArticle, 'slug' | 'title'> | null;
+  nextArticle?: Pick<BlogArticle, 'slug' | 'title'> | null;
 }
 
-export function BlogLayout({ article, config, relatedArticles = [] }: BlogLayoutProps) {
+export function BlogLayout({ article, config, relatedArticles = [], prevArticle, nextArticle }: BlogLayoutProps) {
   const waUrl = `https://wa.me/${config.cta.whatsappNumber.replace(/\D/g, '')}?text=${encodeURIComponent(config.cta.whatsappMessage)}`;
 
   return (
@@ -106,6 +108,52 @@ export function BlogLayout({ article, config, relatedArticles = [] }: BlogLayout
               </a>
             </div>
           </div>
+
+          {/* Prev / Next navigation */}
+          {(prevArticle ?? nextArticle) && (
+            <nav
+              data-testid="blog-article-prevnext"
+              aria-label="Navegação entre artigos"
+              className="mt-10 pt-6 border-t flex flex-col sm:flex-row justify-between gap-4"
+              style={{ borderColor: 'var(--color-border)' }}
+            >
+              {prevArticle ? (
+                <Link
+                  data-testid="blog-article-prev"
+                  href={`/blog/${prevArticle.slug}`}
+                  className="flex flex-col gap-1 max-w-[48%] group"
+                >
+                  <span className="text-xs font-medium" style={{ color: 'var(--color-text-muted)' }}>
+                    ← Artigo anterior
+                  </span>
+                  <span
+                    className="text-sm font-semibold transition-colors duration-150"
+                    style={{ color: 'var(--color-accent)' }}
+                  >
+                    {prevArticle.title}
+                  </span>
+                </Link>
+              ) : <div />}
+
+              {nextArticle && (
+                <Link
+                  data-testid="blog-article-next"
+                  href={`/blog/${nextArticle.slug}`}
+                  className="flex flex-col gap-1 max-w-[48%] sm:text-right group"
+                >
+                  <span className="text-xs font-medium" style={{ color: 'var(--color-text-muted)' }}>
+                    Próximo artigo →
+                  </span>
+                  <span
+                    className="text-sm font-semibold transition-colors duration-150"
+                    style={{ color: 'var(--color-accent)' }}
+                  >
+                    {nextArticle.title}
+                  </span>
+                </Link>
+              )}
+            </nav>
+          )}
 
           {/* Related posts — mobile (after article) */}
           {relatedArticles.length > 0 && (

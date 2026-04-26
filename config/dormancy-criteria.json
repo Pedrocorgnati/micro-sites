@@ -1,0 +1,10 @@
+{
+  "$schema": "../src/schemas/dormancy-criteria.schema.json",
+  "version": "1.0.0",
+  "lastUpdatedAt": "2026-04-25",
+  "minSessions30d": 50,
+  "minImpressions30d": 5,
+  "minLeads6m": 1,
+  "signalsToTriggerDormant": 2,
+  "exemptSlugs": []
+}

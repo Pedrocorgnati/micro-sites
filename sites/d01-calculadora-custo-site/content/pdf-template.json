@@ -1,0 +1,45 @@
+{
+  "title": "Relatorio — Custo estimado do seu site",
+  "subtitle": "Faixas de preco de mercado, escopo e recomendacoes para tomar decisao com seguranca. Baseado em dados medios do mercado brasileiro.",
+  "blocks": [
+    { "type": "heading", "level": 2, "text": "1. Faixas de preco por tipo de site" },
+    { "type": "paragraph", "text": "Os valores abaixo sao referencias medias de mercado para projetos entregues por agencias e profissionais independentes no Brasil." },
+    {
+      "type": "table",
+      "columns": ["Tipo", "Entry", "Medio", "Premium"],
+      "rows": [
+        ["Landing page", "R$ 800", "R$ 1.800", "R$ 3.500"],
+        ["Site institucional", "R$ 2.000", "R$ 5.000", "R$ 12.000"],
+        ["E-commerce pequeno", "R$ 4.000", "R$ 9.000", "R$ 20.000"],
+        ["Sistema web / app", "R$ 10.000", "R$ 25.000", "R$ 60.000+"]
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "2. O que afeta o preco" },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        "Quantidade de paginas e fluxos personalizados",
+        "Integracoes (pagamentos, CRM, ERP, WhatsApp, e-mail marketing)",
+        "SEO tecnico e conteudo base",
+        "Design sob medida vs. template ajustado",
+        "Suporte e manutencao pos-lancamento"
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "3. Checklist antes de contratar" },
+    {
+      "type": "list",
+      "style": "numbered",
+      "items": [
+        "Defina o objetivo primario: lead, venda, autoridade ou institucional",
+        "Liste 3 concorrentes que admira e anote o que quer replicar/evitar",
+        "Levante conteudo existente (textos, imagens, provas sociais)",
+        "Decida se tera blog e quem vai alimentar com conteudo",
+        "Reserve orcamento para hospedagem, dominio e manutencao anuais"
+      ]
+    },
+    { "type": "callout", "text": "Dica: peca sempre um escopo detalhado por escrito antes de assinar contrato. Evita surpresas e alinha expectativas de prazo e entrega." },
+    { "type": "heading", "level": 2, "text": "4. Proximo passo" },
+    { "type": "paragraph", "text": "Se preferir conversar sobre o seu caso especifico, fale com um especialista pelo WhatsApp no rodape deste PDF. A consulta inicial e gratuita." }
+  ]
+}

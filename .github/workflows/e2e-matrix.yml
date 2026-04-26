@@ -1,0 +1,84 @@
+name: E2E Matrix (36 sites)
+
+# TASK-17 ST003 / CL-311 — testes E2E shardeados por categoria.
+# Cada job builda + testa apenas os sites de uma categoria, dando paralelismo
+# 6x sem precisar webserver compartilhado.
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'sites/**'
+      - 'e2e/**'
+      - 'playwright.config.ts'
+      - 'package.json'
+  workflow_dispatch:
+    inputs:
+      categories:
+        description: 'Categorias (default: todas)'
+        required: false
+        default: 'A,B,C,D,E,F'
+
+jobs:
+  matrix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        category: [A, B, C, D, E, F]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+      - name: Install deps
+        run: npm ci
+      - name: Install Playwright browsers
+        run: npx playwright install chromium
+      - name: Install http-server (devDep)
+        run: npm i -D http-server@^14.1.1 --no-save
+
+      - name: Get slugs for category ${{ matrix.category }}
+        id: slugs
+        run: |
+          source scripts/deploy-map.sh
+          ALL_SLUGS=()
+          PREFIX_LOWER=$(echo "${{ matrix.category }}" | tr '[:upper:]' '[:lower:]')
+          for SLUG in "${!DEPLOY_MAP[@]}"; do
+            if [[ "$SLUG" == "${PREFIX_LOWER}"* ]]; then
+              ALL_SLUGS+=("$SLUG")
+            fi
+          done
+          SLUG_LIST=$(IFS=, ; echo "${ALL_SLUGS[*]}")
+          echo "slugs=${SLUG_LIST}" >> "$GITHUB_OUTPUT"
+          echo "Found: ${SLUG_LIST}"
+
+      - name: Build sites for category
+        run: |
+          IFS=',' read -ra SLUGS <<< "${{ steps.slugs.outputs.slugs }}"
+          for SLUG in "${SLUGS[@]}"; do
+            echo "::group::Build $SLUG"
+            bash scripts/build-site.sh "$SLUG" --skip-og --skip-validate || true
+            echo "::endgroup::"
+          done
+
+      - name: Run E2E matrix (category=${{ matrix.category }})
+        env:
+          E2E_MATRIX: '1'
+          CATEGORY: ${{ matrix.category }}
+          CI: 'true'
+        run: |
+          npx playwright test e2e/sites.matrix.spec.ts --project=chromium
+
+      - name: Upload Playwright traces
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-traces-${{ matrix.category }}
+          path: |
+            test-results/**
+            playwright-report/**
+          retention-days: 7

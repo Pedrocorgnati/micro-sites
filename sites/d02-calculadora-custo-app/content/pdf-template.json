@@ -1,0 +1,42 @@
+{
+  "title": "Relatorio — Custo estimado do seu app",
+  "subtitle": "Faixas de preco para apps nativos, hibridos e PWA, por plataforma e complexidade. Valores de mercado brasileiro.",
+  "blocks": [
+    { "type": "heading", "level": 2, "text": "1. Faixas por plataforma" },
+    {
+      "type": "table",
+      "columns": ["Plataforma", "MVP", "Profissional", "Completo"],
+      "rows": [
+        ["PWA (web mobile)", "R$ 4.000", "R$ 12.000", "R$ 30.000"],
+        ["Android nativo", "R$ 10.000", "R$ 30.000", "R$ 80.000"],
+        ["iOS nativo", "R$ 12.000", "R$ 35.000", "R$ 90.000"],
+        ["Android + iOS (RN/Flutter)", "R$ 18.000", "R$ 45.000", "R$ 120.000"]
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "2. Fatores que impactam o orcamento" },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        "Autenticacao (social, biometria, multifator)",
+        "Integracoes com APIs internas e externas",
+        "Notificacoes push e engajamento",
+        "Geolocalizacao e mapas",
+        "Loja (IAP, pagamentos recorrentes)"
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "3. Checklist pre-projeto" },
+    {
+      "type": "list",
+      "style": "numbered",
+      "items": [
+        "Mapear os 5 fluxos principais do usuario",
+        "Decidir se publicara em uma ou duas lojas",
+        "Definir indicadores de sucesso (DAU, retencao, conversao)",
+        "Prever custos de manutencao e atualizacao mensais",
+        "Considerar suporte pos-lancamento"
+      ]
+    },
+    { "type": "callout", "text": "Dica: comece sempre por um MVP enxuto, valide com usuarios reais e so entao invista em features avancadas." }
+  ]
+}

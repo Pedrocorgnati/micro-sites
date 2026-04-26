@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { HEADER_VARIANT_BY_CATEGORY } from '@/lib/constants';
+import type { SiteCategory } from '@/types';
 
 interface NavLink {
   label: string;
@@ -13,6 +15,9 @@ interface HeaderProps {
   navLinks?: NavLink[];
   ctaLabel?: string;
   ctaHref?: string;
+  headerBadge?: string;
+  category?: SiteCategory;
+  whatsappUrl?: string;
 }
 
 const DEFAULT_NAV: NavLink[] = [
@@ -26,9 +31,18 @@ export function Header({
   navLinks = DEFAULT_NAV,
   ctaLabel = 'Solicitar Orçamento',
   ctaHref = '/contato',
+  headerBadge,
+  category,
+  whatsappUrl,
 }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const variant = category ? HEADER_VARIANT_BY_CATEGORY[category] : undefined;
+  const effectiveCtaLabel = variant?.ctaLabel ?? ctaLabel;
+  const rawHref = variant?.ctaHref ?? ctaHref;
+  const effectiveCtaHref = rawHref === 'whatsapp' ? (whatsappUrl ?? '/contato') : rawHref;
+  const ctaIsExternal = effectiveCtaHref.startsWith('http');
 
   useEffect(() => {
     const handler = () => setIsScrolled(window.scrollY > 8);
@@ -66,11 +80,49 @@ export function Header({
         <Link
           data-testid="header-logo"
           href="/"
-          className="text-lg font-bold leading-none shrink-0"
+          className="flex flex-col leading-none shrink-0"
           style={{ fontFamily: 'var(--font-heading)', color: 'var(--color-text-primary)' }}
         >
-          {siteName}
+          <span className="text-lg font-bold">{siteName}</span>
+          {headerBadge && (
+            <span
+              data-testid="header-badge"
+              className="hidden sm:inline text-xs font-normal mt-0.5"
+              style={{ color: 'var(--color-text-muted, #6B7280)' }}
+            >
+              {headerBadge}
+            </span>
+          )}
+          {category === 'D' && (
+            <span
+              data-testid="header-sf-attribution"
+              className="hidden sm:inline text-xs font-normal mt-0.5"
+              style={{ color: 'var(--color-text-muted, #6B7280)' }}
+            >
+              Uma ferramenta da SystemForge
+            </span>
+          )}
         </Link>
+
+        {variant?.showUrgencyBadge && variant.urgencyText && (
+          <span
+            data-testid="header-urgency-badge"
+            className="hidden sm:inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold"
+            style={{ backgroundColor: '#FEF3C7', color: '#92400E' }}
+          >
+            {variant.urgencyText}
+          </span>
+        )}
+
+        {variant?.showTrustBadge && variant.trustText && (
+          <span
+            data-testid="header-trust-badge"
+            className="hidden sm:inline-flex items-center text-sm font-medium"
+            style={{ color: 'var(--color-text-secondary)' }}
+          >
+            {variant.trustText}
+          </span>
+        )}
 
         {/* Desktop nav */}
         <nav data-testid="header-nav" aria-label="Navegação principal" className="hidden md:flex items-center gap-6">
@@ -95,20 +147,33 @@ export function Header({
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center">
-          <Link
-            data-testid="header-cta-button"
-            href={ctaHref}
-            className="inline-flex items-center justify-center px-5 py-2.5 min-h-[44px] rounded-lg font-semibold text-sm text-white transition-all duration-150 active:scale-95"
-            style={{ backgroundColor: 'var(--color-accent)' }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLElement).style.backgroundColor = 'var(--color-accent-hover, var(--color-accent))';
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLElement).style.backgroundColor = 'var(--color-accent)';
-            }}
-          >
-            {ctaLabel}
-          </Link>
+          {ctaIsExternal ? (
+            <a
+              data-testid="header-cta-button"
+              href={effectiveCtaHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-5 py-2.5 min-h-[44px] rounded-lg font-semibold text-sm text-white transition-all duration-150 active:scale-95"
+              style={{ backgroundColor: 'var(--color-accent)' }}
+            >
+              {effectiveCtaLabel}
+            </a>
+          ) : (
+            <Link
+              data-testid="header-cta-button"
+              href={effectiveCtaHref}
+              className="inline-flex items-center justify-center px-5 py-2.5 min-h-[44px] rounded-lg font-semibold text-sm text-white transition-all duration-150 active:scale-95"
+              style={{ backgroundColor: 'var(--color-accent)' }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLElement).style.backgroundColor = 'var(--color-accent-hover, var(--color-accent))';
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLElement).style.backgroundColor = 'var(--color-accent)';
+              }}
+            >
+              {effectiveCtaLabel}
+            </Link>
+          )}
         </div>
 
         {/* Mobile hamburger */}
@@ -165,15 +230,29 @@ export function Header({
                 {link.label}
               </Link>
             ))}
-            <Link
-              data-testid="header-mobile-cta-button"
-              href={ctaHref}
-              onClick={() => setMenuOpen(false)}
-              className="mt-2 inline-flex items-center justify-center px-5 py-3 min-h-[44px] rounded-lg font-semibold text-sm text-white text-center transition-all duration-150 active:scale-95"
-              style={{ backgroundColor: 'var(--color-accent)' }}
-            >
-              {ctaLabel}
-            </Link>
+            {ctaIsExternal ? (
+              <a
+                data-testid="header-mobile-cta-button"
+                href={effectiveCtaHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMenuOpen(false)}
+                className="mt-2 inline-flex items-center justify-center px-5 py-3 min-h-[44px] rounded-lg font-semibold text-sm text-white text-center transition-all duration-150 active:scale-95"
+                style={{ backgroundColor: 'var(--color-accent)' }}
+              >
+                {effectiveCtaLabel}
+              </a>
+            ) : (
+              <Link
+                data-testid="header-mobile-cta-button"
+                href={effectiveCtaHref}
+                onClick={() => setMenuOpen(false)}
+                className="mt-2 inline-flex items-center justify-center px-5 py-3 min-h-[44px] rounded-lg font-semibold text-sm text-white text-center transition-all duration-150 active:scale-95"
+                style={{ backgroundColor: 'var(--color-accent)' }}
+              >
+                {effectiveCtaLabel}
+              </Link>
+            )}
           </nav>
         </div>
       )}

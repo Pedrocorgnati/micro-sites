@@ -116,6 +116,53 @@ describe('SiteConfigSchema', () => {
     });
   });
 
+  describe('CL-143 — contactEmail obrigatório', () => {
+    it('rejeita config sem contactEmail', () => {
+      const { contactEmail, ...rest } = validCatDConfig;
+      void contactEmail;
+      const result = SiteConfigSchema.safeParse(rest);
+      expect(result.success).toBe(false);
+    });
+
+    it('rejeita contactEmail malformado', () => {
+      const cfg = { ...validCatDConfig, contactEmail: 'not-an-email' };
+      const result = SiteConfigSchema.safeParse(cfg);
+      expect(result.success).toBe(false);
+    });
+
+    it('rejeita contactEmail em dominio de teste', () => {
+      const cfg = { ...validCatDConfig, contactEmail: 'contato@example.com' };
+      const result = SiteConfigSchema.safeParse(cfg);
+      expect(result.success).toBe(false);
+    });
+  });
+
+  describe('CL-387 — whatsappNumber hardening', () => {
+    it('rejeita whatsapp placeholder 5511999999999', () => {
+      const cfg = { ...validCatDConfig, cta: { ...validCatDConfig.cta, whatsappNumber: '5511999999999' } };
+      const result = SiteConfigSchema.safeParse(cfg);
+      expect(result.success).toBe(false);
+    });
+
+    it('rejeita whatsapp com DDD sem 55', () => {
+      const cfg = { ...validCatDConfig, cta: { ...validCatDConfig.cta, whatsappNumber: '11988887777' } };
+      const result = SiteConfigSchema.safeParse(cfg);
+      expect(result.success).toBe(false);
+    });
+
+    it('rejeita whatsapp com formato curto (< 12 digitos)', () => {
+      const cfg = { ...validCatDConfig, cta: { ...validCatDConfig.cta, whatsappNumber: '551199998' } };
+      const result = SiteConfigSchema.safeParse(cfg);
+      expect(result.success).toBe(false);
+    });
+
+    it('aceita whatsapp real 5512920043268 (13 digitos)', () => {
+      const cfg = { ...validCatDConfig, cta: { ...validCatDConfig.cta, whatsappNumber: '5512920043268' } };
+      const result = SiteConfigSchema.safeParse(cfg);
+      expect(result.success).toBe(true);
+    });
+  });
+
   describe('refinamentos', () => {
     it('rejeita Cat. D sem leadMagnet (refine)', () => {
       const cfg = { ...validCatDConfig, leadMagnet: undefined };

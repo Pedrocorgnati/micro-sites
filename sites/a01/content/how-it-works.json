@@ -1,0 +1,25 @@
+{
+  "headline": "Como funciona o agendamento?",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Escolha a especialidade",
+      "description": "Selecione o tipo de consulta que você precisa: clínica geral, cardiologia, ortopedia e muito mais."
+    },
+    {
+      "number": 2,
+      "title": "Selecione data e hora",
+      "description": "Veja a disponibilidade em tempo real e escolha o horário mais conveniente para você."
+    },
+    {
+      "number": 3,
+      "title": "Confirme seus dados",
+      "description": "Preencha nome, telefone e convênio (se tiver). Pronto, sua consulta está marcada!"
+    },
+    {
+      "number": 4,
+      "title": "Receba a confirmação",
+      "description": "SMS e e-mail com todos os detalhes: endereço, médico, data e horário da sua consulta."
+    }
+  ]
+}

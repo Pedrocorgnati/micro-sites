@@ -1,0 +1,29 @@
+{
+  "headline": "O que torna o ForgeSite diferente",
+  "items": [
+    {
+      "title": "Conteúdo personalizado",
+      "description": "IA identifica o perfil do visitante e adapta textos e CTAs para aumentar relevância e conversão."
+    },
+    {
+      "title": "Chatbot com IA real",
+      "description": "Não é script — é IA treinada com seu negócio. Responde qualquer pergunta dos visitantes com precisão."
+    },
+    {
+      "title": "Otimização automática",
+      "description": "A/B testing contínuo em títulos, textos e botões. O site melhora sozinho com base em dados reais."
+    },
+    {
+      "title": "SEO dinâmico",
+      "description": "Conteúdo atualizado pela IA para manter relevância. Menos esforço, mais visibilidade no Google."
+    },
+    {
+      "title": "Insights acionáveis",
+      "description": "Pergunte em português sobre seu site e receba análises e recomendações em linguagem simples."
+    },
+    {
+      "title": "Zero código",
+      "description": "Configure tudo visualmente. IA cuida da complexidade técnica enquanto você foca no negócio."
+    }
+  ]
+}

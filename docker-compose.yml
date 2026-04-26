@@ -1,0 +1,24 @@
+# ============================================================
+# Docker Compose — Desenvolvimento Local (micro-sites)
+# Uso: docker compose up
+#
+# NOTA: Este compose roda o servidor de dev com hot reload.
+#       Nao usa o Dockerfile (que e somente para build de producao).
+# ============================================================
+
+services:
+  app:
+    image: node:24-alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+      - app_node_modules:/app/node_modules
+    ports:
+      - "3000:3000"
+    command: sh -c "npm install && npm run dev"
+    env_file:
+      - .env.docker
+    restart: unless-stopped
+
+volumes:
+  app_node_modules:

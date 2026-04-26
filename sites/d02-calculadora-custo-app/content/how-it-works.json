@@ -1,0 +1,20 @@
+{
+  "headline": "Como a calculadora funciona",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Responda 5 perguntas",
+      "description": "Plataforma, complexidade, backend, design e prazo. Cada resposta refina a estimativa."
+    },
+    {
+      "number": 2,
+      "title": "Veja o resultado parcial",
+      "description": "Após 3 respostas, você já vê uma estimativa de investimento para o seu app."
+    },
+    {
+      "number": 3,
+      "title": "Receba o detalhamento completo",
+      "description": "Informe seu e-mail e receba o breakdown completo com próximos passos recomendados."
+    }
+  ]
+}

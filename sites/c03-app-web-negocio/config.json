@@ -1,0 +1,49 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "c03-app-web-negocio",
+  "name": "SystemForge Digital",
+  "category": "C",
+  "accentColor": "#059669",
+  "wave": 2,
+  "funnelStage": "consideration",
+  "template": "landing",
+  "hasBlog": true,
+  "schema": [
+    "FAQPage",
+    "HowTo",
+    "Organization"
+  ],
+  "sectionOrder": "default",
+  "headline": "Aplicativos Web Sob Medida para o Seu Negócio",
+  "subheadline": "Desenvolvemos aplicações web que automatizam processos e melhoram a experiência dos seus clientes.",
+  "seo": {
+    "title": "Aplicativo Web Sob Medida para Empresa | SystemForge",
+    "description": "Criamos aplicativos web sob medida para automatizar processos, melhorar a produtividade e escalar seu negócio com tecnologia moderna.",
+    "keywords": [
+      "desenvolvimento aplicativo web",
+      "app web sob medida",
+      "criar aplicativo para empresa",
+      "sistema web negócio"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Quero um Aplicativo Web para Minha Empresa",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Preciso desenvolver um aplicativo web para minha empresa e vim pelo site da SystemForge."
+  },
+  "showSystemForgeLogo": true,
+  "footerLinks": [
+    {
+      "label": "Blog",
+      "href": "/blog"
+    },
+    {
+      "label": "FAQ",
+      "href": "/faq"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "systemForgeUrl": "https://systemforge.com.br",
+  "lastReviewed": "2026-04-12"
+}

@@ -2,26 +2,37 @@
 
 import Script from 'next/script';
 import { useEffect, useState } from 'react';
+import { readConsent as readCanonicalConsent, type ConsentState } from '@/lib/cookie-consent';
 
 interface GA4LoaderProps {
   gaId: string;
+}
+
+type StoredConsent = { essential: true; analytics: boolean };
+
+// TASK-18 ST003 (CL-252): usa readConsent canonico que ja invalida consents
+// expirados (>12m) e de versao stale.
+function readConsent(): StoredConsent | null {
+  const c: ConsentState | null = readCanonicalConsent();
+  if (!c) return null;
+  return { essential: true, analytics: c.analytics };
 }
 
 export function GA4Loader({ gaId }: GA4LoaderProps) {
   const [active, setActive] = useState(false);
 
   useEffect(() => {
-    // Verificar consentimento inicial
-    try {
-      const stored = localStorage.getItem('cookie_consent');
-      if (stored === 'accepted') setActive(true);
-    } catch {
-      // localStorage indisponível
-    }
+    const initial = readConsent();
+    if (initial?.analytics === true) setActive(true);
 
-    // Ouvir mudanças em tempo real
-    const handleConsent = (e: CustomEvent<string>) => {
-      setActive(e.detail === 'accepted');
+    const handleConsent = (e: CustomEvent<StoredConsent | string>) => {
+      const detail = e.detail;
+      if (detail && typeof detail === 'object' && 'analytics' in detail) {
+        setActive(detail.analytics === true);
+        return;
+      }
+      // Retrocompat com versoes antigas que enviavam 'accepted' / 'rejected'
+      setActive(detail === 'accepted');
     };
 
     window.addEventListener('cookie_consent', handleConsent as EventListener);

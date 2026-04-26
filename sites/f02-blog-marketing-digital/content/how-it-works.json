@@ -1,0 +1,20 @@
+{
+  "headline": "Compare as Opções em 3 Dimensões",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Mapeie Suas Necessidades Reais",
+      "description": "Volume de páginas, integrações necessárias, autonomia para editar conteúdo — esses critérios definem qual solução faz sentido para você."
+    },
+    {
+      "number": 2,
+      "title": "Avalie Custo Total de Propriedade",
+      "description": "Plataformas têm mensalidade recorrente. Desenvolvimento próprio tem custo único maior, mas pode ser muito mais barato em 3 anos."
+    },
+    {
+      "number": 3,
+      "title": "Decida com Base em Dados, Não em Modismo",
+      "description": "WordPress ainda domina 43% da web, mas Next.js entrega performance superior. Nossa consultoria ajuda a escolher sem viés de fornecedor."
+    }
+  ]
+}

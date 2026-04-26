@@ -1,0 +1,25 @@
+{
+  "headline": "Perguntas Frequentes",
+  "items": [
+    {
+      "question": "Vocês atendem emergências fora do horário comercial?",
+      "answer": "Sim! Mantemos plantão de emergência todos os dias. Em casos urgentes, venha diretamente — nossa equipe fará triagem imediata."
+    },
+    {
+      "question": "Quais espécies vocês atendem?",
+      "answer": "Atendemos principalmente cães e gatos. Para animais exóticos (coelhos, aves, répteis), consulte previamente disponibilidade de especialista."
+    },
+    {
+      "question": "Fazem exames laboratoriais no local?",
+      "answer": "Sim. Temos laboratório interno para hemograma, bioquímica e urinálise com resultado em até 2 horas. Exames de imagem (raio-x e ultrassom) também são realizados aqui."
+    },
+    {
+      "question": "Como funciona a internação?",
+      "answer": "Internação com monitoramento constante, medicação programada, alimentação e visita do veterinário duas vezes ao dia. Você recebe atualizações diárias por WhatsApp."
+    },
+    {
+      "question": "Vocês aceitam convênio pet?",
+      "answer": "Sim, trabalhamos com os principais convênios pet do mercado. Consulte as operadoras parceiras no momento do agendamento."
+    }
+  ]
+}

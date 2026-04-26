@@ -1,0 +1,66 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "a07",
+  "name": "Contábil Precision",
+  "category": "A",
+  "accentColor": "#2563EB",
+  "wave": 3,
+  "funnelStage": "consideration",
+  "showSystemForgeLogo": false,
+  "template": "landing",
+  "hasBlog": true,
+  "schema": [
+    "Organization",
+    "FAQPage",
+    "LocalBusiness"
+  ],
+  "seo": {
+    "title": "Contábil Precision — Escritório de Contabilidade em [Cidade]",
+    "description": "Contabilidade empresarial, abertura de empresa, folha de pagamento e obrigações fiscais. Atendimento personalizado para MEI, ME e empresas de médio porte.",
+    "keywords": [
+      "contabilidade",
+      "contador",
+      "abertura de empresa",
+      "MEI",
+      "folha de pagamento",
+      "imposto de renda"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Falar com Contador",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Vim pelo site Contábil Precision e gostaria de uma consulta sobre serviços contábeis."
+  },
+  "localBusiness": {
+    "type": "AccountingService",
+    "address": "Rua das Finanças, 700, [Cidade] - [Estado]",
+    "phone": "+5511999990007",
+    "openingHours": "Mo-Fr 08:00-18:00",
+    "priceRange": "$$"
+  },
+  "footerLinks": [
+    {
+      "label": "Privacidade",
+      "href": "/privacidade"
+    },
+    {
+      "label": "Contato",
+      "href": "/contato"
+    }
+  ],
+  "crossLinks": [
+    {
+      "href": "https://c01.DOMAIN.com",
+      "anchor": "Presença digital profissional para contadores",
+      "context": "footer"
+    },
+    {
+      "href": "https://c01.DOMAIN.com",
+      "anchor": "Site profissional para contabilidade digital",
+      "context": "footer"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "lastReviewed": "2026-04-12"
+}

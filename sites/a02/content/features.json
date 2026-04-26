@@ -1,0 +1,25 @@
+{
+  "headline": "Por que o Studio FitPro é diferente?",
+  "items": [
+    {
+      "icon": "target",
+      "title": "Personal trainer exclusivo",
+      "description": "Cada aluno tem um personal dedicado que monta, acompanha e ajusta o treino semana a semana."
+    },
+    {
+      "icon": "trending-up",
+      "title": "Resultados em 90 dias",
+      "description": "Nosso método combina treino funcional, musculação e orientação nutricional para transformação real e duradoura."
+    },
+    {
+      "icon": "clock",
+      "title": "Treinos de 45 minutos",
+      "description": "Sem perda de tempo. Treinos otimizados para quem tem agenda cheia — máximo resultado no mínimo tempo."
+    },
+    {
+      "icon": "users",
+      "title": "Comunidade motivadora",
+      "description": "Ambiente acolhedor com turmas pequenas. Você se sente parte de um grupo que se incentiva todo dia."
+    }
+  ]
+}

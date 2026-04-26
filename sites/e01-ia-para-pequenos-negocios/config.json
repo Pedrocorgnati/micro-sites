@@ -1,0 +1,48 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "e01-ia-para-pequenos-negocios",
+  "name": "ForgeAI — IA para Pequenos Negócios",
+  "category": "E",
+  "accentColor": "#0891B2",
+  "wave": 2,
+  "funnelStage": "awareness",
+  "template": "waitlist",
+  "hasBlog": false,
+  "schema": [
+    "FAQPage",
+    "Organization",
+    "Organization"
+  ],
+  "headline": "IA Acessível para Pequenos Negócios — Chegando em Breve",
+  "subheadline": "Atendimento automatizado, análise de dados e conteúdo criado por IA — sem precisar saber programar.",
+  "seo": {
+    "title": "ForgeAI — IA para Pequenos Negócios | Lista de Espera",
+    "description": "Plataforma de IA para pequenas empresas: atendimento automatizado, análise de dados e geração de conteúdo. Entre na lista de espera.",
+    "keywords": [
+      "ia para pequenos negócios",
+      "inteligência artificial PME",
+      "automação com ia",
+      "chatgpt para empresa"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Entrar na Lista de Espera",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Tenho interesse no ForgeAI para meu negócio. Podem me informar quando lançar?"
+  },
+  "waitlist": {
+    "count": 847,
+    "earlyBirdDiscount": "Primeiros 100 na lista: 40% de desconto vitalício",
+    "endpoint": "https://api.staticforms.xyz/submit"
+  },
+  "showSystemForgeLogo": true,
+  "footerLinks": [
+    {
+      "label": "FAQ",
+      "href": "/faq"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "lastReviewed": "2026-04-12"
+}

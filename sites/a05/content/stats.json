@@ -1,0 +1,35 @@
+{
+  "category": "A",
+  "claims": [
+    {
+      "id": "mpe_digitalizacao",
+      "value": "70%",
+      "text": "Apenas 30% das micro e pequenas empresas brasileiras possuem presenca digital ativa",
+      "source": {
+        "label": "Sebrae",
+        "url": "https://sebrae.com.br/sites/PortalSebrae/artigos/digitalizacao-mpe",
+        "year": 2024
+      }
+    },
+    {
+      "id": "busca_local_google",
+      "value": "46%",
+      "text": "46% das buscas no Google tem intencao local",
+      "source": {
+        "label": "Google Search Data",
+        "url": "https://www.thinkwithgoogle.com/marketing-strategies/search/local-search-statistics/",
+        "year": 2024
+      }
+    },
+    {
+      "id": "populacao_internet_br",
+      "value": "84%",
+      "text": "84% da populacao brasileira com 10+ anos acessa a internet",
+      "source": {
+        "label": "CGI.br / TIC Domicilios",
+        "url": "https://cetic.br/pt/pesquisa/domicilios/",
+        "year": 2024
+      }
+    }
+  ]
+}

@@ -7,16 +7,23 @@
   "funnelStage": "awareness",
   "template": "landing",
   "hasBlog": false,
-  "schema": ["Organization", "FAQPage"],
+  "schema": [
+    "Organization",
+    "FAQPage"
+  ],
   "seo": {
     "title": "Título do Site (max 60 chars)",
     "description": "Descrição do site com foco em conversão. (max 155 chars)",
-    "keywords": ["keyword 1", "keyword 2"]
+    "keywords": [
+      "keyword 1",
+      "keyword 2"
+    ]
   },
   "cta": {
     "primaryLabel": "Falar com especialista",
     "formEndpoint": "https://api.staticforms.xyz/submit/TOKEN_AQUI",
     "whatsappNumber": "5511999999999",
     "whatsappMessage": "Olá! Vi o site e quero conversar."
-  }
+  },
+  "lastReviewed": "2026-04-12"
 }

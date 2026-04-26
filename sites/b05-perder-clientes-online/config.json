@@ -1,0 +1,66 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "b05-perder-clientes-online",
+  "name": "SystemForge Digital",
+  "category": "B",
+  "accentColor": "#EA580C",
+  "wave": 2,
+  "funnelStage": "awareness",
+  "template": "landing",
+  "hasBlog": true,
+  "schema": [
+    "Organization",
+    "FAQPage",
+    "HowTo"
+  ],
+  "sectionOrder": "b-variant",
+  "headline": "Você Está Perdendo Clientes Para o Concorrente Online",
+  "subheadline": "Enquanto seu site não converte, o concorrente captura os clientes que deveriam ser seus. A diferença é digital.",
+  "seo": {
+    "title": "Perdendo Clientes Online? Veja Como Converter Mais",
+    "description": "Descubra por que você perde clientes para o concorrente online e como ter presença digital que converte de verdade.",
+    "keywords": [
+      "perder clientes online",
+      "converter visitantes clientes",
+      "taxa de conversão site",
+      "presença digital converter"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Quero Parar de Perder Clientes",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Estou perdendo clientes para o concorrente online e preciso de ajuda para melhorar minha presença digital."
+  },
+  "exitIntent": {
+    "offerText": "Cada dia sem agir é um cliente a mais para o concorrente",
+    "offerSubtext": "Empresas com boa presença digital convertem 3x mais do que as sem. Qual lado você quer estar?",
+    "ctaLabel": "Quero Converter Mais",
+    "ctaHref": "#contato"
+  },
+  "showSystemForgeLogo": false,
+  "footerLinks": [
+    {
+      "label": "Blog",
+      "href": "/blog"
+    },
+    {
+      "label": "FAQ",
+      "href": "/faq"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "crossLinks": [
+    {
+      "href": "https://c02.DOMAIN.com",
+      "anchor": "Landing page que converte visitantes em clientes",
+      "context": "footer"
+    },
+    {
+      "href": "https://d05.DOMAIN.com",
+      "anchor": "Checklist de presença digital",
+      "context": "footer"
+    }
+  ],
+  "lastReviewed": "2026-04-12"
+}

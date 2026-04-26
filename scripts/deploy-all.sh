@@ -300,6 +300,23 @@ echo -e "  ${YELLOW}Warnings:${NC}  $WARNINGS"
 echo -e "  ${RED}Erros:${NC}     $ERRORS"
 echo "  Duração:   ${TOTAL_MIN}m ${TOTAL_SEC}s"
 echo ""
+echo "  Resumo: ${SUCCESSES} PASS / ${ERRORS} FAIL"
+echo ""
+
+# Persist aggregate log (CL-054)
+DEPLOY_LOG="${ROOT_DIR}/deploy-log.txt"
+TS="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+{
+  echo "[${TS}] deploy-all — total=${TOTAL_SITES} pass=${SUCCESSES} fail=${ERRORS} warn=${WARNINGS} dur=${TOTAL_MIN}m${TOTAL_SEC}s dry_run=${DRY_RUN}"
+  if [[ ${#ERROR_SLUGS[@]} -gt 0 ]]; then
+    echo "[${TS}]   failed_slugs=${ERROR_SLUGS[*]}"
+  fi
+} >> "$DEPLOY_LOG"
+
+# Rotate if >5MB
+if [[ -f "$DEPLOY_LOG" ]] && [[ $(stat -c%s "$DEPLOY_LOG" 2>/dev/null || stat -f%z "$DEPLOY_LOG") -gt 5242880 ]]; then
+  mv "$DEPLOY_LOG" "${DEPLOY_LOG}.$(date +%Y%m%d).old"
+fi
 
 if [[ ${#ERROR_SLUGS[@]} -gt 0 ]]; then
   echo -e "${RED}Sites com erro:${NC}"
@@ -317,6 +334,18 @@ fi
 
 if [[ "$DRY_RUN" == "true" ]]; then
   echo -e "${YELLOW}[DRY RUN] Nenhum push foi feito.${NC}"
+fi
+
+# ---------------------------------------------------------------------------
+# Pós-deploy: aplica cross-wave interlinking (CL-115)
+# Roda sempre — em dry-run gera report sem tocar no remote.
+# ---------------------------------------------------------------------------
+
+log_info "Aplicando cross-wave interlinking pós-deploy..."
+if (cd "$ROOT_DIR" && npx tsx scripts/apply-cross-wave-links.ts); then
+  log_ok "cross-wave-report gravado em output/cross-wave-report.json"
+else
+  log_warn "apply-cross-wave-links.ts falhou. Veja output/cross-wave-report.json."
 fi
 
 echo -e "${GREEN}DEPLOY ALL CONCLUÍDO COM SUCESSO!${NC}"

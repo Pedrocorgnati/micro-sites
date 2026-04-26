@@ -1,0 +1,20 @@
+{
+  "headline": "Como implementamos automação no seu negócio",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Mapeamento de processos",
+      "description": "Entendemos suas rotinas atuais e identificamos os pontos com maior ganho de tempo e dinheiro com automação."
+    },
+    {
+      "number": 2,
+      "title": "Implementação e integração",
+      "description": "Desenvolvemos as automações e conectamos com as ferramentas que você já usa. Você aprova antes de ativar."
+    },
+    {
+      "number": 3,
+      "title": "Treinamento e suporte",
+      "description": "Treinamos você e sua equipe, documentamos tudo e ficamos disponíveis para ajustes por 30 dias."
+    }
+  ]
+}

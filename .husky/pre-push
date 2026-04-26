@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+# .husky/pre-push (CL-072 + TASK-26 ST004 / CL-313/308/069)
+# 1. Bloqueia dev junior de push direto em deploy-NN ou main
+# 2. Bloqueia push em deploy-NN se outro dev segura o deploy lock
+set -uo pipefail
+
+email=$(git config user.email 2>/dev/null || echo "")
+remote="$1"
+url="$2"
+
+while read -r local_ref local_sha remote_ref remote_sha; do
+  is_protected=false
+  if [[ "$remote_ref" =~ refs/heads/(deploy-[0-9]+|main)$ ]]; then
+    is_protected=true
+  fi
+
+  # CL-072: dev junior bloqueado em protected branches
+  if [ "$is_protected" = true ] && [[ "$email" == *"junior"* || "$email" == *"jr@"* || "$email" == *".jr."* ]]; then
+    echo "==============================================================="
+    echo "Pre-push bloqueado para dev junior (${email})"
+    echo "Branch protegida: ${remote_ref}"
+    echo
+    echo "Abra um PR a partir de uma feature branch e peca review ao Pedro."
+    echo "==============================================================="
+    exit 1
+  fi
+
+  # TASK-26 ST004: deploy lock cooperativo em deploy-NN
+  if [[ "$remote_ref" =~ refs/heads/deploy-[0-9]+$ ]]; then
+    if command -v npx >/dev/null 2>&1 && [ -f scripts/dev-deploy-lock.ts ]; then
+      if ! npx tsx scripts/dev-deploy-lock.ts check; then
+        echo "==============================================================="
+        echo "Push em ${remote_ref} bloqueado pelo deploy lock cooperativo."
+        echo
+        echo "Para forcar (apenas se coordenado):"
+        echo "  npx tsx scripts/dev-deploy-lock.ts release  # se lock seu/expirado"
+        echo "  npx tsx scripts/dev-deploy-lock.ts acquire  # adquirir antes do push"
+        echo
+        echo "Coordene com o dono do lock (ver \`status\`) antes."
+        echo "==============================================================="
+        exit 1
+      fi
+    fi
+  fi
+done
+
+exit 0

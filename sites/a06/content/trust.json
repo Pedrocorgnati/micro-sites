@@ -1,0 +1,26 @@
+{
+  "headline": "O que dizem nossos alunos formados",
+  "testimonials": [
+    {
+      "name": "Fernanda Oliveira",
+      "role": "Técnica em Administração",
+      "business": "",
+      "quote": "Fiz o curso técnico em Administração e em três meses já estava trabalhando na área. O certificado MEC fez toda a diferença nas entrevistas. Recomendo sem hesitar.",
+      "rating": 5
+    },
+    {
+      "name": "Carlos Eduardo Lima",
+      "role": "Analista de TI",
+      "business": "Corretora Digital",
+      "quote": "Aprendi inglês no EduFuturo em 18 meses e consegui uma promoção com aumento de 40%. Os professores são realmente experientes e o método funciona de verdade.",
+      "rating": 5
+    },
+    {
+      "name": "Mariana Souza",
+      "role": "Empreendedora",
+      "business": "MS Confecções",
+      "quote": "O curso de gestão financeira mudou a forma como administro minha empresa. Conteúdo prático, professores acessíveis e certificado reconhecido. Valeu cada centavo.",
+      "rating": 5
+    }
+  ]
+}

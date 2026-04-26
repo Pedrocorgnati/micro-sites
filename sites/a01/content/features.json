@@ -1,0 +1,25 @@
+{
+  "headline": "Tudo que você precisa em um só lugar",
+  "items": [
+    {
+      "icon": "calendar",
+      "title": "Agendamento online 24h",
+      "description": "Marque sua consulta pelo site a qualquer hora, sem precisar ligar. Confirmação imediata por e-mail."
+    },
+    {
+      "icon": "users",
+      "title": "Especialistas certificados",
+      "description": "Médicos com CRM ativo, pós-graduação e ampla experiência nas principais especialidades."
+    },
+    {
+      "icon": "zap",
+      "title": "Resultado de exames rápido",
+      "description": "Laudos digitais em até 48h diretamente no seu e-mail ou WhatsApp."
+    },
+    {
+      "icon": "heart",
+      "title": "Atendimento humanizado",
+      "description": "Cada paciente é único. Nossos médicos ouvem, explicam e tratam com atenção e cuidado."
+    }
+  ]
+}

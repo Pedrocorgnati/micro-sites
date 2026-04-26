@@ -4,3 +4,5 @@ export { ToastProvider, useToast } from './Toast';
 export { ErrorBoundary } from './ErrorBoundary';
 export { NotFound } from './NotFound';
 export { Breadcrumbs } from './Breadcrumbs';
+export { ExitIntentPopup } from './ExitIntentPopup';
+export { OutboundLink } from './OutboundLink';

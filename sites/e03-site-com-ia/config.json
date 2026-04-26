@@ -1,0 +1,48 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "e03-site-com-ia",
+  "name": "ForgeSite — Sites com Inteligência Artificial",
+  "category": "E",
+  "accentColor": "#0891B2",
+  "wave": 3,
+  "funnelStage": "consideration",
+  "template": "waitlist",
+  "hasBlog": false,
+  "schema": [
+    "FAQPage",
+    "Organization",
+    "Organization"
+  ],
+  "headline": "Um Site que Pensa, Aprende e Converte por Você",
+  "subheadline": "Não é um site estático. É uma plataforma inteligente que personaliza conteúdo, qualifica visitantes e melhora sozinha com cada acesso.",
+  "seo": {
+    "title": "ForgeSite — Sites com IA para Negócios | Lista de Espera",
+    "description": "Site com inteligência artificial: conteúdo personalizado, chatbot integrado e otimização automática. Entre na lista de espera do ForgeSite.",
+    "keywords": [
+      "site com ia",
+      "site inteligente empresa",
+      "ia no site",
+      "site personalizado inteligência artificial"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Entrar na Lista de Espera",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Tenho interesse no ForgeSite com IA. Podem me avisar quando lançar?"
+  },
+  "waitlist": {
+    "count": 2156,
+    "earlyBirdDiscount": "Fundadores: 50% off no primeiro ano + configuração gratuita",
+    "endpoint": "https://api.staticforms.xyz/submit"
+  },
+  "showSystemForgeLogo": true,
+  "footerLinks": [
+    {
+      "label": "FAQ",
+      "href": "/faq"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "lastReviewed": "2026-04-12"
+}

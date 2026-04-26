@@ -1,0 +1,61 @@
+name: SF Weekly Backup
+
+# TASK-22 ST001 / CL-572-574 — backup semanal de submissions Static Forms
+
+on:
+  schedule:
+    - cron: '0 4 * * MON'   # toda segunda 04:00 UTC
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'manual | api'
+        required: false
+        default: 'manual'
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Run SF export
+        env:
+          SF_API_KEY: ${{ secrets.SF_API_KEY }}
+        run: npx tsx scripts/sf-export-backup.ts --mode=${{ inputs.mode || 'manual' }}
+
+      - name: Open PR with backup
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: 'chore(sf-backup): weekly backup ${{ github.run_id }}'
+          title: 'chore(sf-backup): weekly submissions backup'
+          body: |
+            ## Static Forms — Weekly Backup
+
+            Backup automatico semanal das submissions consolidadas em
+            `output/backups/sf/{YYYY-WW}.json`.
+
+            Schema:
+            - `version: 1`
+            - `week`, `mode`, `exported_at`
+            - `endpoints: { <endpoint>: [submissions] }`
+            - PII mascarada: `email_hash` (sha256), telefones com `*`
+
+            Retencao: 24 meses (alinhado LGPD ROPA). Expurgo automatico no script.
+
+            Mode: `${{ inputs.mode || 'manual' }}` — se manual, Pedro deve exportar
+            do dashboard SF para `output/exports/sf-manual-export.json` antes de rodar.
+          branch: sf-backup/weekly-${{ github.run_id }}
+          delete-branch: true
+          labels: |
+            automation
+            backup
+            sf

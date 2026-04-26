@@ -1,0 +1,26 @@
+{
+  "headline": "O que nossos clientes dizem",
+  "testimonials": [
+    {
+      "name": "Patricia Lima",
+      "role": "Gerente",
+      "business": "Escritório Central",
+      "quote": "Peço marmita toda semana há 2 anos. Comida gostosa, porção generosa e entrega sempre no horário combinado. É como comer na casa da minha mãe — impossível enjoar.",
+      "rating": 5
+    },
+    {
+      "name": "Fernando Santos",
+      "role": "Médico",
+      "business": "Hospital Regional",
+      "quote": "Almoço aqui quase todo dia. A variedade do cardápio e a qualidade dos ingredientes são excepcionais para o preço. Finalmente encontrei comida de verdade perto do trabalho.",
+      "rating": 5
+    },
+    {
+      "name": "Cláudia Oliveira",
+      "role": "Secretária",
+      "business": "Advocacia Oliveira",
+      "quote": "Pedi delivery pela primeira vez e fiquei impressionada. Chegou quente, bem embalado e com um bilhetinho simpático. Agora peço toda semana para mim e meus colegas.",
+      "rating": 5
+    }
+  ]
+}

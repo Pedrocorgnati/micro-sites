@@ -1,0 +1,71 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "b02-site-antigo-lento",
+  "name": "SystemForge Digital",
+  "category": "B",
+  "accentColor": "#EA580C",
+  "wave": 2,
+  "funnelStage": "awareness",
+  "template": "landing",
+  "hasBlog": true,
+  "schema": [
+    "Organization",
+    "FAQPage",
+    "HowTo"
+  ],
+  "sectionOrder": "b-variant",
+  "headline": "Seu Site Está Afastando Clientes Sem Você Perceber",
+  "subheadline": "Site antigo, lento ou que não funciona no celular custa mais caro do que parece. Veja como resolver.",
+  "seo": {
+    "title": "Site Antigo e Lento? Você Perde Clientes — SystemForge",
+    "description": "Site lento, desatualizado ou quebrado no mobile afasta clientes e prejudica SEO. Modernize em 7 dias com orçamento gratuito.",
+    "keywords": [
+      "site antigo lento",
+      "modernizar site empresa",
+      "site não funciona celular",
+      "atualizar site profissional"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Quero Modernizar Meu Site",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Meu site está desatualizado e lento. Podem me ajudar a modernizar?"
+  },
+  "exitIntent": {
+    "offerText": "Seu site lento está custando clientes agora",
+    "offerSubtext": "53% dos visitantes abandonam um site que demora mais de 3 segundos para carregar. Quanto você está perdendo?",
+    "ctaLabel": "Quero Resolver Isso",
+    "ctaHref": "#contato"
+  },
+  "showSystemForgeLogo": false,
+  "footerLinks": [
+    {
+      "label": "Blog",
+      "href": "/blog"
+    },
+    {
+      "label": "FAQ",
+      "href": "/faq"
+    }
+  ],
+  "crossLinks": [
+    {
+      "href": "https://c02.DOMAIN.com",
+      "anchor": "Modernize seu site com uma landing page de alta conversão",
+      "context": "cta"
+    },
+    {
+      "href": "https://c01.DOMAIN.com",
+      "anchor": "Modernize seu site agora",
+      "context": "footer"
+    },
+    {
+      "href": "https://d01.DOMAIN.com",
+      "anchor": "Calculadora de custo de site",
+      "context": "footer"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "lastReviewed": "2026-04-12"
+}

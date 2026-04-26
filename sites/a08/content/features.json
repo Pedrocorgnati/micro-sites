@@ -1,0 +1,25 @@
+{
+  "headline": "Por que a PetCare é diferente?",
+  "items": [
+    {
+      "icon": "activity",
+      "title": "Emergência e internação 24h",
+      "description": "Plantão veterinário todos os dias. Internação com monitoramento constante, soro, medicação e equipe pronta para qualquer intercorrência."
+    },
+    {
+      "icon": "shield",
+      "title": "Especialistas certificados",
+      "description": "Equipe com pós-graduação em clínica geral, dermatologia, cardiologia e oncologia veterinária. Diagnóstico preciso, tratamento correto."
+    },
+    {
+      "icon": "bell",
+      "title": "Lembretes automáticos",
+      "description": "Receba alertas no WhatsApp sobre vacinas, vermifugação e consultas de retorno. Nunca mais esqueça de proteger seu pet."
+    },
+    {
+      "icon": "scissors",
+      "title": "Banho, tosa e estética",
+      "description": "Serviço de banho e tosa com profissionais treinados. Produtos hipoalergênicos, ambiente climatizado e cuidado com raças de necessidades especiais."
+    }
+  ]
+}

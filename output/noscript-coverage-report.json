@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "siteCount": 5,
+  "routes": [
+    "resultado",
+    "quanto-custa",
+    "lista-de-espera",
+    "diagnostico",
+    "contato"
+  ],
+  "missing": [],
+  "sitesChecked": [
+    "d01-calculadora-custo-site",
+    "d02-calculadora-custo-app",
+    "d03-diagnostico-maturidade-digital",
+    "d04-calculadora-roi-automacao",
+    "d05-checklist-presenca-digital"
+  ],
+  "timestamp": "2026-04-21T20:56:55.668Z"
+}

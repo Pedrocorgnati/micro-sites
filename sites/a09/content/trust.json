@@ -1,0 +1,26 @@
+{
+  "headline": "Clientes que amam o resultado",
+  "testimonials": [
+    {
+      "name": "Camila Rodrigues",
+      "role": "Cliente",
+      "business": "",
+      "quote": "Fiz mechas loiras depois de anos tentando outros salões sem resultado. No Studio Beauté ficou exatamente como queria — dourado natural, sem danificar. Me sinto outra pessoa.",
+      "rating": 5
+    },
+    {
+      "name": "Beatriz Nascimento",
+      "role": "Cliente",
+      "business": "",
+      "quote": "A manicure e pedicure com gel aqui dura 3 semanas sem lascar. Já fui em dezenas de salões na cidade, o Studio Beauté é o único que vale cada centavo.",
+      "rating": 5
+    },
+    {
+      "name": "Larissa Teixeira",
+      "role": "Cliente",
+      "business": "LT Boutique",
+      "quote": "Faço limpeza de pele e tratamento facial mensalmente. A esteticista é incrível, minha pele nunca esteve tão bem. Ambiente aconchegante e equipe super atenciosa.",
+      "rating": 5
+    }
+  ]
+}

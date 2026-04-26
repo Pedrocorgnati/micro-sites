@@ -1,0 +1,267 @@
+
+> micro-sites@0.1.0 validate:all
+> npm run validate:articles && npm run validate:interlinking && npm run generate:blog-index && npm run audit:footprint && npm run audit:waves && npm run validate:blog-selectivity && npm run validate:copy-uniqueness && npm run validate:geo
+
+
+> micro-sites@0.1.0 validate:articles
+> tsx scripts/validate-articles.ts
+
+✓ a01/blog/articles/exame-preventivo-lista-completa.md (1015 palavras, ~6 min)
+✓ a01/blog/articles/plano-de-saude-vs-consulta-particular.md (893 palavras, ~5 min)
+✓ a01/blog/articles/sintomas-que-exigem-pronto-socorro.md (966 palavras, ~5 min)
+✓ a01/blog/articles/telemedicina-como-funciona-brasil.md (863 palavras, ~5 min)
+✓ a02/blog/articles/perder-peso-quantas-vezes-semana-treinar.md (1018 palavras, ~6 min)
+✓ a02/blog/articles/personal-trainer-beneficios.md (1315 palavras, ~7 min)
+✓ a02/blog/articles/proteina-whey-vale-a-pena.md (1062 palavras, ~6 min)
+✓ a02/blog/articles/treino-em-casa-vs-academia.md (1027 palavras, ~6 min)
+✗ a03/blog/articles/beneficios-comida-caseira-vs-fast-food.md: slug: Invalid input: expected string, received undefined
+✗ a03/blog/articles/como-escolher-marmita-saudavel-delivery.md: slug: Invalid input: expected string, received undefined
+✗ a03/blog/articles/como-montar-cardapio-semanal-empresa.md: slug: Invalid input: expected string, received undefined
+✗ a03/blog/articles/delivery-almoco-executivo-como-funciona.md: slug: Invalid input: expected string, received undefined
+✓ a04/blog/articles/como-abrir-processo-trabalhista.md (1188 palavras, ~6 min)
+✓ a04/blog/articles/direitos-trabalhistas-rescisao.md (1060 palavras, ~6 min)
+✓ a04/blog/articles/mei-direitos-trabalhistas.md (1243 palavras, ~7 min)
+✓ a04/blog/articles/pensao-alimenticia-como-calcular.md (1070 palavras, ~6 min)
+✓ a05/blog/articles/escritura-registro-imovel.md (1079 palavras, ~6 min)
+✓ a05/blog/articles/fgts-compra-imovel-como-usar.md (1184 palavras, ~6 min)
+✓ a05/blog/articles/laudo-vistoria-imovel.md (1056 palavras, ~6 min)
+✓ a05/blog/articles/valor-metro-quadrado-cidade.md (1034 palavras, ~6 min)
+✓ a06/blog/articles/certificado-mec-importancia.md (1117 palavras, ~6 min)
+✓ a06/blog/articles/cursos-profissionalizantes-mais-empregaveis.md (1182 palavras, ~6 min)
+✓ a06/blog/articles/ead-ou-presencial-curso.md (1259 palavras, ~7 min)
+✓ a06/blog/articles/ingles-para-negocios-como-aprender.md (1208 palavras, ~7 min)
+✓ a07/blog/articles/desenquadramento-mei-quando-acontece.md (1148 palavras, ~6 min)
+✓ a07/blog/articles/diferenca-mei-me-epp.md (1014 palavras, ~6 min)
+✓ a07/blog/articles/mei-pode-contratar-funcionario.md (921 palavras, ~5 min)
+✓ a07/blog/articles/nota-fiscal-mei-como-emitir.md (1041 palavras, ~6 min)
+✗ a08/blog/articles/calendario-vacinas-caes-gatos-2026.md: slug: Invalid input: expected string, received undefined
+✗ a08/blog/articles/castrar-pet-beneficios-cuidados.md: slug: Invalid input: expected string, received undefined
+✗ a08/blog/articles/como-escolher-clinica-veterinaria.md: slug: Invalid input: expected string, received undefined
+✗ a08/blog/articles/sinais-que-seu-pet-precisa-veterinario.md: slug: Invalid input: expected string, received undefined
+✗ a09/blog/articles/como-cuidar-cabelo-apos-coloracao.md: slug: Invalid input: expected string, received undefined
+✗ a09/blog/articles/como-escolher-salao-de-beleza.md: slug: Invalid input: expected string, received undefined
+✗ a09/blog/articles/tendencias-coloracao-cabelo-2026.md: slug: Invalid input: expected string, received undefined
+✗ a09/blog/articles/tratamentos-capilares-mais-procurados.md: slug: Invalid input: expected string, received undefined
+✗ a10/blog/articles/como-decorar-sala-pequena-apartamento.md: slug: Invalid input: expected string, received undefined
+✗ a10/blog/articles/como-escolher-moveis-para-espaco-pequeno.md: slug: Invalid input: expected string, received undefined
+✗ a10/blog/articles/iluminacao-residencial-guia-completo.md: slug: Invalid input: expected string, received undefined
+✗ a10/blog/articles/tendencias-decoracao-2026.md: slug: Invalid input: expected string, received undefined
+✗ b01-sem-site-profissional/blog/articles/como-criar-site-profissional-pequena-empresa.md: slug: Invalid input: expected string, received undefined
+✗ b01-sem-site-profissional/blog/articles/como-criar-site-profissional-pequena-empresa.md: title: Título deve ter no máximo 60 caracteres (SEO)
+✗ b01-sem-site-profissional/blog/articles/empresa-sem-site-perde-clientes.md: slug: Invalid input: expected string, received undefined
+✗ b01-sem-site-profissional/blog/articles/empresa-sem-site-perde-clientes.md: title: Título deve ter no máximo 60 caracteres (SEO)
+✗ b02-site-antigo-lento/blog/articles/como-modernizar-site-empresa.md: slug: Invalid input: expected string, received undefined
+✗ b02-site-antigo-lento/blog/articles/como-modernizar-site-empresa.md: title: Título deve ter no máximo 60 caracteres (SEO)
+✗ b02-site-antigo-lento/blog/articles/site-lento-perde-clientes.md: slug: Invalid input: expected string, received undefined
+✗ b02-site-antigo-lento/blog/articles/site-lento-perde-clientes.md: title: Título deve ter no máximo 60 caracteres (SEO)
+✗ b03-sem-automacao/blog/articles/automacao-negocio-pequeno-empresa.md: slug: Invalid input: expected string, received undefined
+✗ b03-sem-automacao/blog/articles/automacao-negocio-pequeno-empresa.md: title: Título deve ter no máximo 60 caracteres (SEO)
+✗ b03-sem-automacao/blog/articles/whatsapp-business-automacao-empresa.md: slug: Invalid input: expected string, received undefined
+✗ b03-sem-automacao/blog/articles/whatsapp-business-automacao-empresa.md: title: Título deve ter no máximo 60 caracteres (SEO)
+✗ b04-sem-presenca-digital/blog/articles/google-meu-negocio-otimizacao.md: slug: Invalid input: expected string, received undefined
+✗ b04-sem-presenca-digital/blog/articles/google-meu-negocio-otimizacao.md: title: Título deve ter no máximo 60 caracteres (SEO)
+✗ b04-sem-presenca-digital/blog/articles/presenca-digital-negocio-local.md: slug: Invalid input: expected string, received undefined
+✗ b04-sem-presenca-digital/blog/articles/presenca-digital-negocio-local.md: title: Título deve ter no máximo 60 caracteres (SEO)
+✗ b05-perder-clientes-online/blog/articles/concorrente-melhor-site.md: slug: Invalid input: expected string, received undefined
+✗ b05-perder-clientes-online/blog/articles/concorrente-melhor-site.md: title: Título deve ter no máximo 60 caracteres (SEO)
+✗ b05-perder-clientes-online/blog/articles/taxa-conversao-site.md: slug: Invalid input: expected string, received undefined
+✗ b05-perder-clientes-online/blog/articles/taxa-conversao-site.md: title: Título deve ter no máximo 60 caracteres (SEO)
+✗ b06-sem-leads-qualificados/blog/articles/como-qualificar-leads-digitalmente.md: slug: Invalid input: expected string, received undefined
+✗ b06-sem-leads-qualificados/blog/articles/como-qualificar-leads-digitalmente.md: title: Título deve ter no máximo 60 caracteres (SEO)
+✗ b06-sem-leads-qualificados/blog/articles/funil-de-vendas-digital-pme.md: slug: Invalid input: expected string, received undefined
+✗ b06-sem-leads-qualificados/blog/articles/funil-de-vendas-digital-pme.md: title: Título deve ter no máximo 60 caracteres (SEO)
+✗ b07-site-nao-aparece-google/blog/articles/por-que-site-nao-aparece-google.md: slug: Invalid input: expected string, received undefined
+✗ b07-site-nao-aparece-google/blog/articles/por-que-site-nao-aparece-google.md: title: Título deve ter no máximo 60 caracteres (SEO)
+✗ b07-site-nao-aparece-google/blog/articles/seo-local-negocio-local.md: slug: Invalid input: expected string, received undefined
+✗ b07-site-nao-aparece-google/blog/articles/seo-local-negocio-local.md: title: Título deve ter no máximo 60 caracteres (SEO)
+✗ b07-site-nao-aparece-google/blog/articles/seo-local-negocio-local.md: description: Meta description deve ter no máximo 155 caracteres (SERP)
+✗ b08-concorrente-digital/blog/articles/como-superar-concorrente-digital.md: slug: Invalid input: expected string, received undefined
+✗ b08-concorrente-digital/blog/articles/como-superar-concorrente-digital.md: title: Título deve ter no máximo 60 caracteres (SEO)
+✗ b08-concorrente-digital/blog/articles/transformacao-digital-pequena-empresa.md: slug: Invalid input: expected string, received undefined
+✗ b08-concorrente-digital/blog/articles/transformacao-digital-pequena-empresa.md: title: Título deve ter no máximo 60 caracteres (SEO)
+✓ c01-site-institucional-pme/blog/articles/custo-manutencao-site.md (1132 palavras, ~6 min)
+✓ c01-site-institucional-pme/blog/articles/hospedagem-site-comparativo.md (1129 palavras, ~6 min)
+✓ c01-site-institucional-pme/blog/articles/site-institucional-vs-landing-page.md (991 palavras, ~5 min)
+✓ c02-landing-page-conversao/blog/articles/copy-landing-page-formula.md (1616 palavras, ~9 min)
+✓ c02-landing-page-conversao/blog/articles/cro-como-aumentar-conversao.md (1237 palavras, ~7 min)
+✓ c02-landing-page-conversao/blog/articles/landing-page-b2b-vs-b2c.md (1245 palavras, ~7 min)
+✗ c03-app-web-negocio/blog/articles/app-web-vs-app-mobile-qual-escolher.md: slug: Invalid input: expected string, received undefined
+✗ c03-app-web-negocio/blog/articles/quanto-custa-desenvolver-aplicativo-web.md: slug: Invalid input: expected string, received undefined
+✗ c04-ecommerce-pequeno-negocio/blog/articles/como-montar-ecommerce-sem-complicar.md: slug: Invalid input: expected string, received undefined
+✗ c04-ecommerce-pequeno-negocio/blog/articles/como-montar-ecommerce-sem-complicar.md: title: Título deve ter no máximo 60 caracteres (SEO)
+✗ c04-ecommerce-pequeno-negocio/blog/articles/taxa-de-conversao-ecommerce-como-melhorar.md: slug: Invalid input: expected string, received undefined
+✗ c05-sistema-agendamento/blog/articles/agenda-online-vs-agenda-papel.md: slug: Invalid input: expected string, received undefined
+✗ c05-sistema-agendamento/blog/articles/como-implementar-agendamento-online.md: slug: Invalid input: expected string, received undefined
+✗ c05-sistema-agendamento/blog/articles/como-reduzir-faltas-com-lembretes-automaticos.md: slug: Invalid input: expected string, received undefined
+✗ c05-sistema-agendamento/blog/articles/vantagens-agendamento-online-para-negocios.md: slug: Invalid input: expected string, received undefined
+✗ c06-automacao-atendimento/blog/articles/atendimento-humano-vs-automatizado.md: slug: Invalid input: expected string, received undefined
+✗ c06-automacao-atendimento/blog/articles/chatbot-para-pequenas-empresas-vale-a-pena.md: slug: Invalid input: expected string, received undefined
+✗ c06-automacao-atendimento/blog/articles/como-automatizar-atendimento-whatsapp.md: slug: Invalid input: expected string, received undefined
+✗ c06-automacao-atendimento/blog/articles/como-criar-fluxo-atendimento-automatizado.md: slug: Invalid input: expected string, received undefined
+✗ d01-calculadora-custo-site/blog/articles/artigo-antigo.md: 2 palavras (mínimo 800)
+✗ d01-calculadora-custo-site/blog/articles/artigo-novo.md: 2 palavras (mínimo 800)
+✗ d01-calculadora-custo-site/blog/articles/custo-criar-site-2026.md: 315 palavras (mínimo 800)
+✗ d01-calculadora-custo-site/blog/articles/site-sob-medida-vs-plataforma.md: 523 palavras (mínimo 800)
+✗ d02-calculadora-custo-app/blog/articles/mvp-app-guia-completo.md: title: Título deve ter no máximo 60 caracteres (SEO)
+✗ d02-calculadora-custo-app/blog/articles/mvp-app-guia-completo.md: description: Invalid input: expected string, received undefined
+✗ d02-calculadora-custo-app/blog/articles/quanto-custa-criar-app-2026.md: title: Título deve ter no máximo 60 caracteres (SEO)
+✗ d02-calculadora-custo-app/blog/articles/quanto-custa-criar-app-2026.md: description: Invalid input: expected string, received undefined
+✓ f01-blog-desenvolvimento-web/blog/articles/contrato-desenvolvimento-software.md (1549 palavras, ~8 min)
+✓ f01-blog-desenvolvimento-web/blog/articles/custo-app-mobile-2026.md (1545 palavras, ~8 min)
+✓ f01-blog-desenvolvimento-web/blog/articles/manutencao-site-o-que-inclui.md (1532 palavras, ~8 min)
+✓ f01-blog-desenvolvimento-web/blog/articles/site-wordpress-vs-next-js.md (1406 palavras, ~8 min)
+✓ f02-blog-marketing-digital/blog/articles/cms-headless-o-que-e.md (1511 palavras, ~8 min)
+✓ f02-blog-marketing-digital/blog/articles/migrar-site-sem-perder-seo.md (1423 palavras, ~8 min)
+✓ f02-blog-marketing-digital/blog/articles/shopify-vs-loja-integrada.md (1369 palavras, ~7 min)
+✓ f02-blog-marketing-digital/blog/articles/wix-para-empresas-vale-a-pena.md (1329 palavras, ~7 min)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+VALIDAÇÃO DE ARTIGOS — RELATÓRIO FINAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Total processado: 88
+Válidos:          38
+Erros:            50
+
+ERROS ENCONTRADOS:
+  • a03/blog/articles/beneficios-comida-caseira-vs-fast-food.md
+    slug: Invalid input: expected string, received undefined
+  • a03/blog/articles/como-escolher-marmita-saudavel-delivery.md
+    slug: Invalid input: expected string, received undefined
+  • a03/blog/articles/como-montar-cardapio-semanal-empresa.md
+    slug: Invalid input: expected string, received undefined
+  • a03/blog/articles/delivery-almoco-executivo-como-funciona.md
+    slug: Invalid input: expected string, received undefined
+  • a08/blog/articles/calendario-vacinas-caes-gatos-2026.md
+    slug: Invalid input: expected string, received undefined
+  • a08/blog/articles/castrar-pet-beneficios-cuidados.md
+    slug: Invalid input: expected string, received undefined
+  • a08/blog/articles/como-escolher-clinica-veterinaria.md
+    slug: Invalid input: expected string, received undefined
+  • a08/blog/articles/sinais-que-seu-pet-precisa-veterinario.md
+    slug: Invalid input: expected string, received undefined
+  • a09/blog/articles/como-cuidar-cabelo-apos-coloracao.md
+    slug: Invalid input: expected string, received undefined
+  • a09/blog/articles/como-escolher-salao-de-beleza.md
+    slug: Invalid input: expected string, received undefined
+  • a09/blog/articles/tendencias-coloracao-cabelo-2026.md
+    slug: Invalid input: expected string, received undefined
+  • a09/blog/articles/tratamentos-capilares-mais-procurados.md
+    slug: Invalid input: expected string, received undefined
+  • a10/blog/articles/como-decorar-sala-pequena-apartamento.md
+    slug: Invalid input: expected string, received undefined
+  • a10/blog/articles/como-escolher-moveis-para-espaco-pequeno.md
+    slug: Invalid input: expected string, received undefined
+  • a10/blog/articles/iluminacao-residencial-guia-completo.md
+    slug: Invalid input: expected string, received undefined
+  • a10/blog/articles/tendencias-decoracao-2026.md
+    slug: Invalid input: expected string, received undefined
+  • b01-sem-site-profissional/blog/articles/como-criar-site-profissional-pequena-empresa.md
+    slug: Invalid input: expected string, received undefined
+  • b01-sem-site-profissional/blog/articles/como-criar-site-profissional-pequena-empresa.md
+    title: Título deve ter no máximo 60 caracteres (SEO)
+  • b01-sem-site-profissional/blog/articles/empresa-sem-site-perde-clientes.md
+    slug: Invalid input: expected string, received undefined
+  • b01-sem-site-profissional/blog/articles/empresa-sem-site-perde-clientes.md
+    title: Título deve ter no máximo 60 caracteres (SEO)
+  • b02-site-antigo-lento/blog/articles/como-modernizar-site-empresa.md
+    slug: Invalid input: expected string, received undefined
+  • b02-site-antigo-lento/blog/articles/como-modernizar-site-empresa.md
+    title: Título deve ter no máximo 60 caracteres (SEO)
+  • b02-site-antigo-lento/blog/articles/site-lento-perde-clientes.md
+    slug: Invalid input: expected string, received undefined
+  • b02-site-antigo-lento/blog/articles/site-lento-perde-clientes.md
+    title: Título deve ter no máximo 60 caracteres (SEO)
+  • b03-sem-automacao/blog/articles/automacao-negocio-pequeno-empresa.md
+    slug: Invalid input: expected string, received undefined
+  • b03-sem-automacao/blog/articles/automacao-negocio-pequeno-empresa.md
+    title: Título deve ter no máximo 60 caracteres (SEO)
+  • b03-sem-automacao/blog/articles/whatsapp-business-automacao-empresa.md
+    slug: Invalid input: expected string, received undefined
+  • b03-sem-automacao/blog/articles/whatsapp-business-automacao-empresa.md
+    title: Título deve ter no máximo 60 caracteres (SEO)
+  • b04-sem-presenca-digital/blog/articles/google-meu-negocio-otimizacao.md
+    slug: Invalid input: expected string, received undefined
+  • b04-sem-presenca-digital/blog/articles/google-meu-negocio-otimizacao.md
+    title: Título deve ter no máximo 60 caracteres (SEO)
+  • b04-sem-presenca-digital/blog/articles/presenca-digital-negocio-local.md
+    slug: Invalid input: expected string, received undefined
+  • b04-sem-presenca-digital/blog/articles/presenca-digital-negocio-local.md
+    title: Título deve ter no máximo 60 caracteres (SEO)
+  • b05-perder-clientes-online/blog/articles/concorrente-melhor-site.md
+    slug: Invalid input: expected string, received undefined
+  • b05-perder-clientes-online/blog/articles/concorrente-melhor-site.md
+    title: Título deve ter no máximo 60 caracteres (SEO)
+  • b05-perder-clientes-online/blog/articles/taxa-conversao-site.md
+    slug: Invalid input: expected string, received undefined
+  • b05-perder-clientes-online/blog/articles/taxa-conversao-site.md
+    title: Título deve ter no máximo 60 caracteres (SEO)
+  • b06-sem-leads-qualificados/blog/articles/como-qualificar-leads-digitalmente.md
+    slug: Invalid input: expected string, received undefined
+  • b06-sem-leads-qualificados/blog/articles/como-qualificar-leads-digitalmente.md
+    title: Título deve ter no máximo 60 caracteres (SEO)
+  • b06-sem-leads-qualificados/blog/articles/funil-de-vendas-digital-pme.md
+    slug: Invalid input: expected string, received undefined
+  • b06-sem-leads-qualificados/blog/articles/funil-de-vendas-digital-pme.md
+    title: Título deve ter no máximo 60 caracteres (SEO)
+  • b07-site-nao-aparece-google/blog/articles/por-que-site-nao-aparece-google.md
+    slug: Invalid input: expected string, received undefined
+  • b07-site-nao-aparece-google/blog/articles/por-que-site-nao-aparece-google.md
+    title: Título deve ter no máximo 60 caracteres (SEO)
+  • b07-site-nao-aparece-google/blog/articles/seo-local-negocio-local.md
+    slug: Invalid input: expected string, received undefined
+  • b07-site-nao-aparece-google/blog/articles/seo-local-negocio-local.md
+    title: Título deve ter no máximo 60 caracteres (SEO)
+  • b07-site-nao-aparece-google/blog/articles/seo-local-negocio-local.md
+    description: Meta description deve ter no máximo 155 caracteres (SERP)
+  • b08-concorrente-digital/blog/articles/como-superar-concorrente-digital.md
+    slug: Invalid input: expected string, received undefined
+  • b08-concorrente-digital/blog/articles/como-superar-concorrente-digital.md
+    title: Título deve ter no máximo 60 caracteres (SEO)
+  • b08-concorrente-digital/blog/articles/transformacao-digital-pequena-empresa.md
+    slug: Invalid input: expected string, received undefined
+  • b08-concorrente-digital/blog/articles/transformacao-digital-pequena-empresa.md
+    title: Título deve ter no máximo 60 caracteres (SEO)
+  • c03-app-web-negocio/blog/articles/app-web-vs-app-mobile-qual-escolher.md
+    slug: Invalid input: expected string, received undefined
+  • c03-app-web-negocio/blog/articles/quanto-custa-desenvolver-aplicativo-web.md
+    slug: Invalid input: expected string, received undefined
+  • c04-ecommerce-pequeno-negocio/blog/articles/como-montar-ecommerce-sem-complicar.md
+    slug: Invalid input: expected string, received undefined
+  • c04-ecommerce-pequeno-negocio/blog/articles/como-montar-ecommerce-sem-complicar.md
+    title: Título deve ter no máximo 60 caracteres (SEO)
+  • c04-ecommerce-pequeno-negocio/blog/articles/taxa-de-conversao-ecommerce-como-melhorar.md
+    slug: Invalid input: expected string, received undefined
+  • c05-sistema-agendamento/blog/articles/agenda-online-vs-agenda-papel.md
+    slug: Invalid input: expected string, received undefined
+  • c05-sistema-agendamento/blog/articles/como-implementar-agendamento-online.md
+    slug: Invalid input: expected string, received undefined
+  • c05-sistema-agendamento/blog/articles/como-reduzir-faltas-com-lembretes-automaticos.md
+    slug: Invalid input: expected string, received undefined
+  • c05-sistema-agendamento/blog/articles/vantagens-agendamento-online-para-negocios.md
+    slug: Invalid input: expected string, received undefined
+  • c06-automacao-atendimento/blog/articles/atendimento-humano-vs-automatizado.md
+    slug: Invalid input: expected string, received undefined
+  • c06-automacao-atendimento/blog/articles/chatbot-para-pequenas-empresas-vale-a-pena.md
+    slug: Invalid input: expected string, received undefined
+  • c06-automacao-atendimento/blog/articles/como-automatizar-atendimento-whatsapp.md
+    slug: Invalid input: expected string, received undefined
+  • c06-automacao-atendimento/blog/articles/como-criar-fluxo-atendimento-automatizado.md
+    slug: Invalid input: expected string, received undefined
+  • d01-calculadora-custo-site/blog/articles/artigo-antigo.md
+    2 palavras (mínimo 800)
+  • d01-calculadora-custo-site/blog/articles/artigo-novo.md
+    2 palavras (mínimo 800)
+  • d01-calculadora-custo-site/blog/articles/custo-criar-site-2026.md
+    315 palavras (mínimo 800)
+  • d01-calculadora-custo-site/blog/articles/site-sob-medida-vs-plataforma.md
+    523 palavras (mínimo 800)
+  • d02-calculadora-custo-app/blog/articles/mvp-app-guia-completo.md
+    title: Título deve ter no máximo 60 caracteres (SEO)
+  • d02-calculadora-custo-app/blog/articles/mvp-app-guia-completo.md
+    description: Invalid input: expected string, received undefined
+  • d02-calculadora-custo-app/blog/articles/quanto-custa-criar-app-2026.md
+    title: Título deve ter no máximo 60 caracteres (SEO)
+  • d02-calculadora-custo-app/blog/articles/quanto-custa-criar-app-2026.md
+    description: Invalid input: expected string, received undefined
+
+❌ Validação FALHOU. Corrija os erros acima e tente novamente.

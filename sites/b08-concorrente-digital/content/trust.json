@@ -1,0 +1,26 @@
+{
+  "headline": "Empresas que viraram o jogo",
+  "stats": [
+    { "value": "+220%", "label": "Leads em 6 meses" },
+    { "value": "3-4 meses", "label": "Para superar concorrente local" },
+    { "value": "50+", "label": "Projetos digitais entregues" },
+    { "value": "4.9★", "label": "Avaliação dos clientes" }
+  ],
+  "testimonials": [
+    {
+      "name": "Vinicius Carvalho",
+      "role": "Proprietário — Clínica Ortopédica",
+      "quote": "Meu concorrente tinha site há anos e eu não. Em 5 meses superamos o volume de avaliações e já aparecemos antes dele em buscas locais."
+    },
+    {
+      "name": "Camila Rocha",
+      "role": "Personal organizer",
+      "quote": "Não sabia nem por onde começar. A SystemForge fez tudo de forma estratégica, focando em onde o concorrente era mais fraco. Deu certo."
+    },
+    {
+      "name": "Fabricio Lima",
+      "role": "Instrutor de autoescola",
+      "quote": "Em 4 meses de SEO já apareço antes dos concorrentes que estão há anos no digital. Minha agenda lotou."
+    }
+  ]
+}

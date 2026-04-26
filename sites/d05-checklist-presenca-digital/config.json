@@ -1,0 +1,172 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "d05-checklist-presenca-digital",
+  "name": "Checklist de Presença Digital",
+  "category": "D",
+  "accentColor": "#7C3AED",
+  "wave": 2,
+  "funnelStage": "consideration",
+  "template": "calculator",
+  "hasBlog": true,
+  "schema": [
+    "FAQPage",
+    "Organization",
+    "HowTo",
+    "Product"
+  ],
+  "sectionOrder": "default",
+  "headline": "Sua empresa está pronta para o mundo digital?",
+  "subheadline": "Checklist gratuito de presença digital para pequenas e médias empresas. Descubra o que está faltando em 5 minutos.",
+  "seo": {
+    "title": "Checklist de Presença Digital — Avalie sua Empresa Grátis",
+    "description": "Verifique se sua empresa tem tudo o que precisa para uma presença digital completa. Checklist gratuito com pontuação e recomendações.",
+    "keywords": [
+      "checklist presença digital",
+      "presença digital empresa",
+      "site profissional",
+      "marketing digital PME"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Ver Resultado Completo",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Fiz o checklist de presença digital e gostaria de melhorar minha pontuação."
+  },
+  "leadMagnet": {
+    "enabled": true,
+    "type": "checklist",
+    "partialResultLabel": "Sua pontuação de presença digital",
+    "fullResultPath": "/resultado"
+  },
+  "routes": {
+    "simulador": true
+  },
+  "calculatorInputs": [
+    {
+      "id": "tem-site",
+      "label": "Sua empresa tem um site próprio?",
+      "type": "radio",
+      "weight": 1,
+      "options": [
+        {
+          "value": "sim-moderno",
+          "label": "Sim, site moderno e atualizado",
+          "points": 20
+        },
+        {
+          "value": "sim-antigo",
+          "label": "Sim, mas está desatualizado",
+          "points": 8
+        },
+        {
+          "value": "nao",
+          "label": "Não tenho site",
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "site-mobile",
+      "label": "O site funciona bem em celular (responsivo)?",
+      "type": "radio",
+      "weight": 1,
+      "options": [
+        {
+          "value": "sim",
+          "label": "Sim, 100% mobile-friendly",
+          "points": 20
+        },
+        {
+          "value": "parcial",
+          "label": "Parcialmente, com problemas em mobile",
+          "points": 8
+        },
+        {
+          "value": "nao",
+          "label": "Não, sem versão mobile",
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "google-meu-negocio",
+      "label": "Tem perfil no Google Meu Negócio atualizado?",
+      "type": "radio",
+      "weight": 1,
+      "options": [
+        {
+          "value": "sim-completo",
+          "label": "Sim, perfil completo e com avaliações",
+          "points": 20
+        },
+        {
+          "value": "sim-basico",
+          "label": "Sim, mas incompleto",
+          "points": 8
+        },
+        {
+          "value": "nao",
+          "label": "Não tenho perfil",
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "redes-sociais",
+      "label": "Como estão suas redes sociais?",
+      "type": "radio",
+      "weight": 1,
+      "options": [
+        {
+          "value": "ativo",
+          "label": "Ativas com posts regulares (2+ por semana)",
+          "points": 20
+        },
+        {
+          "value": "ocasional",
+          "label": "Postagens ocasionais (1-2 por mês)",
+          "points": 8
+        },
+        {
+          "value": "inativo",
+          "label": "Sem redes sociais ou abandonadas",
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "analytics",
+      "label": "Você monitora os resultados digitais da empresa?",
+      "type": "radio",
+      "weight": 1,
+      "options": [
+        {
+          "value": "sim-regular",
+          "label": "Sim, análise regular com Google Analytics ou similar",
+          "points": 20
+        },
+        {
+          "value": "sim-eventual",
+          "label": "Eventualmente, sem sistema definido",
+          "points": 8
+        },
+        {
+          "value": "nao",
+          "label": "Não monitoro resultados digitais",
+          "points": 0
+        }
+      ]
+    }
+  ],
+  "showSystemForgeLogo": true,
+  "footerLinks": [
+    {
+      "label": "Privacidade",
+      "href": "/privacidade"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "headerBadge": "Uma ferramenta da SystemForge",
+  "lastReviewed": "2026-04-12"
+}

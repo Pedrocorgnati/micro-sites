@@ -1,0 +1,26 @@
+{
+  "headline": "Quem está esperando o ForgeChat",
+  "stats": [
+    { "value": "487", "label": "Na lista de espera" },
+    { "value": "3 meses", "label": "Grátis para early birds" },
+    { "value": "< 1h", "label": "Para configurar" },
+    { "value": "24/7", "label": "Atendimento automático" }
+  ],
+  "testimonials": [
+    {
+      "name": "Gabriela Ramos",
+      "role": "Esteticista",
+      "quote": "Fico o dia todo com as mãos ocupadas atendendo. ForgeChat vai ser a solução que eu precisava para gerenciar o WhatsApp sem parar o trabalho."
+    },
+    {
+      "name": "Felipe Oliveira",
+      "role": "Instrutor de culinária",
+      "quote": "Recebo mais de 50 mensagens por dia sobre cursos. Qualificar isso manualmente é impossível. Espero muito o lançamento do ForgeChat."
+    },
+    {
+      "name": "Claudia Santos",
+      "role": "Nutricionista",
+      "quote": "A ideia de ter agendamentos e follow-ups automáticos no WhatsApp sem precisar de um dev é exatamente o que precisamos como profissionais solo."
+    }
+  ]
+}

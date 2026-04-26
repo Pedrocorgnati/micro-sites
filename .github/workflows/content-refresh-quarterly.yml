@@ -1,0 +1,44 @@
+name: Content Refresh Quarterly
+
+# TASK-22 ST002 / CL-595 — refresh trimestral com duplication gate
+
+on:
+  schedule:
+    # Trimestral: 1o do mes em Mar/Jun/Set/Dez 06:00 UTC
+    - cron: '0 6 1 3,6,9,12 *'
+  workflow_dispatch:
+    inputs:
+      threshold:
+        description: 'Similarity threshold (0-1)'
+        required: false
+        default: '0.85'
+
+jobs:
+  refresh-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Run refresh duplication gate
+        run: |
+          npx tsx scripts/refresh-duplication-gate.ts --threshold ${{ inputs.threshold || '0.85' }}
+
+      - name: Open issue if gate fails
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Content refresh quarterly — duplication gate FAIL (run ${context.runId})`,
+              body: `O gate de duplicacao trimestral falhou. Acao: revisar copy duplicada e re-rodar manualmente:\n\n\`\`\`\ngh workflow run content-refresh-quarterly.yml -f threshold=0.85\n\`\`\`\n\nVer logs: ${context.payload.repository?.html_url}/actions/runs/${context.runId}`,
+              labels: ['content-refresh', 'duplication', 'quarterly']
+            });

@@ -1,0 +1,68 @@
+{
+  "$schema": "../src/schemas/geo-monitoring.schema.json",
+  "version": "1.0.0",
+  "lastUpdatedAt": "2026-04-25",
+  "sites": {
+    "a01": {
+      "category": "A",
+      "domain": "a01.example",
+      "priority": "high",
+      "keywords": [
+        "site para [nicho-vertical]",
+        "como criar site [nicho-vertical]",
+        "preco site [nicho-vertical]"
+      ]
+    },
+    "b01-sem-site-profissional": {
+      "category": "B",
+      "domain": "b01.example",
+      "priority": "medium",
+      "keywords": [
+        "minha empresa nao tem site",
+        "preciso de um site profissional",
+        "como ter site sem ser caro"
+      ]
+    },
+    "c01-site-institucional-pme": {
+      "category": "C",
+      "domain": "c01.example",
+      "priority": "high",
+      "keywords": [
+        "site institucional pme",
+        "criar site institucional",
+        "site profissional pequena empresa"
+      ]
+    },
+    "d01-calculadora-custo-site": {
+      "category": "D",
+      "domain": "d01.example",
+      "priority": "high",
+      "keywords": [
+        "quanto custa criar um site",
+        "calculadora preco site",
+        "preco site profissional brasil",
+        "valor de site para empresa"
+      ]
+    },
+    "d05-checklist-presenca-digital": {
+      "category": "D",
+      "domain": "d05.example",
+      "priority": "high",
+      "keywords": [
+        "checklist presenca digital",
+        "como avaliar presenca digital empresa",
+        "diagnostico digital pme"
+      ]
+    },
+    "f01-blog-desenvolvimento-web": {
+      "category": "F",
+      "domain": "f01.example",
+      "priority": "medium",
+      "keywords": [
+        "quanto custa criar site 2026",
+        "preco site brasil",
+        "freelancer ou agencia para site"
+      ]
+    }
+  }
+}

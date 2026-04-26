@@ -1,0 +1,71 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "b01-sem-site-profissional",
+  "name": "SystemForge Digital",
+  "category": "B",
+  "accentColor": "#EA580C",
+  "wave": 1,
+  "funnelStage": "awareness",
+  "template": "landing",
+  "hasBlog": true,
+  "schema": [
+    "Organization",
+    "FAQPage",
+    "HowTo"
+  ],
+  "sectionOrder": "b-variant",
+  "headline": "Seu Negócio Ainda Não Tem Site Profissional?",
+  "subheadline": "Enquanto você adia, seu concorrente conquista os clientes que deveriam ser seus. Mude isso hoje.",
+  "seo": {
+    "title": "Sem Site Profissional? Você Perde Clientes — SystemForge",
+    "description": "Descubra quanto você perde sem site profissional e como ter presença digital completa em 7 dias. Orçamento gratuito.",
+    "keywords": [
+      "empresa sem site",
+      "criar site profissional",
+      "presença digital negócio",
+      "site para empresa pequena"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Quero Meu Site Profissional",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Meu negócio ainda não tem site e quero resolver isso. Podem me ajudar?"
+  },
+  "exitIntent": {
+    "offerText": "Espere! Você sabe quanto perde sem site?",
+    "offerSubtext": "87% dos consumidores pesquisam online antes de comprar. Sem site, você é invisível para eles.",
+    "ctaLabel": "Quero Saber Mais",
+    "ctaHref": "#contato"
+  },
+  "showSystemForgeLogo": false,
+  "footerLinks": [
+    {
+      "label": "Blog",
+      "href": "/blog"
+    },
+    {
+      "label": "FAQ",
+      "href": "/faq"
+    }
+  ],
+  "crossLinks": [
+    {
+      "href": "https://d01.DOMAIN.com",
+      "anchor": "Calcule quanto um site profissional custa para seu negócio",
+      "context": "article"
+    },
+    {
+      "href": "https://c01.DOMAIN.com",
+      "anchor": "Veja como um site profissional resolve este problema",
+      "context": "cta"
+    },
+    {
+      "href": "https://d01.DOMAIN.com",
+      "anchor": "Calcule o custo do seu site grátis",
+      "context": "footer"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "lastReviewed": "2026-04-12"
+}

@@ -4,26 +4,31 @@ import { FormProvider, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { useRef, useState } from 'react';
-import Link from 'next/link';
 import { Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { HoneypotField } from './HoneypotField';
+import { ConsentCheckbox } from './ConsentCheckbox';
 import { useToast } from '@/components/ui/Toast';
 import { buildWhatsAppUrl } from '@/lib/whatsapp';
+import { CONSENT_COPY, getFormEndpoint } from '@/lib/constants';
+import { PRIVACY_POLICY_VERSION } from '@/lib/privacy-version';
+import { recordFailure, recordSuccess, shouldSkipRequest } from '@/lib/circuit-breaker';
+import { useOnlineStatus } from '@/lib/network-status';
+import { useEffect } from 'react';
 
 // ============================================================
 // Schema de validação
 // ============================================================
 
 const schema = z.object({
-  name:     z.string().min(2, 'nome é obrigatório'),
+  name:     z.string().min(3, 'Informe pelo menos 3 caracteres'),
   email:    z.string().email('Informe um e-mail válido (ex: nome@email.com)'),
   phone:    z.string().optional().refine(
     (v) => !v || /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/.test(v.trim()),
     { message: 'Informe um telefone válido (ex: (11) 99999-9999)' },
   ),
-  message:  z.string().min(10, 'mensagem é obrigatória'),
-  consent:  z.literal(true, { error: 'Você precisa aceitar para continuar' }),
+  message:  z.string().min(10, 'Mínimo de 10 caracteres').max(500, 'Máximo de 500 caracteres'),
+  consent:  z.literal(true, { error: CONSENT_COPY.errorMessage }),
   honeypot: z.string().max(0).optional(),
 });
 
@@ -36,7 +41,11 @@ type FormState = 'idle' | 'submitting' | 'error';
 // ============================================================
 
 interface ContactFormBaseProps {
-  formEndpoint: string;
+  /**
+   * Endpoint explicito do site (config.cta.formEndpoint). Quando ausente,
+   * resolve via getFormEndpoint('contact', { slug: siteSlug }) — TASK-20 ST002.
+   */
+  formEndpoint?: string;
   whatsappNumber: string;
   whatsappMessage?: string;
   siteName?: string;
@@ -59,11 +68,56 @@ export function ContactFormBase({
   const { addToast } = useToast();
   const [formState, setFormState] = useState<FormState>('idle');
   const abortRef = useRef<AbortController | null>(null);
+  // TASK-19 ST001 / CL-157: detectar offline para mensagem dedicada + esconder submit.
+  const isOnline = useOnlineStatus();
+
+  // TASK-19 ST002 / CL-155: state preservation via sessionStorage por slug.
+  const STORAGE_KEY = `contact-form-state:${siteSlug ?? 'default'}`;
 
   const methods = useForm<FormValues>({
     resolver: zodResolver(schema),
     mode: 'onSubmit',
   });
+
+  // TASK-19 ST002: hidratar form com state preservado (se ha) ao montar.
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    try {
+      const raw = sessionStorage.getItem(STORAGE_KEY);
+      if (raw) {
+        const parsed = JSON.parse(raw) as Partial<FormValues>;
+        methods.reset({
+          name: parsed.name ?? '',
+          email: parsed.email ?? '',
+          phone: parsed.phone ?? '',
+          message: parsed.message ?? '',
+          consent: parsed.consent ?? false,
+          honeypot: '',
+        } as FormValues);
+      }
+    } catch {
+      // ignore — sessionStorage indisponivel
+    }
+    // Persistir on change
+    const sub = methods.watch((vals) => {
+      try {
+        sessionStorage.setItem(
+          STORAGE_KEY,
+          JSON.stringify({
+            name: vals.name,
+            email: vals.email,
+            phone: vals.phone,
+            message: vals.message,
+            consent: vals.consent,
+          }),
+        );
+      } catch {
+        // ignore
+      }
+    });
+    return () => sub.unsubscribe();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [STORAGE_KEY]);
 
   const {
     register,
@@ -76,24 +130,44 @@ export function ContactFormBase({
     // Silent drop se honeypot preenchido (bot)
     if (data.honeypot) return;
 
+    // CL-496: circuit breaker — se aberto, pula fetch e envia direto ao WA
+    if (shouldSkipRequest('static-forms')) {
+      setFormState('error');
+      addToast('error', 'Servico de formulario instavel. Use o WhatsApp para falar agora.');
+      return;
+    }
+
     setFormState('submitting');
 
     abortRef.current = new AbortController();
     const timer = setTimeout(() => abortRef.current?.abort(), 10_000);
 
     try {
+      const siteOrigin = siteSlug ? `Vim do site ${siteSlug}. ` : '';
+      // TASK-7 / CL-013: identificar origem D03/D04 no payload para
+      // roteamento de nurture (email alert + WhatsApp follow-up).
+      const nurturePriorityTag = siteSlug?.startsWith('d03')
+        ? 'D03'
+        : siteSlug?.startsWith('d04')
+        ? 'D04'
+        : undefined;
       const payload = {
         accessKey: accessKey ?? '',
         subject: `Contato via ${siteName ?? 'site'}`,
         name: data.name,
         email: data.email,
         phone: data.phone ?? '',
-        message: data.message,
+        message: `${siteOrigin}${data.message}`,
         replyTo: data.email,
+        source: siteSlug ?? '',
+        nurture_priority_tag: nurturePriorityTag,
+        // CL-242: registro de versao da PrivacyPolicy aceita
+        privacy_version: PRIVACY_POLICY_VERSION,
         '$honeypot': '',
       };
 
-      const res = await fetch(formEndpoint, {
+      const target = getFormEndpoint('contact', { slug: siteSlug, siteOverride: formEndpoint });
+      const res = await fetch(target, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify(payload),
@@ -103,6 +177,12 @@ export function ContactFormBase({
       clearTimeout(timer);
 
       if (!res.ok) throw new Error('Erro do servidor');
+
+      // CL-496: sucesso -> reset breaker
+      recordSuccess('static-forms');
+
+      // TASK-19 ST002: limpar state preservado apos sucesso
+      try { sessionStorage.removeItem(STORAGE_KEY); } catch { /* ignore */ }
 
       // Disparar GA4 event
       if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -116,14 +196,32 @@ export function ContactFormBase({
       window.location.href = '/obrigado';
     } catch (err) {
       clearTimeout(timer);
+      // CL-496: registrar falha (3 em 5min abre o breaker)
+      recordFailure('static-forms');
       setFormState('error');
       addToast('error', 'Erro ao enviar. Tente novamente ou use o WhatsApp.');
     }
   }
 
-  const whatsappFallbackUrl = buildWhatsAppUrl(whatsappNumber, whatsappMessage);
   const isSubmitting = formState === 'submitting';
   const isError = formState === 'error';
+
+  // TASK-9 / CL-330: fallback WhatsApp preserva nome + mensagem do usuario
+  // e sinaliza que o envio pelo site falhou.
+  function buildFallbackUrl(): string {
+    if (!isError) return buildWhatsAppUrl(whatsappNumber, whatsappMessage);
+    const values = methods.getValues();
+    const nome = values.name?.trim();
+    const msg = values.message?.trim();
+    const slugPart = siteSlug ? ` ${siteSlug}` : '';
+    const parts = [
+      nome ? `Ola, sou ${nome}.` : 'Ola!',
+      msg ? `Mensagem: ${msg}` : '',
+      `(tentativa de envio pelo site${slugPart} falhou)`,
+    ].filter(Boolean);
+    return buildWhatsAppUrl(whatsappNumber, parts.join(' '));
+  }
+  const whatsappFallbackUrl = buildFallbackUrl();
 
   return (
     <FormProvider {...methods}>
@@ -134,6 +232,31 @@ export function ContactFormBase({
         className="relative max-w-[600px] mx-auto w-full flex flex-col gap-5"
       >
         <HoneypotField />
+        <input type="hidden" name="_origin" value={process.env.NEXT_PUBLIC_SITE_SLUG ?? process.env.SITE_SLUG ?? ''} data-testid="contact-form-origin" />
+
+        {/* TASK-19 ST001 / CL-157 — banner offline com WhatsApp fallback. */}
+        {!isOnline && (
+          <div
+            data-testid="form-offline-banner"
+            role="status"
+            aria-live="polite"
+            className="rounded-lg border p-3 text-sm"
+            style={{ borderColor: '#FCD34D', background: '#FEF3C7', color: '#78350F' }}
+          >
+            <strong>Voce esta offline.</strong> O envio pelo site so funciona com conexao.
+            Use o WhatsApp para falar agora:{' '}
+            <a
+              href={whatsappFallbackUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="form-offline-wa-link"
+              style={{ textDecoration: 'underline', fontWeight: 600 }}
+            >
+              abrir WhatsApp
+            </a>
+            .
+          </div>
+        )}
 
         {/* Nome */}
         <div className="flex flex-col gap-1.5">
@@ -147,6 +270,7 @@ export function ContactFormBase({
           <input
             id="name"
             type="text"
+            inputMode="text"
             data-testid="contact-form-name-input"
             autoComplete="name"
             aria-required="true"
@@ -184,6 +308,7 @@ export function ContactFormBase({
           <input
             id="email"
             type="email"
+            inputMode="email"
             data-testid="contact-form-email-input"
             autoComplete="email"
             aria-required="true"
@@ -216,6 +341,7 @@ export function ContactFormBase({
           <input
             id="phone"
             type="tel"
+            inputMode="tel"
             data-testid="contact-form-phone-input"
             autoComplete="tel"
             aria-invalid={!!errors.phone}
@@ -266,44 +392,14 @@ export function ContactFormBase({
           )}
         </div>
 
-        {/* Consentimento LGPD */}
-        <div className="flex items-start gap-3">
-          <input
-            id="consent"
-            type="checkbox"
-            data-testid="contact-form-consent-checkbox"
-            aria-required="true"
-            aria-invalid={!!errors.consent}
-            aria-describedby={errors.consent ? 'consent-error' : undefined}
-            {...register('consent')}
-            className="mt-1 min-h-[20px] min-w-[20px] rounded accent-current cursor-pointer"
-            style={{ accentColor: 'var(--color-accent)' }}
-          />
-          <div>
-            <label
-              htmlFor="consent"
-              className="text-sm cursor-pointer select-none"
-              style={{ color: 'var(--color-text-secondary)' }}
-            >
-              Concordo com o tratamento dos meus dados conforme a{' '}
-              <Link
-                href="/privacidade"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-2"
-                style={{ color: 'var(--color-accent)' }}
-              >
-                Política de Privacidade
-              </Link>{' '}
-              <span aria-hidden="true">*</span>
-            </label>
-            {errors.consent && (
-              <span id="consent-error" role="alert" className="block text-xs text-red-600 mt-1">
-                {errors.consent.message}
-              </span>
-            )}
-          </div>
-        </div>
+        {/* Consentimento LGPD — TASK-2 / CL-235: redacao canonica via CONSENT_COPY */}
+        <ConsentCheckbox
+          name="consent"
+          register={register}
+          error={errors.consent}
+          id="consent"
+          testId="contact-form-consent-checkbox"
+        />
 
         {/* Submit */}
         <button
@@ -327,11 +423,19 @@ export function ContactFormBase({
           )}
         </button>
 
-        {/* Fallback WhatsApp (visível apenas em estado de erro) */}
+        {/* Fallback WhatsApp inline (apenas em estado de erro) — TASK-9 / CL-330 */}
         {isError && (
-          <div className="text-center">
-            <p className="text-sm mb-2" style={{ color: 'var(--color-text-muted)' }}>
-              Ou clique aqui para falar pelo WhatsApp
+          <div
+            role="alert"
+            data-testid="contact-form-error-fallback"
+            className="rounded-lg border p-4 text-center"
+            style={{ borderColor: 'var(--color-accent)', backgroundColor: 'rgba(37,211,102,0.06)' }}
+          >
+            <p className="text-sm font-semibold mb-1" style={{ color: 'var(--color-text-primary)' }}>
+              Nao foi possivel enviar agora.
+            </p>
+            <p className="text-xs mb-3" style={{ color: 'var(--color-text-muted)' }}>
+              Seus dados foram preservados. Fale com a gente direto pelo WhatsApp — ja incluimos sua mensagem.
             </p>
             <a
               data-testid="contact-form-whatsapp-fallback"
@@ -343,10 +447,10 @@ export function ContactFormBase({
                   (window as any).gtag('event', 'whatsapp_click', { trigger: 'form_fallback' });
                 }
               }}
-              className="text-sm font-medium underline underline-offset-2 transition-opacity hover:opacity-80"
-              style={{ color: '#25D366' }}
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 min-h-[44px] rounded-lg text-sm font-semibold transition-opacity hover:opacity-90"
+              style={{ backgroundColor: '#25D366', color: '#FFFFFF' }}
             >
-              Falar pelo WhatsApp
+              Falar no WhatsApp agora
             </a>
           </div>
         )}

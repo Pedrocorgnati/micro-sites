@@ -4,8 +4,10 @@ import './globals.css';
 import { ToastProvider } from '@/components/ui/Toast';
 import { CookieConsent } from '@/components/lgpd/CookieConsent';
 import { GA4Loader } from '@/components/lgpd/GA4Loader';
+import { GA4Preconnect } from '@/components/lgpd/GA4Preconnect';
 import { WebVitalsReporter } from '@/components/lgpd/WebVitalsReporter';
 import { loadSiteConfig } from '@/lib/config-loader';
+import { CATEGORY_THEME_COLORS, DEFAULT_THEME_COLOR } from '@/lib/constants';
 // Camada 2: import condicional — eliminado pelo bundler em produção
 import { DevOverlayWrapper } from '@/components/dev/DevOverlayWrapper';
 
@@ -29,7 +31,7 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   viewportFit: 'cover',
-  // themeColor injetado por site via generateMetadata em cada [slug]/page.tsx
+  themeColor: CATEGORY_THEME_COLORS[config.category] ?? DEFAULT_THEME_COLOR,
 };
 
 export const metadata: Metadata = {
@@ -39,12 +41,38 @@ export const metadata: Metadata = {
   },
   description: config.seo.description,
   keywords: config.seo.keywords,
+  // TASK-6 intake-review (CL-331): variantes completas de favicon por site.
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+    other: [{ rel: 'manifest', url: '/site.webmanifest' }],
+  },
+  manifest: '/site.webmanifest',
+  appleWebApp: {
+    title: config.name,
+    statusBarStyle: 'default',
+  },
+  alternates: config.hasBlog
+    ? { types: { 'application/rss+xml': [{ url: '/rss.xml', title: `${config.name} RSS` }] } }
+    : undefined,
   openGraph: {
     title: config.seo.title,
     description: config.seo.description,
     images: config.seo.ogImage ? [config.seo.ogImage] : [],
     locale: 'pt_BR',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: config.seo.title,
+    description: config.seo.description,
+    images: config.seo.ogImage ? [config.seo.ogImage] : [],
   },
   robots: config.seo.noindex ? { index: false, follow: false } : { index: true, follow: true },
 };
@@ -60,6 +88,13 @@ export default function RootLayout({
       data-category={config.category}
       className={`${inter.variable} ${plusJakartaSans.variable} h-full`}
     >
+      <head>
+        {/* CL-635 — preconnect para Static Forms (sempre essencial) */}
+        <link rel="preconnect" href="https://api.staticforms.xyz" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://api.staticforms.xyz" />
+        {/* CL-635 — preconnect GA4 condicional ao consent */}
+        {GA4_ID && <GA4Preconnect />}
+      </head>
       <body className="min-h-full flex flex-col antialiased" style={{ backgroundColor: 'var(--color-background)', color: 'var(--color-text-primary)' }}>
         <a
           href="#main-content"

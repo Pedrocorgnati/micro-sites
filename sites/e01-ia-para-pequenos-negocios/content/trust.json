@@ -1,0 +1,26 @@
+{
+  "headline": "Quem já está na lista",
+  "stats": [
+    { "value": "312", "label": "Na lista de espera" },
+    { "value": "40%", "label": "Desconto early bird" },
+    { "value": "< 1h", "label": "Para configurar" },
+    { "value": "2026", "label": "Lançamento previsto" }
+  ],
+  "testimonials": [
+    {
+      "name": "Sofia Martins",
+      "role": "Dona de restaurante",
+      "quote": "Finalmente uma ferramenta de IA que não exige que eu saiba programar. Mal posso esperar para usar no meu negócio."
+    },
+    {
+      "name": "Thiago Alves",
+      "role": "Personal trainer",
+      "quote": "Gasto horas criando conteúdo para Instagram. Se ForgeAI me ajudar a fazer isso em minutos, já paga o investimento."
+    },
+    {
+      "name": "Renata Gomes",
+      "role": "Psicóloga",
+      "quote": "A ideia de ter IA respondendo perguntas frequentes no WhatsApp enquanto atendo pacientes é exatamente o que preciso."
+    }
+  ]
+}

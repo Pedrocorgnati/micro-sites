@@ -1,0 +1,26 @@
+{
+  "headline": "Tempo recuperado, negócio escalado",
+  "stats": [
+    { "value": "15h+", "label": "Economizadas por semana" },
+    { "value": "80%", "label": "Redução no atendimento manual" },
+    { "value": "-40%", "label": "Redução na inadimplência" },
+    { "value": "30 dias", "label": "Para ver resultados" }
+  ],
+  "testimonials": [
+    {
+      "name": "Amanda Torres",
+      "role": "Proprietária — Clínica de Estética",
+      "quote": "Passava horas confirmando agendamentos pelo WhatsApp. Agora o sistema faz tudo sozinho e só chega para mim o que realmente precisa."
+    },
+    {
+      "name": "Ricardo Barros",
+      "role": "Dentista",
+      "quote": "A automação de cobranças foi transformadora. Reduziu a inadimplência em 35% e acabou com o constrangimento de ter que ligar para cobrar."
+    },
+    {
+      "name": "Luciana Campos",
+      "role": "Professora particular",
+      "quote": "Agora tenho tempo para focar nos alunos. A parte administrativa praticamente se cuida sozinha com as automações implementadas."
+    }
+  ]
+}

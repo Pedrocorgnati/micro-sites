@@ -1,0 +1,20 @@
+{
+  "headline": "Por que nossa landing page converte mais",
+  "items": [
+    {
+      "icon": "target",
+      "title": "CRO desde o primeiro pixel",
+      "description": "Cada elemento — título, imagem, formulário e botão — é posicionado para guiar o visitante até a conversão sem distrações."
+    },
+    {
+      "icon": "zap",
+      "title": "Velocidade ≥ 95 no PageSpeed",
+      "description": "Páginas lentas perdem conversões. Desenvolvemos com Next.js estático, imagens otimizadas e zero JavaScript desnecessário."
+    },
+    {
+      "icon": "bar-chart",
+      "title": "Integração com qualquer funil",
+      "description": "Conectamos ao Meta Pixel, Google Tag Manager, RD Station, HubSpot ou qualquer ferramenta que você já usa no seu negócio."
+    }
+  ]
+}

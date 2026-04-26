@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "escritura-registro-imovel",
+    "title": "Escritura e Registro de Imóvel: Passo a Passo",
+    "description": "Entenda a diferença entre escritura e registro de imóvel, quanto custa cada um e como fazer. Guia completo 2026.",
+    "tags": [
+      "escritura",
+      "registro de imóvel",
+      "cartório",
+      "transferência"
+    ],
+    "date": "2026-04-09",
+    "readingTime": 6,
+    "category": "Caso de Uso",
+    "funnelStage": "MOFU"
+  },
+  {
+    "slug": "fgts-compra-imovel-como-usar",
+    "title": "FGTS para Comprar Imóvel: Guia Completo 2026",
+    "description": "Veja como usar o FGTS na compra de imóvel, quais os requisitos, limites e o passo a passo para sacar sem erros.",
+    "tags": [
+      "FGTS",
+      "compra de imóvel",
+      "financiamento",
+      "habitação"
+    ],
+    "date": "2026-04-09",
+    "readingTime": 6,
+    "category": "Caso de Uso",
+    "funnelStage": "MOFU"
+  },
+  {
+    "slug": "laudo-vistoria-imovel",
+    "title": "Laudo de Vistoria de Imóvel: Por Que Fazer Antes",
+    "description": "Saiba o que é o laudo de vistoria de imóvel, quanto custa, o que é avaliado e por que é indispensável antes de comprar ou alugar.",
+    "tags": [
+      "laudo de vistoria",
+      "compra de imóvel",
+      "inspeção predial",
+      "CREA"
+    ],
+    "date": "2026-04-09",
+    "readingTime": 6,
+    "category": "Caso de Uso",
+    "funnelStage": "MOFU"
+  },
+  {
+    "slug": "valor-metro-quadrado-cidade",
+    "title": "Valor do Metro Quadrado: Como Calcular em 2026",
+    "description": "Como pesquisar o valor do metro quadrado na sua cidade e bairro. Metodologia, fontes confiáveis e como avaliar se o preço é justo.",
+    "tags": [
+      "metro quadrado",
+      "avaliação de imóvel",
+      "mercado imobiliário",
+      "preço"
+    ],
+    "date": "2026-04-09",
+    "readingTime": 6,
+    "category": "Caso de Uso",
+    "funnelStage": "TOFU"
+  }
+]

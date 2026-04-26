@@ -1,0 +1,66 @@
+{
+  "title": "Checklist — Presenca Digital Completa",
+  "subtitle": "Os 24 itens essenciais para o seu negocio aparecer e converter online, ordenados por impacto.",
+  "blocks": [
+    { "type": "heading", "level": 2, "text": "Fundacoes" },
+    {
+      "type": "list",
+      "style": "numbered",
+      "items": [
+        "Dominio proprio com HTTPS",
+        "Site responsivo com Lighthouse > 90 em mobile",
+        "Google Business Profile atualizado",
+        "E-mail profissional no dominio",
+        "Politica de privacidade e termos publicados"
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "Aquisicao" },
+    {
+      "type": "list",
+      "style": "numbered",
+      "items": [
+        "Paginas de servicos e/ou produtos com CTA claro",
+        "Blog com 4+ artigos sobre dores do cliente",
+        "Presenca em pelo menos uma rede social ativa",
+        "Campanha paga teste (R$ 300 a R$ 1.000)",
+        "Parcerias de link/backlink"
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "Conversao" },
+    {
+      "type": "list",
+      "style": "numbered",
+      "items": [
+        "Formulario de contato simples (<= 4 campos)",
+        "Botao WhatsApp flutuante",
+        "Pagina de obrigado com proximo passo",
+        "Pop-up de saida (exit intent) opcional",
+        "Provas sociais visiveis (reviews, logos)"
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "Operacao e dados" },
+    {
+      "type": "list",
+      "style": "numbered",
+      "items": [
+        "Google Analytics 4 com consent granular",
+        "CRM minimo para registrar leads",
+        "Playbook de atendimento com SLAs",
+        "Relatorio semanal de leads e origem"
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "Retencao e crescimento" },
+    {
+      "type": "list",
+      "style": "numbered",
+      "items": [
+        "Email marketing (transacional + newsletter)",
+        "Programa de indicacoes",
+        "Atualizacao trimestral do site",
+        "Plano de conteudo mensal",
+        "Revisao anual de LGPD e seguranca"
+      ]
+    },
+    { "type": "callout", "text": "Marque o que ja tem e priorize os 3 itens de maior impacto no seu contexto." }
+  ]
+}

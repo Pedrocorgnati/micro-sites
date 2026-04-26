@@ -1,0 +1,20 @@
+{
+  "headline": "Como desenvolvemos seu aplicativo web em 3 etapas",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Mapeamento de Processos",
+      "description": "Documentamos como seu negócio funciona hoje e identificamos quais tarefas repetitivas o sistema vai automatizar."
+    },
+    {
+      "number": 2,
+      "title": "Prototipagem e Validação",
+      "description": "Criamos protótipo navegável das telas principais para você validar o fluxo antes de uma linha de código."
+    },
+    {
+      "number": 3,
+      "title": "Entrega e Treinamento",
+      "description": "Lançamos o sistema, migramos seus dados e treinamos sua equipe para usar com autonomia desde o primeiro dia."
+    }
+  ]
+}

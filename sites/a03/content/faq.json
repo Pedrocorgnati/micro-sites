@@ -1,0 +1,25 @@
+{
+  "headline": "Dúvidas Frequentes",
+  "items": [
+    {
+      "question": "Qual é o valor da marmita?",
+      "answer": "Marmitas a partir de R$ 18 (pequena), R$ 22 (média) e R$ 26 (grande). Combos semanais com até 20% de desconto."
+    },
+    {
+      "question": "Qual é a área de entrega?",
+      "answer": "Entregamos em um raio de 5km do nosso restaurante. Consulte se seu endereço está na área pelo WhatsApp."
+    },
+    {
+      "question": "Como funciona o cardápio semanal?",
+      "answer": "Toda segunda-feira enviamos o cardápio da semana pelo WhatsApp. Você pode pedir com antecedência ou no dia."
+    },
+    {
+      "question": "Têm opções fitness ou vegetarianas?",
+      "answer": "Sim! Sempre temos ao menos 2 opções fitness (baixo carboidrato) e 1 opção vegetariana no cardápio semanal."
+    },
+    {
+      "question": "Qual é a forma de pagamento?",
+      "answer": "Aceitamos Pix, dinheiro e cartão na entrega. Para pedidos corporativos, também aceitamos faturamento mensal."
+    }
+  ]
+}

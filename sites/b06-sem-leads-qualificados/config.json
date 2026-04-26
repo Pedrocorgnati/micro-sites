@@ -1,0 +1,71 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "b06-sem-leads-qualificados",
+  "name": "SystemForge Digital",
+  "category": "B",
+  "accentColor": "#EA580C",
+  "wave": 3,
+  "funnelStage": "consideration",
+  "template": "landing",
+  "hasBlog": true,
+  "schema": [
+    "Organization",
+    "FAQPage",
+    "HowTo"
+  ],
+  "sectionOrder": "b-variant",
+  "headline": "Cansado de Leads que Nunca Fecham Negócio?",
+  "subheadline": "O problema não é falta de contatos — é falta de qualificação. A solução está na estrutura digital do seu negócio.",
+  "seo": {
+    "title": "Sem Leads Qualificados? Como Atrair Quem Vai Comprar",
+    "description": "Deixe de perder tempo com leads que não convertem. Construa funil digital que atrai e qualifica prospects prontos para comprar.",
+    "keywords": [
+      "leads qualificados",
+      "funil de vendas digital",
+      "atrair clientes certos",
+      "qualificação de leads"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Quero Leads que Fecham Negócio",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Recebo muitos contatos mas poucos fecham negócio. Podem me ajudar a qualificar melhor meus leads?"
+  },
+  "exitIntent": {
+    "offerText": "Leads ruins desperdiçam seu tempo mais valioso",
+    "offerSubtext": "Um funil bem estruturado reduz em 60% o tempo gasto com prospects que não vão comprar.",
+    "ctaLabel": "Quero Leads Melhores",
+    "ctaHref": "#contato"
+  },
+  "showSystemForgeLogo": false,
+  "footerLinks": [
+    {
+      "label": "Blog",
+      "href": "/blog"
+    },
+    {
+      "label": "FAQ",
+      "href": "/faq"
+    }
+  ],
+  "crossLinks": [
+    {
+      "href": "https://d03.DOMAIN.com",
+      "anchor": "Diagnóstico gratuito da sua maturidade digital",
+      "context": "article"
+    },
+    {
+      "href": "https://c02.DOMAIN.com",
+      "anchor": "Landing page otimizada para geração de leads",
+      "context": "footer"
+    },
+    {
+      "href": "https://d02.DOMAIN.com",
+      "anchor": "Calculadora de custo de app",
+      "context": "footer"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "lastReviewed": "2026-04-12"
+}

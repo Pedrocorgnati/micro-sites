@@ -1,0 +1,25 @@
+{
+  "headline": "Dúvidas sobre desenvolvimento de aplicativo web",
+  "items": [
+    {
+      "question": "Qual é o prazo para desenvolver um aplicativo web?",
+      "answer": "Aplicativos simples (1-3 módulos) ficam prontos em 4 a 8 semanas. Sistemas complexos com múltiplas integrações levam de 2 a 4 meses. Definimos o prazo exato no briefing técnico."
+    },
+    {
+      "question": "Preciso ter servidor ou hospedagem para contratar?",
+      "answer": "Não. Incluímos infraestrutura em cloud (Vercel, Supabase ou AWS) nos primeiros 6 meses. Após esse período, ajudamos a migrar o sistema para o plano que melhor atenda ao seu volume."
+    },
+    {
+      "question": "Meu aplicativo web vai se conectar com as ferramentas que já uso (CRM, ERP, planilhas)?",
+      "answer": "Na maioria dos casos, sim. Desenvolvemos integrações via API REST, webhooks e importação de dados para conectar seu novo aplicativo web ao CRM, ERP ou sistema existente. Avaliamos a viabilidade técnica no briefing."
+    },
+    {
+      "question": "Consigo editar o conteúdo do sistema depois?",
+      "answer": "Sim. Entregamos com painel administrativo para você cadastrar e editar dados sem precisar de programador. Alterações de funcionalidade requerem desenvolvimento adicional."
+    },
+    {
+      "question": "O que acontece se o sistema apresentar algum problema?",
+      "answer": "Oferecemos SLA de 24h para bugs críticos nos primeiros 6 meses. Após esse período, disponibilizamos planos de suporte e manutenção contínua."
+    }
+  ]
+}

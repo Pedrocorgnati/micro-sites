@@ -1,0 +1,61 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "a08",
+  "name": "PetCare Veterinária",
+  "category": "A",
+  "accentColor": "#2563EB",
+  "wave": 3,
+  "funnelStage": "consideration",
+  "showSystemForgeLogo": false,
+  "template": "landing",
+  "hasBlog": true,
+  "schema": [
+    "Organization",
+    "FAQPage",
+    "LocalBusiness"
+  ],
+  "seo": {
+    "title": "PetCare Veterinária — Clínica Veterinária em [Cidade]",
+    "description": "Consultas veterinárias, vacinas, banho e tosa, internação e cirurgias. Atendimento de emergência. Cuidado especializado para cães e gatos em [Cidade].",
+    "keywords": [
+      "veterinário",
+      "clínica veterinária",
+      "vacina pet",
+      "banho e tosa",
+      "emergência veterinária",
+      "cirurgia veterinária"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Agendar Consulta",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Vim pelo site PetCare Veterinária e gostaria de agendar uma consulta para meu pet."
+  },
+  "localBusiness": {
+    "type": "VeterinaryCare",
+    "address": "Av. dos Animais, 850, [Cidade] - [Estado]",
+    "phone": "+5511999990008",
+    "openingHours": "Mo-Sa 07:00-20:00",
+    "priceRange": "$$"
+  },
+  "footerLinks": [
+    {
+      "label": "Privacidade",
+      "href": "/privacidade"
+    },
+    {
+      "label": "Contato",
+      "href": "/contato"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "crossLinks": [
+    {
+      "href": "https://c01.DOMAIN.com",
+      "anchor": "Site imobiliário profissional para a sua região",
+      "context": "footer"
+    }
+  ],
+  "lastReviewed": "2026-04-12"
+}

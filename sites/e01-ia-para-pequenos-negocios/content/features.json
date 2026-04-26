@@ -1,0 +1,29 @@
+{
+  "headline": "O que o ForgeAI vai fazer pelo seu negócio",
+  "items": [
+    {
+      "title": "Atendimento com IA",
+      "description": "Treine a IA com informações do seu negócio. Ela responde clientes com precisão, no seu tom, 24 horas por dia."
+    },
+    {
+      "title": "Gerador de conteúdo",
+      "description": "Posts para Instagram, e-mails de vendas, descrições de produtos. Crie em minutos o que levaria horas."
+    },
+    {
+      "title": "Análise inteligente",
+      "description": "Pergunte em português sobre seu negócio e receba insights úteis. Sem planilhas, sem relatórios complexos."
+    },
+    {
+      "title": "Integração WhatsApp",
+      "description": "Conecte com seu WhatsApp Business e automatize conversas com clientes sem precisar programar."
+    },
+    {
+      "title": "Templates por nicho",
+      "description": "Configurações prontas para restaurantes, clínicas, lojas, prestadores de serviço e mais."
+    },
+    {
+      "title": "Tudo em português",
+      "description": "Interface, suporte e IA treinada para o contexto brasileiro. Zero barreira de idioma."
+    }
+  ]
+}

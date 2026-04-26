@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "activeWave": 1,
+  "addedLinks": 0,
+  "removedLinks": 0,
+  "sitesTouched": [],
+  "siteCount": 37,
+  "auditOk": true,
+  "progressiveLinksStdoutTail": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nWAVE-AWARE INTERLINKING — wave 1 (APPLY)\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nSites no manifesto: 37\nSites alterados:    0\nNenhuma mudanca necessaria — todos crossLinks ja respeitam a onda.\n",
+  "timestamp": "2026-04-21T20:56:51.964Z"
+}

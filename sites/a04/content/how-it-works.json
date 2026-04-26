@@ -1,0 +1,25 @@
+{
+  "headline": "Como funciona a consulta inicial gratuita?",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Agende pelo WhatsApp ou site",
+      "description": "Entre em contato e informe brevemente sua situação. Nossa equipe agenda a consulta em até 24h."
+    },
+    {
+      "number": 2,
+      "title": "Análise do caso",
+      "description": "Na consulta, o advogado ouve detalhadamente seu caso, analisa documentos e identifica as opções disponíveis."
+    },
+    {
+      "number": 3,
+      "title": "Orientação jurídica clara",
+      "description": "Explicamos as possibilidades legais em linguagem acessível, sem promessas, com transparência sobre o processo."
+    },
+    {
+      "number": 4,
+      "title": "Proposta de atuação",
+      "description": "Se decidir contratar, apresentamos proposta de honorários clara e assinamos contrato com escopo definido."
+    }
+  ]
+}

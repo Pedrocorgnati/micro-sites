@@ -19,7 +19,7 @@ export const validCatDConfig: SiteConfigInput = {
   cta: {
     primaryLabel: 'Ver resultado completo',
     formEndpoint: 'https://api.staticforms.xyz/submit',
-    whatsappNumber: '5511999999999',
+    whatsappNumber: '5512920043268',
     whatsappMessage: 'Olá! Calculei o custo do meu site e quero conversar.',
   },
   leadMagnet: {
@@ -29,6 +29,7 @@ export const validCatDConfig: SiteConfigInput = {
     fullResultPath: '/resultado',
   },
   showSystemForgeLogo: true,
+  contactEmail: 'contato@forjadesistemas.com.br',
 };
 
 export const validCatCConfig: SiteConfigInput = {

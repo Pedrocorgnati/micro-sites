@@ -1,0 +1,25 @@
+{
+  "headline": "Perguntas Frequentes sobre Custo de App",
+  "items": [
+    {
+      "question": "Qual a diferença entre app nativo e híbrido?",
+      "answer": "Apps nativos são desenvolvidos separadamente para iOS (Swift) e Android (Kotlin), com melhor performance. Apps híbridos (React Native, Flutter) compartilham o código entre as plataformas, custando menos e sendo lançados mais rapidamente."
+    },
+    {
+      "question": "Posso começar com um MVP e evoluir depois?",
+      "answer": "Sim, e é a abordagem mais recomendada. Um MVP (Produto Mínimo Viável) cobre as funcionalidades essenciais, permite validar a ideia com usuários reais e reduz o risco de investir em funcionalidades que ninguém usa."
+    },
+    {
+      "question": "Quanto tempo leva para desenvolver um app?",
+      "answer": "Um MVP simples leva de 2 a 4 meses. Apps de complexidade média levam de 4 a 8 meses. Projetos complexos com integrações e backend customizado podem levar mais de 12 meses."
+    },
+    {
+      "question": "A estimativa da calculadora é um orçamento oficial?",
+      "answer": "É uma estimativa baseada em dados reais do mercado brasileiro. Para um orçamento detalhado e personalizado, entre em contato após usar a calculadora — analisamos seu projeto sem custo."
+    },
+    {
+      "question": "Quais são os custos além do desenvolvimento?",
+      "answer": "Considere também: Apple Developer Program (US$ 99/ano), Google Play Console (US$ 25 taxa única), hospedagem do backend, serviços externos (push notifications, mapas, pagamentos) e manutenção contínua."
+    }
+  ]
+}

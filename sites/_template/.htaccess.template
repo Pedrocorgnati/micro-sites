@@ -1,0 +1,68 @@
+# Redirect 301 para dominio proprio — gerado por scripts/generate-htaccess-redirects.ts
+# Preserva path e query string. Substituir {NEW_DOMAIN} pelo dominio alvo.
+
+RewriteEngine On
+
+# TASK-21 ST001 / CL-639 — Force HTTPS (qualquer host nao-https sobe para 301)
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L,QSA]
+
+# TASK-21 ST001 / CL-638 — Security headers padronizados
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header always set X-Frame-Options "DENY"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=()"
+  # Cross-Origin policies (relaxadas para permitir embeds GA4/SF; ajustar se inline only).
+  Header always set X-Permitted-Cross-Domain-Policies "none"
+</IfModule>
+
+# TASK-25 ST002 / CL-192, CL-587 — Bot scraping mitigation (rate limit)
+# Apenas se Hostinger Shared tiver mod_evasive (nem todos shared providers tem).
+# Se nao tiver, este bloco e ignorado silenciosamente (mod_evasive ausente).
+<IfModule mod_evasive20.c>
+  DOSPageCount 30
+  DOSSiteCount 100
+  DOSPageInterval 60
+  DOSSiteInterval 60
+  DOSBlockingPeriod 600
+  DOSEmailNotify footstockbr@gmail.com
+</IfModule>
+
+# Bot scraping fase 1 — bloqueio por User-Agent suspeito conhecido
+RewriteCond %{HTTP_USER_AGENT} (semrush|ahrefs|mj12bot|petalbot|dotbot|seokicks) [NC]
+RewriteRule ^(quanto-custa|diagnostico|resultado|simulador) - [F,L]
+
+# Forcar HTTPS no dominio alvo (apos redirect generico acima)
+RewriteCond %{HTTP_HOST} ^(?:www\.)?{OLD_HOST}$ [NC]
+RewriteRule ^(.*)$ https://{NEW_DOMAIN}/$1 [R=301,L,QSA]
+
+# Canonicalizacao: www → apex
+RewriteCond %{HTTP_HOST} ^www\.{NEW_DOMAIN}$ [NC]
+RewriteRule ^(.*)$ https://{NEW_DOMAIN}/$1 [R=301,L,QSA]
+
+# Sitemap do novo dominio
+<IfModule mod_headers.c>
+  <FilesMatch "sitemap.*\.xml$">
+    Header set X-Robots-Tag "noindex, nofollow" env=REDIRECT_SITEMAP
+  </FilesMatch>
+</IfModule>
+
+# CL-617: Redirects 301 de artigos despublicados — gerenciado por scripts/depublish-article.ts
+# Nao editar manualmente entre os marcadores abaixo.
+# DEPUBLISHED_REDIRECTS_START
+# DEPUBLISHED_REDIRECTS_END
+
+# CL-521: Hotlink protection para PDFs — bloqueia banda-leech e
+# scraping de leads que pegariam relatorio sem visitar o site.
+# {NEW_DOMAIN} substituido por scripts/create-site.sh / generate-htaccess-redirects.
+<FilesMatch "\.pdf$">
+  SetEnvIfNoCase Referer "^https?://(www\.)?{NEW_DOMAIN}/" allowed_referer
+  # Permite acesso direto sem Referer (download via "salvar como")
+  SetEnvIfNoCase Referer "^$" allowed_referer
+  Order deny,allow
+  Deny from all
+  Allow from env=allowed_referer
+</FilesMatch>

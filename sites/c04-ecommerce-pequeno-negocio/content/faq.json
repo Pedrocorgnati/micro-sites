@@ -1,0 +1,25 @@
+{
+  "headline": "Dúvidas sobre criação de e-commerce para pequeno negócio",
+  "items": [
+    {
+      "question": "Em quanto tempo minha loja fica pronta?",
+      "answer": "Lojas com até 50 produtos e sem customizações complexas ficam prontas em 2 a 3 semanas. Para lojas maiores ou com integrações específicas, o prazo é de 4 a 6 semanas após o briefing aprovado."
+    },
+    {
+      "question": "Qual gateway de pagamento vocês usam?",
+      "answer": "Trabalhamos com Mercado Pago, PagSeguro e Stripe — os mais usados no Brasil. Você recebe Pix, cartão de crédito e débito sem precisar abrir conta em banco específico."
+    },
+    {
+      "question": "Preciso pagar comissão por venda?",
+      "answer": "Não para nós. Você paga apenas as taxas do gateway de pagamento escolhido (geralmente 2-4% por transação). Sem comissão mensal sobre suas vendas."
+    },
+    {
+      "question": "Posso migrar produtos de outra plataforma?",
+      "answer": "Sim. Importamos catálogos de plataformas como Shopify, WooCommerce e Nuvemshop via exportação CSV. O processo é feito pela nossa equipe sem custo adicional."
+    },
+    {
+      "question": "A loja vai aparecer no Google?",
+      "answer": "Sim. Cada página de produto é otimizada para SEO e compatível com Google Shopping. Também configuramos o Google Merchant Center para que seus produtos apareçam nos anúncios gratuitos de shopping."
+    }
+  ]
+}

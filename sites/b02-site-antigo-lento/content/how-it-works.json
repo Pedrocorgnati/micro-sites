@@ -1,0 +1,20 @@
+{
+  "headline": "Como modernizamos seu site em 7 dias",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Auditoria e briefing",
+      "description": "Analisamos seu site atual, identificamos os problemas e entendemos seus objetivos de negócio."
+    },
+    {
+      "number": 2,
+      "title": "Desenvolvimento e migração",
+      "description": "Criamos o novo site mantendo seu domínio, URLs e histórico de SEO. Você acompanha e aprova."
+    },
+    {
+      "number": 3,
+      "title": "Lançamento monitorado",
+      "description": "Publicamos, verificamos performance, mobile e formulários. 30 dias de suporte incluso."
+    }
+  ]
+}

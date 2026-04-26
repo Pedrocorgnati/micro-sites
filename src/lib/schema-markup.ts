@@ -9,7 +9,7 @@ export function buildOrganizationSchema(config: SiteConfig, baseUrl: string): Js
     '@type': 'Organization',
     name: config.name,
     url: baseUrl,
-    logo: `${baseUrl}/logo.svg`,
+    logo: `${baseUrl}/brand/sf-logo.webp`,
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: `+${config.cta.whatsappNumber}`,
@@ -70,18 +70,43 @@ export function buildArticleSchema(
   config: SiteConfig,
   baseUrl: string
 ): JsonLD {
+  const authorName =
+    article.authorMeta?.name ?? article.author ?? config.name ?? 'Equipe SystemForge';
+  const authorUrl = article.authorMeta?.url ?? 'https://systemforge.com.br/sobre';
+
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: article.title,
     description: article.description,
-    author: { '@type': 'Person', name: article.author ?? config.name },
+    author: {
+      '@type': 'Person',
+      name: authorName,
+      url: authorUrl,
+    },
     datePublished: article.date,
+    dateModified: article.dateModified ?? article.date,
     publisher: {
       '@type': 'Organization',
       name: config.name,
-      logo: `${baseUrl}/logo.svg`,
+      logo: `${baseUrl}/brand/sf-logo.webp`,
     },
+  };
+}
+
+export function buildBreadcrumbList(
+  baseUrl: string,
+  items: Array<{ name: string; url: string }>,
+): JsonLD {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: item.name,
+      item: `${baseUrl.replace(/\/$/, '')}${item.url.startsWith('/') ? item.url : `/${item.url}`}`,
+    })),
   };
 }
 

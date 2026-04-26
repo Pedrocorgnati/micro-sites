@@ -1,0 +1,130 @@
+# =============================================================================
+# blog-monthly.yml — Execucao mensal do pipeline /blog:* + reconciliacao
+#
+# Disparos:
+#   - cron: 05:00 UTC no dia 1 de cada mes
+#   - workflow_dispatch (manual)
+#
+# Secrets necessarios:
+#   ANTHROPIC_API_KEY — token Claude (para o CLI rodar /blog:*)
+#
+# Jobs:
+#   1. monthly-pipeline — invoca scripts/blog-pipeline-wrapper.sh --mode=monthly
+#   2. reconcile        — valida cadencia (exit 1 se deficit)
+# =============================================================================
+
+name: Blog — Pipeline mensal
+
+on:
+  schedule:
+    # Minuto Hora Dia Mes DiaSemana — 05:00 UTC do dia 1
+    - cron: '0 5 1 * *'
+  workflow_dispatch:
+    inputs:
+      site:
+        description: 'Slug unico (vazio = todos com hasBlog=true)'
+        required: false
+        default: ''
+      mode:
+        description: 'Modo (monthly|refresh)'
+        required: false
+        default: 'monthly'
+
+concurrency:
+  group: blog-monthly
+  cancel-in-progress: false
+
+env:
+  NODE_VERSION: '20'
+
+jobs:
+  monthly-pipeline:
+    name: Monthly — /blog:* via wrapper
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Claude Code CLI
+        run: npm i -g @anthropic-ai/claude-code
+
+      - name: Verify CLI is available
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: claude --version
+
+      - name: Run blog pipeline wrapper (monthly)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          SITE_FLAG="${{ github.event.inputs.site }}"
+          MODE_FLAG="${{ github.event.inputs.mode || 'monthly' }}"
+          if [ -n "$SITE_FLAG" ]; then
+            ./scripts/blog-pipeline-wrapper.sh --mode="$MODE_FLAG" --site="$SITE_FLAG"
+          else
+            ./scripts/blog-pipeline-wrapper.sh --mode=monthly
+          fi
+
+      - name: Upload pipeline logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: blog-pipeline-logs-${{ github.run_id }}
+          path: logs/blog-pipeline/
+          if-no-files-found: ignore
+
+      - name: Open PR with generated content
+        if: github.event_name == 'schedule'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: 'content(blog): monthly batch ${{ github.run_id }}'
+          branch: 'blog/monthly-${{ github.run_id }}'
+          title: 'Blog: batch mensal ${{ github.run_id }}'
+          body: |
+            Gerado automaticamente pelo workflow `blog-monthly.yml`.
+            Comandos invocados: /blog:expand-keywords, /blog:cluster-keywords,
+            /blog:discover-intents, /blog:prioritize-topics, /blog:generate-briefs,
+            /blog:write-articles, /blog:eeat-inject, /blog:quality-gate,
+            /blog:build-metadata, /blog:review-seo, /blog:build-internal-links,
+            /blog:schedule-batch.
+
+  reconcile:
+    name: Reconcile — cadencia por categoria
+    needs: monthly-pipeline
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run blog-inventory-reconcile
+        run: npm run blog:reconcile
+
+      - name: Upload reconcile report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: blog-inventory-report-${{ github.run_id }}
+          path: output/blog-inventory-report.json
+          if-no-files-found: ignore

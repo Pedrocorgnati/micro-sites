@@ -32,15 +32,17 @@ const VALID_CONFIG = {
   cta: {
     primaryLabel: 'Solicitar Orçamento',
     formEndpoint: 'https://api.staticforms.xyz/submit/TOKEN',
-    whatsappNumber: '5511999999999',
+    whatsappNumber: '5511987654321',
     whatsappMessage: 'Olá! Vim pelo site.',
   },
+  contactEmail: 'qa@forjadesistemas.com.br',
 };
 
 beforeAll(() => {
   // Setup: criar site de teste com config válido
   fs.mkdirSync(path.join(TEST_SITE_DIR, 'content'), { recursive: true });
-  fs.mkdirSync(path.join(TEST_SITE_DIR, 'blog'), { recursive: true });
+  // loadBlogArticles le de blog/articles/ — usar mesmo caminho aqui
+  fs.mkdirSync(path.join(TEST_SITE_DIR, 'blog', 'articles'), { recursive: true });
   fs.writeFileSync(
     path.join(TEST_SITE_DIR, 'config.json'),
     JSON.stringify(VALID_CONFIG)
@@ -86,7 +88,8 @@ describe('loadSiteConfig', () => {
 
 describe('validateAllConfigs', () => {
   it('[SUCCESS] agrega erros de múltiplos configs inválidos', () => {
-    const dirs = ['_test-bad-1', '_test-bad-2'].map((n) =>
+    // Nao usar prefixo `_` pois getAllSlugs filtra dirs com `_`/`.`
+    const dirs = ['zzz-bad-1', 'zzz-bad-2'].map((n) =>
       path.join(TEST_SITES_DIR, n)
     );
 
@@ -122,10 +125,15 @@ describe('getAllSlugs', () => {
     expect(slugs.every((s) => !s.startsWith('.'))).toBe(true);
   });
 
-  it('[SUCCESS] retorna apenas diretórios', () => {
+  it('[SUCCESS] retorna apenas diretórios (exclui prefixo _)', () => {
     const slugs = getAllSlugs();
     expect(Array.isArray(slugs)).toBe(true);
-    expect(slugs).toContain(TEST_SLUG);
+    expect(slugs.length).toBeGreaterThan(0);
+    // Dirs com prefixo _ são excluídos (mesma lógica dos ocultos com .)
+    expect(slugs).not.toContain(TEST_SLUG);
+    expect(slugs.every((s) => !s.startsWith('_'))).toBe(true);
+    // Um slug real conhecido deve estar presente
+    expect(slugs).toContain('d01-calculadora-custo-site');
   });
 });
 
@@ -164,25 +172,25 @@ describe('loadPageContent', () => {
 
 describe('loadBlogArticles', () => {
   it('[SUCCESS] carrega artigos e ordena por data decrescente', async () => {
-    const baseSlug = 'd01-calculadora-custo-site';
-    const baseDir = path.join(TEST_SITES_DIR, baseSlug, 'blog');
-    fs.mkdirSync(baseDir, { recursive: true });
+    // Usa TEST_SLUG (pasta isolada criada no beforeAll) para não interferir em conteúdo real
+    const blogDir = path.join(TEST_SITE_DIR, 'blog', 'articles');
 
     fs.writeFileSync(
-      path.join(baseDir, 'artigo-antigo.md'),
+      path.join(blogDir, 'artigo-antigo.md'),
       '---\nslug: artigo-antigo\ntitle: Artigo Antigo com Título Completo Aqui\ndescription: Descrição do artigo antigo que deve ter ao menos 50 caracteres para validar.\ndate: 2024-01-01\nauthor: Pedro\n---\nConteúdo antigo.'
     );
     fs.writeFileSync(
-      path.join(baseDir, 'artigo-novo.md'),
+      path.join(blogDir, 'artigo-novo.md'),
       '---\nslug: artigo-novo\ntitle: Artigo Novo com Título Bem Completo\ndescription: Descrição do artigo novo que deve ter ao menos 50 caracteres para validar o schema.\ndate: 2024-06-01\nauthor: Pedro\n---\nConteúdo novo.'
     );
 
-    const articles = await loadBlogArticles(baseSlug);
+    const articles = await loadBlogArticles(TEST_SLUG);
     expect(articles[0].date).toBe('2024-06-01');
     expect(articles[1].date).toBe('2024-01-01');
 
-    // Cleanup
-    fs.rmSync(baseDir, { recursive: true, force: true });
+    // Cleanup apenas dos arquivos de teste (não remove a pasta — afterAll cuida disso)
+    fs.rmSync(path.join(blogDir, 'artigo-antigo.md'), { force: true });
+    fs.rmSync(path.join(blogDir, 'artigo-novo.md'), { force: true });
   });
 
   it('[SUCCESS] retorna [] quando pasta blog não existe', async () => {
@@ -191,7 +199,7 @@ describe('loadBlogArticles', () => {
   });
 
   it('[ERROR] BUILD_004 — frontmatter inválido', async () => {
-    const badBlogDir = path.join(TEST_SITE_DIR, 'blog');
+    const badBlogDir = path.join(TEST_SITE_DIR, 'blog', 'articles');
     fs.writeFileSync(
       path.join(badBlogDir, 'bad-post.md'),
       '---\nslug: bad\ntitle: Curto\ndate: not-a-date\nauthor: X\n---\nConteúdo.'

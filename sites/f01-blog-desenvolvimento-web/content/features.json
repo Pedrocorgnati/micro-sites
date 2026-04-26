@@ -1,0 +1,20 @@
+{
+  "headline": "Por que contratar a SystemForge Digital?",
+  "items": [
+    {
+      "icon": "file-text",
+      "title": "Orçamento Detalhado e Transparente",
+      "description": "Você recebe o custo discriminado por item: design, desenvolvimento, SEO, hospedagem e suporte. Sem letra miúda."
+    },
+    {
+      "icon": "trending-up",
+      "title": "Sites Otimizados para Google",
+      "description": "SEO técnico incluído: velocidade de carregamento, dados estruturados, meta tags e sitemap. Seu site encontrado por quem busca."
+    },
+    {
+      "icon": "shield-check",
+      "title": "Prazo Cumprido com Contrato",
+      "description": "Entrega em 10 a 21 dias úteis, com contrato claro sobre escopo, prazo e o que acontece em caso de atraso."
+    }
+  ]
+}

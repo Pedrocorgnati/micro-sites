@@ -1,0 +1,25 @@
+{
+  "headline": "Por que escolher a Contábil Precision?",
+  "items": [
+    {
+      "icon": "shield",
+      "title": "Zero multas por atraso",
+      "description": "Monitoramos todos os prazos fiscais e entregamos antes do vencimento. Nenhum cliente nosso levou multa por esquecimento nos últimos 5 anos."
+    },
+    {
+      "icon": "file-text",
+      "title": "Especialistas no Simples Nacional",
+      "description": "Domínio completo do Simples, Lucro Presumido e Lucro Real. Planejamento tributário para pagar apenas o que é devido — sem mais, sem menos."
+    },
+    {
+      "icon": "smartphone",
+      "title": "Portal do cliente 24h",
+      "description": "Acesse balancetes, notas fiscais, guias de pagamento e documentos a qualquer hora pelo portal digital. Sem precisar ligar ou esperar email."
+    },
+    {
+      "icon": "users",
+      "title": "Contador dedicado",
+      "description": "Cada cliente tem um contador de referência que conhece seu negócio. Sem call center, sem atendente que não sabe a história da sua empresa."
+    }
+  ]
+}

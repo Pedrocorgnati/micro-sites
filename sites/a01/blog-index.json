@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "exame-preventivo-lista-completa",
+    "title": "Exames Preventivos: Lista Completa por Idade e Sexo",
+    "description": "Quais exames preventivos fazer em cada fase da vida? Confira a lista por faixa etária aprovada pelo Ministério da Saúde e pela SBM.",
+    "tags": [
+      "exames preventivos",
+      "saúde preventiva",
+      "check-up",
+      "Ministério da Saúde"
+    ],
+    "date": "2026-04-09",
+    "readingTime": 6,
+    "category": "Caso de Uso",
+    "funnelStage": "TOFU"
+  },
+  {
+    "slug": "plano-de-saude-vs-consulta-particular",
+    "title": "Plano de Saúde vs Consulta Particular: Qual Vale Mais?",
+    "description": "Compare custos, cobertura e tempo de espera. Saiba quando usar plano de saúde e quando a consulta particular é mais vantajosa.",
+    "tags": [
+      "saúde",
+      "plano de saúde",
+      "consulta médica",
+      "economia"
+    ],
+    "date": "2026-04-09",
+    "readingTime": 5,
+    "category": "Caso de Uso",
+    "funnelStage": "MOFU"
+  },
+  {
+    "slug": "sintomas-que-exigem-pronto-socorro",
+    "title": "Sintomas que Exigem Pronto-Socorro: Não Espere",
+    "description": "Saiba quais sintomas são emergência médica real e precisam de pronto-socorro imediato. Lista baseada nos protocolos do CFM e do ACLS.",
+    "tags": [
+      "pronto-socorro",
+      "emergência médica",
+      "sinais de alerta",
+      "saúde"
+    ],
+    "date": "2026-04-09",
+    "readingTime": 5,
+    "category": "Caso de Uso",
+    "funnelStage": "TOFU"
+  },
+  {
+    "slug": "telemedicina-como-funciona-brasil",
+    "title": "Telemedicina no Brasil: Como Funciona em 2026",
+    "description": "Entenda como funciona a telemedicina no Brasil, quais plataformas são regulamentadas pelo CFM e quando você pode usar consulta online.",
+    "tags": [
+      "telemedicina",
+      "consulta online",
+      "CFM",
+      "saúde digital"
+    ],
+    "date": "2026-04-09",
+    "readingTime": 5,
+    "category": "Caso de Uso",
+    "funnelStage": "TOFU"
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "headline": "Dúvidas sobre automação de negócios",
+  "items": [
+    {
+      "question": "Meu negócio é pequeno. Automação faz sentido para mim?",
+      "answer": "Sim. Quanto menor a equipe, mais cada hora importa. Automações permitem que 1-2 pessoas operem com eficiência de uma equipe maior."
+    },
+    {
+      "question": "Precisa de conhecimento técnico para usar?",
+      "answer": "Não. Entregamos sistemas prontos e treinados para a sua equipe. Você usa como qualquer aplicativo do dia a dia."
+    },
+    {
+      "question": "Funciona com WhatsApp Business?",
+      "answer": "Sim. Integramos com WhatsApp Business API para automação de mensagens, fluxos de atendimento e notificações."
+    },
+    {
+      "question": "E se a automação errar alguma coisa?",
+      "answer": "Você mantém controle total. Pode pausar, ajustar ou desativar qualquer automação a qualquer momento. Monitoramos e ajustamos em tempo real."
+    },
+    {
+      "question": "Qual o prazo para implementação?",
+      "answer": "Depende da complexidade. Automações simples (WhatsApp, agendamento) ficam prontas em 7-14 dias. Integrações mais complexas podem levar 3-4 semanas."
+    }
+  ]
+}

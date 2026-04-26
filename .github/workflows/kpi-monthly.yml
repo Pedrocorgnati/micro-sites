@@ -1,0 +1,96 @@
+name: KPI Monthly
+
+# TASK-27 ST002 / CL-012, CL-013, CL-014 — tracking dos 3 KPIs canonicos
+
+on:
+  schedule:
+    - cron: '0 8 5 * *'   # dia 5 de cada mes 08:00 UTC (apos GSC fechar mes anterior)
+  workflow_dispatch:
+    inputs:
+      month:
+        description: 'YYYY-MM (default: mes atual)'
+        required: false
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Decode GSC service account
+        env:
+          GSC_SA_BASE64: ${{ secrets.GSC_SERVICE_ACCOUNT_BASE64 }}
+        run: |
+          mkdir -p secrets
+          if [ -n "$GSC_SA_BASE64" ]; then
+            echo "$GSC_SA_BASE64" | base64 -d > secrets/gsc-service-account.json
+          else
+            echo "::warning::GSC_SERVICE_ACCOUNT_BASE64 ausente — KPI 1 sera 0"
+            echo '{}' > secrets/gsc-service-account.json
+          fi
+
+      - name: Run KPI tracker
+        id: kpi
+        env:
+          GSC_CREDENTIALS: secrets/gsc-service-account.json
+        run: |
+          set +e
+          if [ -n "${{ inputs.month }}" ]; then
+            npx tsx scripts/kpi-tracker.ts --month "${{ inputs.month }}"
+          else
+            npx tsx scripts/kpi-tracker.ts
+          fi
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          # exit 2 = alertas; nao falhar workflow para PR ainda abrir
+          exit 0
+
+      - name: Cleanup secrets
+        if: always()
+        run: rm -f secrets/gsc-service-account.json
+
+      - name: Open PR with KPI report
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: 'chore(kpi): monthly report ${{ github.run_id }}'
+          title: 'chore(kpi): monthly KPI report'
+          body: |
+            ## KPI Monthly Report
+
+            Tracking dos 3 KPIs canonicos:
+            1. % sites com keyword em 1a pag GSC (meta 30%)
+            2. Leads/mes (meta 20+)
+            3. Projetos fechados/mes (meta 2-3)
+
+            Conferir: `output/reports/kpi-monthly/`
+
+            Exit code do tracker: ${{ steps.kpi.outputs.exit_code }}
+            (2 = alertas detectados; vide secao "Alertas" do report)
+          branch: kpi/monthly-${{ github.run_id }}
+          delete-branch: true
+          labels: |
+            automation
+            kpi
+
+      - name: Open issue if alerts triggered
+        if: steps.kpi.outputs.exit_code == '2'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `KPI alert — ${new Date().toISOString().slice(0, 7)} (run ${context.runId})`,
+              body: `Tracker reportou KPIs <50% da meta. Acao: revisar report em \`output/reports/kpi-monthly/\` e:\n\n- Se KPI 1 baixo: revisar SEO + content refresh\n- Se KPI 2 baixo: revisar CTAs + audit forms\n- Se KPI 3 baixo: revisar pipeline comercial / pitches\n\n2 meses consecutivos com alerta = revisar plano estrategico.`,
+              labels: ['kpi', 'alert', 'monthly']
+            });

@@ -24,6 +24,7 @@ export function ProblemSection({
           </h2>
           <div
             className="prose"
+            style={{ color: '#374151' }}
             dangerouslySetInnerHTML={{ __html: content }}
           />
         </div>

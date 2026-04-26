@@ -1,0 +1,25 @@
+{
+  "headline": "Como é sua experiência no Studio Beauté?",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Agende seu horário",
+      "description": "Envie mensagem pelo WhatsApp com o serviço desejado e preferiência de horário. Confirmamos em minutos e reservamos seu espaço."
+    },
+    {
+      "number": 2,
+      "title": "Avaliação inicial",
+      "description": "Na chegada, sua profissional conversa sobre seus objetivos, analisa o estado atual do cabelo ou pele e indica a melhor abordagem."
+    },
+    {
+      "number": 3,
+      "title": "Serviço com atenção total",
+      "description": "Ambiente confortável, produtos de qualidade e profissional dedicada exclusivamente a você durante todo o atendimento."
+    },
+    {
+      "number": 4,
+      "title": "Finalização e dicas de manutenção",
+      "description": "Orientações personalizadas para manter o resultado em casa, recomendação de produtos e agendamento do retorno."
+    }
+  ]
+}

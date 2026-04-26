@@ -1,0 +1,44 @@
+/* ============================================================
+   src/styles/print.css (CL-623)
+   ============================================================
+   Print stylesheet aplicado em /resultado (FullResult.tsx).
+   Oculta header/footer/CTA, expande URLs e protege quebras
+   de pagina dentro de tabelas de resultados.
+   ============================================================ */
+
+@media print {
+  header,
+  footer,
+  nav,
+  .cta,
+  .skip-link,
+  [data-print-hide] {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  a::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.8em;
+    color: #444;
+  }
+
+  /* Resultados / tabelas devem evitar quebra dentro */
+  .result-table,
+  [data-print-keep] {
+    page-break-inside: avoid;
+  }
+
+  /* Largura full em print */
+  main,
+  .result-container {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}

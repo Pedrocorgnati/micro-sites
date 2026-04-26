@@ -1,0 +1,26 @@
+{
+  "headline": "O que nossos pacientes dizem",
+  "testimonials": [
+    {
+      "name": "Ana Rodrigues",
+      "role": "Paciente",
+      "business": "",
+      "quote": "Finalmente encontrei uma clínica onde me sinto acolhida. O agendamento online é prático e os médicos são extremamente atentos. Recomendo para toda a família!",
+      "rating": 5
+    },
+    {
+      "name": "Carlos Ferreira",
+      "role": "Empresário",
+      "business": "Ferreira & Cia",
+      "quote": "Precisava de exames com urgência e consegui marcar em menos de 24h. Resultado rápido, atendimento excelente. Nunca mais vou a outro lugar.",
+      "rating": 5
+    },
+    {
+      "name": "Mariana Costa",
+      "role": "Professora",
+      "business": "",
+      "quote": "Atendo meus filhos aqui há 3 anos. A equipe de pediatria é incrível, paciente e explica tudo com clareza. Ambiente limpo e muito profissional.",
+      "rating": 5
+    }
+  ]
+}

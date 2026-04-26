@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { TIMING } from '@/types';
+import { TIMING, STORAGE_KEYS } from '@/types';
 
 interface SavedProgress {
   answers: Record<string, string>;
@@ -19,7 +19,7 @@ export function ProgressBanner({ slug, onRetomar, onComecarDoZero }: ProgressBan
   const [saved, setSaved] = useState<SavedProgress | null>(null);
 
   useEffect(() => {
-    const key = `calc_progress_${slug}`;
+    const key = STORAGE_KEYS.calculatorProgress(slug);
     try {
       const raw = localStorage.getItem(key);
       if (!raw) return;
@@ -53,7 +53,7 @@ export function ProgressBanner({ slug, onRetomar, onComecarDoZero }: ProgressBan
           type="button"
           data-testid="progress-banner-retomar-button"
           onClick={() => onRetomar(saved)}
-          className="px-4 py-2 rounded-lg text-sm font-semibold text-white min-h-[44px] transition-opacity hover:opacity-90"
+          className="px-4 py-2 rounded-lg text-sm font-semibold text-white min-h-[44px] transition-opacity hover:opacity-90 focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 focus-visible:outline-none"
           style={{ backgroundColor: 'var(--color-accent)' }}
         >
           Retomar
@@ -62,7 +62,7 @@ export function ProgressBanner({ slug, onRetomar, onComecarDoZero }: ProgressBan
           type="button"
           data-testid="progress-banner-comecar-do-zero-button"
           onClick={onComecarDoZero}
-          className="px-4 py-2 rounded-lg text-sm font-medium border min-h-[44px] transition-colors hover:bg-gray-50"
+          className="px-4 py-2 rounded-lg text-sm font-medium border min-h-[44px] transition-colors hover:bg-gray-50 focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 focus-visible:outline-none"
           style={{ borderColor: 'var(--color-border)', color: 'var(--color-text-secondary)' }}
         >
           Começar do zero

@@ -1,0 +1,26 @@
+{
+  "headline": "Resultados após modernização",
+  "stats": [
+    { "value": "< 2s", "label": "Tempo de carregamento" },
+    { "value": "+67%", "label": "Mais leads captados" },
+    { "value": "95+", "label": "Score Lighthouse" },
+    { "value": "7 dias", "label": "Prazo de entrega" }
+  ],
+  "testimonials": [
+    {
+      "name": "Beatriz Souza",
+      "role": "Proprietária — Boutique de Roupas",
+      "quote": "Meu site velho demorava 8 segundos para carregar. Depois da modernização, carrega em 1,5s. As visitas aumentaram e os pedidos também."
+    },
+    {
+      "name": "Diego Ferreira",
+      "role": "Dentista",
+      "quote": "Clientes reclamavam que o site não abria no celular. Desde que modernizou, recebo muito mais contatos pelo formulário."
+    },
+    {
+      "name": "Priscila Nunes",
+      "role": "Arquiteta",
+      "quote": "O novo site ficou muito mais profissional. Google Analytics mostra aumento de 40% nas sessões em dois meses."
+    }
+  ]
+}

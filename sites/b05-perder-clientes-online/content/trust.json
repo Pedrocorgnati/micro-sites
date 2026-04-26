@@ -1,0 +1,26 @@
+{
+  "headline": "Empresas que pararam de perder clientes",
+  "stats": [
+    { "value": "+3x", "label": "Mais conversões" },
+    { "value": "-60%", "label": "Taxa de rejeição" },
+    { "value": "30 dias", "label": "Para ver diferença" },
+    { "value": "98%", "label": "Clientes satisfeitos" }
+  ],
+  "testimonials": [
+    {
+      "name": "Larissa Mendes",
+      "role": "Proprietária — Escola de Inglês",
+      "quote": "Perdia alunos para o concorrente que tinha um site mais moderno. Depois da reformulação, nossas matrículas online dobraram."
+    },
+    {
+      "name": "Anderson Silva",
+      "role": "Médico esteta",
+      "quote": "Descobri pelo Analytics que 80% dos visitantes saíam na página de procedimentos. Corrigimos isso e as consultas aumentaram muito."
+    },
+    {
+      "name": "Patricia Viana",
+      "role": "Consultora de RH",
+      "quote": "Tinha visitas no site mas ninguém entrava em contato. A SystemForge identificou o problema e resolveu em uma semana."
+    }
+  ]
+}

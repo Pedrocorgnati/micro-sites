@@ -1,0 +1,20 @@
+{
+  "headline": "Como modernizamos seu software legado com segurança",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Auditoria Técnica",
+      "description": "Analisamos seu sistema legado: código, banco de dados, integrações e pontos de risco operacional."
+    },
+    {
+      "number": 2,
+      "title": "Plano de Modernização",
+      "description": "Apresentamos um roadmap priorizado por risco: quais partes modernizar primeiro sem parar a operação."
+    },
+    {
+      "number": 3,
+      "title": "Migração Gradual",
+      "description": "Executamos as mudanças em sprints curtos com rollback garantido, sem downtime e sem perda de dados históricos."
+    }
+  ]
+}

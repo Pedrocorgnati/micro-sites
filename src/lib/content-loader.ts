@@ -79,9 +79,11 @@ export async function loadPageContent(slug: string, filename: string): Promise<P
 
 /** Carrega e ordena artigos de blog (BUILD_004 em frontmatter inválido) */
 export async function loadBlogArticles(slug: string): Promise<BlogArticle[]> {
-  const blogDir = path.join(SITES_DIR, slug, 'blog');
+  const articlesDir = path.join(SITES_DIR, slug, 'blog', 'articles');
 
-  if (!fs.existsSync(blogDir)) return [];
+  if (!fs.existsSync(articlesDir)) return [];
+
+  const blogDir = articlesDir;
 
   const files = fs.readdirSync(blogDir).filter((f) => f.endsWith('.md'));
   const articles: BlogArticle[] = [];
@@ -94,9 +96,14 @@ export async function loadBlogArticles(slug: string): Promise<BlogArticle[]> {
     // Normalizar: gray-matter parseia datas YAML como Date objects
     const normalizedFm = {
       ...fm,
-      date: fm.date instanceof Date
-        ? fm.date.toISOString().split('T')[0]
-        : fm.date,
+      date:
+        fm.date instanceof Date
+          ? fm.date.toISOString().split('T')[0]
+          : fm.date,
+      dateModified:
+        fm.dateModified instanceof Date
+          ? fm.dateModified.toISOString().split('T')[0]
+          : fm.dateModified,
     };
 
     // BUILD_004 — frontmatter malformado

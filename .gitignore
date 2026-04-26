@@ -32,6 +32,8 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+!.env.docker.example
 
 # vercel
 .vercel
@@ -64,3 +66,14 @@ out/
 /tmp/deploy-worktree-*
 /tmp/build-log-*.txt
 /tmp/micro-sites-*.lock
+
+# Sentry
+.sentryclirc
+.sentry-build-plugin/
+
+# Logs operacionais
+logs/sf-purge-*.json
+.cache/gsc-indexing-snapshots/
+
+# TASK-26 ST004 — dev deploy lock cooperativo
+.deploy-lock

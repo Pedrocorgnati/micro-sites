@@ -1,0 +1,25 @@
+{
+  "headline": "Perguntas Frequentes sobre ROI de Automação",
+  "items": [
+    {
+      "question": "Qual a economia média com automação de processos?",
+      "answer": "Estudos do Gartner e McKinsey apontam que empresas que automatizam processos repetitivos economizam entre 40% e 70% do tempo gasto nessas tarefas, com ROI médio de 250% nos primeiros 12 meses."
+    },
+    {
+      "question": "Quais processos têm maior retorno com automação?",
+      "answer": "Financeiro e faturamento (emissão de NF, conciliação), atendimento ao cliente (respostas automáticas, triagem), agendamento e logística. São processos com alto volume de repetição e baixa necessidade de julgamento humano."
+    },
+    {
+      "question": "Quanto tempo leva para implementar automação?",
+      "answer": "Depende do processo. Automações simples (respostas automáticas, emissão de NF) ficam prontas em 2 a 4 semanas. Integrações complexas entre sistemas podem levar de 2 a 4 meses."
+    },
+    {
+      "question": "A calculadora considera o custo da ferramenta de automação?",
+      "answer": "A calculadora foca na economia gerada pela automação. O custo das ferramentas (RPA, iPaaS, CRM) varia muito por solução. Nossa equipe pode detalhar o custo total de implementação após ver seu resultado."
+    },
+    {
+      "question": "A estimativa é garantida?",
+      "answer": "É uma projeção baseada em benchmarks do mercado. O resultado real depende de fatores específicos de cada empresa. Nossa equipe faz uma análise detalhada sem custo antes de qualquer compromisso."
+    }
+  ]
+}

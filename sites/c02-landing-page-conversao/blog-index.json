@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "copy-landing-page-formula",
+    "title": "Copy de Landing Page: Fórmula que Converte em 2026",
+    "description": "Aprenda a escrever copy de landing page que converte. Fórmulas testadas (PAS, AIDA, 4U), estrutura de headline e CTAs que funcionam.",
+    "tags": [
+      "copywriting",
+      "landing page",
+      "copy",
+      "headline",
+      "persuasão"
+    ],
+    "date": "2026-04-09",
+    "readingTime": 9,
+    "category": "Caso de Uso",
+    "funnelStage": "BOFU"
+  },
+  {
+    "slug": "cro-como-aumentar-conversao",
+    "title": "CRO: Como Aumentar Conversão do Seu Site em 2026",
+    "description": "Aprenda as principais técnicas de CRO (Otimização de Taxa de Conversão) para aumentar leads e vendas sem aumentar seu tráfego.",
+    "tags": [
+      "CRO",
+      "conversão",
+      "landing page",
+      "otimização",
+      "testes A/B"
+    ],
+    "date": "2026-04-09",
+    "readingTime": 7,
+    "category": "Caso de Uso",
+    "funnelStage": "MOFU"
+  },
+  {
+    "slug": "landing-page-b2b-vs-b2c",
+    "title": "Landing Page B2B vs B2C: Diferenças que Convertem",
+    "description": "Veja as principais diferenças de estrutura, copy e CTA entre landing pages B2B e B2C. Com exemplos práticos e checklist de implementação.",
+    "tags": [
+      "landing page",
+      "B2B",
+      "B2C",
+      "copywriting",
+      "conversão"
+    ],
+    "date": "2026-04-09",
+    "readingTime": 7,
+    "category": "Caso de Uso",
+    "funnelStage": "MOFU"
+  }
+]

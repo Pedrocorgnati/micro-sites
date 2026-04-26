@@ -1,0 +1,35 @@
+{
+  "category": "E",
+  "claims": [
+    {
+      "id": "whatsapp_penetracao_br",
+      "value": "93%",
+      "text": "93% dos usuarios brasileiros de smartphone usam WhatsApp diariamente",
+      "source": {
+        "label": "Meta / Statista Brasil",
+        "url": "https://www.statista.com/topics/3695/whatsapp/",
+        "year": 2024
+      }
+    },
+    {
+      "id": "adoption_ia_mpe",
+      "value": "18%",
+      "text": "18% das pequenas empresas brasileiras ja utilizam alguma ferramenta de IA",
+      "source": {
+        "label": "Sebrae Inteligencia Artificial",
+        "url": "https://sebrae.com.br/sites/PortalSebrae/artigos/inteligencia-artificial",
+        "year": 2024
+      }
+    },
+    {
+      "id": "ia_crescimento_br",
+      "value": "28,9%",
+      "text": "Taxa composta de crescimento anual (CAGR) do mercado de IA no Brasil",
+      "source": {
+        "label": "IDC / Statista",
+        "url": "https://www.statista.com/topics/ai-brazil/",
+        "year": 2024
+      }
+    }
+  ]
+}

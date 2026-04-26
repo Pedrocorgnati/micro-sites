@@ -1,0 +1,61 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "a09",
+  "name": "Studio Beauté",
+  "category": "A",
+  "accentColor": "#2563EB",
+  "wave": 3,
+  "funnelStage": "consideration",
+  "showSystemForgeLogo": false,
+  "template": "landing",
+  "hasBlog": true,
+  "schema": [
+    "Organization",
+    "FAQPage",
+    "LocalBusiness"
+  ],
+  "seo": {
+    "title": "Studio Beauté — Salão de Beleza e Estética em [Cidade]",
+    "description": "Corte, coloração, tratamentos capilares, manicure e estética facial. Produtos premium. Agende seu horário em [Cidade].",
+    "keywords": [
+      "salão de beleza",
+      "cabeleireiro",
+      "coloração",
+      "tratamento capilar",
+      "manicure",
+      "estética facial"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Agendar Horário",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Vim pelo site Studio Beauté e gostaria de agendar um horário."
+  },
+  "localBusiness": {
+    "type": "HairSalon",
+    "address": "Rua da Beleza, 125, [Cidade] - [Estado]",
+    "phone": "+5511999990009",
+    "openingHours": "Tu-Sa 09:00-20:00",
+    "priceRange": "$$"
+  },
+  "footerLinks": [
+    {
+      "label": "Privacidade",
+      "href": "/privacidade"
+    },
+    {
+      "label": "Contato",
+      "href": "/contato"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "crossLinks": [
+    {
+      "href": "https://c01.DOMAIN.com",
+      "anchor": "Site moderno para sua escola de idiomas",
+      "context": "footer"
+    }
+  ],
+  "lastReviewed": "2026-04-12"
+}

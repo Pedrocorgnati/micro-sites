@@ -1,0 +1,25 @@
+{
+  "headline": "Por que escolher o Instituto EduFuturo?",
+  "items": [
+    {
+      "icon": "award",
+      "title": "Autorizado pelo MEC",
+      "description": "Certificados reconhecidos pelo mercado e aceitos em processos seletivos públicos e privados em todo o Brasil."
+    },
+    {
+      "icon": "clock",
+      "title": "Horários flexíveis",
+      "description": "Turmas manhã, tarde e noite. Modalidade EAD disponível para quem tem agenda corrida. Você estuda no seu ritmo."
+    },
+    {
+      "icon": "users",
+      "title": "Professores de mercado",
+      "description": "Nosso corpo docente é formado por profissionais ativos nas áreas que ensinam. Teoria e prática juntas, do jeito certo."
+    },
+    {
+      "icon": "trending-up",
+      "title": "Alta empregabilidade",
+      "description": "82% dos nossos formandos conseguem emprego ou promoção em até 6 meses após a conclusão do curso."
+    }
+  ]
+}

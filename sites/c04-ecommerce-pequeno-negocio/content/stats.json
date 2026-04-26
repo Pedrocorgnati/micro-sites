@@ -1,0 +1,35 @@
+{
+  "category": "C",
+  "claims": [
+    {
+      "id": "conversao_landing_pages",
+      "value": "9,7%",
+      "text": "Taxa media global de conversao de landing pages otimizadas",
+      "source": {
+        "label": "Unbounce Conversion Benchmark",
+        "url": "https://unbounce.com/conversion-benchmark-report/",
+        "year": 2024
+      }
+    },
+    {
+      "id": "ecommerce_brasil_crescimento",
+      "value": "13%",
+      "text": "Crescimento anual do e-commerce brasileiro",
+      "source": {
+        "label": "ABComm",
+        "url": "https://abcomm.org/noticias/",
+        "year": 2024
+      }
+    },
+    {
+      "id": "consumidor_pesquisa_online",
+      "value": "87%",
+      "text": "87% dos consumidores pesquisam online antes de comprar",
+      "source": {
+        "label": "Statista Digital Brasil",
+        "url": "https://www.statista.com/markets/423/topic/459/brazil/",
+        "year": 2024
+      }
+    }
+  ]
+}

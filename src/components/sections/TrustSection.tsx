@@ -1,18 +1,28 @@
+import Image from 'next/image';
 import type { Stat, Testimonial } from '@/types';
+
+interface TrustLogo {
+  src: string;
+  alt: string;
+  href?: string;
+}
 
 interface TrustSectionProps {
   headline?: string;
   stats?: Stat[];
   testimonials?: Testimonial[];
+  logos?: TrustLogo[];
 }
 
 export function TrustSection({
   headline = 'Resultados que falam por si',
   stats,
   testimonials,
+  logos,
 }: TrustSectionProps) {
   const hasStats = stats && stats.length > 0;
   const hasTestimonials = testimonials && testimonials.length > 0;
+  const hasLogos = logos && logos.length > 0;
 
   return (
     <section
@@ -73,7 +83,7 @@ export function TrustSection({
                 <figcaption className="text-sm font-semibold" style={{ color: 'var(--color-text-primary)' }}>
                   — {t.name}
                   {t.role && (
-                    <span className="font-normal ml-1" style={{ color: 'var(--color-text-muted)' }}>
+                    <span className="font-normal ml-1" style={{ color: 'var(--color-text-secondary)' }}>
                       {t.role}
                     </span>
                   )}
@@ -87,6 +97,52 @@ export function TrustSection({
               Depoimentos em breve.
             </p>
           )
+        )}
+
+        {/* Logos de parceiros/clientes */}
+        {hasLogos && (
+          <div
+            data-testid="trust-logos"
+            className="mt-12 pt-8 border-t flex flex-wrap items-center justify-center gap-6"
+            style={{ borderColor: 'var(--color-border)' }}
+          >
+            {logos.map((logo, i) => {
+              const img = (
+                <Image
+                  key={i}
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={120}
+                  height={40}
+                  className="h-8 w-auto object-contain transition-all duration-200"
+                  style={{ filter: 'grayscale(100%)', opacity: 0.6 }}
+                  onMouseEnter={(e) => {
+                    (e.currentTarget as HTMLImageElement).style.filter = 'grayscale(0%)';
+                    (e.currentTarget as HTMLImageElement).style.opacity = '1';
+                  }}
+                  onMouseLeave={(e) => {
+                    (e.currentTarget as HTMLImageElement).style.filter = 'grayscale(100%)';
+                    (e.currentTarget as HTMLImageElement).style.opacity = '0.6';
+                  }}
+                />
+              );
+              return logo.href ? (
+                <a
+                  key={i}
+                  href={logo.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid={`trust-logo-${i + 1}`}
+                >
+                  {img}
+                </a>
+              ) : (
+                <span key={i} data-testid={`trust-logo-${i + 1}`}>
+                  {img}
+                </span>
+              );
+            })}
+          </div>
         )}
       </div>
     </section>

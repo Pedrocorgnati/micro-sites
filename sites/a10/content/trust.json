@@ -1,0 +1,26 @@
+{
+  "headline": "Lares transformados pelos nossos clientes",
+  "testimonials": [
+    {
+      "name": "Cláudia Barros",
+      "role": "Cliente",
+      "business": "",
+      "quote": "Reformei minha sala com a consultoria da Casa & Decor e o resultado ficou incrível. Eles me ajudaram a escolher cada peça sem extrapolar o orçamento. Todo mundo que visita pergunta onde comprei.",
+      "rating": 5
+    },
+    {
+      "name": "Eduardo Pinto",
+      "role": "Arquiteto",
+      "business": "EP Arquitetura",
+      "quote": "Uso a Casa & Decor como parceira para meus projetos residenciais. Curadoria consistente, produtos com procedência e entrega pontual. Recomendo para todos os colegas.",
+      "rating": 5
+    },
+    {
+      "name": "Vanessa Moreira",
+      "role": "Cliente",
+      "business": "",
+      "quote": "Comprei um presente de casamento personalizado aqui e a consultora me ajudou a montar um kit perfeito. Embalagem linda, entrega no prazo e os noivos amaram. Voltarei sempre.",
+      "rating": 5
+    }
+  ]
+}

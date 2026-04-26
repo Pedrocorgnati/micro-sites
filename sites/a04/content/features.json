@@ -1,0 +1,25 @@
+{
+  "headline": "Como podemos orientar você",
+  "items": [
+    {
+      "icon": "briefcase",
+      "title": "Direito Trabalhista",
+      "description": "Análise de verbas rescisórias, horas extras, assédio moral e demissões. Orientação sobre seus direitos na Justiça do Trabalho."
+    },
+    {
+      "icon": "heart",
+      "title": "Direito de Família",
+      "description": "Divorcios, guarda, pensão alimentícia e herança. Atuação com foco no diálogo e na proteção dos interesses familiares."
+    },
+    {
+      "icon": "file-text",
+      "title": "Direito Cível",
+      "description": "Contratos, cobranças indevidas, dano moral e relações de consumo. Análise detalhada das possibilidades legais disponíveis."
+    },
+    {
+      "icon": "video",
+      "title": "Atendimento online",
+      "description": "Consultas por videoconferência para maior comodidade. Mesma qualidade de atendimento presencial, sem sair de casa."
+    }
+  ]
+}

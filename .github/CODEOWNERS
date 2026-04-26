@@ -1,0 +1,20 @@
+# CODEOWNERS — Micro Sites
+# Areas que exigem aprovacao explicita do Pedro antes do merge.
+# Sintaxe: https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Defaults
+*                                  @Pedrocorgnati
+
+# Areas criticas (compliance / infra / seguranca)
+/sites/_template/                  @Pedrocorgnati
+/scripts/                          @Pedrocorgnati
+/src/components/lgpd/              @Pedrocorgnati
+/.github/                          @Pedrocorgnati
+/.husky/                           @Pedrocorgnati
+/docs/compliance/                  @Pedrocorgnati
+/docs/operations/                  @Pedrocorgnati
+/docs/adrs/                        @Pedrocorgnati
+/sentry.*.config.ts                @Pedrocorgnati
+/next.config.ts                    @Pedrocorgnati
+/package.json                      @Pedrocorgnati
+/package-lock.json                 @Pedrocorgnati

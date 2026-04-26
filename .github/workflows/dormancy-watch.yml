@@ -1,0 +1,49 @@
+name: Site Dormancy Watch
+
+on:
+  schedule:
+    - cron: '0 4 1 * *'   # mensal — dia 1 as 04:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+
+      - name: Run dormancy watch
+        id: watch
+        env:
+          GA4_SERVICE_ACCOUNT_JSON: ${{ secrets.GA4_SERVICE_ACCOUNT_JSON }}
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set +e
+          npx tsx scripts/site-dormancy-watch.ts | tee dormancy.json
+          echo "code=$?" >> "$GITHUB_OUTPUT"
+
+      - name: Open PR with newly-dormant sites
+        if: steps.watch.outputs.code == '1'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore(dormancy): mark dormant sites $(date -u +%Y-%m)"
+          title: "[dormancy] Sites marcados dormentes — $(date -u +%Y-%m)"
+          body: |
+            Workflow `dormancy-watch` detectou sites com 2+ sinais de baixa atividade.
+
+            Veja `dormancy.json` para detalhes (sessoes30d / impressoes30d / leads6m).
+
+            Acao recomendada: revisar e decidir entre `manter`, `refresh`, `sunset` ou `migrar dominio` conforme `docs/operations/POST-12-MONTH-EVALUATION.md`.
+          branch: dormancy/${{ github.run_id }}
+          add-paths: |
+            sites/*/config.json
+            dormancy.json
+          labels: dormancy,evaluation

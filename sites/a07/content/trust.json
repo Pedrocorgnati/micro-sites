@@ -1,0 +1,26 @@
+{
+  "headline": "Clientes que cresceram com a gente",
+  "testimonials": [
+    {
+      "name": "Ricardo Alves",
+      "role": "Sócio-Proprietário",
+      "business": "Alves Distribuidora",
+      "quote": "Migramos para a Contábil Precision há 3 anos e economizamos R$ 18 mil por ano em tributos com o planejamento deles. Contador que pensa junto com o empresário.",
+      "rating": 5
+    },
+    {
+      "name": "Patrícia Gonçalves",
+      "role": "Proprietária",
+      "business": "PG Estética Avançada",
+      "quote": "Abri minha empresa em 7 dias úteis com a ajuda deles. Todo o processo do CNPJ ao alvará foi feito pela equipe. Simples, rápido e sem estresse.",
+      "rating": 5
+    },
+    {
+      "name": "Marcos Ferreira",
+      "role": "MEI",
+      "business": "",
+      "quote": "Como MEI nunca entendi de obrigações fiscais. A Contábil Precision explica tudo de forma clara, me avisa dos prazos e cuida da declaração anual. Tranquilidade total.",
+      "rating": 5
+    }
+  ]
+}

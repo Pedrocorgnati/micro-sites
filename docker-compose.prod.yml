@@ -1,0 +1,23 @@
+# ============================================================
+# Docker Compose — Produção Local (micro-sites)
+# Uso: SITE_SLUG=c01-site-institucional docker compose -f docker-compose.prod.yml up -d
+#
+# NOTA: Para Hostinger shared hosting, o deploy real e via arquivos
+#       estáticos (branch deploy). Este compose serve para testar
+#       o build de producao localmente antes do deploy.
+# ============================================================
+
+services:
+  app:
+    build:
+      context: .
+      args:
+        SITE_SLUG: ${SITE_SLUG:-c01-site-institucional}
+    ports:
+      - "80:80"
+    restart: always
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:80"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

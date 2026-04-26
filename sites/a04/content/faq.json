@@ -1,0 +1,25 @@
+{
+  "headline": "Perguntas Frequentes",
+  "items": [
+    {
+      "question": "A consulta inicial é mesmo gratuita?",
+      "answer": "Sim. Na consulta inicial, analisamos seu caso sem cobrança. Caso decida contratar nossos serviços, apresentamos proposta de honorários clara e detalhada."
+    },
+    {
+      "question": "Qual é o prazo para meu processo?",
+      "answer": "O prazo varia conforme a área jurídica e a complexidade do caso. Durante a análise, orientamos sobre os prazos legais aplicáveis à sua situação específica."
+    },
+    {
+      "question": "Vocês atendem online?",
+      "answer": "Sim. Realizamos atendimento por videoconferência com a mesma qualidade do presencial, com segurança e sigilo profissional garantidos."
+    },
+    {
+      "question": "Como funcionam os honorários?",
+      "answer": "Os honorários são definidos caso a caso, conforme a complexidade e área de atuação. Seguimos a tabela da OAB e apresentamos proposta por escrito antes de qualquer contratação."
+    },
+    {
+      "question": "Vocês atendem casos de todo o estado?",
+      "answer": "Atendemos presencialmente na nossa sede e online para clientes de todo o Brasil em casos que permitem atuação remota."
+    }
+  ]
+}

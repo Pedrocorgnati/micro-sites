@@ -1,0 +1,65 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "a02",
+  "name": "Studio FitPro",
+  "category": "A",
+  "accentColor": "#2563EB",
+  "wave": 1,
+  "funnelStage": "consideration",
+  "showSystemForgeLogo": false,
+  "template": "landing",
+  "hasBlog": true,
+  "schema": [
+    "Organization",
+    "FAQPage",
+    "LocalBusiness"
+  ],
+  "seo": {
+    "title": "Studio FitPro — Personal Training e Musculação em [Cidade]",
+    "description": "Treinos personalizados, musculação e funcional. Primeira aula grátis. Resultados garantidos em 90 dias com acompanhamento profissional.",
+    "keywords": [
+      "academia personal training",
+      "musculação",
+      "emagrecimento",
+      "treino personalizado",
+      "funcional"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Agendar Aula Grátis",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Vim pelo site Studio FitPro e gostaria de agendar minha primeira aula grátis."
+  },
+  "localBusiness": {
+    "type": "HealthClub",
+    "address": "Av. da Saúde, 456, [Cidade] - [Estado]",
+    "phone": "+5511999990002",
+    "openingHours": "Mo-Sa 06:00-22:00",
+    "priceRange": "$$"
+  },
+  "footerLinks": [
+    {
+      "label": "Privacidade",
+      "href": "/privacidade"
+    },
+    {
+      "label": "Contato",
+      "href": "/contato"
+    }
+  ],
+  "crossLinks": [
+    {
+      "href": "https://c01.DOMAIN.com",
+      "anchor": "Seu site para academia e estúdio de fitness",
+      "context": "footer"
+    },
+    {
+      "href": "https://c01.DOMAIN.com",
+      "anchor": "Site profissional para academia e crossfit",
+      "context": "footer"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "lastReviewed": "2026-04-12"
+}

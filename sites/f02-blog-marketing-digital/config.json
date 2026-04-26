@@ -1,0 +1,66 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "f02-blog-marketing-digital",
+  "name": "SystemForge Digital",
+  "category": "F",
+  "accentColor": "#1E40AF",
+  "wave": 3,
+  "funnelStage": "awareness",
+  "template": "landing",
+  "hasBlog": true,
+  "schema": [
+    "Organization",
+    "FAQPage",
+    "Article"
+  ],
+  "sectionOrder": "default",
+  "headline": "Site Sob Medida ou Plataforma Pronta? Comparativo Honesto para 2026",
+  "subheadline": "WordPress, Wix, Squarespace ou desenvolvimento próprio: saiba o que funciona para cada tipo de negócio.",
+  "seo": {
+    "title": "Site Sob Medida vs Plataforma | SystemForge Digital",
+    "description": "Comparativo completo: WordPress vs desenvolvimento próprio vs Wix. Prós, contras, custo e quando usar cada opção para seu negócio.",
+    "keywords": [
+      "site sob medida vs plataforma",
+      "WordPress vs desenvolvimento próprio",
+      "site personalizado ou pronto",
+      "comparativo plataformas 2026"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Falar com um Especialista",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Li o comparativo e tenho dúvidas sobre qual solução é melhor para meu negócio."
+  },
+  "showSystemForgeLogo": true,
+  "footerLinks": [
+    {
+      "label": "Blog",
+      "href": "/blog"
+    },
+    {
+      "label": "FAQ",
+      "href": "/faq"
+    }
+  ],
+  "crossLinks": [
+    {
+      "href": "https://c01.DOMAIN.com",
+      "anchor": "Site institucional profissional para sua empresa",
+      "context": "article"
+    },
+    {
+      "href": "https://c04.DOMAIN.com",
+      "anchor": "E-commerce para pequenos negócios",
+      "context": "article"
+    },
+    {
+      "href": "https://c05.DOMAIN.com",
+      "anchor": "Sistema de agendamento online profissional",
+      "context": "article"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "systemForgeUrl": "https://systemforge.com.br",
+  "lastReviewed": "2026-04-12"
+}

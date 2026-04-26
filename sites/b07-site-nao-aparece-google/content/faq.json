@@ -1,0 +1,25 @@
+{
+  "headline": "Perguntas sobre SEO",
+  "items": [
+    {
+      "question": "Quanto tempo leva para aparecer no Google?",
+      "answer": "Para palavras-chave locais com menor concorrência, resultados aparecem em 30-60 dias. Para termos mais competitivos, 3-6 meses. SEO é investimento de médio prazo, não solução imediata."
+    },
+    {
+      "question": "Não é mais fácil fazer anúncio no Google?",
+      "answer": "Anúncios dão resultado imediato mas têm custo contínuo. SEO é mais lento no início mas gera tráfego orgânico gratuito que cresce ao longo do tempo. O ideal é combinar os dois."
+    },
+    {
+      "question": "Por que meu site não indexa mesmo tendo SEO básico?",
+      "answer": "Há muitas causas: erros de indexação, conteúdo duplicado, velocidade muito baixa, site novo sem autoridade ainda. Nossa auditoria identifica o bloqueador específico."
+    },
+    {
+      "question": "SEO funciona para qualquer tipo de negócio?",
+      "answer": "Sim, mas a estratégia varia. Negócios locais focam em SEO local (bairro, cidade). Negócios online focam em palavras-chave de nicho. Adaptamos para a realidade de cada negócio."
+    },
+    {
+      "question": "Posso fazer SEO eu mesmo?",
+      "answer": "Parte do SEO técnico básico é acessível. Mas erros comuns — URLs mal estruturadas, conteúdo duplicado, velocidade — podem penalizar seu site. Recomendamos auditoria profissional primeiro."
+    }
+  ]
+}

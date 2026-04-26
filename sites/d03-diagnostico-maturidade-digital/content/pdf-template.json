@@ -1,0 +1,42 @@
+{
+  "title": "Diagnostico de Maturidade Digital",
+  "subtitle": "Checklist priorizado de frentes para evoluir a operacao digital do seu negocio.",
+  "blocks": [
+    { "type": "heading", "level": 2, "text": "1. Scorecard — visao geral" },
+    {
+      "type": "table",
+      "columns": ["Frente", "Nivel atual", "Impacto", "Urgencia"],
+      "rows": [
+        ["Presenca digital (site + SEO)", "Parcial", "Alto", "Alta"],
+        ["Atendimento (WhatsApp/chat)", "Iniciante", "Alto", "Media"],
+        ["Analise de dados", "Iniciante", "Medio", "Media"],
+        ["Automacao (CRM + e-mail)", "Ausente", "Alto", "Media"],
+        ["Seguranca e LGPD", "Parcial", "Alto", "Alta"]
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "2. Recomendacoes priorizadas" },
+    {
+      "type": "list",
+      "style": "numbered",
+      "items": [
+        "Publicar politicas de privacidade e termos de uso alinhados a LGPD",
+        "Configurar Google Analytics 4 com consent granular",
+        "Automatizar respostas de primeiro nivel no WhatsApp",
+        "Criar um CRM minimo com pipeline de vendas",
+        "Estabelecer cadencia mensal de conteudo SEO"
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "3. Quick wins (30 dias)" },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        "Revisar tempo de resposta medio no atendimento",
+        "Auditar paginas lentas com Lighthouse",
+        "Subir Google Business Profile atualizado",
+        "Mapear 10 palavras-chave prioritarias"
+      ]
+    },
+    { "type": "callout", "text": "Este diagnostico e uma fotografia — tratar como roteiro para os proximos 90 dias, nao como sentenca." }
+  ]
+}

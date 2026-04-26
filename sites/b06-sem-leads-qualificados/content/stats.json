@@ -1,0 +1,35 @@
+{
+  "category": "B",
+  "claims": [
+    {
+      "id": "site_lento_abandono",
+      "value": "53%",
+      "text": "53% dos usuarios mobile abandonam paginas que levam mais de 3s para carregar",
+      "source": {
+        "label": "Google / Think With Google",
+        "url": "https://www.thinkwithgoogle.com/consumer-insights/consumer-trends/mobile-page-speed-load-time/",
+        "year": 2024
+      }
+    },
+    {
+      "id": "mpe_sem_site",
+      "value": "61%",
+      "text": "61% das MPEs brasileiras ainda nao possuem um site proprio",
+      "source": {
+        "label": "Sebrae",
+        "url": "https://sebrae.com.br/sites/PortalSebrae/artigos/transformacao-digital-mpe",
+        "year": 2024
+      }
+    },
+    {
+      "id": "perda_vendas_offline",
+      "value": "R$ 1.200",
+      "text": "Perda media mensal por negocio sem presenca digital ativa",
+      "source": {
+        "label": "Sebrae Pesquisa Economia Digital",
+        "url": "https://sebrae.com.br/sites/PortalSebrae/estudos",
+        "year": 2024
+      }
+    }
+  ]
+}

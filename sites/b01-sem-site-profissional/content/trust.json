@@ -1,0 +1,26 @@
+{
+  "headline": "Empresas que deixaram de ser invisíveis",
+  "stats": [
+    { "value": "50+", "label": "Sites entregues" },
+    { "value": "7 dias", "label": "Prazo médio de entrega" },
+    { "value": "98%", "label": "Aprovação no primeiro layout" },
+    { "value": "4.9★", "label": "Avaliação dos clientes" }
+  ],
+  "testimonials": [
+    {
+      "name": "Roberto Alves",
+      "role": "Proprietário — Oficina Mecânica",
+      "quote": "Passei anos só com cartão de visita. Em uma semana tinha site, e no mês seguinte já recebi 3 orçamentos pelo formulário."
+    },
+    {
+      "name": "Juliana Costa",
+      "role": "Nutricionista",
+      "quote": "Achei que ia ser complicado e caro. Fui surpreendida: rápido, fácil de aprovar e o resultado ficou muito profissional."
+    },
+    {
+      "name": "Marcos Pinto",
+      "role": "Dono — Pizzaria Artesanal",
+      "quote": "Agora quando alguém me indica, mando o link do site. A pessoa chega no WhatsApp já sabendo tudo sobre a pizzaria."
+    }
+  ]
+}

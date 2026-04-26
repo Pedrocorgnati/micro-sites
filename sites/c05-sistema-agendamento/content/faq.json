@@ -1,0 +1,25 @@
+{
+  "headline": "Dúvidas sobre sistema de agendamento online",
+  "items": [
+    {
+      "question": "Meus clientes precisam criar cadastro para agendar?",
+      "answer": "Depende da sua escolha. Configuramos o sistema para agendamento sem cadastro (apenas nome, e-mail e telefone) ou com login — o que for mais adequado para o seu tipo de cliente."
+    },
+    {
+      "question": "O sistema funciona para múltiplos profissionais?",
+      "answer": "Sim. Configuramos quantos profissionais ou recursos você tiver, cada um com sua agenda de disponibilidade independente. O cliente escolhe o profissional ou deixa a cargo do sistema."
+    },
+    {
+      "question": "Como o sistema avisa o cliente sobre o agendamento?",
+      "answer": "Automaticamente por WhatsApp e e-mail: confirmação imediata após o agendamento, lembrete 24h antes e notificação de cancelamento. Você define o texto de cada mensagem."
+    },
+    {
+      "question": "Consigo bloquear datas de férias ou feriados?",
+      "answer": "Sim. O painel administrativo permite bloquear horários específicos, dias inteiros ou períodos de férias — por profissional ou para toda a empresa."
+    },
+    {
+      "question": "Preciso de app na Play Store ou App Store?",
+      "answer": "Não. O sistema funciona direto no navegador do celular — seus clientes agendam pelo link sem precisar instalar nada. Sua equipe também gerencia a agenda pelo navegador."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "headline": "Como funciona o atendimento?",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Agende pelo WhatsApp",
+      "description": "Consultas de rotina, vacinas e banho são agendadas antecipadamente. Para emergências, venha diretamente — atendemos na hora."
+    },
+    {
+      "number": 2,
+      "title": "Triagem e anamnese",
+      "description": "Na chegada, nosso veterinário avalia o estado geral do pet, revisa o histórico e aplica triagem de urgência se necessário."
+    },
+    {
+      "number": 3,
+      "title": "Diagnóstico e tratamento",
+      "description": "Exames laboratoriais e de imagem no local. Diagnóstico preciso e plano de tratamento explicado em detalhes para o tutor."
+    },
+    {
+      "number": 4,
+      "title": "Acompanhamento pós-consulta",
+      "description": "Retorno agendado, lembrete automático de medicação e canal direto com o veterinário para dúvidas após a consulta."
+    }
+  ]
+}

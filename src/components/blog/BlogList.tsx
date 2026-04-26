@@ -82,7 +82,7 @@ export function BlogList({ articles, siteSlug: _siteSlug }: BlogListProps) {
                 style={{ color: 'var(--color-text-muted)' }}
               >
                 {format(new Date(article.date + 'T12:00:00'), 'dd/MM/yyyy', { locale: ptBR })}
-                {article.readingTime && ` · ${article.readingTime} min`}
+                {article.readingTime != null && ` · ${typeof article.readingTime === 'number' ? `${article.readingTime} min` : String(article.readingTime).replace(/\s*min\s*$/i, '') + ' min'}`}
               </time>
 
               <Link

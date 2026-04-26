@@ -2,12 +2,19 @@ import type { Testimonial } from '@/types';
 
 interface LocalTestimonialsProps {
   headline?: string;
-  testimonials?: Array<Testimonial & { rating?: number }>;
+  testimonials?: Testimonial[];
+  /**
+   * CL-250: rotulo "ilustrativos" quando depoimentos sao demonstrativos
+   * (sem coleta com consentimento real). Default e `illustrative` ate
+   * Pedro coletar reais com formulario LGPD.
+   */
+  kind?: 'real' | 'illustrative';
 }
 
 function StarRating({ rating, max = 5 }: { rating: number; max?: number }) {
   return (
     <div
+      role="img"
       className="flex gap-1 mb-4"
       aria-label={`Avaliação: ${rating} de ${max} estrelas`}
     >
@@ -27,6 +34,7 @@ function StarRating({ rating, max = 5 }: { rating: number; max?: number }) {
 export function LocalTestimonials({
   headline = 'O que nossos clientes dizem',
   testimonials = [],
+  kind = 'illustrative',
 }: LocalTestimonialsProps) {
   return (
     <section
@@ -90,7 +98,7 @@ export function LocalTestimonials({
                   {t.role && (
                     <span
                       className="text-xs"
-                      style={{ color: 'var(--color-text-muted)' }}
+                      style={{ color: 'var(--color-text-secondary)' }}
                     >
                       {t.role}
                     </span>
@@ -99,6 +107,17 @@ export function LocalTestimonials({
               </article>
             ))}
           </div>
+        )}
+
+        {/* CL-250: rotulo de ilustrativos quando aplicavel */}
+        {testimonials.length > 0 && kind === 'illustrative' && (
+          <p
+            data-testid="local-testimonials-illustrative-label"
+            className="text-xs italic text-center mt-6"
+            style={{ color: 'var(--color-text-muted)' }}
+          >
+            * Depoimentos ilustrativos para fins demonstrativos
+          </p>
         )}
       </div>
     </section>

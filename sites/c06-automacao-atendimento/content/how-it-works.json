@@ -1,0 +1,20 @@
+{
+  "headline": "Como implantamos seu atendimento automático com IA",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Mapeamento de Atendimento",
+      "description": "Analisamos seus fluxos de atendimento atuais e identificamos as perguntas mais frequentes dos seus clientes."
+    },
+    {
+      "number": 2,
+      "title": "Treinamento do Assistente IA",
+      "description": "Configuramos e treinamos o chatbot com as respostas da sua empresa, tom de voz e scripts de qualificação."
+    },
+    {
+      "number": 3,
+      "title": "Implantação e Monitoramento",
+      "description": "Publicamos no WhatsApp ou no site, e monitoramos as primeiras interações para ajuste contínuo."
+    }
+  ]
+}

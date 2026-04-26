@@ -1,0 +1,61 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "a06",
+  "name": "Instituto EduFuturo",
+  "category": "A",
+  "accentColor": "#2563EB",
+  "wave": 2,
+  "funnelStage": "consideration",
+  "showSystemForgeLogo": false,
+  "template": "landing",
+  "hasBlog": true,
+  "schema": [
+    "Organization",
+    "FAQPage",
+    "LocalBusiness"
+  ],
+  "seo": {
+    "title": "Instituto EduFuturo — Cursos Profissionalizantes em [Cidade]",
+    "description": "Cursos técnicos, idiomas e capacitação profissional. Autorizado MEC. Certificado reconhecido pelo mercado. Turmas presenciais e EAD.",
+    "keywords": [
+      "curso profissionalizante",
+      "escola técnica",
+      "idiomas",
+      "certificado MEC",
+      "capacitação profissional",
+      "EAD"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Solicitar Informações",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Vim pelo site Instituto EduFuturo e gostaria de saber mais sobre os cursos disponíveis."
+  },
+  "localBusiness": {
+    "type": "EducationalOrganization",
+    "address": "Av. da Educação, 300, [Cidade] - [Estado]",
+    "phone": "+5511999990006",
+    "openingHours": "Mo-Sa 07:00-22:00",
+    "priceRange": "$$"
+  },
+  "footerLinks": [
+    {
+      "label": "Privacidade",
+      "href": "/privacidade"
+    },
+    {
+      "label": "Contato",
+      "href": "/contato"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "crossLinks": [
+    {
+      "href": "https://c02.DOMAIN.com",
+      "anchor": "Landing page para captação de pacientes de psicologia",
+      "context": "footer"
+    }
+  ],
+  "lastReviewed": "2026-04-12"
+}

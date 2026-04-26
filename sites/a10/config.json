@@ -1,0 +1,61 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "a10",
+  "name": "Casa & Decor Shop",
+  "category": "A",
+  "accentColor": "#2563EB",
+  "wave": 3,
+  "funnelStage": "consideration",
+  "showSystemForgeLogo": false,
+  "template": "landing",
+  "hasBlog": true,
+  "schema": [
+    "Organization",
+    "FAQPage",
+    "LocalBusiness"
+  ],
+  "seo": {
+    "title": "Casa & Decor Shop — Loja de Decoração e Móveis em [Cidade]",
+    "description": "Móveis, objetos de decoração, iluminação e presentes únicos. Curadoria exclusiva para transformar sua casa. Entrega em [Cidade] e região.",
+    "keywords": [
+      "decoração",
+      "móveis",
+      "objetos decorativos",
+      "iluminação",
+      "presentes",
+      "loja decoração"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Ver Catálogo",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Vim pelo site Casa & Decor Shop e gostaria de ver o catálogo de produtos disponíveis."
+  },
+  "localBusiness": {
+    "type": "HomeGoodsStore",
+    "address": "Av. Design, 400, [Cidade] - [Estado]",
+    "phone": "+5511999990010",
+    "openingHours": "Mo-Sa 10:00-19:00",
+    "priceRange": "$$"
+  },
+  "footerLinks": [
+    {
+      "label": "Privacidade",
+      "href": "/privacidade"
+    },
+    {
+      "label": "Contato",
+      "href": "/contato"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "crossLinks": [
+    {
+      "href": "https://c01.DOMAIN.com",
+      "anchor": "Site profissional para clínica odontológica",
+      "context": "footer"
+    }
+  ],
+  "lastReviewed": "2026-04-12"
+}

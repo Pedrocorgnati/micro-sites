@@ -1,0 +1,35 @@
+{
+  "category": "F",
+  "claims": [
+    {
+      "id": "conteudo_seo_trafego",
+      "value": "53%",
+      "text": "53% do trafego web ainda vem de busca organica",
+      "source": {
+        "label": "BrightEdge Research",
+        "url": "https://www.brightedge.com/resources/research-reports",
+        "year": 2024
+      }
+    },
+    {
+      "id": "blog_leads_b2b",
+      "value": "67%",
+      "text": "Empresas B2B com blog ativo geram 67% mais leads qualificados",
+      "source": {
+        "label": "HubSpot State of Marketing",
+        "url": "https://www.hubspot.com/state-of-marketing",
+        "year": 2024
+      }
+    },
+    {
+      "id": "artigo_consumo_mobile",
+      "value": "74%",
+      "text": "74% do consumo de conteudo editorial no Brasil e mobile",
+      "source": {
+        "label": "CGI.br / TIC Domicilios",
+        "url": "https://cetic.br/pt/pesquisa/domicilios/",
+        "year": 2024
+      }
+    }
+  ]
+}

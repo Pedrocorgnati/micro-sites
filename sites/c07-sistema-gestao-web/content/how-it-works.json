@@ -1,0 +1,20 @@
+{
+  "headline": "Como construímos seu dashboard de gestão",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Definição de Indicadores",
+      "description": "Identificamos os KPIs que realmente importam para o seu negócio e as fontes de dados que já existem."
+    },
+    {
+      "number": 2,
+      "title": "Conexão de Dados",
+      "description": "Integramos suas fontes (planilhas, ERP, CRM, APIs) no painel centralizado com atualização em tempo real."
+    },
+    {
+      "number": 3,
+      "title": "Entrega do Painel",
+      "description": "Apresentamos o dashboard, capacitamos sua equipe e configuramos alertas automáticos para desvios críticos."
+    }
+  ]
+}

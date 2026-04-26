@@ -1,0 +1,33 @@
+{
+  "title": "Projecao de ROI — Automacao de Atendimento",
+  "subtitle": "Simulacao de 12 meses de ganho e economia com automacao de WhatsApp + CRM.",
+  "blocks": [
+    { "type": "heading", "level": 2, "text": "1. Projecao mensal" },
+    {
+      "type": "table",
+      "columns": ["Mes", "Leads", "Conversao", "Receita estimada"],
+      "rows": [
+        ["M1", "120", "8%", "R$ 9.600"],
+        ["M3", "200", "10%", "R$ 20.000"],
+        ["M6", "320", "12%", "R$ 38.400"],
+        ["M9", "420", "13%", "R$ 54.600"],
+        ["M12", "500", "15%", "R$ 75.000"]
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "2. Premissas" },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        "Ticket medio fixo de R$ 1.000",
+        "Tempo medio de resposta reduzido de 2h para 2min",
+        "Investimento unico em setup + R$ 300/mes de ferramentas",
+        "Taxa de cancelamento estavel",
+        "Equipe comercial mantida constante"
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "3. Payback estimado" },
+    { "type": "paragraph", "text": "Considerando investimento inicial de R$ 6.000 e custo mensal de R$ 300, o payback ocorre entre os meses 2 e 3. A partir do mes 4, o ganho acumulado e superior a R$ 30.000 em receita incremental." },
+    { "type": "callout", "text": "Simulacao orientativa. Rodamos uma versao com seus numeros reais em 15 minutos." }
+  ]
+}

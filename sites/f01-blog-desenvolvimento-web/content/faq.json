@@ -1,0 +1,25 @@
+{
+  "headline": "Dúvidas sobre custo de criação de site",
+  "items": [
+    {
+      "question": "Quanto custa criar um site profissional em 2026?",
+      "answer": "Para pequenos negócios: R$ 3.000 a R$ 8.000 com desenvolvedor. Sites simples em plataforma (Wix/Squarespace): R$ 0 de setup + R$ 100-200/mês. Landing page de campanha: R$ 1.500 a R$ 4.000. E-commerce básico: R$ 5.000 a R$ 15.000."
+    },
+    {
+      "question": "O que influencia o preço de um site?",
+      "answer": "Os cinco fatores principais são: número de páginas, integrações necessárias (pagamento, CRM, WhatsApp), nível de personalização do design, responsividade mobile, e se inclui conteúdo/copywriting ou só o desenvolvimento."
+    },
+    {
+      "question": "Wix e Squarespace são mais baratos que contratar um desenvolvedor?",
+      "answer": "No curto prazo sim. Mas em 3 anos você pode pagar R$ 7.000+ em mensalidades, com limitações de SEO, velocidade e personalização. Para negócios que crescem, desenvolvimento próprio costuma ser mais econômico no médio prazo."
+    },
+    {
+      "question": "Qual a diferença entre freelancer e agência de desenvolvimento?",
+      "answer": "Freelancer: menor custo (R$ 1.500-R$ 6.000), mais ágil, menos overhead. Agência: custo maior (R$ 5.000-R$ 20.000+), processo estruturado, equipe maior, mais garantias contratuais. Fábrica de sites como a SystemForge: equipe especializada com preço de freelancer."
+    },
+    {
+      "question": "Manutenção mensal é obrigatória?",
+      "answer": "Para sites desenvolvidos em plataformas (WordPress, Wix): sim, recomenda-se pelo menos R$ 150-300/mês para updates de segurança e backups. Para sites estáticos modernos (Next.js, Astro): manutenção é esporádica e muito mais barata."
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "f01-blog-desenvolvimento-web",
+  "name": "SystemForge Digital",
+  "category": "F",
+  "accentColor": "#1E40AF",
+  "embeddedCalculator": {
+    "enabled": true,
+    "source": "d01-calculadora-custo-site",
+    "headline": "Quanto seu site deve custar?",
+    "trackingEvent": "f01_calculator_used"
+  },
+  "wave": 1,
+  "funnelStage": "awareness",
+  "template": "landing",
+  "hasBlog": true,
+  "schema": [
+    "Organization",
+    "FAQPage",
+    "Article"
+  ],
+  "sectionOrder": "default",
+  "headline": "Quanto Custa Criar um Site em 2026? Guia Completo com Preços Reais",
+  "subheadline": "Resposta direta: de R$ 500 a R$ 15.000. Descubra o que define o preço e como não pagar caro por algo simples.",
+  "seo": {
+    "title": "Quanto Custa Criar um Site em 2026 | SystemForge Digital",
+    "description": "Tabela de preços reais para criação de site no Brasil em 2026. Freelancer, agência ou fábrica: saiba o que esperar e como escolher.",
+    "keywords": [
+      "quanto custa criar um site",
+      "preço site 2026",
+      "custo site profissional Brasil",
+      "criar site quanto custa"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Solicitar Orçamento Sem Compromisso",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Li o guia sobre custo de site e gostaria de um orçamento para o meu projeto."
+  },
+  "leadMagnet": {
+    "enabled": true,
+    "type": "checklist",
+    "partialResultLabel": "Comparativo de plataformas",
+    "fullResultPath": "/resultado"
+  },
+  "showSystemForgeLogo": true,
+  "footerLinks": [
+    {
+      "label": "Blog",
+      "href": "/blog"
+    },
+    {
+      "label": "FAQ",
+      "href": "/faq"
+    }
+  ],
+  "crossLinks": [
+    {
+      "href": "https://d01.DOMAIN.com",
+      "anchor": "Use nossa calculadora de custo de site gratuita",
+      "context": "article"
+    },
+    {
+      "href": "https://c01.DOMAIN.com",
+      "anchor": "Criação de sites profissionais para empresas",
+      "context": "article"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "systemForgeUrl": "https://systemforge.com.br",
+  "lastReviewed": "2026-04-12"
+}

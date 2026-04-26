@@ -1,0 +1,63 @@
+[
+  {
+    "slug": "contrato-desenvolvimento-software",
+    "title": "Contrato de Desenvolvimento de Software: O Que Incluir",
+    "description": "Saiba o que deve constar em um contrato de desenvolvimento de software. Cláusulas essenciais, propriedade intelectual e garantias.",
+    "tags": [
+      "contrato de software",
+      "desenvolvimento",
+      "propriedade intelectual",
+      "TI jurídico"
+    ],
+    "date": "2026-04-09",
+    "readingTime": 8,
+    "category": "Caso de Uso",
+    "funnelStage": "BOFU"
+  },
+  {
+    "slug": "custo-app-mobile-2026",
+    "title": "Quanto Custa Desenvolver um App Mobile em 2026?",
+    "description": "Veja os custos reais de desenvolvimento de app mobile nativo, híbrido e PWA. Tabela de preços por tipo, plataforma e complexidade.",
+    "tags": [
+      "desenvolvimento de app",
+      "custo de app",
+      "React Native",
+      "iOS Android"
+    ],
+    "date": "2026-04-09",
+    "readingTime": 8,
+    "category": "Caso de Uso",
+    "funnelStage": "MOFU"
+  },
+  {
+    "slug": "manutencao-site-o-que-inclui",
+    "title": "Manutenção de Site: O Que Está Incluso e o Que Custa",
+    "description": "Entenda o que é manutenção de site, quais serviços estão inclusos, o que é cobrado à parte e como escolher um plano de manutenção.",
+    "tags": [
+      "manutenção de site",
+      "suporte web",
+      "hospedagem",
+      "segurança web"
+    ],
+    "date": "2026-04-09",
+    "readingTime": 8,
+    "category": "Caso de Uso",
+    "funnelStage": "MOFU"
+  },
+  {
+    "slug": "site-wordpress-vs-next-js",
+    "title": "WordPress vs Next.js: Qual Escolher em 2026?",
+    "description": "Compare WordPress e Next.js para seu projeto. Veja performance, SEO, custo, manutenção e quando cada tecnologia é a melhor escolha.",
+    "tags": [
+      "WordPress",
+      "Next.js",
+      "desenvolvimento web",
+      "CMS",
+      "performance"
+    ],
+    "date": "2026-04-09",
+    "readingTime": 8,
+    "category": "Ferramenta",
+    "funnelStage": "TOFU"
+  }
+]

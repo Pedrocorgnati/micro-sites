@@ -1,0 +1,29 @@
+{
+  "headline": "O que fazemos para você aparecer no Google",
+  "items": [
+    {
+      "title": "Auditoria gratuita",
+      "description": "Análise completa do seu site: velocidade, indexação, erros técnicos e oportunidades de melhoria de SEO."
+    },
+    {
+      "title": "SEO técnico",
+      "description": "Velocidade, mobile, structured data, sitemap, robots.txt — a base que o Google precisa para ranquear bem."
+    },
+    {
+      "title": "Palavras-chave certas",
+      "description": "Pesquisa das buscas que seus clientes fazem — foco em intenção de compra na sua cidade e nicho."
+    },
+    {
+      "title": "Conteúdo que ranqueia",
+      "description": "Páginas de serviço, FAQ e blog escritos com SEO correto e úteis para quem pesquisa."
+    },
+    {
+      "title": "Google Local",
+      "description": "Otimização do Google Meu Negócio para aparecer no Maps e no pacote local das buscas."
+    },
+    {
+      "title": "Relatórios mensais",
+      "description": "Acompanhe sua evolução: posições, tráfego orgânico e novas oportunidades identificadas."
+    }
+  ]
+}

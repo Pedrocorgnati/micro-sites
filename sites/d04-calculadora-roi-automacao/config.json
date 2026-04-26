@@ -1,0 +1,194 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "d04-calculadora-roi-automacao",
+  "name": "Calculadora de ROI de Automação",
+  "category": "D",
+  "accentColor": "#7C3AED",
+  "wave": 2,
+  "funnelStage": "consideration",
+  "template": "calculator",
+  "hasBlog": true,
+  "schema": [
+    "FAQPage",
+    "Organization",
+    "HowTo",
+    "Product"
+  ],
+  "sectionOrder": "default",
+  "headline": "Calcule o ROI da automação na sua empresa.",
+  "subheadline": "Descubra quanto você pode economizar automatizando processos manuais. Simulador gratuito baseado em dados reais.",
+  "seo": {
+    "title": "Calculadora de ROI de Automação — Calcule sua Economia",
+    "description": "Calcule o retorno sobre investimento da automação de processos na sua empresa. Simulador gratuito com estimativa de economia anual.",
+    "keywords": [
+      "ROI automação",
+      "retorno investimento automação",
+      "economia automação empresas",
+      "calculadora ROI"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Ver ROI Completo",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Calculei o ROI de automação da minha empresa e gostaria de conversar sobre implementação."
+  },
+  "leadMagnet": {
+    "enabled": true,
+    "type": "calculator",
+    "partialResultLabel": "ROI estimado de automação",
+    "fullResultPath": "/resultado"
+  },
+  "calculatorInputs": [
+    {
+      "id": "funcionarios",
+      "label": "Quantos funcionários fazem tarefas repetitivas manualmente?",
+      "type": "radio",
+      "weight": 1,
+      "options": [
+        {
+          "value": "1-5",
+          "label": "1 a 5 funcionários",
+          "points": 2000
+        },
+        {
+          "value": "6-15",
+          "label": "6 a 15 funcionários",
+          "points": 8000
+        },
+        {
+          "value": "16-30",
+          "label": "16 a 30 funcionários",
+          "points": 18000
+        },
+        {
+          "value": "31+",
+          "label": "Mais de 30 funcionários",
+          "points": 40000
+        }
+      ]
+    },
+    {
+      "id": "processos",
+      "label": "Quais processos consomem mais tempo?",
+      "type": "radio",
+      "weight": 1,
+      "options": [
+        {
+          "value": "financeiro",
+          "label": "Financeiro e faturamento",
+          "points": 5000
+        },
+        {
+          "value": "atendimento",
+          "label": "Atendimento ao cliente",
+          "points": 8000
+        },
+        {
+          "value": "estoque",
+          "label": "Estoque e logística",
+          "points": 6000
+        },
+        {
+          "value": "rh",
+          "label": "RH e folha de pagamento",
+          "points": 4000
+        }
+      ]
+    },
+    {
+      "id": "horas-semana",
+      "label": "Quantas horas semanais a equipe gasta em tarefas manuais?",
+      "type": "radio",
+      "weight": 1,
+      "options": [
+        {
+          "value": "ate-10",
+          "label": "Até 10 horas/semana",
+          "points": 1500
+        },
+        {
+          "value": "11-30",
+          "label": "11 a 30 horas/semana",
+          "points": 5000
+        },
+        {
+          "value": "31-60",
+          "label": "31 a 60 horas/semana",
+          "points": 12000
+        },
+        {
+          "value": "60+",
+          "label": "Mais de 60 horas/semana",
+          "points": 25000
+        }
+      ]
+    },
+    {
+      "id": "nivel-automacao",
+      "label": "Qual o nível de automação atual da empresa?",
+      "type": "radio",
+      "weight": 1,
+      "options": [
+        {
+          "value": "zero",
+          "label": "Nenhuma automação (tudo manual)",
+          "points": 3000
+        },
+        {
+          "value": "basico",
+          "label": "Alguma automação básica (planilhas)",
+          "points": 2000
+        },
+        {
+          "value": "medio",
+          "label": "Ferramentas separadas sem integração",
+          "points": 1000
+        },
+        {
+          "value": "avancado",
+          "label": "Sistemas integrados, mas processos ainda manuais",
+          "points": 500
+        }
+      ]
+    },
+    {
+      "id": "prazo-implantacao",
+      "label": "Em quanto tempo você quer ver resultados?",
+      "type": "radio",
+      "weight": 1,
+      "options": [
+        {
+          "value": "1-3-meses",
+          "label": "1 a 3 meses (implantação rápida)",
+          "points": 2000
+        },
+        {
+          "value": "3-6-meses",
+          "label": "3 a 6 meses (implantação padrão)",
+          "points": 1000
+        },
+        {
+          "value": "6-12-meses",
+          "label": "6 a 12 meses (implantação completa)",
+          "points": 0
+        },
+        {
+          "value": "sem-pressa",
+          "label": "Sem pressa definida",
+          "points": -500
+        }
+      ]
+    }
+  ],
+  "showSystemForgeLogo": true,
+  "footerLinks": [
+    {
+      "label": "Privacidade",
+      "href": "/privacidade"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "headerBadge": "Uma ferramenta da SystemForge",
+  "lastReviewed": "2026-04-12"
+}

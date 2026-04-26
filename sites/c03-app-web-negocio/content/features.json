@@ -1,0 +1,20 @@
+{
+  "headline": "Por que escolher a SystemForge para seu aplicativo web",
+  "items": [
+    {
+      "icon": "layers",
+      "title": "Arquitetura escalável desde o dia 1",
+      "description": "Construímos com Next.js, TypeScript e banco de dados estruturado para suportar crescimento sem reescrever o sistema."
+    },
+    {
+      "icon": "shield",
+      "title": "Segurança e controle de acesso",
+      "description": "Autenticação robusta, permissões por perfil e dados protegidos por LGPD — tudo configurado antes da entrega."
+    },
+    {
+      "icon": "refresh-cw",
+      "title": "Entrega iterativa e visível",
+      "description": "Você acompanha o progresso em sprints de 2 semanas, aprova cada módulo e solicita ajustes antes do lançamento final."
+    }
+  ]
+}

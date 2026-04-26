@@ -8,7 +8,10 @@
 export type SiteCategory = 'A' | 'B' | 'C' | 'D' | 'E' | 'F';
 
 export type CategorySlug =
-  // Categoria A — Nicho Vertical
+  // Categoria A — Nicho Vertical (slugs curtos — módulo-9)
+  | 'a01' | 'a02' | 'a03' | 'a04' | 'a05'
+  | 'a06' | 'a07' | 'a08' | 'a09' | 'a10'
+  // Categoria A — Nicho Vertical (slugs legados descritivos)
   | 'a01-clinicas-estetica' | 'a02-academia-crossfit' | 'a03-restaurante-delivery'
   | 'a04-pet-shop-veterinario' | 'a05-advocacia-familia' | 'a06-psicologia-online'
   // Categoria B — Dor / Problema
@@ -18,7 +21,10 @@ export type CategorySlug =
   | 'c01-site-institucional-pme' | 'c02-landing-page-conversao' | 'c03-app-web-negocio'
   | 'c04-ecommerce-pequeno-negocio' | 'c05-sistema-agendamento'
   // Categoria D — Ferramenta Interativa
-  | 'd01-calculadora-custo-site' | 'd02-calculadora-roi-digital' | 'd03-diagnostico-presenca-digital'
+  | 'd01-calculadora-custo-site' | 'd02-calculadora-custo-app' | 'd03-diagnostico-maturidade-digital'
+  | 'd04-calculadora-roi-automacao' | 'd05-checklist-presenca-digital'
+  // Categoria D — slugs legados (manter para compatibilidade)
+  | 'd02-calculadora-roi-digital' | 'd03-diagnostico-presenca-digital'
   | 'd04-quanto-custa-sistema' | 'd05-simulador-trafego-pago'
   // Categoria E — Waitlist / Tendência
   | 'e01-ia-para-pequenos-negocios' | 'e02-automacao-whatsapp' | 'e03-site-com-ia'
@@ -30,7 +36,7 @@ export type CategorySlug =
   // Categoria B — Dor / Problema (extras)
   | 'b06-sem-leads-qualificados' | 'b07-site-nao-aparece-google' | 'b08-concorrente-digital'
   // Categoria C — Solução (extras)
-  | 'c06-automacao-atendimento' | 'c07-sistema-gestao-web' | 'c08-marketplace-nicho';
+  | 'c06-automacao-atendimento' | 'c07-sistema-gestao-web' | 'c08-manutencao-software';
 
 export type FunnelStage = 'awareness' | 'consideration' | 'decision';
 
@@ -66,6 +72,7 @@ export interface SEOConfig {
 export interface CTAConfig {
   primaryLabel: string;
   formEndpoint: string;
+  formAccessKey?: string;
   whatsappNumber: string;
   whatsappMessage: string;
 }
@@ -101,6 +108,9 @@ export interface SiteConfig {
   // CTA
   cta: CTAConfig;
 
+  // CL-143: contactEmail obrigatorio (LGPD canal de contato)
+  contactEmail: string;
+
   // Opcional
   leadMagnet?: LeadMagnetConfig;
   relatedSites?: CategorySlug[];
@@ -108,6 +118,33 @@ export interface SiteConfig {
   gaId?: string;
   showSystemForgeLogo?: boolean;
   footerLinks?: { label: string; href: string }[];
+  // Categoria B — Exit-Intent Popup (INT-038)
+  exitIntent?: {
+    offerText: string;
+    offerSubtext?: string;
+    ctaLabel: string;
+    ctaHref?: string;
+  };
+  // Categoria E — Waitlist / Pré-SaaS (INT-015)
+  waitlist?: {
+    count?: number;
+    earlyBirdDiscount?: string;
+    endpoint?: string;
+  };
+  // Categoria A — LocalBusiness data
+  localBusiness?: {
+    type: string;
+    address?: string;
+    phone?: string;
+    openingHours?: string;
+    priceRange?: string;
+  };
+  // Module-12: Cross-site interlinking (RC-INT-002: máx. 3 links por site)
+  crossLinks?: Array<{
+    href: string;
+    anchor: string;
+    context: 'footer' | 'article' | 'cta' | 'resultado';
+  }>;
 }
 
 // --- Tipos de conteúdo ---
@@ -137,7 +174,14 @@ export interface Stat {
 export interface Testimonial {
   name: string;
   role?: string;
+  business?: string;
   quote: string;
+  rating?: number; // 1-5, exclusivo Cat A
+}
+
+export interface BlogAuthor {
+  name: string;
+  url?: string;
 }
 
 export interface BlogArticle {
@@ -145,7 +189,9 @@ export interface BlogArticle {
   title: string;
   description: string;
   author?: string;
+  authorMeta?: BlogAuthor;
   date: string;
+  dateModified?: string;
   readingTime?: number;
   tags?: string[];
   body: string;
@@ -220,10 +266,10 @@ export interface AccentColors {
 
 export const ACCENT_COLORS: Record<SiteCategory, AccentColors> = {
   A: { accent: '#2563EB', accentHover: '#1D4ED8', onAccent: '#FFFFFF', secondary: '#93C5FD', onSecondary: '#1E3A8A' },
-  B: { accent: '#EA580C', accentHover: '#C2410C', onAccent: '#FFFFFF', secondary: '#FDBA74', onSecondary: '#7C2D12' },
-  C: { accent: '#059669', accentHover: '#047857', onAccent: '#FFFFFF', secondary: '#6EE7B7', onSecondary: '#064E3B' },
+  B: { accent: '#C2410C', accentHover: '#9A3412', onAccent: '#FFFFFF', secondary: '#FDBA74', onSecondary: '#7C2D12' },
+  C: { accent: '#047857', accentHover: '#065F46', onAccent: '#FFFFFF', secondary: '#6EE7B7', onSecondary: '#064E3B' },
   D: { accent: '#7C3AED', accentHover: '#6D28D9', onAccent: '#FFFFFF', secondary: '#C4B5FD', onSecondary: '#4C1D95' },
-  E: { accent: '#0891B2', accentHover: '#0E7490', onAccent: '#FFFFFF', secondary: '#67E8F9', onSecondary: '#155E75' },
+  E: { accent: '#0E7490', accentHover: '#155E75', onAccent: '#FFFFFF', secondary: '#67E8F9', onSecondary: '#155E75' },
   F: { accent: '#1E40AF', accentHover: '#1E3A8A', onAccent: '#FFFFFF', secondary: '#93C5FD', onSecondary: '#1E3A8A' },
 };
 
@@ -263,10 +309,12 @@ export const PAGE_ROUTES = {
   contact: '/contato',
   thanks: '/obrigado',
   privacy: '/privacidade',
+  terms: '/termos',
   faq: '/faq',
   result: '/resultado',
   blog: '/blog',
   waitlist: '/lista-de-espera',
+  cookies: '/cookies',
 } as const;
 
 export const TIMING = {

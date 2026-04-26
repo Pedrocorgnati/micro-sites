@@ -1,0 +1,26 @@
+{
+  "headline": "O que nossos clientes dizem",
+  "testimonials": [
+    {
+      "name": "Marcos Souza",
+      "role": "Ex-cliente",
+      "business": "",
+      "quote": "Fui atendido com muito profissionalismo. A equipe explicou todas as etapas do processo de forma clara e acessível. Me senti seguro e bem orientado durante todo o percurso.",
+      "rating": 5
+    },
+    {
+      "name": "Renata Gomes",
+      "role": "Empresária",
+      "business": "Gomes Confecções",
+      "quote": "Contratei para uma questão trabalhista complexa. O atendimento foi impecável — transparente desde o início sobre as possibilidades legais. O resultado superou minhas expectativas.",
+      "rating": 5
+    },
+    {
+      "name": "Henrique Barbosa",
+      "role": "Servidor público",
+      "business": "",
+      "quote": "Precisei de orientação para pensão alimentícia. A consulta inicial gratuita já esclareceu todas as minhas dúvidas. Quando precisar novamente, voltarei com certeza.",
+      "rating": 5
+    }
+  ]
+}

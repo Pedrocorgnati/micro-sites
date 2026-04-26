@@ -1,0 +1,20 @@
+{
+  "headline": "Por que seu e-commerce vai vender mais conosco",
+  "items": [
+    {
+      "icon": "shopping-cart",
+      "title": "Checkout sem fricção",
+      "description": "Menos cliques do produto ao pagamento. Pix, cartão e parcelamento sem redirecionar para outro site."
+    },
+    {
+      "icon": "search",
+      "title": "Google Shopping integrado",
+      "description": "Seus produtos aparecem nos anúncios gratuitos do Google Shopping. Configuramos o Merchant Center na entrega."
+    },
+    {
+      "icon": "smartphone",
+      "title": "70% das vendas vêm do celular",
+      "description": "Desenvolvemos mobile-first: o cliente compra sem zoom, sem dificuldade de clicar, sem abandonar o carrinho."
+    }
+  ]
+}

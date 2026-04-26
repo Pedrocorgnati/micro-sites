@@ -1,0 +1,20 @@
+{
+  "headline": "Como criamos sua landing page em 3 etapas",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Análise de Campanha",
+      "description": "Entendemos seus objetivos de conversão, público-alvo e oferta para criar uma página com proposta irresistível."
+    },
+    {
+      "number": 2,
+      "title": "Construção e Testes A/B",
+      "description": "Criamos a landing page com copywriting focado em conversão e estrutura validada por testes com usuários reais."
+    },
+    {
+      "number": 3,
+      "title": "Publicação e Integração",
+      "description": "Integramos ao seu pixel, CRM ou funil de e-mails e colocamos no ar em menos de 48h."
+    }
+  ]
+}

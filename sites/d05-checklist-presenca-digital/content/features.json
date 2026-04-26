@@ -1,0 +1,20 @@
+{
+  "headline": "5 pilares avaliados no checklist",
+  "items": [
+    {
+      "icon": "globe",
+      "title": "Site Profissional",
+      "description": "Se existe, se está atualizado, se é responsivo e se carrega rápido."
+    },
+    {
+      "icon": "map-pin",
+      "title": "Google Meu Negócio",
+      "description": "O canal mais importante para visibilidade local e buscas 'perto de mim'."
+    },
+    {
+      "icon": "bar-chart-2",
+      "title": "Monitoramento de Resultados",
+      "description": "Se você acompanha o desempenho digital com analytics e KPIs definidos."
+    }
+  ]
+}

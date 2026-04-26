@@ -1,0 +1,25 @@
+{
+  "headline": "Perguntas sobre conversão online",
+  "items": [
+    {
+      "question": "Como saber se estou perdendo clientes online?",
+      "answer": "Sinais claros: visitas no site mas sem contatos, clientes que chegam via indicação mas mencionam ter visto o concorrente antes, queda em consultas ou orçamentos mesmo com visitas."
+    },
+    {
+      "question": "Quanto tempo leva para melhorar a conversão?",
+      "answer": "Mudanças técnicas (velocidade, mobile, CTA) têm impacto em 1-2 semanas. SEO leva 1-3 meses. Primeiros resultados concretos costumam aparecer em 30 dias."
+    },
+    {
+      "question": "Precisamos refazer o site inteiro?",
+      "answer": "Nem sempre. Avaliamos o que pode ser otimizado vs o que precisa ser refeito. Em muitos casos, ajustes pontuais têm grande impacto sem necessidade de site novo."
+    },
+    {
+      "question": "Como vocês identificam onde perco clientes?",
+      "answer": "Através de análise de Google Analytics, heatmaps (onde o visitante clica), taxa de rejeição por página e análise de funil de conversão."
+    },
+    {
+      "question": "Qual o investimento?",
+      "answer": "Depende do diagnóstico. Fazemos a análise gratuita primeiro para entender o escopo antes de propor qualquer investimento."
+    }
+  ]
+}

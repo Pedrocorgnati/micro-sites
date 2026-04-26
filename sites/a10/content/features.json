@@ -1,0 +1,25 @@
+{
+  "headline": "O que torna a Casa & Decor especial?",
+  "items": [
+    {
+      "icon": "star",
+      "title": "Curadoria exclusiva",
+      "description": "Nosso time visita feiras nacionais e internacionais para selecionar peças únicas, autorais e de qualidade superior. Nada de coleções genéricas."
+    },
+    {
+      "icon": "home",
+      "title": "Consultoria de decoração grátis",
+      "description": "Nossos consultores ajudam a montar o ambiente ideal: sugerem combinações de cores, texturas e estilos alinhados com o seu gosto e orçamento."
+    },
+    {
+      "icon": "truck",
+      "title": "Entrega local com cuidado",
+      "description": "Entrega própria em [Cidade] e região com embalagem especial para itens delicados. Agendamos o horário que for melhor para você."
+    },
+    {
+      "icon": "refresh-cw",
+      "title": "Troca garantida em 7 dias",
+      "description": "Comprou e não ficou como imaginou? Trocaremos sem burocracia em até 7 dias. Queremos que você fique satisfeito com cada peça."
+    }
+  ]
+}

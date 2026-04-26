@@ -1,0 +1,20 @@
+{
+  "headline": "Por que confiar a modernização do seu sistema a nós",
+  "items": [
+    {
+      "icon": "shield-check",
+      "title": "Rollback garantido em cada etapa",
+      "description": "Antes de cada mudança em produção, criamos ponto de restauração. Se algo der errado, voltamos ao estado anterior em minutos."
+    },
+    {
+      "icon": "file-text",
+      "title": "Documentação completa entregue",
+      "description": "Ao final, você tem documentação técnica atualizada que qualquer desenvolvedor consegue entender — não mais dependência de uma única pessoa."
+    },
+    {
+      "icon": "trending-up",
+      "title": "Modernização sem perda de dados",
+      "description": "Migração de dados com validação linha por linha. Backup da base original mantido por 90 dias após a migração."
+    }
+  ]
+}

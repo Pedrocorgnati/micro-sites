@@ -1,0 +1,25 @@
+{
+  "headline": "Perguntas sobre o ForgeChat",
+  "items": [
+    {
+      "question": "Preciso usar o WhatsApp Business ou a API?",
+      "answer": "ForgeChat vai suportar tanto o WhatsApp Business padrão (para uso simples) quanto a API oficial do WhatsApp (para automações avançadas e múltiplos atendentes)."
+    },
+    {
+      "question": "Meus clientes vão saber que é um bot?",
+      "answer": "Você escolhe. O ForgeChat pode se apresentar como assistente virtual da sua empresa ou integrar-se discretamente ao atendimento. A maioria das empresas prefere a transparência."
+    },
+    {
+      "question": "Quando o ForgeChat lança?",
+      "answer": "Previsão para o segundo semestre de 2026. Quem está na lista de espera será notificado primeiro e terá acesso ao benefício de early bird."
+    },
+    {
+      "question": "Posso usar sem saber programar?",
+      "answer": "Sim. ForgeChat é totalmente visual — você configura fluxos arrastando e soltando, sem escrever uma linha de código."
+    },
+    {
+      "question": "Qual o benefício de estar na lista agora?",
+      "answer": "3 meses grátis + onboarding dedicado com um especialista para configurar tudo. Benefício exclusivo para os primeiros cadastros na lista."
+    }
+  ]
+}

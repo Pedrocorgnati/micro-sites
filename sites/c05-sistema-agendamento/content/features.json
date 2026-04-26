@@ -1,0 +1,20 @@
+{
+  "headline": "Por que nosso sistema de agendamento é diferente",
+  "items": [
+    {
+      "icon": "bell",
+      "title": "Reduz no-shows em até 60%",
+      "description": "Lembretes automáticos por WhatsApp 24h antes eliminam a maioria das faltas sem você precisar ligar."
+    },
+    {
+      "icon": "calendar",
+      "title": "Agenda disponível 24h",
+      "description": "Seu cliente agenda às 23h no domingo pelo celular. Você acorda com novos agendamentos confirmados."
+    },
+    {
+      "icon": "settings",
+      "title": "Configurado para seu negócio",
+      "description": "Não é um app genérico. Configuramos o fluxo de acordo com seus serviços, profissionais e regras específicas."
+    }
+  ]
+}

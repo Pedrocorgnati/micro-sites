@@ -1,0 +1,70 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "a04",
+  "name": "Escritório Jurídico Pires",
+  "category": "A",
+  "accentColor": "#2563EB",
+  "wave": 1,
+  "funnelStage": "consideration",
+  "showSystemForgeLogo": false,
+  "template": "landing",
+  "hasBlog": true,
+  "schema": [
+    "Organization",
+    "FAQPage",
+    "LocalBusiness"
+  ],
+  "seo": {
+    "title": "Escritório Jurídico Pires — Advocacia em [Cidade]",
+    "description": "Direito trabalhista, família e cível. Consulta inicial gratuita. OAB ativo. Atendimento presencial e online com orientação jurídica especializada.",
+    "keywords": [
+      "advogado trabalhista",
+      "escritório advocacia",
+      "consulta jurídica gratuita",
+      "direito família",
+      "advogado cível"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Solicitar Consulta Gratuita",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Vim pelo site Escritório Jurídico Pires e gostaria de agendar uma consulta inicial gratuita."
+  },
+  "compliance": {
+    "oabConformity": true,
+    "noCaptacaoAtiva": true,
+    "noPromessaResultado": true
+  },
+  "localBusiness": {
+    "type": "LegalService",
+    "address": "Av. Paulista, 1000, [Cidade] - [Estado]",
+    "phone": "+5511999990004",
+    "openingHours": "Mo-Fr 09:00-18:00",
+    "priceRange": "$$$"
+  },
+  "footerLinks": [
+    {
+      "label": "Privacidade",
+      "href": "/privacidade"
+    },
+    {
+      "label": "Contato",
+      "href": "/contato"
+    }
+  ],
+  "crossLinks": [
+    {
+      "href": "https://c01.DOMAIN.com",
+      "anchor": "Site profissional para escritório de advocacia",
+      "context": "footer"
+    },
+    {
+      "href": "https://c01.DOMAIN.com",
+      "anchor": "Site profissional para pet shop",
+      "context": "footer"
+    }
+  ],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "lastReviewed": "2026-04-12"
+}

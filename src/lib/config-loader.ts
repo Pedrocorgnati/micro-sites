@@ -7,6 +7,39 @@ import { ACCENT_COLORS as COLORS, CTA_LABELS } from '@/types';
 
 const SITES_DIR = path.join(process.cwd(), 'sites');
 
+const ENV_PLACEHOLDER = /\$\{env:([A-Z0-9_]+)\}/g;
+
+/**
+ * Substitui recursivamente ocorrencias de `${env:VAR}` em strings de um
+ * objeto pelos valores correspondentes de `process.env`. Se a variavel nao
+ * estiver definida, mantem o placeholder (falha explicita no schema parser).
+ * TASK-6 / CL-255.
+ */
+function resolveEnvPlaceholders(node: unknown): void {
+  if (Array.isArray(node)) {
+    for (let i = 0; i < node.length; i++) {
+      const v = node[i];
+      if (typeof v === 'string') {
+        node[i] = v.replace(ENV_PLACEHOLDER, (m, key) => process.env[key] ?? m);
+      } else if (v && typeof v === 'object') {
+        resolveEnvPlaceholders(v);
+      }
+    }
+    return;
+  }
+  if (node && typeof node === 'object') {
+    const obj = node as Record<string, unknown>;
+    for (const k of Object.keys(obj)) {
+      const v = obj[k];
+      if (typeof v === 'string') {
+        obj[k] = v.replace(ENV_PLACEHOLDER, (m, key) => process.env[key] ?? m);
+      } else if (v && typeof v === 'object') {
+        resolveEnvPlaceholders(v);
+      }
+    }
+  }
+}
+
 // ============================================================
 // Config Loader
 // ============================================================
@@ -21,6 +54,11 @@ export function loadSiteConfig(slug: string): SiteConfig {
 
   const raw = fs.readFileSync(configPath, 'utf-8');
   const parsed = JSON.parse(raw);
+
+  // Resolver placeholders ${env:VAR} em strings (TASK-6 / CL-255).
+  // Permite trocar o endpoint de Static Forms via env var unica,
+  // sem editar os 36 configs individuais.
+  resolveEnvPlaceholders(parsed);
 
   // Normalizar campos legados
   const config: SiteConfig = {
@@ -110,22 +148,25 @@ export function loadSiteContent(slug: string): SiteContent {
 // ============================================================
 
 export function loadBlogArticles(slug: string): BlogArticle[] {
-  const blogDir = path.join(SITES_DIR, slug, 'blog');
+  // Artigos ficam em sites/{slug}/blog/articles/ (pipeline TASK-0)
+  const articlesDir = path.join(SITES_DIR, slug, 'blog', 'articles');
 
-  if (!fs.existsSync(blogDir)) return [];
+  if (!fs.existsSync(articlesDir)) return [];
 
-  const files = fs.readdirSync(blogDir).filter((f) => f.endsWith('.md'));
+  const files = fs.readdirSync(articlesDir).filter((f) => f.endsWith('.md'));
 
   return files.map((file) => {
-    const raw = fs.readFileSync(path.join(blogDir, file), 'utf-8');
+    const raw = fs.readFileSync(path.join(articlesDir, file), 'utf-8');
     const { data, content: body } = matter(raw);
 
     return {
-      slug: file.replace('.md', ''),
+      slug: (data.slug as string) ?? file.replace('.md', ''),
       title: (data.title as string) ?? 'Artigo',
       description: (data.description as string) ?? '',
       author: data.author as string | undefined,
-      date: (data.date as string) ?? new Date().toISOString().split('T')[0],
+      date: data.date instanceof Date
+        ? data.date.toISOString().split('T')[0]
+        : (data.date as string) ?? new Date().toISOString().split('T')[0],
       readingTime: data.readingTime as number | undefined,
       tags: data.tags as string[] | undefined,
       body: sanitizeHtml(marked(body) as string),
@@ -196,6 +237,7 @@ function getDefaultConfig(slug: string): SiteConfig {
       whatsappMessage: 'Olá! Vim pelo site e gostaria de saber mais sobre os serviços.',
     },
     showSystemForgeLogo: true,
+    contactEmail: 'contato@forjadesistemas.com.br',
   };
 }
 

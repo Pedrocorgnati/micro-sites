@@ -1,0 +1,181 @@
+{
+  "templateVersion": "1.0.0",
+  "slug": "d02-calculadora-custo-app",
+  "name": "Calculadora de Custo de App",
+  "category": "D",
+  "accentColor": "#7C3AED",
+  "wave": 1,
+  "funnelStage": "consideration",
+  "template": "calculator",
+  "hasBlog": true,
+  "schema": [
+    "FAQPage",
+    "Organization",
+    "HowTo",
+    "Product"
+  ],
+  "sectionOrder": "default",
+  "headline": "Quanto custa criar um app? Simule agora, gratuitamente.",
+  "subheadline": "Estimativa de custo de app iOS e Android com base em dados reais do mercado. 5 minutos, sem compromisso.",
+  "seo": {
+    "title": "Quanto custa criar um app? Calcule grátis em 2026",
+    "description": "Simulador gratuito de custo de desenvolvimento de aplicativo iOS e Android. Estimativa em 5 minutos com base em dados reais do mercado brasileiro.",
+    "keywords": [
+      "custo app",
+      "preço app",
+      "quanto custa aplicativo",
+      "calculadora app",
+      "desenvolvimento app"
+    ]
+  },
+  "cta": {
+    "primaryLabel": "Ver Resultado Completo",
+    "formEndpoint": "https://api.staticforms.xyz/submit",
+    "whatsappNumber": "5512920043268",
+    "whatsappMessage": "Olá! Vim pela calculadora de custo de app e gostaria de saber mais."
+  },
+  "leadMagnet": {
+    "enabled": true,
+    "type": "calculator",
+    "partialResultLabel": "Investimento estimado para seu app",
+    "fullResultPath": "/resultado"
+  },
+  "calculatorInputs": [
+    {
+      "id": "plataforma",
+      "label": "Para qual plataforma você quer o app?",
+      "type": "radio",
+      "weight": 1,
+      "options": [
+        {
+          "value": "ios",
+          "label": "Apenas iOS",
+          "points": 25000
+        },
+        {
+          "value": "android",
+          "label": "Apenas Android",
+          "points": 20000
+        },
+        {
+          "value": "ambos-nativo",
+          "label": "iOS e Android (nativo)",
+          "points": 45000
+        },
+        {
+          "value": "hibrido",
+          "label": "iOS e Android (híbrido/React Native)",
+          "points": 30000
+        }
+      ]
+    },
+    {
+      "id": "complexidade",
+      "label": "Qual a complexidade das funcionalidades?",
+      "type": "radio",
+      "weight": 1,
+      "options": [
+        {
+          "value": "simples",
+          "label": "Simples (listagem, contato, informações)",
+          "points": 0
+        },
+        {
+          "value": "medio",
+          "label": "Médio (login, perfil, notificações)",
+          "points": 10000
+        },
+        {
+          "value": "complexo",
+          "label": "Complexo (pagamentos, GPS, integrações)",
+          "points": 25000
+        },
+        {
+          "value": "muito-complexo",
+          "label": "Muito complexo (IA, realtime, wearables)",
+          "points": 50000
+        }
+      ]
+    },
+    {
+      "id": "backend",
+      "label": "Você precisa de um backend personalizado?",
+      "type": "radio",
+      "weight": 1,
+      "options": [
+        {
+          "value": "nao",
+          "label": "Não (usar Firebase ou similar)",
+          "points": 0
+        },
+        {
+          "value": "parcial",
+          "label": "Parcialmente (APIs existentes)",
+          "points": 8000
+        },
+        {
+          "value": "sim",
+          "label": "Sim, backend customizado completo",
+          "points": 20000
+        }
+      ]
+    },
+    {
+      "id": "design",
+      "label": "Tem identidade visual e UI Kit definidos?",
+      "type": "radio",
+      "weight": 1,
+      "options": [
+        {
+          "value": "sim",
+          "label": "Sim, UI Kit pronto",
+          "points": 0
+        },
+        {
+          "value": "parcial",
+          "label": "Somente branding básico",
+          "points": 5000
+        },
+        {
+          "value": "nao",
+          "label": "Não, criar do zero",
+          "points": 12000
+        }
+      ]
+    },
+    {
+      "id": "prazo",
+      "label": "Qual o prazo para o MVP?",
+      "type": "radio",
+      "weight": 1,
+      "options": [
+        {
+          "value": "curto",
+          "label": "< 3 meses (MVP mínimo)",
+          "points": 10000
+        },
+        {
+          "value": "normal",
+          "label": "3–6 meses (produto completo)",
+          "points": 0
+        },
+        {
+          "value": "longo",
+          "label": "> 6 meses (sem pressa)",
+          "points": -3000
+        }
+      ]
+    }
+  ],
+  "showSystemForgeLogo": true,
+  "footerLinks": [
+    {
+      "label": "Privacidade",
+      "href": "/privacidade"
+    }
+  ],
+  "crossLinks": [],
+  "contactEmail": "contato@forjadesistemas.com.br",
+  "headerBadge": "Uma ferramenta da SystemForge",
+  "lastReviewed": "2026-04-12"
+}

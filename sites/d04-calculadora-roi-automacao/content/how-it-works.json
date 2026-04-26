@@ -1,0 +1,20 @@
+{
+  "headline": "Como a calculadora de ROI funciona",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Informe dados reais",
+      "description": "Número de funcionários, horas gastas em tarefas manuais, custo por hora e processos críticos."
+    },
+    {
+      "number": 2,
+      "title": "Veja a economia estimada",
+      "description": "A calculadora projeta a economia anual com base em benchmarks reais de automação."
+    },
+    {
+      "number": 3,
+      "title": "Receba o plano de ROI",
+      "description": "Informe seu e-mail e receba projeção detalhada com tempo de payback e próximas etapas."
+    }
+  ]
+}

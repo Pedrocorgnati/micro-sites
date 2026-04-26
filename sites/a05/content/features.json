@@ -1,0 +1,25 @@
+{
+  "headline": "Por que escolher a ImóvelCerto?",
+  "items": [
+    {
+      "icon": "search",
+      "title": "Busca personalizada",
+      "description": "Apresentamos apenas imóveis que se encaixam no seu perfil, localização e orçamento. Sem perda de tempo."
+    },
+    {
+      "icon": "shield",
+      "title": "Corretores CRECI",
+      "description": "Equipe certificada e com ampla experiência no mercado imobiliário regional. Segurança em cada negociação."
+    },
+    {
+      "icon": "dollar-sign",
+      "title": "Avaliação gratuita",
+      "description": "Avaliamos seu imóvel sem custo e com critérios de mercado para garantir preço justo na venda ou aluguel."
+    },
+    {
+      "icon": "file-text",
+      "title": "Documentação completa",
+      "description": "Cuidamos de toda a burocracia: contratos, financiamento, registros e transferências com segurança jurídica."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+[
+  {
+    "slug": "custo-criar-site-2026",
+    "title": "Quanto custa criar um site em 2026? Números reais",
+    "description": "Descubra quanto custa criar um site em 2026: de R$ 0 no DIY até R$ 50.000+ no full-custom. Números reais do mercado brasileiro.",
+    "tags": [],
+    "date": "2026-04-10",
+    "readingTime": 2
+  },
+  {
+    "slug": "site-sob-medida-vs-plataforma",
+    "title": "Site sob medida vs plataforma pronta: qual escolher em 2026?",
+    "description": "Comparativo completo entre desenvolvimento personalizado e plataformas como Wix, Squarespace e WordPress. Quando cada opção faz sentido para seu negócio.",
+    "tags": [
+      "wordpress",
+      "wix",
+      "desenvolvimento web",
+      "plataforma"
+    ],
+    "date": "2026-03-15",
+    "readingTime": 3
+  },
+  {
+    "slug": "artigo-novo",
+    "title": "Artigo Novo com Título Bem Completo",
+    "description": "Descrição do artigo novo que deve ter ao menos 50 caracteres para validar o schema.",
+    "tags": [],
+    "date": "2024-06-01",
+    "readingTime": 1
+  },
+  {
+    "slug": "artigo-antigo",
+    "title": "Artigo Antigo com Título Completo Aqui",
+    "description": "Descrição do artigo antigo que deve ter ao menos 50 caracteres para validar.",
+    "tags": [],
+    "date": "2024-01-01",
+    "readingTime": 1
+  }
+]
