@@ -7,6 +7,7 @@ import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { Calculator } from '@/components/sections/Calculator';
 import { NoscriptFallback } from '@/components/sections/NoscriptFallback';
+import { AdSlot } from '@/components/ads/AdSlot';
 import type { CalculatorInput } from '@/types';
 
 const SITE_SLUG = process.env.SITE_SLUG ?? 'c01-site-institucional-pme';
@@ -93,6 +94,9 @@ export default function QuantoCustaPage() {
             />
           )}
         </div>
+
+        {/* ADS-17 — slot footer (so renderiza se config.adsense.routesAllowed inclui 'quanto-custa') */}
+        <AdSlot config={config} pathname="/quanto-custa" slot="footer" />
       </main>
 
       <Footer siteName={config.name} showSystemForgeLogo={config.showSystemForgeLogo} links={config.footerLinks} contactEmail={(config as { contactEmail?: string }).contactEmail} />

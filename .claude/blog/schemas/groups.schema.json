@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "groups.schema.json",
+  "title": "Blog Daily — Groups Manifest",
+  "description": "Mapping fixo de 6 grupos x 6 sites para fan-out hub+spoke.",
+  "type": "object",
+  "required": ["version", "generated_at", "groups_count", "sites_count", "groups"],
+  "properties": {
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "purpose": { "type": "string" },
+    "groups_count": { "type": "integer", "const": 6 },
+    "sites_count": { "type": "integer", "const": 36 },
+    "groups": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "ymyl", "hubSlug", "siteSlugs", "editorialCharter", "qualityFloor"],
+        "properties": {
+          "id": { "type": "string", "enum": ["G1", "G2", "G3", "G4", "G5", "G6"] },
+          "name": { "type": "string", "minLength": 5 },
+          "ymyl": { "type": "boolean" },
+          "hubSlug": { "type": "string", "minLength": 2 },
+          "siteSlugs": {
+            "type": "array",
+            "minItems": 6,
+            "maxItems": 6,
+            "uniqueItems": true,
+            "items": { "type": "string", "minLength": 2 }
+          },
+          "editorialCharter": { "type": "string", "minLength": 50 },
+          "vocabulary": { "type": "array", "items": { "type": "string" } },
+          "ctaPattern": { "type": "string" },
+          "qualityFloor": { "type": "integer", "minimum": 60, "maximum": 100 },
+          "newsRelevanceCriteria": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["alters_decision", "alters_cost", "alters_compliance", "alters_demand"]
+            }
+          },
+          "outboundLinkPolicy": { "type": "string" },
+          "rationale": { "type": "string" }
+        }
+      }
+    }
+  }
+}

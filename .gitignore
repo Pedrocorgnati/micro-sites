@@ -77,3 +77,6 @@ logs/sf-purge-*.json
 
 # TASK-26 ST004 — dev deploy lock cooperativo
 .deploy-lock
+
+# ADS-43 — public/ads.txt é gerado em prebuild a partir de NEXT_PUBLIC_ADSENSE_CLIENT_ID
+public/ads.txt

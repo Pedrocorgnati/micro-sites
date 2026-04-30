@@ -25,5 +25,10 @@
     "whatsappNumber": "5511999999999",
     "whatsappMessage": "Olá! Vi o site e quero conversar."
   },
-  "lastReviewed": "2026-04-12"
+  "lastReviewed": "2026-04-12",
+  "adsense": {
+    "enabled": true,
+    "slots": {},
+    "routesAllowed": []
+  }
 }

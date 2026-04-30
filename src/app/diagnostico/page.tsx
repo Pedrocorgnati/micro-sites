@@ -7,6 +7,7 @@ import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { Calculator } from '@/components/sections/Calculator';
 import { NoscriptFallback } from '@/components/sections/NoscriptFallback';
+import { AdSlot } from '@/components/ads/AdSlot';
 import type { CalculatorInput } from '@/types';
 
 const SITE_SLUG = process.env.SITE_SLUG ?? 'c01-site-institucional-pme';
@@ -99,6 +100,10 @@ export default function DiagnosticoPage() {
             />
           )}
         </div>
+
+        {/* ADS-17 — slot footer apos o quiz (AdSlot retorna null se Cat A
+            ou se rota nao opt-in via config.adsense.routesAllowed). */}
+        <AdSlot config={config} pathname="/diagnostico" slot="footer" />
       </main>
 
       <Footer siteName={config.name} showSystemForgeLogo={config.showSystemForgeLogo} links={config.footerLinks} contactEmail={(config as { contactEmail?: string }).contactEmail} />

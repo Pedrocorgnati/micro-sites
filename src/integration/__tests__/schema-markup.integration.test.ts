@@ -51,7 +51,7 @@ describe('buildOrganizationSchema — integração com config real', () => {
     expect(schema['@type']).toBe('Organization');
     expect(schema.name).toBe(config.name);
     expect(schema.url).toBe(BASE_URL);
-    expect(schema.logo).toBe(`${BASE_URL}/brand/sf-logo.webp`);
+    expect(schema.logo).toBe(`${BASE_URL}/brand/sf-logo.png`);
   });
 
   it('contactPoint.telephone inclui whatsappNumber do config', () => {
@@ -198,7 +198,7 @@ describe('buildArticleSchema — integração com artigo real', () => {
 
     expect(publisher['@type']).toBe('Organization');
     expect(publisher.name).toBe(config.name);
-    expect(publisher.logo).toBe(`${BASE_URL}/brand/sf-logo.webp`);
+    expect(publisher.logo).toBe(`${BASE_URL}/brand/sf-logo.png`);
   });
 });
 

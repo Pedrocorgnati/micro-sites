@@ -6,7 +6,9 @@ import { CookieConsent } from '@/components/lgpd/CookieConsent';
 import { GA4Loader } from '@/components/lgpd/GA4Loader';
 import { GA4Preconnect } from '@/components/lgpd/GA4Preconnect';
 import { WebVitalsReporter } from '@/components/lgpd/WebVitalsReporter';
+import { AdSenseLoader } from '@/components/ads/AdSenseLoader';
 import { loadSiteConfig } from '@/lib/config-loader';
+import { resolveAdsenseRuntime } from '@/lib/adsense';
 import { CATEGORY_THEME_COLORS, DEFAULT_THEME_COLOR } from '@/lib/constants';
 // Camada 2: import condicional — eliminado pelo bundler em produção
 import { DevOverlayWrapper } from '@/components/dev/DevOverlayWrapper';
@@ -26,6 +28,8 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 const SITE_SLUG = process.env.SITE_SLUG ?? 'c01-site-institucional-pme';
 const config = loadSiteConfig(SITE_SLUG);
 const GA4_ID = config.gaId ?? process.env.NEXT_PUBLIC_GA4_ID;
+// ADS-13/14: AdSense runtime resolvido server-side (env-driven via NEXT_PUBLIC_ADSENSE_CLIENT_ID).
+const ADSENSE_RUNTIME = resolveAdsenseRuntime();
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -94,6 +98,8 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://api.staticforms.xyz" />
         {/* CL-635 — preconnect GA4 condicional ao consent */}
         {GA4_ID && <GA4Preconnect />}
+        {/* ADS-14 — preconnect AdSense é injetado pelo AdSenseLoader client-side
+            apos consent.advertising para nao furar INV-ADS-08 (zero requests sem consent). */}
       </head>
       <body className="min-h-full flex flex-col antialiased" style={{ backgroundColor: 'var(--color-background)', color: 'var(--color-text-primary)' }}>
         <a
@@ -107,9 +113,13 @@ export default function RootLayout({
           {children}
         </ToastProvider>
 
-        <CookieConsent />
-        {GA4_ID && <GA4Loader gaId={GA4_ID} />}
+        <CookieConsent siteSlug={SITE_SLUG} />
+        {GA4_ID && <GA4Loader gaId={GA4_ID} category={config.category} />}
         {GA4_ID && <WebVitalsReporter />}
+        {/* ADS-13 — AdSense script loader (condicional a env + consent.advertising + rota elegivel) */}
+        {ADSENSE_RUNTIME.enabled && (
+          <AdSenseLoader clientId={ADSENSE_RUNTIME.clientId} config={config} />
+        )}
         {process.env.NODE_ENV === 'development' && <DevOverlayWrapper />}
       </body>
     </html>

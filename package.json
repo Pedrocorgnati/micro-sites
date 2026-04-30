@@ -40,6 +40,7 @@
     "validate:blog-selectivity": "tsx scripts/validate-blog-selectivity.ts",
     "validate:geo": "tsx scripts/validate-geo-content.ts",
     "validate:all": "npm run validate:articles && npm run validate:interlinking && npm run generate:blog-index && npm run audit:footprint && npm run audit:waves && npm run validate:blog-selectivity && npm run validate:copy-uniqueness && npm run validate:geo",
+    "smoke:adsense": "node scripts/smoke-adsense.mjs",
     "audit:analytics": "tsx scripts/audit-analytics-events.ts",
     "audit:contacts": "tsx scripts/audit-contacts-consistency.ts",
     "audit:animations": "tsx scripts/audit-animations.ts",

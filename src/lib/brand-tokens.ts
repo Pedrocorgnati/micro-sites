@@ -15,8 +15,8 @@ export const SF_BRAND = {
     accentDark: '#1E3A5F',
   },
   logo: {
-    default: '/brand/sf-logo.webp',
-    white: '/brand/sf-logo-white.webp',
+    default: '/brand/sf-logo.png',
+    white: '/brand/sf-logo-white.png',
     favicon: '/brand/sf-favicon.ico',
   },
   name: 'SystemForge',

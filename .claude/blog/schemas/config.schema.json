@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "config.schema.json",
+  "title": "Blog Daily — Config",
+  "type": "object",
+  "required": ["version", "market", "routine", "quality", "anti_duplicate", "topic_strategy", "boundaries", "expected_groups_hash"],
+  "properties": {
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "purpose": { "type": "string" },
+    "market": {
+      "type": "object",
+      "required": ["locale", "currency", "country"],
+      "properties": {
+        "locale": { "type": "string", "const": "pt-BR" },
+        "currency": { "type": "string", "const": "BRL" },
+        "country": { "type": "string", "const": "BR" }
+      }
+    },
+    "routine": {
+      "type": "object",
+      "required": ["stories_per_run", "sites_per_story", "total_articles_per_run"],
+      "properties": {
+        "stories_per_run": { "type": "integer", "const": 6 },
+        "sites_per_story": { "type": "integer", "const": 6 },
+        "total_articles_per_run": { "type": "integer", "const": 36 },
+        "max_attempts_per_job": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "schedule_hint_utc": { "type": "string", "pattern": "^\\d{2}:\\d{2}$" }
+      }
+    },
+    "quality": {
+      "type": "object",
+      "required": ["default_threshold", "ymyl_threshold", "spoke_min_threshold"],
+      "properties": {
+        "default_threshold": { "type": "integer", "minimum": 50, "maximum": 100 },
+        "ymyl_threshold": { "type": "integer", "minimum": 60, "maximum": 100 },
+        "spoke_min_threshold": { "type": "integer", "minimum": 50, "maximum": 100 },
+        "min_word_count_hub": { "type": "integer", "minimum": 600 },
+        "min_word_count_spoke": { "type": "integer", "minimum": 200 },
+        "max_word_count_spoke": { "type": "integer", "minimum": 250, "maximum": 800 }
+      }
+    },
+    "anti_duplicate": {
+      "type": "object",
+      "required": ["strategy", "include_spokes_in_sitemap", "ban_spoke_to_spoke_links"],
+      "properties": {
+        "strategy": { "type": "string", "const": "hub_canonical" },
+        "spoke_canonical_target": { "type": "string", "const": "absolute_url" },
+        "include_spokes_in_sitemap": { "type": "boolean", "const": false },
+        "spoke_must_have_unique_h1": { "type": "boolean", "const": true },
+        "spoke_max_internal_links": { "type": "integer", "maximum": 1 },
+        "spoke_link_to_hub_required": { "type": "boolean", "const": true },
+        "ban_spoke_to_spoke_links": { "type": "boolean", "const": true }
+      }
+    },
+    "topic_strategy": {
+      "type": "object",
+      "required": ["mode"],
+      "properties": {
+        "mode": { "type": "string", "enum": ["evergreen_only", "news_only", "hybrid_evergreen_news"] }
+      }
+    },
+    "boundaries": {
+      "type": "object",
+      "required": ["allowed_write_paths", "forbidden_write_paths"],
+      "properties": {
+        "allowed_write_paths": { "type": "array", "items": { "type": "string" }, "minItems": 5 },
+        "forbidden_write_paths": { "type": "array", "items": { "type": "string" }, "minItems": 5 }
+      }
+    },
+    "expected_groups_hash": { "type": "string", "minLength": 64, "maxLength": 64 },
+    "services": { "type": "object" }
+  }
+}

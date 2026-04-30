@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "batch-manifest.schema.json",
+  "title": "Blog Daily — Batch Manifest (per run)",
+  "description": "36 jobs (6 stories x 6 sites) com status finitos para idempotencia + retry granular.",
+  "type": "object",
+  "required": ["batchId", "batchDate", "groups_hash", "stories"],
+  "properties": {
+    "batchId": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{6}Z$" },
+    "batchDate": { "type": "string", "format": "date" },
+    "groups_hash": { "type": "string", "minLength": 64, "maxLength": 64 },
+    "stories": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["storyId", "groupId", "topic", "trigger", "hub", "spokes"],
+        "properties": {
+          "storyId": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}-G[1-6]-[a-z0-9-]+$" },
+          "groupId": { "type": "string", "enum": ["G1", "G2", "G3", "G4", "G5", "G6"] },
+          "topic": { "type": "string", "minLength": 10 },
+          "trigger": { "type": "string", "enum": ["evergreen", "news", "parity_fix"] },
+          "hub": {
+            "type": "object",
+            "required": ["siteSlug", "slug", "path", "status", "attempts"],
+            "properties": {
+              "siteSlug": { "type": "string" },
+              "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+              "path": { "type": "string", "pattern": "^sites/[^/]+/blog/articles/[^/]+\\.md$" },
+              "status": {
+                "type": "string",
+                "enum": ["pending", "writing", "reviewed", "published", "failed", "skipped"]
+              },
+              "wordCount": { "type": ["integer", "null"] },
+              "qualityScore": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+              "attempts": { "type": "integer", "minimum": 0, "maximum": 5 },
+              "error": { "type": ["string", "null"] }
+            }
+          },
+          "spokes": {
+            "type": "array",
+            "minItems": 5,
+            "maxItems": 5,
+            "items": {
+              "type": "object",
+              "required": ["siteSlug", "slug", "path", "status", "attempts"],
+              "properties": {
+                "siteSlug": { "type": "string" },
+                "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+                "path": { "type": "string", "pattern": "^sites/[^/]+/blog/articles/[^/]+\\.md$" },
+                "status": {
+                  "type": "string",
+                  "enum": ["pending", "writing", "reviewed", "published", "failed", "skipped"]
+                },
+                "wordCount": { "type": ["integer", "null"] },
+                "qualityScore": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+                "attempts": { "type": "integer", "minimum": 0, "maximum": 5 },
+                "error": { "type": ["string", "null"] }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

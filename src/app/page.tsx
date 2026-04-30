@@ -18,6 +18,7 @@ import { TrustSection } from '@/components/sections/TrustSection';
 import { FAQAccordion } from '@/components/sections/FAQAccordion';
 import { CTASection } from '@/components/sections/CTASection';
 import { LocalTestimonials } from '@/components/sections/LocalTestimonials';
+import { AdSlot } from '@/components/ads/AdSlot';
 import type { CalculatorInput } from '@/types';
 
 // Dynamic imports — componentes condicionais por categoria (não inflam bundle de outros sites)
@@ -315,6 +316,12 @@ export default function HomePage() {
           </section>
         )}
 
+        {/* ADS-15 — slot inArticle entre FeatureGrid/HowItWorks/Trust e FAQ.
+            Categoria E (waitlist) tem o ad bloqueado por canShowAds (rota / é allowed,
+            mas page é landing tipo waitlist — AdSlot retorna null se config nao tiver
+            slot inArticle ou se modo `off`). */}
+        <AdSlot config={config} pathname="/" slot="inArticle" />
+
         {hasFaqs && (
           <FAQAccordion
             headline={content.faqs!.headline}
@@ -333,6 +340,9 @@ export default function HomePage() {
             whatsappMessage={config.cta.whatsappMessage}
           />
         )}
+
+        {/* ADS-15 — slot footer (acima do <Footer> global) */}
+        <AdSlot config={config} pathname="/" slot="footer" />
       </main>
 
       <Footer

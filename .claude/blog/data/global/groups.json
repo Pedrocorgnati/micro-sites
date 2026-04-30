@@ -1,0 +1,89 @@
+{
+  "$schema": "../../schemas/groups.schema.json",
+  "version": "1.0.0",
+  "generated_at": "2026-04-28T00:00:00Z",
+  "purpose": "Mapping fixo de 6 grupos x 6 sites. CONGELADO. Mudancas exigem PR + bump de version + rehash.",
+  "groups_count": 6,
+  "sites_count": 36,
+  "groups": [
+    {
+      "id": "G1",
+      "name": "Saude e bem-estar",
+      "ymyl": true,
+      "hubSlug": "a01",
+      "siteSlugs": ["a01", "a02", "a03", "a04", "a06", "a10"],
+      "editorialCharter": "Saude, prevencao, bem-estar, alimentacao saudavel, autocuidado. Conteudo YMYL strict — exige fontes medicas (Ministerio da Saude, SBM, SBC, sociedades especializadas), disclaimers, sem promessa de cura. Tom acolhedor mas autoritativo.",
+      "vocabulary": ["paciente", "consulta", "exame", "tratamento", "prevencao", "sintoma", "diagnostico", "medico", "clinico"],
+      "ctaPattern": "Agende sua consulta",
+      "qualityFloor": 75,
+      "newsRelevanceCriteria": ["alters_compliance", "alters_demand"],
+      "outboundLinkPolicy": "obrigatorio_fontes_governamentais",
+      "rationale": "a01 (clinica geral) escolhido como hub por ter maior autoridade YMYL e keyword core de busca informativa. Demais sao adjacentes (academia, pet, psi, odonto, alimentar)."
+    },
+    {
+      "id": "G2",
+      "name": "Profissionais liberais e servicos especializados",
+      "ymyl": false,
+      "hubSlug": "a07",
+      "siteSlugs": ["a07", "a05", "a08", "a09", "b06-sem-leads-qualificados", "b07-site-nao-aparece-google"],
+      "editorialCharter": "Captacao de clientes, autoridade profissional, posicionamento, marketing pessoal, presenca digital para profissionais liberais (advogados, contadores, corretores, professores). Foco em servicos vendidos por hora/projeto.",
+      "vocabulary": ["honorarios", "cliente", "consultoria", "captacao", "indicacao", "honorarios", "credibilidade"],
+      "ctaPattern": "Saiba como atrair mais clientes",
+      "qualityFloor": 70,
+      "newsRelevanceCriteria": ["alters_decision", "alters_compliance"],
+      "rationale": "a07 (contabilidade) tem alto volume de busca informativa ('como escolher contador'). a05/a08/a09 sao profissoes de venda consultiva. b06/b07 sao dores especificas de captacao desse perfil."
+    },
+    {
+      "id": "G3",
+      "name": "Donos PME pre-digital",
+      "ymyl": false,
+      "hubSlug": "b01-sem-site-profissional",
+      "siteSlugs": ["b01-sem-site-profissional", "b02-site-antigo-lento", "b03-sem-automacao", "b04-sem-presenca-digital", "b05-perder-clientes-online", "b08-concorrente-digital"],
+      "editorialCharter": "Primeiros passos digitais para empresarios sem site ou com solucao obsoleta. Custo de nao estar online, ROI de presenca digital, comparativo com concorrentes que ja saltaram. Tom direto, exemplos numericos.",
+      "vocabulary": ["empresario", "pequena empresa", "concorrente", "vendas", "site", "presenca", "online"],
+      "ctaPattern": "Comece sua presenca digital",
+      "qualityFloor": 70,
+      "newsRelevanceCriteria": ["alters_decision", "alters_demand"],
+      "rationale": "b01 (sem site profissional) tem keyword core de alta intencao comercial. Os outros 5 sao dores adjacentes que compartilham mesma audiencia (dono PME ainda sem solucao tech)."
+    },
+    {
+      "id": "G4",
+      "name": "Donos PME pos-decisao",
+      "ymyl": false,
+      "hubSlug": "c01-site-institucional-pme",
+      "siteSlugs": ["c01-site-institucional-pme", "c02-landing-page-conversao", "c03-app-web-negocio", "c04-ecommerce-pequeno-negocio", "c05-sistema-agendamento", "c06-automacao-atendimento"],
+      "editorialCharter": "Comparativos de solucoes, decisao de compra, BOFU, ROI, prazos, requisitos tecnicos. Audiencia ja sabe que precisa de site/sistema, agora compara opcoes. Conteudo tecnico-comercial.",
+      "vocabulary": ["solucao", "plataforma", "integracao", "ROI", "implantacao", "manutencao", "stack"],
+      "ctaPattern": "Pedir orcamento personalizado",
+      "qualityFloor": 70,
+      "newsRelevanceCriteria": ["alters_cost", "alters_decision"],
+      "rationale": "c01 (site institucional PME) e a keyword core do funil. c02-c06 sao subprodutos da mesma audiencia que ja decidiu investir em digital."
+    },
+    {
+      "id": "G5",
+      "name": "Operacao digital e ferramentas de avaliacao",
+      "ymyl": false,
+      "hubSlug": "d04-calculadora-roi-automacao",
+      "siteSlugs": ["d04-calculadora-roi-automacao", "c07-sistema-gestao-web", "c08-manutencao-software", "d01-calculadora-custo-site", "d02-calculadora-custo-app", "d03-diagnostico-maturidade-digital"],
+      "editorialCharter": "Dimensionamento, ROI, payback, metricas, comparacoes de stack, tomada de decisao data-driven. Ferramentas de auto-avaliacao + manutencao operacional. Audiencia: PME ja digital avaliando proximos passos.",
+      "vocabulary": ["ROI", "payback", "metrica", "diagnostico", "calculadora", "manutencao", "uptime", "SLA"],
+      "ctaPattern": "Faca sua avaliacao gratuita",
+      "qualityFloor": 70,
+      "newsRelevanceCriteria": ["alters_cost", "alters_decision"],
+      "rationale": "d04 (calculadora ROI automacao) e MOFU forte com intencao alta. c07/c08 e d01-d03 sao todos sobre AVALIAR antes de comprar — coerencia editorial."
+    },
+    {
+      "id": "G6",
+      "name": "Tech-curious e IA aplicada",
+      "ymyl": false,
+      "hubSlug": "f01-blog-desenvolvimento-web",
+      "siteSlugs": ["f01-blog-desenvolvimento-web", "d05-checklist-presenca-digital", "e01-ia-para-pequenos-negocios", "e02-automacao-whatsapp", "e03-site-com-ia", "f02-blog-marketing-digital"],
+      "editorialCharter": "Novidades de IA aplicada, casos praticos, codigo, marketing digital com IA, primeiros passos com automacao. Audiencia mais tecnica. Tom formal-tech, vocabulario especializado mas acessivel.",
+      "vocabulary": ["IA", "automacao", "API", "integracao", "GPT", "agente", "chatbot", "no-code", "low-code"],
+      "ctaPattern": "Veja como implementar",
+      "qualityFloor": 70,
+      "newsRelevanceCriteria": ["alters_decision", "alters_demand"],
+      "rationale": "f01 (blog dev web) ja e blog puro com vocacao para SEO informativo. e01-e03 (IA) tem alta busca crescente. d05 e f02 fecham o agrupamento tech."
+    }
+  ]
+}

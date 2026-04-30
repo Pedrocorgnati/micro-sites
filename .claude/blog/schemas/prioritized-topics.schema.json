@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "prioritized-topics.schema.json",
+  "title": "Blog Daily — Prioritized Topics Queue (per group)",
+  "description": "Fila FIFO de topics evergreen consumida pelo routine quando news-relevance-gate nao dispara.",
+  "type": "object",
+  "required": ["groupId", "version", "queue"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "groupId": { "type": "string", "enum": ["G1", "G2", "G3", "G4", "G5", "G6"] },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "purpose": { "type": "string" },
+    "queue": {
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "type": "object",
+        "required": ["topicId", "keyword", "intent", "funnelStage", "priority"],
+        "properties": {
+          "topicId": { "type": "string", "pattern": "^g[1-6]-\\d{3,4}$" },
+          "keyword": { "type": "string", "minLength": 5 },
+          "intent": { "type": "string", "enum": ["informational", "commercial", "transactional", "navigational"] },
+          "funnelStage": { "type": "string", "enum": ["TOFU", "MOFU", "BOFU"] },
+          "priority": { "type": "integer", "minimum": 0, "maximum": 100 },
+          "rationale": { "type": "string" },
+          "status": { "type": "string", "enum": ["pending", "consumed", "skipped"] },
+          "consumedAt": { "type": "string", "format": "date-time" },
+          "consumedInBatch": { "type": "string" }
+        }
+      }
+    }
+  }
+}

@@ -56,5 +56,10 @@
     }
   ],
   "contactEmail": "contato@forjadesistemas.com.br",
-  "lastReviewed": "2026-04-12"
+  "lastReviewed": "2026-04-12",
+  "adsense": {
+    "enabled": true,
+    "slots": {},
+    "routesAllowed": []
+  }
 }

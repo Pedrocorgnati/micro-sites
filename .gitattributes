@@ -22,3 +22,8 @@ out/**             linguist-generated=true
 
 # Lockfiles — hide do diff por default
 package-lock.json  -diff
+
+# Blog daily — hash integrity exige LF estavel cross-platform
+.claude/blog/data/global/groups.json  eol=lf
+.claude/blog/config.json              eol=lf
+.claude/blog/schemas/*.json           eol=lf

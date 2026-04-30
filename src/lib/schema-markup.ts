@@ -9,7 +9,7 @@ export function buildOrganizationSchema(config: SiteConfig, baseUrl: string): Js
     '@type': 'Organization',
     name: config.name,
     url: baseUrl,
-    logo: `${baseUrl}/brand/sf-logo.webp`,
+    logo: `${baseUrl}/brand/sf-logo.png`,
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: `+${config.cta.whatsappNumber}`,
@@ -89,7 +89,7 @@ export function buildArticleSchema(
     publisher: {
       '@type': 'Organization',
       name: config.name,
-      logo: `${baseUrl}/brand/sf-logo.webp`,
+      logo: `${baseUrl}/brand/sf-logo.png`,
     },
   };
 }

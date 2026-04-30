@@ -7,6 +7,7 @@ import { Footer } from '@/components/ui/Footer';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { FAQAccordion } from '@/components/sections/FAQAccordion';
 import { CTASection } from '@/components/sections/CTASection';
+import { AdSlot } from '@/components/ads/AdSlot';
 
 const SITE_SLUG = process.env.SITE_SLUG ?? 'c01-site-institucional-pme';
 
@@ -59,6 +60,9 @@ export default function FAQPage() {
           whatsappNumber={config.cta.whatsappNumber}
           whatsappMessage={config.cta.whatsappMessage}
         />
+
+        {/* ADS-15 — /faq e ALLOWED por default (conteudo editorial). */}
+        <AdSlot config={config} pathname="/faq" slot="footer" />
       </main>
 
       <Footer siteName={config.name} showSystemForgeLogo={config.showSystemForgeLogo} links={config.footerLinks} contactEmail={(config as { contactEmail?: string }).contactEmail} />

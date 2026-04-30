@@ -11,6 +11,7 @@ import { Footer } from '@/components/ui/Footer';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { BlogLayout } from '@/components/blog/BlogLayout';
 import { BlogAnalytics } from '@/components/blog/BlogAnalytics';
+import { AdSlot } from '@/components/ads/AdSlot';
 import { buildArticleSchema } from '@/lib/schema-markup';
 
 const SITE_SLUG = process.env.SITE_SLUG ?? 'c01-site-institucional-pme';
@@ -59,6 +60,9 @@ export default async function BlogArticlePage({ params }: PageProps) {
   const accentStyle = getAccentStyle(config);
   const articleSchema = buildArticleSchema(article, config, '');
 
+  // ADS-16 — pathname canonico para o eligibility match (/blog/[slug] -> /blog).
+  const articlePathname = `/blog/${slug}`;
+
   return (
     <div style={accentStyle}>
       <Header siteName={config.name} ctaLabel={config.cta.primaryLabel} ctaHref="/contato" />
@@ -74,12 +78,23 @@ export default async function BlogArticlePage({ params }: PageProps) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
         />
+
+        {/* ADS-16 — slot header: apos titulo+meta, antes do conteudo. */}
+        <AdSlot config={config} pathname={articlePathname} slot="header" />
+
         <BlogLayout article={article} config={config} relatedArticles={related} prevArticle={prevArticle} nextArticle={nextArticle} />
+
+        {/* ADS-16 — slot inArticle: apos conteudo, antes de related/proximo. */}
+        <AdSlot config={config} pathname={articlePathname} slot="inArticle" />
+
         <BlogAnalytics
           siteSlug={SITE_SLUG}
           articleSlug={slug}
           readingTime={article.readingTime}
         />
+
+        {/* ADS-16 — slot footer */}
+        <AdSlot config={config} pathname={articlePathname} slot="footer" />
       </main>
 
       <Footer siteName={config.name} showSystemForgeLogo={config.showSystemForgeLogo} links={config.footerLinks} contactEmail={(config as { contactEmail?: string }).contactEmail} />

@@ -153,6 +153,23 @@ export const SiteConfigSchema = z.object({
     earlyBirdDiscount: z.string().optional(),
     endpoint: z.string().url().optional(),
   }).optional(),
+  // ADS-01 — Google AdSense (clientId vem de NEXT_PUBLIC_ADSENSE_CLIENT_ID, testMode de NEXT_PUBLIC_APP_ENV)
+  // INV-ADS-05: schema NÃO aceita clientId nem testMode (SoT em env).
+  adsense: z.object({
+    enabled: z.boolean().default(true),
+    slots: z.object({
+      header: z.string().regex(/^\d{10}$/, 'slot deve ter 10 dígitos').optional(),
+      inArticle: z.string().regex(/^\d{10}$/, 'slot deve ter 10 dígitos').optional(),
+      sidebar: z.string().regex(/^\d{10}$/, 'slot deve ter 10 dígitos').optional(),
+      footer: z.string().regex(/^\d{10}$/, 'slot deve ter 10 dígitos').optional(),
+    }).default({}),
+    // Opt-in explícito para rotas CONDITIONAL (INV-ADS-06).
+    // Default = no-ad. Formato canônico: sem leading/trailing slash, kebab-case.
+    // Exemplo válido: ['contato', 'quanto-custa']. Inválido: ['/contato', 'contato/'].
+    routesAllowed: z.array(
+      z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, 'route deve ser kebab-case sem barras')
+    ).default([]),
+  }).optional(),
 }).refine(
   (data) => data.category !== 'D' || data.leadMagnet !== undefined,
   { message: 'Cat. D obriga leadMagnet', path: ['leadMagnet'] }

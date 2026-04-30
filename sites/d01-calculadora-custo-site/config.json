@@ -197,5 +197,10 @@
   ],
   "contactEmail": "contato@forjadesistemas.com.br",
   "headerBadge": "Uma ferramenta da SystemForge",
-  "lastReviewed": "2026-04-12"
+  "lastReviewed": "2026-04-12",
+  "adsense": {
+    "enabled": true,
+    "slots": {},
+    "routesAllowed": []
+  }
 }

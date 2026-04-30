@@ -4,8 +4,8 @@ Origem: `output/workspace/system-forge-landing-page/public/images/`
 
 | Arquivo | Fonte original |
 |---------|----------------|
-| sf-logo.webp | logo_480.webp |
-| sf-logo-white.webp | logo-white_480.webp |
+| sf-logo.png | logo_480.png |
+| sf-logo-white.png | logo-white_480.png |
 | sf-favicon.ico | ../favicon.ico |
 
 Atualizar este diretório quando o branding oficial SF for atualizado no landing-page.

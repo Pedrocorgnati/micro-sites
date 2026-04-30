@@ -24,6 +24,8 @@ export const CONSENT_RETENTION_MS = 12 * 30 * 24 * 60 * 60 * 1000;
 export interface ConsentState {
   essential: true;
   analytics: boolean;
+  /** ADS-03 — opt-in para cookies de publicidade (Google AdSense). LGPD Art. 8º. */
+  advertising: boolean;
   version?: string;
   consentedAt?: string;
 }
@@ -50,8 +52,10 @@ export function readConsent(): ConsentState | null {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return null;
-    if (raw === 'accepted') return { essential: true, analytics: true };
-    if (raw === 'rejected') return { essential: true, analytics: false };
+    // ADS-03: legacy strings 'accepted'/'rejected' nao incluem advertising.
+    // Versao stale forca reabertura do banner (ADS-06 + LGPD Art. 8º §5º).
+    if (raw === 'accepted') return null;
+    if (raw === 'rejected') return null;
     const parsed = JSON.parse(raw) as Partial<ConsentState>;
     if (!parsed || typeof parsed !== 'object' || typeof parsed.analytics !== 'boolean') {
       return null;
@@ -62,6 +66,8 @@ export function readConsent(): ConsentState | null {
     return {
       essential: true,
       analytics: parsed.analytics,
+      // ADS-03: advertising defaulta para false em consents sem o campo (legacy v1).
+      advertising: typeof parsed.advertising === 'boolean' ? parsed.advertising : false,
       version: parsed.version,
       consentedAt: parsed.consentedAt,
     };
@@ -71,10 +77,11 @@ export function readConsent(): ConsentState | null {
 }
 
 /** Persiste consent com `consentedAt` e `version` atuais. */
-export function writeConsent(state: { analytics: boolean }): ConsentState {
+export function writeConsent(state: { analytics: boolean; advertising: boolean }): ConsentState {
   const enriched: ConsentState = {
     essential: true,
     analytics: state.analytics,
+    advertising: state.advertising,
     version: PRIVACY_POLICY_VERSION,
     consentedAt: new Date().toISOString(),
   };

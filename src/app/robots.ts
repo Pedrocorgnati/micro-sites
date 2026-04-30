@@ -12,6 +12,11 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'PerplexityBot', allow: '/' },
       { userAgent: 'ClaudeBot', allow: '/' },
       { userAgent: 'Google-Extended', allow: '/' },
+      // ADS-20 — AdSense crawlers precisam acesso para varrer paginas e
+      // selecionar anuncios contextuais. Sem allow explicito o ad fica unfilled.
+      { userAgent: 'Mediapartners-Google', allow: '/' },
+      { userAgent: 'AdsBot-Google', allow: '/' },
+      { userAgent: 'AdsBot-Google-Mobile', allow: '/' },
     ],
     sitemap: `${BASE_URL}/sitemap.xml`,
   };

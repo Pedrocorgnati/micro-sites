@@ -57,5 +57,10 @@
       "context": "footer"
     }
   ],
-  "lastReviewed": "2026-04-12"
+  "lastReviewed": "2026-04-12",
+  "adsense": {
+    "enabled": true,
+    "slots": {},
+    "routesAllowed": []
+  }
 }

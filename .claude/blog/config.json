@@ -1,0 +1,86 @@
+{
+  "$schema": "./schemas/config.schema.json",
+  "version": "1.0.0",
+  "generated_at": "2026-04-28T00:00:00Z",
+  "purpose": "Blog daily routine config — fan-out 6 stories x 6 sites = 36 articles/run. Brasil-only.",
+  "market": {
+    "locale": "pt-BR",
+    "currency": "BRL",
+    "country": "BR"
+  },
+  "routine": {
+    "stories_per_run": 6,
+    "sites_per_story": 6,
+    "total_articles_per_run": 36,
+    "max_attempts_per_job": 2,
+    "schedule_hint_utc": "12:00"
+  },
+  "quality": {
+    "default_threshold": 70,
+    "ymyl_threshold": 75,
+    "spoke_min_threshold": 60,
+    "min_word_count_hub": 1200,
+    "min_word_count_spoke": 300,
+    "max_word_count_spoke": 450
+  },
+  "anti_duplicate": {
+    "strategy": "hub_canonical",
+    "spoke_canonical_target": "absolute_url",
+    "include_spokes_in_sitemap": false,
+    "spoke_must_have_unique_h1": true,
+    "spoke_max_internal_links": 1,
+    "spoke_link_to_hub_required": true,
+    "ban_spoke_to_spoke_links": true
+  },
+  "topic_strategy": {
+    "mode": "hybrid_evergreen_news",
+    "target_mix": {
+      "evergreen_pct": 70,
+      "news_triggered_pct": 20,
+      "parity_fix_pct": 10
+    },
+    "news_relevance_gate": {
+      "criteria": ["alters_decision", "alters_cost", "alters_compliance", "alters_demand"],
+      "min_criteria_required": 1
+    }
+  },
+  "boundaries": {
+    "allowed_write_paths": [
+      "sites/*/blog/articles/*.md",
+      ".claude/blog/data/global/registry.json",
+      ".claude/blog/data/global/canonical-map.json",
+      ".claude/blog/data/global/slug-history.jsonl",
+      ".claude/blog/data/groups/*/article-briefs/*.md",
+      ".claude/blog/data/groups/*/prioritized-topics/*.json",
+      ".claude/blog/data/groups/*/parity/*.json",
+      ".claude/blog/data/groups/*/deploy-reports/*.md",
+      ".claude/blog/data/runs/*.json",
+      ".claude/routine-reports/*.md",
+      ".claude/routine-reports/*.json"
+    ],
+    "forbidden_write_paths": [
+      "src/**",
+      "public/**",
+      "package.json",
+      "package-lock.json",
+      "next.config.ts",
+      "tsconfig.json",
+      "nginx.conf",
+      "sites/*/config.json",
+      "sites/*/content/**",
+      "scripts/**",
+      ".github/**",
+      ".claude/blog/config.json",
+      ".claude/blog/data/global/groups.json",
+      ".claude/blog/schemas/**",
+      ".claude/blog/lib/**",
+      ".claude/routines/**"
+    ]
+  },
+  "expected_groups_hash": "4a81730ec33a3c449de0a7e16c5e2eb627a3ebbc367e54673d9dc176f02ca4a2",
+  "services": {
+    "primary": "Sites profissionais sob medida",
+    "secondary": "Sistemas web, automacoes, IA aplicada",
+    "cta_default": "Fale com a Forja de Sistemas"
+  }
+}

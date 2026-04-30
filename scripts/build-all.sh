@@ -51,7 +51,8 @@ for slug in $SLUGS; do
   fi
 
   echo -n "  Building $slug... "
-  if SITE_SLUG="$slug" npx next build > "$LOG_DIR/build-${slug}.log" 2>&1; then
+  # ADS-REV-05: usar `npm run build` para garantir prebuild hook (gera ads.txt etc).
+  if SITE_SLUG="$slug" npm run build > "$LOG_DIR/build-${slug}.log" 2>&1; then
     echo "✓ OK"
     ((SUCCESS++)) || true
   else

@@ -226,3 +226,167 @@ Acoes humanas pendentes que a IA nao pode executar diretamente. Cada item tem `i
 - [ ] Criar diretorio `~/Documents/SystemForge/consents/` (fora do repo)
 - [ ] Salvar template consent PDF em local acessivel (Pedro)
 - [ ] Criar `data/social-proof.json` baseline com `{ "items": [] }`
+
+---
+
+## AdSense + SelfAd Fallback (idempotency: `adsense-self-ads-2026-04-28`)
+
+### A. Conta Google AdSense (publisher)
+
+- [ ] Criar conta AdSense em https://www.google.com/adsense/start/ usando email principal
+- [ ] Verificar identidade (CPF, endereco residencial, conta bancaria PJ ou PF)
+- [ ] Submeter os 36 dominios da rede para review (lista em `sites/*/config.json`)
+- [ ] Aguardar aprovacao (1-14 dias por dominio; alguns podem ser reprovados por baixo conteudo)
+- [ ] Apos aprovacao, anotar **publisher ID** `ca-pub-XXXXXXXXXXXXXXXX` (16 digitos)
+- [ ] Setar env `NEXT_PUBLIC_ADSENSE_CLIENT_ID` no secret manager (Hostinger/Vercel/Railway)
+- [ ] Setar `NEXT_PUBLIC_APP_ENV=production` apenas em producao final (staging/dev = qualquer outro)
+- [ ] Decidir modelo: `NEXT_PUBLIC_ADSENSE_PERSONALIZATION = npa | personalized | off` (default sugerido: `npa`)
+
+### B. Ad units (slots) por dominio
+
+Para cada dominio aprovado, criar 4 ad units no painel AdSense:
+- `header` (Display Ads, Responsive)
+- `inArticle` (In-feed Ads ou Display Responsive)
+- `sidebar` (Display Ads, Responsive — desktop only)
+- `footer` (Display Ads, Responsive)
+
+- [ ] Anotar os 4 slot IDs (10 digitos cada) por site
+- [ ] Popular `sites/{slug}/config.json > adsense.slots` com os IDs reais
+- [ ] (Opcional, sites Cat A) revisar `config.adsense.routesAllowed` — default `[]` mantem so rotas hard-allowed
+
+### C. Banners proprios — fallback (10 imagens)
+
+Local: `public/self-ads/`. Manifest completo em `public/self-ads/MANIFEST.md`.
+
+**Marca 1 — Pedro Corgnati (https://www.corgnati.com)**
+- [ ] `corgnati-728x90.webp` — 728×90 px (header/footer desktop, leaderboard)
+- [ ] `corgnati-320x100.webp` — 320×100 px (header/footer mobile)
+- [ ] `corgnati-336x280.webp` — 336×280 px (inArticle desktop, large rectangle)
+- [ ] `corgnati-300x250.webp` — 300×250 px (inArticle mobile, medium rectangle)
+- [ ] `corgnati-300x600.webp` — 300×600 px (sidebar, half page)
+
+**Marca 2 — Forja de Sistemas (https://forjadesistemas.com.br)**
+- [ ] `forjadesistemas-728x90.webp` — 728×90 px (header/footer desktop)
+- [ ] `forjadesistemas-320x100.webp` — 320×100 px (header/footer mobile)
+- [ ] `forjadesistemas-336x280.webp` — 336×280 px (inArticle desktop)
+- [ ] `forjadesistemas-300x250.webp` — 300×250 px (inArticle mobile)
+- [ ] `forjadesistemas-300x600.webp` — 300×600 px (sidebar)
+
+**Diretrizes:**
+- Formato WebP qualidade 85, dimensoes EXATAS (pixel-perfect)
+- Texto legivel ≥ 14px equivalente em viewport 320px
+- Contraste WCAG AA (4.5:1) entre texto e fundo
+- CTA explicito (botao ou seta)
+- Sem cores conflitando com paleta dos 36 sites (preferir neutros + 1 accent da brand)
+- Ja existem placeholders gerados (1-2KB cada) que NAO devem ir pra producao
+
+### D. RIPD + jurídico (idempotency: `adsense-ripd-2026-04`)
+
+- [ ] Revisar `docs/legal/RIPD-ADSENSE.md` com DPO/jurídico antes de producao
+- [ ] Revisar texto da `PrivacyPolicy.tsx` (transferencia internacional, parceiros)
+- [ ] Atualizar `docs/compliance/ROPA.md` com novo tratamento (publicidade)
+- [ ] Decisao formal: assinar/aprovar RIPD na secao 7
+
+### E. Pos-deploy (idempotency: `adsense-postdeploy-2026-04`)
+
+- [ ] Rodar Lighthouse em 5 sites amostrais ANTES do go-live (baseline)
+- [ ] Apos go-live, monitorar painel AdSense por 7 dias (impressions, CTR, policy violations)
+- [ ] Validar manualmente com Google Publisher Toolbar em 5 sites (1 por categoria A-F)
+- [ ] Auditoria de cookies pos-go-live (`docs/legal/RIPD-ADSENSE.md` §2.1; atualizar `CookiesTable.tsx`)
+- [ ] Comparar Lighthouse Performance/CLS/LCP pos vs baseline (regressao tolerada ≤ 10pts)
+
+### F. Validacoes automaticas em CI (idempotency: `adsense-ci-2026-04`)
+
+- [ ] Adicionar `npm run smoke:adsense` ao pipeline de CI (depois do build)
+- [ ] CI deve falhar se `NEXT_PUBLIC_APP_ENV=production` E `NEXT_PUBLIC_ADSENSE_CLIENT_ID` ausente
+- [ ] (Opcional) Adicionar Playwright spec de consent flow ao CI
+
+
+---
+
+## Blog Daily Routine (idempotency: `blog-daily-2026-04-28`)
+
+### Classificacao de prioridade
+- **P0 (bloqueia soft-launch):** secoes A, B, C, D.1
+- **P1 (bloqueia full launch):** secoes D.2, D.3, E
+- **P2 (manutencao continua):** secao F
+
+### A. Validacoes humanas (P0)
+
+- [ ] Revisar `groups.json` (6 grupos × 6 sites) em `.claude/blog/data/global/groups.json` e validar mapping
+- [ ] Confirmar hubs propostos por grupo: a01, a07, b01, c01, d04, f01
+- [ ] Aprovar `BLOG-DAILY-STRATEGY.md` em `scheduled-updates/micro-sites/`
+
+### B. Geracao de master-strategies (5 grupos pendentes)
+
+- [ ] G1 (saude/YMYL) — `/blog:init-strategy --group G1` (atencao: outboundLinkPolicy=fontes_governamentais)
+- [ ] G2 (profissionais liberais) — `/blog:init-strategy --group G2`
+- [ ] G3 (PME pre-digital) — `/blog:init-strategy --group G3`
+- [ ] G4 (PME pos-decisao) — `/blog:init-strategy --group G4`
+- [ ] G5 (ferramentas/avaliacao) — `/blog:init-strategy --group G5`
+
+**Custo Tavily — atencao a ambiguidade:**
+- O comando `/blog:init-strategy` faz `~5-15 buscas` por execucao em modo basic (1 credito cada). Plano pay-as-you-go: $0.008/credito.
+- Estimativa REAL: ~$0.04-$0.12/grupo executando init-strategy.
+- A estimativa anterior de "$0.50/grupo" assumia execucao completa de `expand-keywords` (~90 buscas). Confirmar com o operador qual modo sera usado.
+- Total estimado conservador: $0.50-$3 para os 5 grupos. [Tavily docs](https://docs.tavily.com/documentation/api-credits)
+
+### C. Geracao de prioritized-topics (queues iniciais — P0)
+
+**Threshold operacional:** minimo 30 topics por queue antes do schedule (validate-state warning < 30). Com 1 consumo/dia/grupo, 30 = 30 dias de cobertura.
+
+Apos master-strategy de cada grupo:
+- [ ] G1 queue.json — `/blog:expand-keywords --group G1` (validar **>= 30 itens**)
+- [ ] G2 queue.json — `/blog:expand-keywords --group G2` (>= 30)
+- [ ] G3 queue.json — `/blog:expand-keywords --group G3` (>= 30)
+- [ ] G4 queue.json — `/blog:expand-keywords --group G4` (>= 30)
+- [ ] G5 queue.json — `/blog:expand-keywords --group G5` (>= 30)
+- [ ] **G6 queue.json — EXISTE com 10 itens, expandir para >= 30** via `/blog:expand-keywords --group G6`
+
+### D. Setup routine no painel claude.ai/code/routines
+
+#### D.1 — Gates pre-schedule (P0, obrigatorio)
+- [ ] `node .claude/blog/lib/validate-state.mjs` retorna 0 erros
+- [ ] `BLOG_SMOKE_STRICT=1 node .claude/blog/lib/smoke-test.mjs` retorna 10/10 com 0 warnings
+- [ ] Manualmente: ler ultima linha de `.claude/blog/data/global/registry.json` e confirmar `storiesPublished: 0` (clean state)
+
+#### D.2 — Soft launch: 2 grupos nao-YMYL primeiro (P1)
+
+Razao: G1 (saude) e YMYL — risco de penalizacao se canonical/conteudo nao estiver perfeito. Testar com G6 (tech) + G4 (PME) primeiro.
+
+- [ ] Mover queue.json de G1, G2, G3, G5 para `queue.json.disabled` temporariamente
+  ```bash
+  for g in G1 G2 G3 G5; do
+    mv .claude/blog/data/groups/$g/prioritized-topics/queue.json .claude/blog/data/groups/$g/prioritized-topics/queue.json.disabled
+  done
+  ```
+- [ ] Routine vai pular G1/G2/G3/G5 (queue ausente = warn, mas nao aborta single-group; o caller decide)
+- [ ] Run now manual deve produzir 12 artigos (2 hubs + 10 spokes — apenas G4 + G6)
+- [ ] Monitorar 7 dias antes de Full launch
+
+#### D.3 — Full launch (apos soft OK)
+- [ ] Restaurar queues: `mv queue.json.disabled queue.json` em G1/G2/G3/G5
+- [ ] Adicionar repo `Pedrocorgnati/micro-sites` (working dir: raiz)
+- [ ] Configurar env vars:
+  - `GITHUB_TOKEN` (push + abrir issue)
+  - `TAVILY_API_KEY` (search primario)
+  - `FIRECRAWL_API_KEY` (extracao concorrentes)
+  - `PERPLEXITY_API_KEY` (fallback)
+- [ ] Permitir push apenas para `main`
+- [ ] Colar `[ROUTINE PROMPT]` de `.claude/routines/blog-daily.md`
+- [ ] Schedule: 1× ao dia, 12:00 UTC (09:00 BRT)
+- [ ] **Run now manual** antes de ativar schedule
+
+### E. Monitoramento pos-go-live (primeiros 7 dias)
+
+- [ ] Validar primeiro batch de 36 artigos: 6 hubs + 30 spokes publicados
+- [ ] GSC `site:{hub_domain}/blog/` confirma indexacao do hub
+- [ ] GSC `site:{spoke_domain}/blog/` confirma BAIXA indexacao spokes (esperado, canonical resolve)
+- [ ] Console: zero violations de canonical "Google chose different canonical"
+- [ ] Painel AdSense: hubs comecam a registrar impressoes nos primeiros 3-7d
+
+### F. Manutencao mensal
+
+- [ ] Dia 1 de cada mes: `/blog:expand-keywords --group {Gn}` para cada grupo (refresh delta)
+- [ ] Audit semanal de paridade — `node .claude/blog/lib/validate-state.mjs --queues`
+- [ ] Audit semanal de quality gate fail rate (relatorios em `.claude/routine-reports/`)

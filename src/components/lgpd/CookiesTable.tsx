@@ -40,6 +40,44 @@ export const COOKIES_TABLE: CookieRow[] = [
     retention: '24 horas',
     thirdParty: 'Google LLC',
   },
+  // ADS-07 — cookies AdSense (apos consentimento de Publicidade).
+  // Inventario inicial baseado em https://policies.google.com/technologies/cookies
+  // sera revisto em ADS-45 com observacao real pos go-live.
+  {
+    name: '__gads',
+    domain: '.dominio principal',
+    purpose: 'AdSense — frequency capping e medicao agregada',
+    retention: 'Ate 13 meses',
+    thirdParty: 'Google LLC (EUA — base LGPD Art. 33, IX)',
+  },
+  {
+    name: '__gpi',
+    domain: '.dominio principal',
+    purpose: 'AdSense — identificador de pseudonimo para personalizacao (so se modelo personalized ativo)',
+    retention: 'Ate 13 meses',
+    thirdParty: 'Google LLC (EUA — base LGPD Art. 33, IX)',
+  },
+  {
+    name: 'NID',
+    domain: '.google.com',
+    purpose: 'AdSense — preferencias e seguranca da conta Google do usuario',
+    retention: '6 meses',
+    thirdParty: 'Google LLC',
+  },
+  {
+    name: 'IDE',
+    domain: '.doubleclick.net',
+    purpose: 'AdSense/DoubleClick — medicao de conversoes e relatorios',
+    retention: '13 meses',
+    thirdParty: 'Google LLC',
+  },
+  {
+    name: 'cookie_consent_proof',
+    domain: 'site (1st party — localStorage)',
+    purpose: 'ADS-46 — prova auditavel de consent (LGPD Art. 8º §2º)',
+    retention: 'Ate 20 capturas (rolling)',
+    thirdParty: 'Nenhum',
+  },
   {
     name: 'calculatorProgress',
     domain: 'site (1st party — localStorage)',

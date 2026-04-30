@@ -1,0 +1,89 @@
+{
+  "$schema": "../../../../schemas/prioritized-topics.schema.json",
+  "groupId": "G6",
+  "version": "1.0.0",
+  "generated_at": "2026-04-28T00:00:00Z",
+  "purpose": "Fila FIFO de topics evergreen prontos para o routine consumir quando news-relevance-gate nao dispara.",
+  "queue": [
+    {
+      "topicId": "g6-001",
+      "keyword": "como funciona um chatbot com IA",
+      "intent": "informational",
+      "funnelStage": "TOFU",
+      "priority": 95,
+      "rationale": "Alta busca + baixa concorrencia + fit com servicos de e02-automacao-whatsapp e e03-site-com-ia."
+    },
+    {
+      "topicId": "g6-002",
+      "keyword": "quanto custa implantar chatbot WhatsApp",
+      "intent": "commercial",
+      "funnelStage": "MOFU",
+      "priority": 92,
+      "rationale": "Comercial alta intencao, MOFU, leva direto ao servico do hub e2."
+    },
+    {
+      "topicId": "g6-003",
+      "keyword": "diferenca entre IA e automacao",
+      "intent": "informational",
+      "funnelStage": "TOFU",
+      "priority": 88,
+      "rationale": "Educacional, abre funnel para servicos de automacao."
+    },
+    {
+      "topicId": "g6-004",
+      "keyword": "melhor plataforma de IA para PME",
+      "intent": "commercial",
+      "funnelStage": "MOFU",
+      "priority": 87,
+      "rationale": "Comparativo MOFU forte, encaixa servicos de e01."
+    },
+    {
+      "topicId": "g6-005",
+      "keyword": "RAG explicado em portugues",
+      "intent": "informational",
+      "funnelStage": "TOFU",
+      "priority": 85,
+      "rationale": "Termo tecnico em alta, baixa concorrencia em PT-BR."
+    },
+    {
+      "topicId": "g6-006",
+      "keyword": "ChatGPT Plus vs API qual escolher",
+      "intent": "commercial",
+      "funnelStage": "MOFU",
+      "priority": 84,
+      "rationale": "Comparativo direto, leitor decidido a investir."
+    },
+    {
+      "topicId": "g6-007",
+      "keyword": "o que sao agentes de IA",
+      "intent": "informational",
+      "funnelStage": "TOFU",
+      "priority": 82,
+      "rationale": "Trending 2026, encaixa em todos os 6 sites do grupo."
+    },
+    {
+      "topicId": "g6-008",
+      "keyword": "como escolher fornecedor de IA",
+      "intent": "commercial",
+      "funnelStage": "MOFU",
+      "priority": 80,
+      "rationale": "Encaminha leitor para conversa com Forja de Sistemas (CTA)."
+    },
+    {
+      "topicId": "g6-009",
+      "keyword": "Make vs Zapier vs n8n comparativo",
+      "intent": "commercial",
+      "funnelStage": "MOFU",
+      "priority": 78,
+      "rationale": "Tres ferramentas no-code populares, alto search volume."
+    },
+    {
+      "topicId": "g6-010",
+      "keyword": "preco WhatsApp Business API",
+      "intent": "commercial",
+      "funnelStage": "MOFU",
+      "priority": 77,
+      "rationale": "Conversion-pricing modelo novo do Meta, audiencia procura ativamente."
+    }
+  ]
+}

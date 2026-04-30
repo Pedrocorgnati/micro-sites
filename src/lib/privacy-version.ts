@@ -2,11 +2,13 @@
 // Bumpar SEMPRE que: copy material mudar, nova base legal, nova categoria de dado.
 // Bump menor (PATCH) = correcao gramatical sem mudanca de conteudo.
 
-export const PRIVACY_POLICY_VERSION = '2026-04-25';
-export const PRIVACY_POLICY_LAST_UPDATED_AT = '2026-04-25T00:00:00Z';
+// ADS-04 — bump por nova finalidade (Publicidade / Google AdSense).
+// LGPD Art. 8º §5º exige novo consentimento granular para nova finalidade.
+export const PRIVACY_POLICY_VERSION = '2026-04-28-ads';
+export const PRIVACY_POLICY_LAST_UPDATED_AT = '2026-04-28T00:00:00Z';
 
 /** Versao semver para programs que precisam comparar versoes. */
-export const PRIVACY_POLICY_SEMVER = '1.0.0';
+export const PRIVACY_POLICY_SEMVER = '1.1.0';
 
 /**
  * Indica se um consent armazenado e considerado expirado.

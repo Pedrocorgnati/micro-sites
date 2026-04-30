@@ -27,13 +27,23 @@ try {
 }
 
 // ── 3. Geração de índices para Fuse.js search ─────────────────
-console.log('📊 [3/3] Gerando índices de blog para search...');
+console.log('📊 [3/4] Gerando índices de blog para search...');
 try {
   execSync('npx tsx scripts/generate-blog-index.ts', { stdio: 'inherit' });
   console.log('✅ Índices gerados\n');
 } catch {
   // Não-bloqueante: índices são nice-to-have
   console.warn('⚠️  Geração de índices falhou (não-bloqueante). Continuando build...\n');
+}
+
+// ── 4. ADS-43 — Geração de public/ads.txt (AdSense publisher declaration) ─────
+console.log('💰 [4/4] Gerando public/ads.txt...');
+try {
+  execSync('node scripts/generate-ads-txt.mjs', { stdio: 'inherit' });
+  console.log('');
+} catch {
+  console.error('❌ Geração de ads.txt falhou. Abortando build.\n');
+  process.exit(1);
 }
 
 console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');

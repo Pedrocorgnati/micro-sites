@@ -10,6 +10,7 @@ import { Footer } from '@/components/ui/Footer';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { D05Checklist } from '@/components/sections/D05Checklist';
 import { NoscriptFallback } from '@/components/sections/NoscriptFallback';
+import { AdSlot } from '@/components/ads/AdSlot';
 import { buildBreadcrumbList } from '@/lib/schema-markup';
 import { buildNextMetadata } from '@/lib/seo-helpers';
 
@@ -144,6 +145,9 @@ export default function SimuladorPage() {
             </a>
           </div>
         </section>
+
+        {/* ADS-17 — slot footer (opt-in via config.adsense.routesAllowed = ['simulador']) */}
+        <AdSlot config={config} pathname="/simulador" slot="footer" />
       </main>
 
       <Footer

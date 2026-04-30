@@ -39,12 +39,18 @@ export function PrivacyPolicy({
           <li>Telefone (opcional)</li>
           <li>Dados de navegacao via Google Analytics 4 (apos consentimento)</li>
           <li>Dados preenchidos em calculadoras/diagnosticos (quando aplicavel)</li>
+          <li>
+            Identificadores de cookies de publicidade (apos consentimento) — Google AdSense:{' '}
+            <code>__gads</code>, <code>__gpi</code>, <code>NID</code> e congeneres.
+          </li>
         </ul>
 
         <h2>Finalidade</h2>
         <p>
-          Os dados sao coletados exclusivamente para responder as suas solicitacoes de contato
-          e, mediante consentimento, para analise de trafego com fins de melhoria do site.
+          Os dados sao coletados para: (a) responder as suas solicitacoes de contato; (b) mediante
+          consentimento, analise de trafego para melhoria do site; (c) mediante consentimento,
+          exibicao de anuncios contextuais via Google AdSense, medicao de impressoes/cliques,
+          frequency capping e prevencao de fraude/invalid traffic.
         </p>
 
         <h2>Compartilhamento</h2>
@@ -56,12 +62,35 @@ export function PrivacyPolicy({
             </a>
           </li>
           <li>
-            <strong>Google Analytics 4</strong> — analise de trafego (somente com consentimento).{' '}
+            <strong>Google LLC — Analytics 4</strong> — analise de trafego (apenas com consentimento de Analise).{' '}
             <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
               Politica do Google
             </a>
           </li>
+          <li>
+            <strong>Google LLC — AdSense</strong> — exibicao de anuncios e medicao (apenas com consentimento de
+            Publicidade). Por padrao operamos em modo <em>Non-Personalized Ads (NPA)</em> — anuncios
+            sao selecionados pelo conteudo da pagina, nao pelo seu historico. Em sites de saude
+            (Categoria A) o NPA e sempre forcado.{' '}
+            <a href="https://support.google.com/adsense/answer/9804260" target="_blank" rel="noopener noreferrer">
+              AdSense + LGPD
+            </a>
+            {' · '}
+            <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">
+              Como o Google usa cookies em ads
+            </a>
+          </li>
         </ul>
+
+        <h2 id="transferencia-internacional">Transferencia internacional de dados</h2>
+        <p>
+          Google LLC processa dados nos Estados Unidos da America. Como o Brasil nao possui
+          decisao de adequacao com os EUA, a transferencia ocorre com base em{' '}
+          <strong>consentimento especifico e em destaque do titular</strong> (LGPD, Art. 33, IX).
+          Ao aceitar cookies de Analise ou Publicidade no banner, voce esta consentindo
+          expressamente com essa transferencia. Voce pode revogar a qualquer momento sem
+          prejuizo ao acesso ao conteudo do site.
+        </p>
 
         <h2>Retencao de dados</h2>
         <p>
@@ -115,9 +144,11 @@ export function PrivacyPolicy({
         <h2>Cookies</h2>
         <p>
           Utilizamos cookies essenciais para o funcionamento do site e, somente apos seu
-          consentimento explicito, cookies de analise via Google Analytics 4. A preferencia e
-          armazenada no <code>localStorage</code> do seu navegador com retencao de{' '}
-          <strong>12 meses</strong> (apos isso solicitamos consentimento novamente).
+          consentimento explicito, cookies de analise (Google Analytics 4) e de publicidade
+          (Google AdSense). A preferencia e armazenada no <code>localStorage</code> do seu
+          navegador com retencao de <strong>12 meses</strong> (apos isso solicitamos
+          consentimento novamente). Cookies AdSense da Google tem retencao propria, tipicamente
+          ate 13 meses.
         </p>
 
         {/* CL-626 — Tabela estruturada de cookies (componente reusavel CookiesTable). */}
@@ -132,8 +163,19 @@ export function PrivacyPolicy({
         <h3 id="revogar-consentimento">Como revogar consentimento</h3>
         <ol>
           <li>Role ate o rodape do site e clique em <strong>&quot;Gerenciar cookies&quot;</strong>.</li>
-          <li>No painel, escolha <strong>&quot;Apenas essenciais&quot;</strong> ou desative <em>Analytics</em>.</li>
+          <li>No painel, escolha <strong>&quot;Apenas essenciais&quot;</strong> ou desative <em>Analytics</em> e/ou <em>Publicidade</em>.</li>
           <li>Recarregue a pagina — o consentimento e aplicado imediatamente.</li>
+          <li>
+            Para controle adicional sobre publicidade da Google, voce pode usar:{' '}
+            <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">
+              Configuracoes de anuncios do Google
+            </a>{' '}
+            e{' '}
+            <a href="https://optout.networkadvertising.org/" target="_blank" rel="noopener noreferrer">
+              Opt-out NAI
+            </a>
+            .
+          </li>
           <li>Para revogar consentimento de formularios anteriormente enviados, escreva para{' '}
             <a href={`mailto:${controllerContact}?subject=%5BLGPD%5D%20Revogacao%20consentimento`}>{controllerContact}</a>{' '}
             informando o e-mail usado. Atendemos em ate 24 horas (efeito imediato no banner; ate 5 dias para purge automatizado de dados ja coletados).</li>
