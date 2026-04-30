@@ -1,6 +1,7 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 # .husky/pre-commit (CL-072, CL-064)
 # Bloqueia dev junior (email contem "junior" ou "jr") de commitar paths protegidos.
+[ -z "$BASH_VERSION" ] && exec bash "$0" "$@"
 set -u
 
 email=$(git config user.email 2>/dev/null || echo "")
