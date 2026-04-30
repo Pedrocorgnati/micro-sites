@@ -2,7 +2,7 @@
 # .husky/pre-push (CL-072 + TASK-26 ST004 / CL-313/308/069)
 # 1. Bloqueia dev junior de push direto em deploy-NN ou main
 # 2. Bloqueia push em deploy-NN se outro dev segura o deploy lock
-set -uo pipefail
+set -u
 
 email=$(git config user.email 2>/dev/null || echo "")
 remote="$1"
