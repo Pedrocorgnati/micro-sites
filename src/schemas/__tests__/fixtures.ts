@@ -19,7 +19,7 @@ export const validCatDConfig: SiteConfigInput = {
   cta: {
     primaryLabel: 'Ver resultado completo',
     formEndpoint: 'https://api.staticforms.xyz/submit',
-    whatsappNumber: '5512920043268',
+    whatsappNumber: '5512938459127',
     whatsappMessage: 'Olá! Calculei o custo do meu site e quero conversar.',
   },
   leadMagnet: {
