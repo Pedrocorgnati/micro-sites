@@ -156,8 +156,8 @@ describe('SiteConfigSchema', () => {
       expect(result.success).toBe(false);
     });
 
-    it('aceita whatsapp real 5512938459127 (13 digitos)', () => {
-      const cfg = { ...validCatDConfig, cta: { ...validCatDConfig.cta, whatsappNumber: '5512938459127' } };
+    it('aceita whatsapp real 5517981539795 (13 digitos)', () => {
+      const cfg = { ...validCatDConfig, cta: { ...validCatDConfig.cta, whatsappNumber: '5517981539795' } };
       const result = SiteConfigSchema.safeParse(cfg);
       expect(result.success).toBe(true);
     });

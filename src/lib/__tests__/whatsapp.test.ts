@@ -14,8 +14,8 @@ describe('buildWhatsAppUrl', () => {
   });
 
   it('aceita numero valido 13 digitos (55 + DDD + 9 digitos)', () => {
-    const url = buildWhatsAppUrl('5512938459127', 'ola');
-    expect(url).toBe('https://wa.me/5512938459127?text=ola');
+    const url = buildWhatsAppUrl('5517981539795', 'ola');
+    expect(url).toBe('https://wa.me/5517981539795?text=ola');
   });
 
   it('aceita numero valido 12 digitos (55 + DDD + 8 digitos)', () => {
@@ -24,12 +24,12 @@ describe('buildWhatsAppUrl', () => {
   });
 
   it('normaliza caracteres nao-numericos (parenteses, espacos)', () => {
-    const url = buildWhatsAppUrl('+55 (12) 93845-9127', 'ola');
-    expect(url).toContain('wa.me/5512938459127');
+    const url = buildWhatsAppUrl('+55 (17) 98153-9795', 'ola');
+    expect(url).toContain('wa.me/5517981539795');
   });
 
   it('acrescenta originTag quando slug e fornecido', () => {
-    const url = buildWhatsAppUrl('5512938459127', 'ola', 'a01');
+    const url = buildWhatsAppUrl('5517981539795', 'ola', 'a01');
     expect(decodeURIComponent(url.split('?text=')[1])).toContain('[origem: a01]');
   });
 });
